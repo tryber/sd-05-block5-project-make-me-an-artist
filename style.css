@@ -36,35 +36,38 @@
   left: 10px;
 }
 
-.pixel1 {
+.pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixel2 {
+.pixel-board {
+  display: flex;
+}
+/* .pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixel3 {
+.pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixel4 {
+.pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
 
-.pixel5 {
+.pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
@@ -209,4 +212,4 @@
   border: 1px solid black;
   height: 40px;
   width: 40px;
-}
+} */
