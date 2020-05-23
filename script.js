@@ -1,58 +1,58 @@
 window.onload = function () {
   // create variable to store each color element
-  const black = document.querySelector('#black');
-  const yellow = document.querySelector('#yellow');
-  const red = document.querySelector('#red');
-  const blue = document.querySelector('#blue');
+  const black = document.querySelector('.color.black');
+  const yellow = document.querySelector('.color.yellow');
+  const red = document.querySelector('.color.red');
+  const blue = document.querySelector('.color.blue');
 
   // include class selected on black element when the window  is loaded
     black.className += ' selected';  
-    let selectedColor = document.querySelector('.color.selected').id;
+    let selectedColor = 'black';
 
   // add a event listener to each collor in the palett
   black.addEventListener('click', function () {
     // if clas is not selected already, add class selected to   it
-    if (black.className != 'color selected') {
+    if (black.className !== 'color black selected') {
       black.className += ' selected';
     }
     // keep other colors without the selected class
-    yellow.className = 'color';
-    red.className = 'color';
-    blue.className = 'color';
+    yellow.className = 'color yellow';
+    red.className = 'color red';
+    blue.className = 'color blue';
     selectedColor = 'black';
   });
   yellow.addEventListener('click', function () {
-    if (yellow.className != 'color selected') {
+    if (yellow.className !== 'color yellow selected') {
       yellow.className += ' selected';
     }
-    black.className = 'color';
-    red.className = 'color';
-    blue.className = 'color';
+    black.className = 'color black';
+    red.className = 'color red';
+    blue.className = 'color blue';
     selectedColor = 'yellow';
   });
   red.addEventListener('click', function () {
-    if (red.className != 'color selected') {
+    if (red.className !== 'color red selected') {
       red.className += ' selected';
     }
-    yellow.className = 'color';
-    black.className = 'color';
-    blue.className = 'color';
+    yellow.className = 'color yellow';
+    black.className = 'color black';
+    blue.className = 'color blue';
     selectedColor = 'red';    
   });
   blue.addEventListener('click', function () {
-    if (blue.className != 'color selected') {
+    if (blue.className !== 'color blue selected') {
       blue.className += ' selected';
     }
-    yellow.className = 'color';
-    red.className = 'color';
-    black.className = 'color';
+    yellow.className = 'color yellow';
+    red.className = 'color red';
+    black.className = 'color black';
     selectedColor = 'blue';
   });
 
   // change the color of the pixel when it's clicked
   const board = document.getElementById('pixel-board');
   board.addEventListener('click', function (event) {
-    event.target.id = selectedColor;
+    event.target.className = 'pixel ' + selectedColor;
   });
 
   // create a button that clears the board colors when clicked
@@ -60,7 +60,7 @@ window.onload = function () {
   clearButton.addEventListener('click', function () {
     let pixelDivs = document.querySelectorAll('.pixel');
     for (i in pixelDivs) {
-      pixelDivs[i].id = "white";
+      pixelDivs[i].className = "pixel white";
     }
   });
 
@@ -73,6 +73,7 @@ window.onload = function () {
     board.innerHTML = '';
     let boardColumns = '';
     let numberOfPixels = N.value;
+    // limit 5 <= N <= 50
     if (numberOfPixels < 5) {
       numberOfPixels = 5;
       for (let i = 0; i < numberOfPixels; i+=1) {
@@ -103,7 +104,6 @@ window.onload = function () {
         }
       }
     }
-    
     board.style.gridTemplateColumns = boardColumns;
   }
   
