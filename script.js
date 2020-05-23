@@ -63,30 +63,30 @@ function colorPixel() {
   target.style = novaCor;
 }
 
-function getRandomColor() {
-  const r = getRandomInt(0,255);
-  const g = getRandomInt(0,255);
-  const b = getRandomInt(0,255);
-  const color = `rgb(${r},${g},${b}`
-  return color;
-}
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+function getRandomColor() {
+  const r = getRandomInt(0, 255);
+  const g = getRandomInt(0, 255);
+  const b = getRandomInt(0, 255);
+  const color = `rgb(${r},${g},${b}`;
+  return color;
+}
+
 function setRandomColor() {
   const setCor2 = getRandomColor();
-  cor2.style.backgroundColor = setCor2
-  cor2.classList.add(setCor2)
+  cor2.style.backgroundColor = setCor2;
+  cor2.classList.add(setCor2);
   const setCor3 = getRandomColor();
-  cor3.style.backgroundColor = setCor3
-  cor3.classList.add(setCor3)
+  cor3.style.backgroundColor = setCor3;
+  cor3.classList.add(setCor3);
   const setCor4 = getRandomColor();
-  cor4.style.backgroundColor = setCor4
-  cor4.classList.add(setCor4)
+  cor4.style.backgroundColor = setCor4;
+  cor4.classList.add(setCor4);
 }
 // ListenerEvents
 black.addEventListener('click', changeSelected);
@@ -97,4 +97,4 @@ board.addEventListener('click', colorPixel);
 limpar.addEventListener('click', clearBoard);
 botaoTamanho.addEventListener('click', changeSize);
 
-setRandomColor()
+setRandomColor();
