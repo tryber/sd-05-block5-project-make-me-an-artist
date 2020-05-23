@@ -47,7 +47,7 @@ function createGrid(str) {
 }
 
 function changeSize() {
-  let str = inputTamanho.value;
+  const str = inputTamanho.value;
   if (str.length === 0) {
     alert('Board inválido!');
   } else {
