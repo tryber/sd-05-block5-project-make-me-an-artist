@@ -6,6 +6,10 @@
   background-color: rgb(143, 155, 246);
 }
 
+.board {
+  height: 210px;
+  width: 210px;
+}
 .brown {
   background-color: brown;
 }
@@ -40,6 +44,10 @@
   background-color: orange;
 }
 
+.palette {
+  height: 30px;
+  width: 132px;
+}
 .pixel {
   background-color: white;
   border: solid 1px black;
