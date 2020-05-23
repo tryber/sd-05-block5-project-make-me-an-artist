@@ -20,18 +20,16 @@ function changeSelected() {
 }
 
 function changeSize() {
-  let str = inputTamanho.value;
-  str = str.split(' ').join('');
+  let str = inputTamanho.value.split(' ').join('');
   if (str === '') {
     alert('Board inválido!');
   } else {
     if (parseInt(str, 10) < 5) {
       str = 5;
-    }
-    if (parseInt(str, 10) > 50) {
+    } else if (parseInt(str, 10) > 50) {
       str = 50;
     }
-    const tamanhoBoard = parseInt(str, 10) * 32;
+    const tamanhoBoard = parseInt(str, 10) * 42;
     const newSize = tamanhoBoard.toString();
     board.style.width = newSize;
     board.style.height = newSize;

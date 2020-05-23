@@ -6,10 +6,10 @@
   background-color: blue;
 }
 
-.board {
-  height: auto;
-  width: auto;
-}
+/* .board {
+  height: 210px;
+  width: 210px;
+} */
 
 .brown {
   background-color: brown;
