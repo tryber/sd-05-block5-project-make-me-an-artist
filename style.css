@@ -2,7 +2,7 @@ body {
   margin : 0;
 }
 
-.palette , .board, .tools {
+.palette , .board , .tools {
   margin: 5px 0;
   text-align: center;
   width: 210px;

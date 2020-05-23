@@ -1,9 +1,10 @@
 let palette;
 let cells;
+let clearButton;
 function setCurrentColor(el) {
-  for(let i = 0; i < palette.length; i += 1) {
+  for (let i = 0; i < palette.length; i += 1) {
     palette[i].classList.remove('selected');
-  };
+  }
   el.target.classList.add('selected');
 }
 function setPixelColor(el) {
@@ -27,11 +28,13 @@ function buildGrid() {
 function clearAll() {
   for (let i = 0; i < cells.length; i += 1) {
     cells[i].style.backgroundColor = 'white';
-  } 
+  }
 }
 window.onload = function () {
   palette = document.getElementsByClassName('color');
   cells = document.getElementsByClassName('pixel');
+  clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener("click", this.clearAll);
   buildPalette();
   buildGrid();
 };
