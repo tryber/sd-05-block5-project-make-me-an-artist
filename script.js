@@ -30,9 +30,7 @@ function changeSize() {
       str = 50;
     }
     const tamanhoBoard = parseInt(str, 10) * 42;
-    const newSize = tamanhoBoard.toString();
-    board.style.width = newSize;
-    board.style.height = newSize;
+    board.style = `width: ${tamanhoBoard} !important`
     board.innerHTML = '';
     for (let linha = 1; linha <= str; linha += 1) {
       const firstDiv = document.createElement('div');
