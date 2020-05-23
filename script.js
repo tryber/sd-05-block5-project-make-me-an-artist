@@ -1,7 +1,7 @@
 function criarQuadros() {
-  const div1 = document.querySelector('.session1');
+  const div1 = document.querySelector('.pixel-board');
 
-  for(let i = 0; i < 5; i += 1) {
+  for(let i = 0; i < 25; i += 1) {
     const newDiv = document.createElement('div');
     newDiv.className = 'pixel';
     div1.appendChild(newDiv);
@@ -50,10 +50,10 @@ function criarQuadros5() {
 
 function renderizarPixels() {
   criarQuadros();
-  criarQuadros2();
-  criarQuadros3();
-  criarQuadros4();
-  criarQuadros5();
+  // criarQuadros2();
+  // criarQuadros3();
+  // criarQuadros4();
+  // criarQuadros5();
 }
 renderizarPixels();
 
