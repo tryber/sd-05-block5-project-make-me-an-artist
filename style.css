@@ -2,26 +2,28 @@
   background-color: black;
 }
 
+.brown {
+  background-color: brown;
+}
+
 .color {
+  border: black 1px solid;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
   height: 30px;
+  margin-left: 0;
+  margin-right: 1px;
   width: 30px;
-  border-left: black 1px solid;
 }
 
 .gray {
   background-color: gray;
 }
 
+.orange {
+  background-color: orange;
+}
 .palette-box {
-  border-top: black solid 1px;
-  border-bottom: black solid 1px;
-  border-right: black solid 1px;
-  height: 30px;
-  margin-right: auto;
-  width: 124px;
+
 }
 
 .red {
