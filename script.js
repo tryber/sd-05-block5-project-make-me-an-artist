@@ -62,7 +62,6 @@ window.onload = function () {
     for (i in pixelDivs) {
       pixelDivs[i].id = "white";
     }
-    console.log(pixelDivs);
   });
 
   // create a variable N to get the input of the number o pixels
@@ -70,17 +69,41 @@ window.onload = function () {
 
   // create divs inside pixel-board based on the number of pixels of the input
   function createPixels() {
-    //clear al the divs created before creating a new board
+    //clear all the divs created before creating a new board
     board.innerHTML = '';
     let boardColumns = '';
-    for (let i = 0; i < N.value; i+=1) {
-      boardColumns += 'max-content ';
-      for (let j = 0; j < N.value; j+=1) {
-        const div = document.createElement('div');
-        div.className = 'pixel white';
-        board.appendChild(div);
+    let numberOfPixels = N.value;
+    if (numberOfPixels < 5) {
+      numberOfPixels = 5;
+      for (let i = 0; i < numberOfPixels; i+=1) {
+        boardColumns += 'max-content ';
+        for (let j = 0; j < numberOfPixels; j+=1) {
+          const div = document.createElement('div');
+          div.className = 'pixel white';
+          board.appendChild(div);
+        }
+      }
+    } else if (numberOfPixels > 50) {
+      numberOfPixels = 50;
+      for (let i = 0; i < numberOfPixels; i+=1) {
+        boardColumns += 'max-content ';
+        for (let j = 0; j < numberOfPixels; j+=1) {
+          const div = document.createElement('div');
+          div.className = 'pixel white';
+          board.appendChild(div);
+        }
+      }
+    } else {
+      for (let i = 0; i < numberOfPixels; i+=1) {
+        boardColumns += 'max-content ';
+        for (let j = 0; j < numberOfPixels; j+=1) {
+          const div = document.createElement('div');
+          div.className = 'pixel white';
+          board.appendChild(div);
+        }
       }
     }
+    
     board.style.gridTemplateColumns = boardColumns;
   }
   
