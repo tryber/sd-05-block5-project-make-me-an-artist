@@ -3,7 +3,7 @@
 }
 
 .blue {
-  background-color: rgb(143 , 155 , 246);
+  background-color: rgb(143, 155, 246);
 }
 
 .brown {
@@ -14,14 +14,13 @@
   border: black 1px solid;
   float: left;
   height: 30px;
+  margin-bottom: 20px;
   margin-left: 0;
   margin-right: 1px;
   width: 30px;
-  margin-bottom: 20px;
 }
 
 .first {
-  
   clear: left;
 }
 
@@ -42,23 +41,25 @@
 }
 
 .pixel {
-  border: solid 1px black;
-  width: 40px;
-  height: 40px;
-  float: left;
   background-color: white;
+  border: solid 1px black;
+  float: left;
+  height: 40px;
+  width: 40px;
 }
+
 .purple {
-  background-color: rgb(44 , 33 , 55);
+  background-color: rgb(44, 33, 55);
 }
 
 .red {
-  background-color: rgb(171 , 70 , 70);
+  background-color: rgb(171, 70, 70);
 }
 
 .fakewhite {
   background-color: rgb(244, 245, 208);
 }
+
 .yellow {
   background-color: yellow;
 }
