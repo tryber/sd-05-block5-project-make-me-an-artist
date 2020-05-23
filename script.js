@@ -20,8 +20,10 @@ function changeSelected() {
 }
 
 function changeSize() {
-  if (inputTamanho.value === '') {
-    alert('Board inválido');
+  let str = inputTamanho.value;
+  str = str.split(' ').join('');
+  if (str == '') {
+    alert('Board inválido!');
   }
 }
 
