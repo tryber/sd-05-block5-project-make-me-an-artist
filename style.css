@@ -4,20 +4,33 @@
   box-sizing: border-box;
 }
 
-#color-pallete li {
-  list-style: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid black;
-  display: inline-block;
+#color-palette{
 }
 
 #pixel-board li {
   display: inline-block;
 }
 
-.pixel {
-  width: 42px;
-  height: 42px;
+.color {
+  float: left;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
 }
