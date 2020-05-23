@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .color {
   border: 1px solid black;
   height: 40px;
@@ -25,10 +30,6 @@
   float: left;
 }
 
-.pixel {
-  border: 1px solid black;
-}
-
 .session {
   align-items: flex-start;
   display: flex;
@@ -46,6 +47,7 @@
 .pixel-board {
   display: flex;
 }
+
 /* .pixel {
   background-color: white;
   border: 1px solid black;

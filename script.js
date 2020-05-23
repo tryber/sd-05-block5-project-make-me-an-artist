@@ -48,27 +48,56 @@ function criarQuadros5() {
   }
 }
 
-criarQuadros();
-criarQuadros2();
-criarQuadros3();
-criarQuadros4();
-criarQuadros5();
+function renderizarPixels() {
+  criarQuadros();
+  criarQuadros2();
+  criarQuadros3();
+  criarQuadros4();
+  criarQuadros5();
+}
+renderizarPixels();
 
+//evento de click nas cores
+const coresBlack = document.querySelector('.selected');
+coresBlack.addEventListener('click', aplicarCorBlack);
 
-let corActual = 'black';
-function aplicaCorAtual(id) {
-  let caixasPixelBoard = document.querySelector(`.${id}`);
-  caixasPixelBoard.style.backgroundColor = corActual;
+let corAtual = document.querySelector('.selected').style.backgroundColor = 'black';
+
+function aplicarCorBlack() {
+  corAtual = 'black';
+  document.querySelector('.selected').style.backgroundColor = corAtual;
 }
-function selecionaPreto() {
-  corActual = 'black';
+
+const coresYellow = document.querySelector('.color-yellow');
+coresYellow.addEventListener('click', aplicarCorYellow);
+
+function aplicarCorYellow() {
+  corAtual = 'yellow';
+  document.querySelector('.color-yellow').style.backgroundColor = corAtual;
 }
-function selecionaAmarelo() {
-  corActual = 'yellow';
+
+const coresBlue = document.querySelector('.color-blue');
+coresBlue.addEventListener('click', aplicarCorBlue);
+
+function aplicarCorBlue() {
+  corAtual = 'blue';
+  document.querySelector('.color-blue').style.backgroundColor = corAtual;
 }
-function selecionaAzul() {
-  corActual = 'blue';
+
+const coresGreen = document.querySelector('.color-green');
+coresGreen.addEventListener('click', aplicarCorGreen);
+
+function aplicarCorGreen() {
+  corAtual = 'green';
+  document.querySelector('.color-green').style.backgroundColor = corAtual;
 }
-function selecionaVerde() {
-  corActual = 'green';
+
+//caixas de pixel em branco
+const pixels = document.querySelectorAll('.pixel');
+for(let i = 0; i < pixels.length; i += 1) {
+  pixels[i].addEventListener('click', identicarPixel);
+}
+
+function identicarPixel(evento) {
+  evento.target.style.backgroundColor = corAtual;
 }
