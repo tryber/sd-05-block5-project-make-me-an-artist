@@ -65,7 +65,6 @@ let corAtual = document.querySelector('.selected').style.backgroundColor = 'blac
 
 function aplicarCorBlack() {
   corAtual = 'black';
-  document.querySelector('.selected').style.backgroundColor = corAtual;
 }
 
 const coresYellow = document.querySelector('.color-yellow');
@@ -73,7 +72,6 @@ coresYellow.addEventListener('click', aplicarCorYellow);
 
 function aplicarCorYellow() {
   corAtual = 'yellow';
-  document.querySelector('.color-yellow').style.backgroundColor = corAtual;
 }
 
 const coresBlue = document.querySelector('.color-blue');
@@ -81,7 +79,6 @@ coresBlue.addEventListener('click', aplicarCorBlue);
 
 function aplicarCorBlue() {
   corAtual = 'blue';
-  document.querySelector('.color-blue').style.backgroundColor = corAtual;
 }
 
 const coresGreen = document.querySelector('.color-green');
@@ -89,7 +86,6 @@ coresGreen.addEventListener('click', aplicarCorGreen);
 
 function aplicarCorGreen() {
   corAtual = 'green';
-  document.querySelector('.color-green').style.backgroundColor = corAtual;
 }
 
 //caixas de pixel em branco
@@ -101,3 +97,15 @@ for(let i = 0; i < pixels.length; i += 1) {
 function identicarPixel(evento) {
   evento.target.style.backgroundColor = corAtual;
 }
+
+//limpar cores
+let botaoApagarCores = document.querySelector('#clear-board');
+botaoApagarCores.addEventListener('click', apagarEstilos);
+
+function apagarEstilos() {
+  for(let i = 0; i < pixels.length; i += 1) {
+    document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
+  }
+}
+// let divPai = document.getElementsByClassName('session1')[0].children;
+// console.log(divPai);
