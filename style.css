@@ -20,3 +20,15 @@ li.color {
 #yellow {
   background-color: yellow;
 }
+
+#pixel-board {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+}
