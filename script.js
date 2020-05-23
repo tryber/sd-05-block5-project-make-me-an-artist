@@ -107,5 +107,3 @@ function apagarEstilos() {
     document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
   }
 }
-// let divPai = document.getElementsByClassName('session1')[0].children;
-// console.log(divPai);
