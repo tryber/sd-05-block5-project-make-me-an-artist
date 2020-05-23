@@ -6,10 +6,10 @@ let selectedColor = "black";
 
 let colors = ["black", "blue", "green", "yellow"];
 
-function setPaleteColors() {
+function setPaleteColors(colors) {
   for (let pixel = 0; pixel < pixelPaleta.length; pixel+=1) {
       pixelPaleta[pixel].style.backgroundColor = colors[pixel];
     }
 }
 
-window.addEventListener("load", setPaleteColors);
+window.addEventListener("load", setPaleteColors(colors));
