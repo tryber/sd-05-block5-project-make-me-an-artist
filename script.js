@@ -22,8 +22,56 @@ function changeSelected() {
 function changeSize() {
   let str = inputTamanho.value;
   str = str.split(' ').join('');
-  if (str == '') {
+  if (str === '') {
     alert('Board inválido!');
+  } else if (str > 50) {
+    let tamanhoBoard = parseInt(str) * 32;
+    let newSize = tamanhoBoard.toString();
+    board.style.width = newSize;
+    board.style.height = newSize;
+    board.innerHTML = '';
+    for (let linha = 1; linha <= 50; linha += 1) {
+      let firstDiv = document.createElement('div');
+      firstDiv.className = 'pixel first blank';
+      board.appendChild(firstDiv);
+      for (let coluna = 2; coluna <= 50; coluna += 1) {
+        let otherDivs = document.createElement('div');
+        otherDivs.className = 'pixel blank';
+        board.appendChild(otherDivs);
+      }
+    }
+  } else if (str < 5) {
+    let tamanhoBoard = parseInt(str) * 32;
+    let newSize = tamanhoBoard.toString();
+    board.style.width = newSize;
+    board.style.height = newSize;
+    board.innerHTML = '';
+    for (let linha = 1; linha <= 5; linha += 1) {
+      let firstDiv = document.createElement('div');
+      firstDiv.className = 'pixel first blank';
+      board.appendChild(firstDiv);
+      for (let coluna = 2; coluna <= 5; coluna += 1) {
+        let otherDivs = document.createElement('div');
+        otherDivs.className = 'pixel blank';
+        board.appendChild(otherDivs);
+      }
+    }
+  } else {
+    let tamanhoBoard = parseInt(str) * 32;
+    let newSize = tamanhoBoard.toString();
+    board.style.width = newSize;
+    board.style.height = newSize;
+    board.innerHTML = '';
+    for (let linha = 1; linha <= str; linha += 1) {
+      let firstDiv = document.createElement('div');
+      firstDiv.className = 'pixel first blank';
+      board.appendChild(firstDiv);
+      for (let coluna = 2; coluna <= str; coluna += 1) {
+        let otherDivs = document.createElement('div');
+        otherDivs.className = 'pixel blank';
+        board.appendChild(otherDivs);
+      }
+    }
   }
 }
 

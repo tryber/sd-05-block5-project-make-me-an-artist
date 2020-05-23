@@ -7,8 +7,8 @@
 }
 
 .board {
-  height: 210px;
-  width: 210px;
+  height: auto;
+  width: auto;
 }
 
 .brown {
