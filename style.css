@@ -2,6 +2,10 @@
   background-color: black;
 }
 
+.blue {
+  background-color: rgb(143 , 155 , 246);
+}
+
 .brown {
   background-color: brown;
 }
@@ -19,15 +23,24 @@
   background-color: gray;
 }
 
+.green {
+  background-color: green;
+}
+
+.greenyellow {
+  background-color: greenyellow;
+}
+
 .orange {
   background-color: orange;
 }
-.palette-box {
 
+.purple {
+  background-color: rgb(44 , 33 , 55);
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(171 , 70 , 70);
 }
 
 .yellow {
