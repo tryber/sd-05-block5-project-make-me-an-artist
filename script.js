@@ -4,9 +4,11 @@ const red = document.getElementById('red');
 const blue = document.getElementById('blue');
 const yellow = document.getElementById('yellow');
 const board = document.getElementById('pixel-board');
+const limpar = document.getElementById('clear-board');
 let selected = document.getElementsByClassName('selected')[0];
 let cor = selected.classList[1];
 let target = '';
+let pixel = '';
 // functions
 function changeSelected() {
   target = event.target;
@@ -21,7 +23,18 @@ function colorPixel() {
   const corAntiga = target.classList[target.classList.length - 1];
   target.classList.remove(corAntiga);
   target.classList.add(cor);
-  target.style = "background-color: "+cor+" !important"
+  target.style = 'background-color: ' + cor + ' !important';
+}
+
+function clearBoard() {
+  pixel = board.firstElementChild;
+  for (i = 0; i < board.children.length; i += 1) {
+    const corAntiga = pixel.classList[pixel.classList.length - 1];
+    pixel.classList.remove(corAntiga);
+    pixel.classList.add('blank');
+    pixel.style = 'background-color: white';
+    pixel = pixel.nextElementSibling;
+  }
 }
 // ListenerEvents
 black.addEventListener('click', changeSelected);
@@ -29,3 +42,4 @@ red.addEventListener('click', changeSelected);
 blue.addEventListener('click', changeSelected);
 yellow.addEventListener('click', changeSelected);
 board.addEventListener('click', colorPixel);
+limpar.addEventListener('click', clearBoard);
