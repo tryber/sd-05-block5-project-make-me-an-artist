@@ -24,7 +24,7 @@ function colorPixel() {
   target.classList.remove(corAntiga);
   target.classList.add(cor);
   const novaCor = `background-color: ${cor} !important`;
-  target.style = novaCor
+  target.style = novaCor;
 }
 
 function clearBoard() {
