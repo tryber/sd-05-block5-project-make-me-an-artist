@@ -18,10 +18,10 @@ function changeSelected() {
   target.classList.add('selected');
   selected = document.getElementsByClassName('selected')[0];
 }
-
+// let str = inputTamanho.value.split(' ').join('');
 function changeSize() {
-  let str = inputTamanho.value.split(' ').join('');
-  if (str === '') {
+  let str = inputTamanho.value
+  if (str.length === 0 || str === '0') {
     alert('Board inválido!');
   } else {
     if (parseInt(str, 10) < 5) {
