@@ -2,7 +2,7 @@
 const black = document.getElementById('black');
 const red = document.getElementById('red');
 const blue = document.getElementById('blue');
-const white = document.getElementById('white');
+const yellow = document.getElementById('yellow');
 const board = document.getElementById('pixel-board');
 let selected = document.getElementsByClassName('selected')[0];
 let cor = selected.classList[1];
@@ -17,14 +17,15 @@ function changeSelected() {
 
 function colorPixel() {
   cor = selected.classList[1];
-  const target = event.target;
-  const corAntiga = target.classList[target.classList.length-1];
+  target = event.target;
+  const corAntiga = target.classList[target.classList.length - 1];
   target.classList.remove(corAntiga);
   target.classList.add(cor);
+  target.style = "background-color: "+cor+" !important"
 }
 // ListenerEvents
 black.addEventListener('click', changeSelected);
 red.addEventListener('click', changeSelected);
 blue.addEventListener('click', changeSelected);
-white.addEventListener('click', changeSelected);
+yellow.addEventListener('click', changeSelected);
 board.addEventListener('click', colorPixel);

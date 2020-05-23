@@ -1,9 +1,9 @@
 .black {
-  background-color: black !important;
+  background-color: black;
 }
 
 .blue {
-  background-color: rgb(143, 155, 246) !important;
+  background-color: blue;
 }
 
 .board {
@@ -12,7 +12,7 @@
 }
 
 .brown {
-  background-color: brown !important;
+  background-color: brown;
 }
 
 .color {
@@ -25,28 +25,24 @@
   width: 30px;
 }
 
-.fakewhite {
-  background-color: rgb(244, 245, 208) !important;
-}
-
 .first {
   clear: left;
 }
 
 .gray {
-  background-color: gray !important;
+  background-color: gray;
 }
 
 .green {
-  background-color: green !important;
+  background-color: green;
 }
 
 .greenyellow {
-  background-color: greenyellow !important;
+  background-color: greenyellow;
 }
 
 .orange {
-  background-color: orange !important;
+  background-color: orange;
 }
 
 .palette {
@@ -63,13 +59,13 @@
 }
 
 .purple {
-  background-color: rgb(44, 33, 55) !important;
+  background-color: rgb(44, 33, 55);
 }
 
 .red {
-  background-color: rgb(171, 70, 70) !important;
+  background-color: red;
 }
 
 .yellow {
-  background-color: yellow !important;
+  background-color: yellow;
 }
