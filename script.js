@@ -49,8 +49,20 @@ window.onload = function () {
     selectedColor = 'blue';
   });
 
-  let board = document.getElementById('pixel-board');
+  // change the color of the pixel when it's clicked
+  const board = document.getElementById('pixel-board');
   board.addEventListener('click', function (event) {
     event.target.id = selectedColor;
+    console.log(event)
   });
+  console.log(event)
+
+  // create a button that clears the board colors when clicked
+  const clearButton = document.getElementById('clear-board');
+  const pixelDivs = document.querySelectorAll('.pixel')
+  clearButton.addEventListener('click', function () {
+    for (i in pixelDivs) {
+      pixelDivs[i].id = "white";
+    }
+  })
 }
