@@ -24,6 +24,9 @@
   clear: left;
 }
 
+.input {
+  width: 50px;
+}
 .palette {
   height: 30px;
 }

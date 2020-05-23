@@ -30,25 +30,31 @@ function createBoardCollumn() {
   otherDivs.className = 'pixel blank';
   board.appendChild(otherDivs);
 }
+
+function createGrid(str) {
+  if (parseInt(str, 10) < 5) {
+    str = 5;
+  } else if (parseInt(str, 10) > 50) {
+    str = 50;
+  }
+  board.innerHTML = '';
+  for (let linha = 1; linha <= str; linha += 1) {
+    createBoardLine();
+    for (let coluna = 2; coluna <= str; coluna += 1) {
+      createBoardCollumn();
+    }
+  }
+}
+
 function changeSize() {
   let str = inputTamanho.value;
   if (str.length === 0) {
     alert('Board inválido!');
   } else {
-    if (parseInt(str, 10) < 5) {
-      str = 5;
-    } else if (parseInt(str, 10) > 50) {
-      str = 50;
-    }
-    board.innerHTML = '';
-    for (let linha = 1; linha <= str; linha += 1) {
-      createBoardLine();
-      for (let coluna = 2; coluna <= str; coluna += 1) {
-        createBoardCollumn();
-      }
-    }
+    createGrid(str);
   }
 }
+
 function clearBoard() {
   pixel = board.firstElementChild;
   for (let i = 0; i < board.children.length; i += 1) {
