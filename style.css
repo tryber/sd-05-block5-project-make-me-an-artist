@@ -2,16 +2,8 @@
   background-color: black;
 }
 
-.blue {
-  background-color: blue;
-}
-
 .board {
   height: 210px;
-}
-
-.brown {
-  background-color: brown;
 }
 
 .buttons {
@@ -32,22 +24,6 @@
   clear: left;
 }
 
-.gray {
-  background-color: gray;
-}
-
-.green {
-  background-color: green;
-}
-
-.greenyellow {
-  background-color: greenyellow;
-}
-
-.orange {
-  background-color: orange;
-}
-
 .palette {
   height: 30px;
 }
@@ -58,16 +34,4 @@
   float: left;
   height: 40px;
   width: 40px;
-}
-
-.purple {
-  background-color: rgb(44, 33, 55);
-}
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: yellow;
 }
