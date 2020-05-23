@@ -53,16 +53,38 @@ window.onload = function () {
   const board = document.getElementById('pixel-board');
   board.addEventListener('click', function (event) {
     event.target.id = selectedColor;
-    console.log(event)
   });
-  console.log(event)
 
   // create a button that clears the board colors when clicked
   const clearButton = document.getElementById('clear-board');
-  const pixelDivs = document.querySelectorAll('.pixel')
   clearButton.addEventListener('click', function () {
+    let pixelDivs = document.querySelectorAll('.pixel');
     for (i in pixelDivs) {
       pixelDivs[i].id = "white";
     }
-  })
+    console.log(pixelDivs);
+  });
+
+  // create a variable N to get the input of the number o pixels
+  const N = document.getElementById('board-size');
+
+  // create divs inside pixel-board based on the number of pixels of the input
+  function createPixels() {
+    //clear al the divs created before creating a new board
+    board.innerHTML = '';
+    let boardColumns = '';
+    for (let i = 0; i < N.value; i+=1) {
+      boardColumns += 'max-content ';
+      for (let j = 0; j < N.value; j+=1) {
+        const div = document.createElement('div');
+        div.className = 'pixel white';
+        board.appendChild(div);
+      }
+    }
+    board.style.gridTemplateColumns = boardColumns;
+  }
+  
+  // create a event listener to create the board once the button VQV is clicked
+  const vqvBtn = document.getElementById('generate-board');
+  vqvBtn.addEventListener('click', createPixels);
 }

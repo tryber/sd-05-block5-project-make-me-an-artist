@@ -23,7 +23,6 @@ li.color {
 
 #pixel-board {
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content;
 }
 
 .pixel {
