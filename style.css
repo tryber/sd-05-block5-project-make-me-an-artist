@@ -12,21 +12,25 @@
 
 .selected {
   background-color: black;
+  border: 1px solid black;
   float: left;
 }
 
 .color-yellow {
   background-color: yellow;
+  border: 1px solid black;
   float: left;
 }
 
 .color-blue {
   background-color: blue;
+  border: 1px solid black;
   float: left;
 }
 
 .color-green {
   background-color: green;
+  border: 1px solid black;
   float: left;
 }
 

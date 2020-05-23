@@ -61,7 +61,7 @@ renderizarPixels();
 const coresBlack = document.querySelector('.selected');
 coresBlack.addEventListener('click', aplicarCorBlack);
 
-let corAtual = document.querySelector('.selected').style.backgroundColor = 'black';
+let corAtual = 'black';
 
 function aplicarCorBlack() {
   corAtual = 'black';
@@ -104,6 +104,6 @@ botaoApagarCores.addEventListener('click', apagarEstilos);
 
 function apagarEstilos() {
   for(let i = 0; i < pixels.length; i += 1) {
-    document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
+    document.querySelectorAll('.pixel')[i].style.backgroundColor = null;
   }
 }
