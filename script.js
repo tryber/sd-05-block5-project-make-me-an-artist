@@ -23,12 +23,13 @@ function colorPixel() {
   const corAntiga = target.classList[target.classList.length - 1];
   target.classList.remove(corAntiga);
   target.classList.add(cor);
-  target.style = 'background-color: ' + cor + ' !important';
+  const novaCor = `background-color: ${cor} !important`;
+  target.style = novaCor
 }
 
 function clearBoard() {
   pixel = board.firstElementChild;
-  for (i = 0; i < board.children.length; i += 1) {
+  for (let i = 0; i < board.children.length; i += 1) {
     const corAntiga = pixel.classList[pixel.classList.length - 1];
     pixel.classList.remove(corAntiga);
     pixel.classList.add('blank');
