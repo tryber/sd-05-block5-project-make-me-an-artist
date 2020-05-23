@@ -18,10 +18,21 @@ function changeSelected() {
   target.classList.add('selected');
   selected = document.getElementsByClassName('selected')[0];
 }
-// let str = inputTamanho.value.split(' ').join('');
+
+function createBoardLine() {
+  const firstDiv = document.createElement('div');
+  firstDiv.className = 'pixel first blank';
+  board.appendChild(firstDiv);
+}
+
+function createBoardCollumn() {
+  const otherDivs = document.createElement('div');
+  otherDivs.className = 'pixel blank';
+  board.appendChild(otherDivs);
+}
 function changeSize() {
   let str = inputTamanho.value;
-  if (str.length === 0 || str === '0') {
+  if (str.length === 0) {
     alert('Board inválido!');
   } else {
     if (parseInt(str, 10) < 5) {
@@ -31,13 +42,9 @@ function changeSize() {
     }
     board.innerHTML = '';
     for (let linha = 1; linha <= str; linha += 1) {
-      const firstDiv = document.createElement('div');
-      firstDiv.className = 'pixel first blank';
-      board.appendChild(firstDiv);
+      createBoardLine();
       for (let coluna = 2; coluna <= str; coluna += 1) {
-        const otherDivs = document.createElement('div');
-        otherDivs.className = 'pixel blank';
-        board.appendChild(otherDivs);
+        createBoardCollumn();
       }
     }
   }
