@@ -49,10 +49,13 @@
 .color-palette {
   display: flex;
   flex-direction: column;
-  direction: column;
 }
 
 .section-button {
   display: flex;
   padding: 20px;
+}
+
+.clear-board {
+  margin: 10px;
 }
