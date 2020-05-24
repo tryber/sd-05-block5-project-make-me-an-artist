@@ -9,9 +9,9 @@ let cor = "black"
 
 function selecionarCor() {
     for (let i = 0; i < 4; i += 1) {
-        if (this.className === ` color ${coresAtuais[i]}`) {
+        if (this.className === `  ${coresAtuais[i]}`) {
             removerSelected();
-            this.className = ` color ${coresAtuais[i]} selected`;
+            this.className = ` ${coresAtuais[i]} selected`;
             cor = cores[i];
         }
     }
