@@ -57,4 +57,4 @@ red.addEventListener('click', changeSelectedColor);
 green.addEventListener('click', changeSelectedColor);
 pixelBoard.addEventListener('click', setColorPixel)
 
-createGridOfPixel(n)
+window.addEventListener('load',createGridOfPixel(n));
