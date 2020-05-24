@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+#color-palette {
+  height: 30px;
+}
+
+#pixel-board {
+  max-width: 250px;
+  display: block;
+  min-height: 250px;
+}
 
 .color {
   float: left;

@@ -46,6 +46,8 @@ function setColorPixel(el) {
   let backgroundActual = actualColorPixel.classList[1];
   let actualPixel = el.target;
   actualPixel.style.backgroundColor = actualColorPixel.style.backgroundColor = backgroundActual;
+  
+  console.log(backgroundActual)
 }
 
 function clearAll() {
