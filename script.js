@@ -14,13 +14,13 @@ let target = '';
 // functions
 function createBoardLines() {
   let pixelLine = document.createElement('div');
-  pixelLine.className = 'pixel firstLine';
+  pixelLine.className = 'pixel firstLine blank';
   pixelBoard.appendChild(pixelLine);
 }
 
 function createBoardColumns() {
   let pixelColumn = document.createElement('div');
-  pixelColumn.className = 'pixel';
+  pixelColumn.className = 'pixel blank';
   pixelBoard.appendChild(pixelColumn);
 }
 
@@ -51,9 +51,15 @@ function setColorPixel(el) {
 }
 
 function clearAll() {
-  for(let i = 0; i <= n; i += 1) {
-    pixelBoard.childNodes[i].style.backgroundColor = "white";
+  pixel = pixelBoard.firstElementChild;
+  for (let i = 0; i < pixelBoard.children.length; i += 1) {
+    const corAntiga = pixel.classList[pixel.classList.length - 1];
+    pixel.classList.remove(corAntiga);
+    pixel.classList.add('blank');
+    pixel.style = 'background-color: white';
+    pixel = pixel.nextElementSibling;
   }
+
 }
 
 clearAllButton.addEventListener('click', clearAll);
