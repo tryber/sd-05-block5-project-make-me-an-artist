@@ -6,7 +6,7 @@ h1 {
   display: inline-block;
 }
 
-.preta {
+.preto {
   background-color: black;
   border: black solid 1px;
   height: 80px;
@@ -29,13 +29,6 @@ h1 {
 
 .amarelo {
   background-color: yellow;
-  border: black solid 1px;
-  height: 80px;
-  width: 80px;
-}
-
-.verde {
-  background-color: green;
   border: black solid 1px;
   height: 80px;
   width: 80px;
