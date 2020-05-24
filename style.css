@@ -1,5 +1,16 @@
+h1 {
+  margin: 40px;
+}
+
 .color {
   display: inline-block;
+}
+
+.preta {
+  background-color: black;
+  border: black solid 1px;
+  height: 80px;
+  width: 80px;
 }
 
 .vermelho {
@@ -10,22 +21,22 @@
 }
 
 .azul {
-    background-color: blue;
-    border: black solid 1px;
-    height: 80px;
-    width: 80px;
+  background-color: blue;
+  border: black solid 1px;
+  height: 80px;
+  width: 80px;
 }
 
 .amarelo {
-    background-color: yellow;
-    border: black solid 1px;
-    height: 80px;
-    width: 80px;
+  background-color: yellow;
+  border: black solid 1px;
+  height: 80px;
+  width: 80px;
 }
 
 .verde {
-    background-color: green;
-    border: black solid 1px;
-    height: 80px;
-    width: 80px;
+  background-color: green;
+  border: black solid 1px;
+  height: 80px;
+  width: 80px;
 }
