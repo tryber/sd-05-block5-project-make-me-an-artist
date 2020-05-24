@@ -1,0 +1,39 @@
+.color-palette {
+  display: inline-flex;
+}
+
+.amarelo {
+  background-color: yellow;
+  border: 1px solid black;
+  color: yellow;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.azul {
+  background-color: blue;
+  border: 1px solid black;
+  color: blue;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.preto {
+  background-color: black;
+  border: 1px solid black;
+  color: black;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.vermelho {
+  background-color: red;
+  border: 1px solid black;
+  color: red;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
