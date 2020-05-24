@@ -1,7 +1,9 @@
-let botao = document.getElementById('clear-board');
-let corInicial = document.getElementById('pixel-board').style.backgroundColor;
+const botaoReset = document.getElementById('clear-board');
+const quadrados = document.getElementsByClassName('pixel');
 
-botao.addEventListener('click', function limparQuadro() {
-  corInicial = 'white';
-  botao = corInicial;
+botaoReset.addEventListener('click', function limparQuadro() {
+  for (let i = 0; i < quadrados.length; i += 1) {
+    quadrados[i].className = 'pixel';
+    quadrados[i].style.background = 'white';
+  }
 });
