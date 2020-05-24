@@ -37,3 +37,21 @@
   margin: 10px;
   width: 40px;
 }
+
+button {
+  margin-bottom: 30px;
+  margin-left: 90px;
+  margin-top: 30px;
+}
+
+tr {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+td {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
