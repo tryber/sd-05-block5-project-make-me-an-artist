@@ -1,0 +1,22 @@
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+}
