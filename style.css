@@ -1,0 +1,66 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  background-color: white;
+}
+
+#title {
+  color: blueviolet;
+}
+
+#container {
+  width: 220px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.color {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-top: 2%;
+  margin-left: 3.5%;
+}
+
+.color.black {
+  background-color: black;
+}
+
+.color.red {
+  background-color: red;
+}
+
+.color.green {
+  background-color: green;
+}
+
+.color.blue {
+  background-color: blue;
+}
+
+#clear-board {
+  position: relative;
+  margin-left: 60px;
+}
+
+#pixel-board {
+  position: relative;
+  width: 202px;
+  height: 202px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  margin-left: 8px;
+}
+
+.pixel {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: -1%;
+  padding: -1%;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  display: inline-block;
+}
