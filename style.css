@@ -29,9 +29,6 @@ h1{
 .color.green{
     background-color: green;
 }
-.color.yellow{
-    background-color: yellow;
-}
 .color.black{
     background-color: black;
 }
@@ -42,12 +39,10 @@ h1{
     width:200px;
     height: 200px;
 }
-#pixel-board, .lines{
-    background-color: white;
+#pixel-board, .pixel-board{
     display: inline-flex;
-    
 }
-.lines, .pixel{
+.pixel-board, .pixel{
     display: block;
 }
 .pixel{
@@ -57,4 +52,12 @@ h1{
 }
 .borda{
     border: 1px solid black;
+}
+article,h1,#color-palette.color,#clear-board,#pixel-board{
+    display: flex;
+}
+button{
+    position: relative;
+    top:150px;
+    left: 50px
 }
