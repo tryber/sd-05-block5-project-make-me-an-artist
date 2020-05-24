@@ -2,12 +2,13 @@
 let n = 5;
 let colorPalette = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
-let target = '';
-let black = document.getElementById('black');
-let blue = document.getElementById('blue');
-let red = document.getElementById('red');
-let green = document.getElementById('green');
+let black = document.querySelector('.black');
+let blue = document.querySelector('.blue');
+let red = document.querySelector('.red');
+let green = document.querySelector('.green');
 let selected = document.getElementsByClassName('selected')[0];  
+let cor = selected.classList[1];
+let target = '';
 
 // functions
 function createBoardLines() {
@@ -32,17 +33,28 @@ function createGridOfPixel(n) {
   }
 }
 
-function changeColor(){
+function changeSelectedColor(){
   target = event.target;
   selected.classList.remove('selected');
   target.classList.add('selected');
   selected = document.getElementsByClassName('selected')[0];
 }
 
+function setColorPixel(el) {
+  let actualColorPixel = document.querySelector('.selected');
+  let backgroundActual = actualColorPixel.classList[1];
+  let actualPixel = el.target;
+  actualPixel.style.backgroundColor = actualColorPixel.style.backgroundColor = backgroundActual;
+  
+  console.log(backgroundActual)
+}
+
+
 // events
-black.addEventListener('click', changeColor);
-blue.addEventListener('click', changeColor);
-red.addEventListener('click', changeColor);
-green.addEventListener('click', changeColor);
+black.addEventListener('click', changeSelectedColor);
+blue.addEventListener('click', changeSelectedColor);
+red.addEventListener('click', changeSelectedColor);
+green.addEventListener('click', changeSelectedColor);
+pixelBoard.addEventListener('click', setColorPixel)
 
 createGridOfPixel(n)
