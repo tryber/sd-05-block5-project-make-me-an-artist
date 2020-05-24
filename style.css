@@ -47,20 +47,18 @@ body {
 
 #pixel-board {
   position: relative;
-  width: 202px;
-  height: 202px;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
+  width: 215px;
+  height: 215px;
   margin-left: 8px;
+  background-color: white;  
 }
 
 .pixel {
   position: relative;
   width: 40px;
   height: 40px;
-  margin: -1%;
-  padding: -1%;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  display: inline-block;
+  margin: -3px;
+  padding: -3px;
+  border: 1px solid black;
+  display: inline-block;  
 }
