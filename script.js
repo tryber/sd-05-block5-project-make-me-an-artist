@@ -1,5 +1,5 @@
 // variables
-let n = 5;
+let n = 25;
 let colorPalette = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
 let black = document.querySelector('.black');
@@ -8,6 +8,7 @@ let red = document.querySelector('.red');
 let green = document.querySelector('.green');
 let selected = document.getElementsByClassName('selected')[0];  
 let cor = selected.classList[1];
+let clearAllButton = document.getElementById('clear-board');
 let target = '';
 
 // functions
@@ -45,10 +46,15 @@ function setColorPixel(el) {
   let backgroundActual = actualColorPixel.classList[1];
   let actualPixel = el.target;
   actualPixel.style.backgroundColor = actualColorPixel.style.backgroundColor = backgroundActual;
-  
-  console.log(backgroundActual)
 }
 
+function clearAll() {
+  for(let i = 0; i <= n; i += 1) {
+    pixelBoard.childNodes[i].style.backgroundColor = "white";
+  }
+}
+
+clearAllButton.addEventListener('click', clearAll);
 
 // events
 black.addEventListener('click', changeSelectedColor);
@@ -57,4 +63,4 @@ red.addEventListener('click', changeSelectedColor);
 green.addEventListener('click', changeSelectedColor);
 pixelBoard.addEventListener('click', setColorPixel)
 
-window.addEventListener('load',createGridOfPixel(n));
+window.addEventListener('load',createGridOfPixel(5));
