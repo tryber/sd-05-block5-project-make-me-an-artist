@@ -2,6 +2,10 @@
   background-color: black;
 }
 
+.blank {
+  background-color: white;
+}
+
 .board {
   height: 210px;
 }
