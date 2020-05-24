@@ -33,3 +33,21 @@ h1 {
   height: 80px;
   width: 80px;
 }
+
+.pixel-board {
+  display: inline-block;
+  margin: 0px;
+}
+
+.linha {
+  display: inline-block;
+  margin: 0px;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  height: 40px;
+  margin: 0px;
+  width: 40px;
+}
