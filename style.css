@@ -51,7 +51,9 @@ h1{
     width: 40px;
 }
 .borda{
-    border: 1px solid black;
+    border:1px ;
+    border-color:black;
+    border-style: solid;
 }
 article,h1,#color-palette.color,#clear-board,#pixel-board{
     display: flex;
