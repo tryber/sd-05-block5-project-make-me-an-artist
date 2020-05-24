@@ -36,11 +36,12 @@ h1{
     position: absolute;
     top: 200px;
     left: 50px;
-    width:(5*pixel)px;
-    height: (5*pixel)px;
+    width:5*40px;
+    height: 5*40px;
 }
 #pixel-board, .pixel-board{
     display: inline-flex;
+    z-index: 0;
 }
 .pixel-board, .pixel{
     display: block;
@@ -49,11 +50,13 @@ h1{
     background-color: white;
     height: 40px;
     width: 40px;
+    z-index: 1;
 }
 .borda{
     border-color:black;
     border-style: solid;
     border-width: 1px;
+    z-index: 1;
 }
 article,h1,#color-palette.color,#clear-board,#pixel-board{
     display: flex;
