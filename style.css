@@ -1,11 +1,12 @@
-.color{
+.color {
   border-color: black;
   border-style: solid;
   border-width: 1px;
+  display: inline-block;
   height: 30px;
   width: 30px;
-  display: inline-block;
 }
+
 .preto {
   background-color: black;
 }
@@ -23,23 +24,22 @@
 }
 
 #pixel-board {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
-  display: grid;
-  height: 40px;
-  width: 40px;
+  display: table;
 }
 
 .tr {
+  border-style: solid;
+  border-width: 1px;
   display: table-row;
   height: 40px;
   width: 40px;
 }
 
 .pixel {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
   display: table-cell;
   height: 40px;
   width: 40px;
 }
-
