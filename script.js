@@ -44,11 +44,24 @@ function getYellowColor(e) {
 }
 yellow.addEventListener('click', getYellowColor);
 
+// Essa função usa a cor da variável 'selectedColor' para pintar os pixeis clicados
 let pickPixel = document.querySelector('#pixel-board');
 function changePixelColor(e) {
   let pixel = e.target;
   pixel.style.backgroundColor = selectedColor;
 }
 pickPixel.addEventListener('click', changePixelColor);
+
+// Limpa todos os pixeis do quadro
+let buttonClear = document.getElementById('clear-board');
+function clearBoard() {
+  const board = document.getElementById('pixel-board');
+  for (let i = 0; i < 5; i += 1){
+    for (let j = 0; j < 5; j += 1){
+      board.children[i].children[j].style.backgroundColor = 'white';
+    }
+  }
+}
+buttonClear.addEventListener('click', clearBoard);
 
 
