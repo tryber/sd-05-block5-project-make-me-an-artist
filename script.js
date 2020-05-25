@@ -2,31 +2,31 @@
 const btn = document.getElementById("clear-board");
 
 function limpa (){
-  document.getElementById("pi1").style.backgroundColor = 'rgb(0, 0, 255';
-  document.getElementById("pi2").style.backgroundColor = "white";
-  document.getElementById("pi3").style.backgroundColor = "white";
-  document.getElementById("pi4").style.backgroundColor = "white";
-  document.getElementById("pi5").style.backgroundColor = "white";
-  document.getElementById("pi6").style.backgroundColor = "white";
-  document.getElementById("pi7").style.backgroundColor = "white";
-  document.getElementById("pi8").style.backgroundColor = "white";
-  document.getElementById("pi9").style.backgroundColor = "white";
-  document.getElementById("pi10").style.backgroundColor = "white";
-  document.getElementById("pi11").style.backgroundColor = "white";
-  document.getElementById("pi12").style.backgroundColor = "white";
-  document.getElementById("pi13").style.backgroundColor = "white";
-  document.getElementById("pi14").style.backgroundColor = "white";
-  document.getElementById("pi15").style.backgroundColor = "white";
-  document.getElementById("pi16").style.backgroundColor = "white";
-  document.getElementById("pi17").style.backgroundColor = "white";
-  document.getElementById("pi18").style.backgroundColor = "white";
-  document.getElementById("pi19").style.backgroundColor = "white";
-  document.getElementById("pi20").style.backgroundColor = "white";
-  document.getElementById("pi21").style.backgroundColor = "white";
-  document.getElementById("pi22").style.backgroundColor = "white";
-  document.getElementById("pi23").style.backgroundColor = "white";
-  document.getElementById("pi24").style.backgroundColor = "white";
-  document.getElementById("pi25").style.backgroundColor = "white";
+  document.getElementById("pi1").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi2").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi3").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi4").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi5").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi6").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi7").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi8").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi9").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi10").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi11").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi12").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi13").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi14").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi15").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi16").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi17").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi18").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi19").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi20").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi21").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi22").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi23").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi24").style.backgroundColor = "rgb(255, 255, 255)";
+  document.getElementById("pi25").style.backgroundColor = "rgb(255, 255, 255)";
   alert("board limpo!")
 };
 
