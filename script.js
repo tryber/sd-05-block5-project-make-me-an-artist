@@ -1,6 +1,6 @@
 const selecionaPreto = document.getElementById('preto');
 let pegaCorSelecionada = getComputedStyle(selecionaPreto, null).getPropertyValue('background-color');
-const monitoraColorPalette = document.getElementById("color-palette");
+const monitoraColorPalette = document.getElementById('color-palette');
 monitoraColorPalette.addEventListener('click', selecionaCorPaleta);
 //  monitorar "elements" nao deu certo - descobrir pq.
 //  let monitoraPixelBoard = document.getElementsByClassName('pixel');
@@ -37,8 +37,7 @@ function criaBoard(n) {
 }
 function selecionaCorPaleta(event) {
   pegaCorSelecionada = getComputedStyle(event.target, null).getPropertyValue('background-color');
-  const pegaClasseSelecionada = event.target.className;
-  if (pegaClasseSelecionada !== 'color selected') {
+  if (event.target.className !== 'color selected') {
     const elementosPaleta = document.getElementById('color-palette').children;
     for (let i = 0; i < elementosPaleta.length; i += 1) {
       if (elementosPaleta[i].className === 'color selected') {
