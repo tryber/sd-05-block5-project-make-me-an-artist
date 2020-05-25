@@ -4,6 +4,9 @@
 
 #pixel-board {
   margin-top: 60px;
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px;
+  grid-template-rows: 40px 40px 40px 40px 40px;
 }
 
 #clear-board {}
@@ -12,7 +15,9 @@
   border: solid 1px;
   width: 40px;
   height: 40px;
-  float: left;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: -4px;
 }
 
 .black {
@@ -29,6 +34,10 @@
 
 .blue {
   background-color: blue;
+}
+
+.blank {
+  background-color: white;
 }
 
 .pixel {
