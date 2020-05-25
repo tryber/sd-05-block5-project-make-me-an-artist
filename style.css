@@ -1,0 +1,43 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-left: 5px;
+  width: 40px;
+}
+
+.blackPalette {
+  background-color: black;
+}
+
+.redPalette {
+  background-color: red;
+}
+
+.bluePalette {
+  background-color: blue;
+}
+
+.greenPalette {
+  background-color: green;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  display: table; 
+}
+
+tr { 
+  display: table-row; 
+}
+
+td { 
+  display: table-cell; 
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
