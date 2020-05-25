@@ -24,4 +24,3 @@ for (let i = 0; i < listaDePixels.length; i += 1){
 clearButton.addEventListener('click', clear);
 
 //chamadas de funções
-clear()
