@@ -81,6 +81,12 @@ const table = document.getElementsByClassName('table')[1];
 
 buttonGenerateBoard.addEventListener('click', function() {
     let boardSize = boardSizeInput.value;
+    if ( boardSize < 5) {
+        boardSize = 5;
+    }
+    if (boardSize > 50) {
+        boardSize = 50;
+    }
     for (let linha = 0; linha < boardSize; linha += 1) {
         let divLinha = document.createElement('div');
         divLinha.className = 'tr';
@@ -91,12 +97,12 @@ buttonGenerateBoard.addEventListener('click', function() {
             divLinha.appendChild(div);
         }
     }
-    console.log(boardSize) 
+    document.querySelectorAll('.pixel').forEach((item) => {
+        item.addEventListener('click', (event) => {
+          console.log('hello')
+          item.setAttribute('style', 'background-color: ' + corSelecionada + ';');
+        });
+      });
 })
-document.querySelectorAll('.pixel').forEach((item) => {
-    item.addEventListener('click', (event) => {
-      console.log(corSelecionada)
-      item.setAttribute('style', 'background-color: ' + corSelecionada + ';');
-    });
-  });
+
   
