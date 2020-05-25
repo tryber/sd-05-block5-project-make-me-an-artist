@@ -1,17 +1,17 @@
 // Feito por Elisângelo
 // scripts para pintar os pixels de cores que foram seleciondas pelo usuario
-window.onload = function(){
+/*window.onload = function(){
 let selected = document.getElementsByClassName("black")[0];
 let cores = document.getElementById("color-palette");
 let clearButton = document.getElementById('clear-board');
-let pixelBoard = document.querySelectorAll("pixel");
+let pixelBoard = document.querySelector("#pixel-board");
 
 let corSelecionada= '';
-cores.addEventListener("click", selecionaCor);
+cores.addEventListener('click', selecionaCor);
 clearButton.addEventListener('click',limpaPixel);
-pixelBoard.addEventListener("click", colorePixel);
+pixelBoard.addEventListener('click', colorePixel);
 
-if( selecionaCor()){
+if( selecionaCor != undefined){
 selected.classList.remove("selected");
 }
 function selecionaCor(e){
@@ -30,8 +30,24 @@ function limpaPixel(e){
 }
 }
 function colorePixel(e){
-    let  pixelSelecionado = document.querySelectorAll("pixel")[e.target];
+    let  pixelSelecionado = document.querySelector(".pixel")[0];
     pixelSelecionado.style = corSelecionada.style.backgroundColor  
 }
 
-}
+}*/
+// Feito por Elisângelo
+// scripts para pintar os pixels de cores que foram seleciondas pelo usuario
+window.load = function(){
+    document.querySelector(".color.black").className += "selected";
+    let clearButton = document.getElementById('clear-board');
+    clearButton.addEventListener('click',limpaPixel);
+    let pixelBoard = document.getElementsByClassName("pixel")[0];
+    function limpaPixel(e){
+        for( limpa in pixelBoard){
+            pixelBoard[limpa].style.backgroundColor = "white";
+    
+        }
+    }
+    
+    
+    }
