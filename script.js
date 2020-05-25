@@ -7,7 +7,7 @@ function removeClassSelected() {
 }
 
 // Adiciona a classe 'selected' e pega a cor do objeto clicado
-let selectedColor = 'black'; //Valor default da cor igual a black
+let selectedColor = 'black'; // Valor default da cor igual a black
 const getPixelColor = document.querySelector('#color-palette');
 function getPixel(e) {
   const element = e.target;
@@ -42,8 +42,7 @@ const buttonSize = document.getElementById('generate-board');
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
-  
-  if (size.length < 1 || size === '' || size === null || isNaN(size)) {
+  if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
     alert('Board inválido!');
     size = 5;
   }
@@ -73,7 +72,7 @@ function ramdomColor() {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
   const blue = Math.floor(Math.random() * 256);
-  rGBColor += red + ', ' + green + ', ' + blue + ')';
+  rGBColor += red + ',' + green + ',' + blue + ')';
 }
 
 function createColor(classe) {

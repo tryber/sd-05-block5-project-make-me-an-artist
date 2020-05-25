@@ -22,3 +22,9 @@
   height: 40px;
   width: 40px;
 }
+
+.pixel-board {
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
