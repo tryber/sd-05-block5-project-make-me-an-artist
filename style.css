@@ -39,10 +39,6 @@ h1 {
   width: 100%;
 }
 
-.line  {
-  display: inline-block;
-}
-
 .pixel {
   background-color: white;
   border: black solid 1px;
