@@ -3,7 +3,7 @@ const pixel = document.querySelectorAll('.pixel');
 
 btn.addEventListener('click', function () {
   for (let i = 0; i < pixel.length; i+=1) {
-    pixel[i].style.backgroundColor = 'white';
+    pixel[i].className = 'pixel';
   }
 })
 
