@@ -1,10 +1,16 @@
 #pixel-board {
-    width: 200px;
-    height: 200px;
+    width: 210px;
+    height: 210px;
+    border: 1px solid black;
+    line-height: 0px;
+}
+.color {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
 }
-
-.color {
+.pixel {
     display: inline-block;
     width: 40px;
     height: 40px;
