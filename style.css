@@ -1,0 +1,50 @@
+#title {
+	align-content: center;
+}
+
+#color-palette {
+	align-content: center;
+	margin-left: 20%;
+	width: 200px;
+}
+
+.color {
+	border: solid 1px black;
+	height: 50px;
+	margin: 0;
+	position: relative;
+	width: 50px;
+}
+
+#cor1 {
+	background-color: black;
+}
+
+#cor2 {
+	background-color: blue;
+}
+
+#cor3 {
+	background-color: red;
+}
+
+#cor4 {
+	background-color: green;
+}
+
+#pixelboard {
+	border: solid 1px black;
+	height: 200px;
+	margin-left: 20%;
+	padding: 0;
+	width: 200px;
+	}
+
+.pixel {
+	background-color: white;
+	border: solid 1px black;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	width: 40px;
+}
