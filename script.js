@@ -48,28 +48,28 @@ function pixelGenerate (pixelNumbers) {
     }
     if (i <= 9 && i > 4 ) {
       pixelCreate = document.createElement("div");
-      pixelCreate.className = "pixel";
+      pixelCreate.className = "pixel blank";
       
       pixelFather = document.getElementsByClassName("line1")[0];
       pixelFather.appendChild(pixelCreate);
     }
     if (i <= 14 && i > 9 ) {
       pixelCreate = document.createElement("div");
-      pixelCreate.className = "pixel";
+      pixelCreate.className = "pixel blank";
       
       pixelFather = document.getElementsByClassName("line2")[0];
       pixelFather.appendChild(pixelCreate);
     }
     if (i <= 19 && i > 14 ) {
       pixelCreate = document.createElement("div");
-      pixelCreate.className = "pixel";
+      pixelCreate.className = "pixel blank";
       
       pixelFather = document.getElementsByClassName("line3")[0];
       pixelFather.appendChild(pixelCreate);
     }
     if (i<= 24 && i > 19) {
       pixelCreate = document.createElement("div");
-      pixelCreate.className = "pixel";
+      pixelCreate.className = "pixel blank";
       
       pixelFather = document.getElementsByClassName("line4")[0];
       pixelFather.appendChild(pixelCreate);
