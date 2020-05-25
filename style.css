@@ -1,19 +1,19 @@
-.color {
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
+body {
+  background-color: rgb(238, 238, 238);
+}
+.pixel.td {
+  background-color: rgb(255, 255, 255);
 }
 .table {
+  border: 1px solid black;
   display: table;
 }
 .td {
   display: table-cell;
-}
-.tr {
-  display: table-row;
-}
-.pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
+}
+.tr {
+  display: table-row;
 }
