@@ -54,7 +54,7 @@ function verifySize() {
 }
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
-  if (size === '') {size = 5};
+  if (size === '') { size = 5; }
   for (let i = 0; i < size; i += 1) {
     const divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
