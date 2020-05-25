@@ -1,3 +1,4 @@
+//code by Lyraah
 //Variáveis
 let colorBase1 = document.querySelectorAll(".color")[0];
 let colorBase2 = document.querySelectorAll(".color")[1];
