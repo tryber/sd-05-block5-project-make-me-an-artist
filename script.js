@@ -42,16 +42,19 @@ const buttonSize = document.getElementById('generate-board');
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
-  if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
-    alert('Board inválido!');
-    size = 5;
+  function verifySize() {  
+    if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
+      alert('Board inválido!');
+      size = 5;
+    }
+    if (size < 5) {
+      size = 5;
+    }
+    if (size > 50) {
+      size = 50;
+    }
   }
-  if (size < 5) {
-    size = 5;
-  }
-  if (size > 50) {
-    size = 50;
-  }
+  verifySize();
   for (let i = 0; i < size; i += 1) {
     const divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
@@ -70,9 +73,12 @@ let rGBColor = '';
 function ramdomColor() {
   rGBColor = 'rgb(';
   const red = Math.floor(Math.random() * 256);
+  const redName = red.toString();
   const green = Math.floor(Math.random() * 256);
+  const greenName = green.toString();
   const blue = Math.floor(Math.random() * 256);
-  rGBColor += red + ',' + green + ',' + blue + ')';
+  const blueName = blue.toString();
+  rGBColor += redName + ',' + greenName + ',' + blueName + ')';
 }
 
 function createColor(classe) {
