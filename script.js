@@ -47,7 +47,20 @@ document.getElementById("cor4").addEventListener("click", function(){
     document.getElementById("cor2").className = 'color';
     document.getElementById("cor3").className = 'color';
 });
-                    
+
+let pixelselecionado ='';
+//let corpi = document.getElementById("corselecionada").getPropertyValue('background-color');
+//alert(corpi);
+
+function pintapixel (pixelevent){
+    pixelselecionado = pixelevent.target;
+    let selected = document.querySelector('.selected');
+    pixelselecionado.style.backgroundColor = selected.style.backgroundColor;
+    
+};
+
+document.getElementById("pixel-board").addEventListener("click", pintapixel);
+
 // document.addEventListener('click', function (event) {
 //     if ( event.target.classList.contains( 'color' ) ) {
 //     document.getElementById("corselecionada").style.backgroundColor
