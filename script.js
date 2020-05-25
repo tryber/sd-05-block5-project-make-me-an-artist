@@ -56,8 +56,8 @@ pickPixel.addEventListener('click', changePixelColor);
 let buttonClear = document.getElementById('clear-board');
 function clearBoard() {
   const board = document.getElementById('pixel-board');
-  for (let i = 0; i < 5; i += 1){
-    for (let j = 0; j < 5; j += 1){
+  for (let i = 0; i < board.children.length; i += 1){
+    for (let j = 0; j < board.children.length; j += 1){
       board.children[i].children[j].style.backgroundColor = 'white';
     }
   }
