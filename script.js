@@ -62,10 +62,10 @@ buttonClear.addEventListener('click', function () {
 });
 
 let randomColor;
-let cor = document.querySelectorAll('.color');
+const cor = document.querySelectorAll('.color');
 for (let c = 1; c < cor.length; c += 1) {
   randomColor =
-    '#' + (0x1000000 + (Math.random() * 0xffffff)).toString(16).substr(1, 6);
+    `#${(0x1000000 + (Math.random() * 0xffffff)).toString(16).substr(1, 6)}`;
   cor[c].setAttribute('style', `background-color: ${randomColor}`);
 }
 
@@ -100,8 +100,8 @@ buttonGenerateBoard.addEventListener('click', function () {
     }
   }
   document.querySelectorAll('.pixel').forEach((item) => {
-    item.addEventListener('click', () => {
-      
+    
+    item.addEventListener('click', () => {      
       item.setAttribute('style', `background-color: ${corSelecionada};`);
     });
   });
