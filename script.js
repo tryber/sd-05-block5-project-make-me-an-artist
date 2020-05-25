@@ -9,7 +9,6 @@ let eachColor = querySelectorAll(".color");
 function changeSelected() {
   colorSelected.classList.remove("selected");
   event.target.classList.add("selected");
-  colorSelected = getElementsByClassName("selected")[0];
 }
 
 colorBlack.addEventListener("click", changeSelected);
