@@ -24,7 +24,9 @@
 }
 
 #pixel-board {
+  height: 210px;
   width: 210px;
+  
 }
 
 .firstBox {
