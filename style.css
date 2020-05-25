@@ -26,11 +26,12 @@
 }
 
 #pixel-board {
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
 }
 
 .pixel {
+  background-color: white;
   width: 40px;
   height: 40px;
   border: 1px solid black;

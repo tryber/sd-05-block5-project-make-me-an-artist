@@ -113,7 +113,7 @@ function  blankColor() {
   let blanker = document.getElementsByClassName("pixel")
   for (i = 0 ; i < blanker.length ; i += 1) {
 
-    blanker[i].className = "pixel blank"
+    blanker[i].className = "pixel"
   }
 }
 let blankerBut = document.getElementById("clear-board")
