@@ -43,7 +43,7 @@ function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
   console.log(size);
-  if (size == false){
+  if (size === NaN){
     alert('Board inválido!');
     size = 5;
   }
