@@ -1,11 +1,11 @@
 const table = document.getElementById('pixel-board');
-const preto = document.getElementsByClassName('preto');
+const preto = document.getElementById('preto');
 const corUm = document.getElementsByClassName('cor1');
 const corDois = document.getElementsByClassName('cor2');
 const corTres = document.getElementsByClassName('cor3');
 const btnClean = document.getElementById('clear-board');
 let pixel = document.getElementsByClassName('pixel');
-let selectedColor = 'white';
+let selectedColor = 'black';
 const init = '<div class="tr">';
 const cell = '<div class="pixel"></div>';
 const final = '</div>';
@@ -38,23 +38,25 @@ function generateBoard(value = null) {
 generateBoard(5);
 
 function selectColor() {
-  if (event.target === preto[0]) {
+  if (event.target === preto) {
     selectedColor = 'black';
   }
-  if (event.target === corUm[0]) {
+  else if (event.target === corUm[0]) {
     selectedColor = 'blue';
   }
-  if (event.target === corDois[0]) {
+  else if (event.target === corDois[0]) {
     selectedColor = 'red';
   }
-  if (event.target === corTres[0]) {
+  else if (event.target === corTres[0]) {
     selectedColor = 'yellow';
   }
+  changeSelect();
 }
 
 function changeSelect() {
-  if (event.target !== preto[0]) {
-    preto[0].classList.remove('selected')
+  if (event.target !== preto) {
+    preto.classList.remove('selected')
+    event.target.classList.add('selected')
   } 
 }
 
@@ -70,7 +72,7 @@ function cleanBoard() {
   }
 }
 
-preto[0].addEventListener('click', selectColor);
+preto.addEventListener('click', selectColor);
 corUm[0].addEventListener('click', selectColor);
 corDois[0].addEventListener('click', selectColor);
 corTres[0].addEventListener('click', selectColor);
