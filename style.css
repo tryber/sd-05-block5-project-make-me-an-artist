@@ -9,6 +9,18 @@
   background-color: black;
 }
 
+.vermelho {
+  background-color: rgb(157 , 0 , 0);
+}
+
+.amarelo {
+  background-color: rgb(225 , 176 , 0);
+}
+
+.azul {
+  background-color: rgb(0 , 115 , 167);
+}
+
 .pixel {
   background-color: white;
   border: 1px solid black;  
