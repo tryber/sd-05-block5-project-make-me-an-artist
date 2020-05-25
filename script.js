@@ -64,8 +64,9 @@ buttonClear.addEventListener('click', function () {
 let randomColor;
 const cor = document.querySelectorAll('.color');
 for (let c = 1; c < cor.length; c += 1) {
-  randomColor =
-    `#${(0x1000000 + (Math.random() * 0xffffff)).toString(16).substr(1, 6)}`;
+  randomColor = `#${(0x1000000 + Math.random() * 0xffffff)
+    .toString(16)
+    .substr(1, 6)}`;
   cor[c].setAttribute('style', `background-color: ${randomColor}`);
 }
 
@@ -74,7 +75,7 @@ const buttonGenerateBoard = document.getElementById('generate-board');
 const board = document.getElementById('pixel-board');
 
 buttonGenerateBoard.addEventListener('click', function () {
-  board.innerHTML = ''; 
+  board.innerHTML = '';
   let boardSize = boardSizeInput.value;
   if (!boardSize) {
     alert('Board inválido!');
@@ -97,17 +98,12 @@ buttonGenerateBoard.addEventListener('click', function () {
     }
   }
   coloreGrid();
-  // document.querySelectorAll('.pixel').forEach((item)=> {     
-  //   item.addEventListener('click', () => {      
-  //     item.setAttribute('style', `background-color: ${corSelecionada};`);
-  //   });
-  // });
 });
-function coloreGrid() { 
-document.querySelectorAll('.pixel').forEach((item)=> {
-  item.addEventListener('click', () => {
-    item.setAttribute('style', `background-color: ${corSelecionada};`);
+function coloreGrid() {
+  document.querySelectorAll('.pixel').forEach((item) => {
+    item.addEventListener('click', () => {
+      item.setAttribute('style', `background-color: ${corSelecionada};`);
+    });
   });
-});
 }
 coloreGrid();

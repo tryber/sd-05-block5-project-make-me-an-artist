@@ -2,16 +2,13 @@ body {
   background-color: lightblue;
 }
 
-.pixel.td {
-  background-color: white;
-}
-
 .table {
   border: 1px solid black;
   display: table;
 }
 
 .td {
+  background-color: white;
   border: 1px solid black;
   display: table-cell;
   height: 40px;
