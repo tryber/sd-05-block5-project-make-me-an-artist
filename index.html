@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
   <title>Paleta de Cores</title>
 
 </head>
@@ -12,11 +11,11 @@
   <header>
     <h1 id='title'>Paleta de Cores</h1>
   </header>
-<div>
-  <button id='color-palette'class='color'style='background-color:black';></button>
-  <button id='color-palette'class='color'style='background-color:red';></button>
-  <button id='color-palette'class='color'style='background-color:blue';></button>
-  <button id='color-palette'class='color'style='background-color:green';></button>
+<div id ='color-palette'>
+  <div class='color black selected'></div>
+  <div class='color red'></div>
+  <div class='color blue'></div>
+  <div class='color green'></div>
 </div>
 <div>
   <div id='pixel-board'>
@@ -45,9 +44,9 @@
     <div class='pixel'></div>
     <div class='pixel'></div>
     <div class='pixel'></div>
-    
   </div>
 
 </div>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

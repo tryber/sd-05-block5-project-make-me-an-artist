@@ -1,19 +1,36 @@
 .color {
   border: 1px solid black;
-  height: 60px;
-  width: 60px;  
+  height:60px;
+  width:60px;
+  display: inline-block;
+}
+.black {
+  background-color: rgb(0, 0, 0);
+}
+.red {
+  background-color: rgb(255,2, 2);
+}
+
+.blue {
+  background-color: rgb(25,25, 121);
+}
+
+.green{
+  background-color: rgb(34,139,34);
 }
 
 #pixel-board {
   width: 210px;
 }
+
 .firstBox {
-  clear:left;
+  clear: left;
 }
+
 .pixel {
   width: 40px;
   height: 40px;
   background-color: white;
-  float:left;
+  float: left;
   border: 1px solid black;
 }
