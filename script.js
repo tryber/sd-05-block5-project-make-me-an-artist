@@ -8,7 +8,7 @@ let green = document.getElementById("green");
 let blue = document.getElementById("blue");
 
 let currentSelected = document.getElementsByClassName("selected")[0];
-let colorSelected = "";
+
 function changeSelected(event) { //function deve transferir a class selected
   let colorSelected = event.target;
   if (colorSelected != currentSelected) {
