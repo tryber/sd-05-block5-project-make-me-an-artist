@@ -48,8 +48,9 @@
 }
 
 .container {
-  background-color: chartreuse;
-  display: flex;
+  background-color: crimson;
+  border: 1px solid;
+  display: inline-block;
   flex-direction: column;
   margin: 50px;
 }
@@ -57,4 +58,9 @@
 .title {
   text-align: center;
   margin-top: 20px;
+}
+
+.clear-board {
+  margin: 50px;
+  padding: 5px;
 }
