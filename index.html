@@ -9,12 +9,16 @@
  <body>
    <article>
    <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette">
-      <div class="color black"></div>
-      <div class="color red"></div>
-      <div class="color green"></div>
-      <div class="color blue"></div>
-    </div>
+   <section id="selecao">
+   <label>Cor selecionada: </label>
+   <span class="selecao">preto</span>
+  </section>
+    <section id="color-palette">
+      <div class="color black selected borda"></div>
+      <div class="color red borda"></div>
+      <div class="color green borda"></div>
+      <div class="color blue borda"></div>
+    </section>
     <button id="clear-board" type="button">Limpar</button>
     <div id="pixel-board">
       <section class="pixel-board">
@@ -54,5 +58,6 @@
       </section>
     </div>
   </article>
+  <script src="script.js"></script>
   </body>
 </html>
