@@ -40,8 +40,8 @@ h1{
     position: absolute;
     top: 200px;
     left: 50px;
-    width:5*40px;
-    height: 5*40px;
+    widows: 200px;
+    height: 200px;
 }
 #pixel-board, .pixel-board{
     display: inline-flex;

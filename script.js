@@ -11,14 +11,14 @@ cores.addEventListener("click", selecionaCor);
 clearButton.addEventListener('click',limpaPixel);
 pixelBoard.addEventListener("click", colorePixel);
 
-
+if( selecionaCor()){
 selected.classList.remove("selected");
-
+}
 function selecionaCor(e){
     let selecao = document.querySelector(".selecao");
     let cor = e.target;
     selecao.innerHTML = cor.classList[1];
-    corSelecionada.className = cor.classList[1].className;
+    corSelecionada.classList.add(cor.classList[1]);
     console.log(corSelecionada.className);
     console.log("passei por aqui");
 }
