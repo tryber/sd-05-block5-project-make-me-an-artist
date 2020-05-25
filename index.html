@@ -12,15 +12,15 @@
     </header>
     <!--Dives do cabeçalho -->
     <section id="color-palette">
-        <div class="color selected peca1"></div>
-        <div class="color peca2"></div>
-        <div class="color peca3"></div>
-        <div class="color peca4"></div>
+        <div class="selected color  pega1"></div>
+        <div class="color pega2"></div>
+        <div class="color pega3"></div>
+        <div class="color pega4"></div>
         
     </section>
     <!--Dives do cabeçalho termina aqui -->
 
-    <input id="clear-board" type="button" value="Limpar" >
+    <input id="clear-board" type="button" value='Limpar' >
 
     <section id="pixel-board">
         <div class="pixel"></div>
@@ -57,7 +57,7 @@
       </div>
     </section>
 </div> 
-
+<!--Função que limpa o quadro preenchendo de branco -->
 <script>
        let recPixel = document.getElementById('clear-board')
        let limpar = document.getElementsByClassName('pixel')
@@ -67,9 +67,19 @@
              console.log(limpar[contador].style.backgroundColor='white')
              contador += 1
            }
-       })
-           
-    
+       })   
+</script>
+
+<script>
+    let corPreta = document.getElementsByClassName('pega1')
+    let corVermalha = document.getElementsByClassName('pega2')  
+    let corAzul = document.getElementsByClassName('pega3')
+    let corVerde = document.getElementsByClassName('pega4')
+
+    corPreta.addEventListener('click',function(){
+        corPreta.
+    })
+        console.log(corVermalha)
 </script>
     
 </body>
