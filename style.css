@@ -6,6 +6,13 @@ h1 {
   display: inline-block;
 }
 
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  height: 40px;
+  width: 40px;
+}
+
 .preto {
   background-color: black;
   border: black solid 1px;
@@ -37,11 +44,4 @@ h1 {
 .pixel-board {
   height: 100%;
   width: 100%;
-}
-
-.pixel {
-  background-color: white;
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
 }

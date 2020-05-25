@@ -18,15 +18,15 @@ colorPalette.addEventListener('click', function (event) {
   corEscolhida.classList.add('selected');
 })
 
-const colorirPixel = document.querySelectorAll('.pixel');
-
 const colorir = document.querySelector('tbody');
 colorir.addEventListener('click', function (event) {
   let pixelEscolhido = event.target;
+  pixelEscolhido.className = ' ';
   let lista = document.querySelector('.selected').classList;
   for (let i = 0; i < lista.length; i+=1) {
     if (lista[i] !== 'color' && lista[i] !== 'selected') {
-      pixelEscolhido.className = lista[i];
+      pixelEscolhido.classList.add(lista[i]);
     }
   }
+  pixelEscolhido.classList.add('pixel');
 })
