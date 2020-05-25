@@ -21,6 +21,7 @@ function colorPixel() {
   target.style.backgroundColor=corSelecionada;
   
 }
+colorBlack.addEventListener('click',changeSel);
 color1.addEventListener('click',changeSel);
 color2.addEventListener('click',changeSel);
 color3.addEventListener('click',changeSel);
