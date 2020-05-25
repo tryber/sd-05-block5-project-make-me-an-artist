@@ -9,37 +9,37 @@ h1 {
 .preto {
   background-color: black;
   border: black solid 1px;
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
 }
 
 .vermelho {
   background-color: red;
   border: black solid 1px;
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
 }
 
 .azul {
   background-color: blue;
   border: black solid 1px;
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
 }
 
 .amarelo {
   background-color: yellow;
   border: black solid 1px;
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-board {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
 }
 
-.line {
+.line  {
   display: inline-block;
 }
 
