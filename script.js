@@ -64,4 +64,26 @@ function clearBoard() {
 }
 buttonClear.addEventListener('click', clearBoard);
 
+// Cria um board com n x n pixels
+let buttonSize = document.getElementById('generate-board');
+function generateBoard() {
+  let size = document.getElementById('board-size').value;
+  if (size < 5 || size > 50){
+    alert('Digite um número válido entre 5 e 50'); 
+  } else {
+    document.getElementById('pixel-board').innerHTML = '';
+    for (let i = 0; i < size; i += 1){
+      let divLine = document.createElement('div');
+      divLine.className = 'pixel-line';
+      document.getElementById('pixel-board').appendChild(divLine);
+      for (let j = 0; j < size; j += 1){
+        let divPixel = document.createElement('div');
+        divPixel.className = 'pixel';
+        document.querySelectorAll('.pixel-line')[i].appendChild(divPixel);
+      }
+    }
+  }
+}
+buttonSize.addEventListener('click', generateBoard);
+
 
