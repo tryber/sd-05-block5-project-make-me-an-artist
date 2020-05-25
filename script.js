@@ -1,3 +1,4 @@
+//criar quadros dinâmicamente
 function criarQuadros() {
   const div1 = document.querySelector('.pixel-board');
 
@@ -8,87 +9,40 @@ function criarQuadros() {
   }
 }
 
-function criarQuadros2() {
-  const div1 = document.querySelector('.session2');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros3() {
-  const div1 = document.querySelector('.session3');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros4() {
-  const div1 = document.querySelector('.session4');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros5() {
-  const div1 = document.querySelector('.session5');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function renderizarPixels() {
-  criarQuadros();
-  // criarQuadros2();
-  // criarQuadros3();
-  // criarQuadros4();
-  // criarQuadros5();
-}
-renderizarPixels();
+criarQuadros();
 
 //evento de click nas cores
 const coresBlack = document.querySelector('.selected');
-coresBlack.addEventListener('click', aplicarCorBlack);
+coresBlack.addEventListener('click', corBlack);
 
 let corAtual = 'black';
 
-function aplicarCorBlack() {
+function corBlack() {
   corAtual = 'black';
 }
 
 const coresYellow = document.querySelector('.color-yellow');
-coresYellow.addEventListener('click', aplicarCorYellow);
+coresYellow.addEventListener('click', corYellow);
 
-function aplicarCorYellow() {
+function corYellow() {
   corAtual = 'yellow';
 }
 
 const coresBlue = document.querySelector('.color-blue');
-coresBlue.addEventListener('click', aplicarCorBlue);
+coresBlue.addEventListener('click', corBlue);
 
-function aplicarCorBlue() {
+function corBlue() {
   corAtual = 'blue';
 }
 
 const coresGreen = document.querySelector('.color-green');
-coresGreen.addEventListener('click', aplicarCorGreen);
+coresGreen.addEventListener('click', corGreen);
 
-function aplicarCorGreen() {
+function corGreen() {
   corAtual = 'green';
 }
 
-//caixas de pixel em branco
+//Identificar click na caixa de pixel e aplicar cor
 const pixels = document.querySelectorAll('.pixel');
 for(let i = 0; i < pixels.length; i += 1) {
   pixels[i].addEventListener('click', identicarPixel);
@@ -98,7 +52,7 @@ function identicarPixel(evento) {
   evento.target.style.backgroundColor = corAtual;
 }
 
-//limpar cores
+//limpar cores associando ao botão
 let botaoApagarCores = document.querySelector('#clear-board');
 botaoApagarCores.addEventListener('click', apagarEstilos);
 
