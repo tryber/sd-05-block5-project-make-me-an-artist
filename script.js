@@ -1,5 +1,4 @@
 let palette;
-let cells;
 let clearButton;
 function setCurrentColor(el) {
   for (let i = 0; i < palette.length; i += 1) {
@@ -19,10 +18,19 @@ function buildPalette() {
     palette[i].addEventListener('click', setCurrentColor);
   }
 }
-function buildGrid() {
-  for (let i = 0; i < cells.length; i += 1) {
-    cells[i].style.backgroundColor = 'white';
-    cells[i].addEventListener('click', setPixelColor);
+function buildGrid(size) {
+  const board = document.getElementById('pixel-board');
+  const width = `${size*40}px`;
+  board.style.width = width;
+  document.getElementById('color-palette').style.width = width;
+  document.getElementById('tools-board').style.width = width;
+  board.innerHTML = '';
+  for (let i = 0; i < Math.pow(size, 2); i += 1) {
+    const div = document.createElement('div');
+    const cell = board.appendChild(div);
+    cell.className = 'pixel';
+    cell.style.backgroundColor = 'white';
+    cell.addEventListener('click', setPixelColor);
   }
 }
 function clearAll() {
@@ -32,9 +40,18 @@ function clearAll() {
 }
 window.onload = function () {
   palette = document.getElementsByClassName('color');
-  cells = document.getElementsByClassName('pixel');
   clearButton = document.getElementById('clear-board');
   clearButton.addEventListener("click", this.clearAll);
+  // Defines configurations
+  const boardSizeInput = document.getElementById('board-size');
   buildPalette();
-  buildGrid();
+  buildGrid(boardSizeInput.value);
+  document.getElementById('generate-board').addEventListener('click', function () {
+    if (!boardSizeInput.value) {
+      window.alert("Board inválido!");
+      return;
+    }
+    const size = (boardSizeInput.value > 50) ? 50 : (boardSizeInput.value < 5) ? 5 : boardSizeInput.value;
+    buildGrid(size);
+  });
 };

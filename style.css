@@ -5,6 +5,9 @@ body {
 .palette , .board , .tools {
   margin: 5px 0;
   text-align: center;
+}
+
+.palette, .tools {
   width: 210px;
 }
 
