@@ -7,55 +7,7 @@ function criarQuadros() {
     div1.appendChild(newDiv);
   }
 }
-
-function criarQuadros2() {
-  const div1 = document.querySelector('.session2');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros3() {
-  const div1 = document.querySelector('.session3');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros4() {
-  const div1 = document.querySelector('.session4');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function criarQuadros5() {
-  const div1 = document.querySelector('.session5');
-
-  for(let i = 0; i < 5; i += 1) {
-    const newDiv = document.createElement('div');
-    newDiv.className = 'pixel';
-    div1.appendChild(newDiv);
-  }
-}
-
-function renderizarPixels() {
-  criarQuadros();
-  // criarQuadros2();
-  // criarQuadros3();
-  // criarQuadros4();
-  // criarQuadros5();
-}
-renderizarPixels();
+criarQuadros();
 
 //evento de click nas cores
 const coresBlack = document.querySelector('.selected');

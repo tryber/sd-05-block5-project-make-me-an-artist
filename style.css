@@ -34,10 +34,6 @@
   float: left;
 }
 
-.session {
-
-}
-
 .pixel {
   background-color: white;
   border: 1px solid black;
@@ -51,170 +47,14 @@
   width: 210px;
 }
 
-/* .pixel {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
+.container {
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
+.title {
+  text-align: center;
+  margin-top: 20px;
 }
-
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel6 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel7 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel8 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel9 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel10 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel11 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel12 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel13 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel14 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel15 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel16 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel17 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel18 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel19 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel20 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel21 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel22 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel23 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel24 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-}
-
-.pixel25 {
-  background-color: white;
-  border: 1px solid black;
-  height: 40px;
-  width: 40px;
-} */
