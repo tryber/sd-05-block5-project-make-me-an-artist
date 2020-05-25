@@ -6,19 +6,17 @@ const corTres = document.getElementsByClassName('cor3');
 const btnClean = document.getElementById('clear-board');
 let pixel = document.getElementsByClassName('pixel');
 let selectedColor = 'white';
+const init = '<div class="tr">';
+const cell = '<div class="pixel"></div>';
+const final = '</div>';
+let content = '';
+let initSelect = document.getElementsByClassName('selected');
 
 function generateBoard(value = null) {
   let size = value;
   if (value == null) size = document.getElementById('board-size').value;
-  if (size > 50) {
-    window.alert('Valor excedido!');
+  if (size > 50) { window.alert('Valor excedido!');
   }
-
-  const init = '<div class="tr">';
-  const cell = '<div class="pixel"></div>';
-  const final = '</div>';
-  let content = '';
-
   for (let line = 1; line <= size; line += 1) {
     content += init;
     // <div class="tr">
@@ -52,6 +50,12 @@ function selectColor() {
   if (event.target === corTres[0]) {
     selectedColor = 'yellow';
   }
+}
+
+function changeSelect() {
+  if (event.target !== preto[0]) {
+    preto[0].classList.remove('selected')
+  } 
 }
 
 function changeColor() {
