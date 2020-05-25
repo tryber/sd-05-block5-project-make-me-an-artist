@@ -1,42 +1,46 @@
-.color{
+.color {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
-  margin: 0px 5px 0px 5px;
+  margin: 0 5px;
   width: 40px;
 }
 
-.color-palette{
+.color-palette {
   margin: auto;
   margin-bottom: 15px;
   margin-top: 15px;
 }
 
-.black{
-  background-color: red;
+.black {
+  background-color: black;
 }
 
-.green{
+.green {
   background-color: green;
 }
 
-.blue{
+.blue {
   background-color: blue;
 }
 
-.yellow{
+.yellow {
   background-color: yellow;
 }
 
-.pixel{
+.pixel {
   background-color: white;
   border: 1px black solid;
   display: inline-block;
-  margin: 0px;
   height: 40px;
+  margin: 0;
   width: 40px;
 }
 
-.pixel-line{
-  margin: 0px;
+.pixel-line {
+  margin: 0;
+}
+
+.selected {
+
 }
