@@ -2,6 +2,13 @@
 window.onload = function(){
   let selectedClass = document.getElementsByClassName("firstColor")[0]
   selectedClass.className += " selected"
+  selectedClass.style.backgroundColor= "black"
+  let randonColor1 = document.getElementsByClassName("default1")[0]
+  randonColor1.style.backgroundColor = geraCor()
+  let randonColor2 = document.getElementsByClassName("default2")[0]
+  randonColor2.style.backgroundColor = geraCor()
+  let randonColor3 = document.getElementsByClassName("default3")[0]
+  randonColor3.style.backgroundColor = geraCor()
 }
 
 //GERA CORES ALEATORIAS
@@ -20,9 +27,7 @@ function lineGenerate(lineNumbers) {
   
   for( i = 0 ; i < lineNumbers ; i += 1) {
     let lineCreate = document.createElement("div");
-    lineCreate.className = "line"+i
-    lineCreate.style.width = "210px"
-    lineCreate.style.height = "42px"
+    lineCreate.className = "line"+i + " " + "remove"
     
     
     
@@ -79,6 +84,55 @@ function pixelGenerate (pixelNumbers) {
 lineGenerate(5);
 pixelGenerate(25);
 
+//GERA GRID DE ACORDO COM USUARIO
+let quadro = document.getElementById("board-size")
+let formar = document.getElementById("generate-board")
+formar.addEventListener("click", function () {
+  let removalChild = document.getElementsByClassName("remove")
+  
+  for ( i = removalChild.length-1 ; i >= 0 ; i-- ) {
+    let removalFather = document.getElementById("pixel-board")
+    removalFather.removeChild(removalChild[i]);
+  }
+  
+  //CORRIGINFO VALORES DE LINHA E PIXEL
+  linha = parseInt(quadro.value)
+  if (linha < 5) {
+    linha = 5
+  }
+  if (linha > 50) {
+    linha = 50
+  }
+  //GERANDO LINHAS 
+  lineGenerate(linha)
+
+  //REMOVENDO GRID PADRAO E CORRIGINDO WIDTH E HEIGHT
+  let removalFather = document.getElementById("pixel-board");
+  let newWidth = linha*42
+  removalFather.style.width = newWidth+"px"
+  removalFather.style.height = newWidth+"px"
+
+  //CRIANDO PIXELS NOVOS
+  for ( i = 0 ; i < linha ; i += 1) {
+    
+    for (k = 0 ; k < linha ; k += 1) {
+    pixelCreate = document.createElement("div");
+      pixelCreate.className = "pixel blank";
+      let classActualName = "line"+i  
+      pixelFather = document.getElementsByClassName(classActualName)[0];
+      pixelFather.appendChild(pixelCreate);
+    }
+}
+
+
+})
+//INPUT VALUE CORRECTION
+function checkValue (object) {
+  if (object.value <= 0) {
+    alert("Board inválido!")
+  }
+}
+
 //TROCA A SELEÇÃO DA PALETA DE CORES
 function selection (event){
   let oldSelection = document.getElementsByClassName("selected")[0];
@@ -101,9 +155,9 @@ color3.addEventListener('click', selection);
 function changeColor(event) {
   let selectedPallete = document.getElementsByClassName("selected")[0];
   let selectedPixel = event.target
-  
+  let novaCor = selectedPallete.style.backgroundColor
   selectedPixel.classList.remove(selectedPixel.classList[1]);
-  selectedPixel.classList.add(selectedPallete.classList[1])
+  selectedPixel.style.backgroundColor = novaCor 
 }
 let pixTable = document.getElementById("pixel-board")
 pixTable.addEventListener("click", changeColor)
@@ -113,7 +167,7 @@ function  blankColor() {
   let blanker = document.getElementsByClassName("pixel")
   for (i = 0 ; i < blanker.length ; i += 1) {
 
-    blanker[i].className = "pixel blank"
+    blanker[i].style.backgroundColor = "white"
   }
 }
 let blankerBut = document.getElementById("clear-board")
