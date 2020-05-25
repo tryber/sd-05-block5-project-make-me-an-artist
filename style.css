@@ -54,10 +54,24 @@ display: table-row;
 background-color: white;
 border: solid 1px black;
 display: table-cell;
-height: 38px;
-width: 38px;
+height: 40px;
+width: 40px;
 }
 
 #clear-board {
 margin-left: 35%;
+}
+
+#corselecionada {
+	background-color: black;
+	height: 30px;
+	width: 100px;
+	color:white;
+	padding: 5px;
+	text-align: center;
+}
+
+.selected {
+	margin-left: 35%;
+	margin-bottom: 50px;
 }
