@@ -98,3 +98,9 @@ buttonGenerateBoard.addEventListener("click", function () {
     });
   });
 });
+document.querySelectorAll(".pixel").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      console.log("hello");
+      item.setAttribute("style", "background-color: " + corSelecionada + ";");
+    });
+  });
