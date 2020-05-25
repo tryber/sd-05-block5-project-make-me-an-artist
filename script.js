@@ -23,7 +23,7 @@ green.addEventListener("click", changeSelected);
 blue.addEventListener("click", changeSelected);
 
 
-
+let board = querySelector(".board");
 // Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
 // - Ao carregar a página deve ser possível pintar os pixels de preto
 // (ou seja, interpretando: é o selected que conta para isso)
