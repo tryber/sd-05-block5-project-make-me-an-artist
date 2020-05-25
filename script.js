@@ -24,7 +24,7 @@ blue.addEventListener("click", changeSelected);
 
 // Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
 // - Ao carregar a página deve ser possível pintar os pixels de preto
-// (ou seja, interpretando: é o selected que conta para isso)
+// (ou seja, interpretando: é q class selected que vai ser determinante)
 // - Após selecionar uma outra cor na paleta, deve ser possível pintar os pixels com essa cor
 // - Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
 // (ou seja nao usar a class que é igual para todas, e sim um event.target).
@@ -42,7 +42,7 @@ let clearButton = document.getElementById("clear-board");
 
 function clearBoard() {
   let allPixels = document.getElementById("pixel-board");
-  allPixels.style.backgroundColor = "white";
+  allPixels.style = "backgroundColor: white";
 }
 clearButton.addEventListener("click", clearBoard);
 
