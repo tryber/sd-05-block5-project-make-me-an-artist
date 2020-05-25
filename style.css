@@ -32,4 +32,11 @@
   background-color: white;
   border: 1px black solid;
   display: inline-block;
+  margin: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-line{
+  margin: 0px;
 }
