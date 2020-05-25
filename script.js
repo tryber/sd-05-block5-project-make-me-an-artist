@@ -20,7 +20,7 @@ function buildPalette() {
 }
 function buildGrid(size) {
   const board = document.getElementById('pixel-board');
-  const width = `${size * 40}px`;
+  const width = `${size * 41}px`;
   board.style.width = width;
   document.getElementById('color-palette').style.width = width;
   document.getElementById('tools-board').style.width = width;
