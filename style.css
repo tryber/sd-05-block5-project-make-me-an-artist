@@ -35,10 +35,11 @@ h1 {
 }
 
 .pixel-board {
-  display: inline-block;
+  height: 80%;
+  width: 80%;
 }
 
-.linha {
+.line {
   display: inline-block;
 }
 
