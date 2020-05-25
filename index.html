@@ -60,10 +60,13 @@
 
 <script>
        let recPixel = document.getElementById('clear-board')
-       console.log(recPixel)
+       let limpar = document.getElementsByClassName('pixel')
        recPixel.addEventListener('click',function(){
-            
-            
+           let contador = 0  
+           while(contador < 25){
+             console.log(limpar[contador].style.backgroundColor='white')
+             contador += 1
+           }
        })
            
     
