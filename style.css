@@ -1,7 +1,12 @@
 #title {}
 
-#color-palette {
+#color-palette {}
+
+#pixel-board {
+  margin-top: 60px;
 }
+
+#clear-board {}
 
 .color {
   border: solid 1px;
@@ -25,3 +30,11 @@
 .blue {
   background-color: blue;
 }
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid 1px;
+}
+
+.selected {}
