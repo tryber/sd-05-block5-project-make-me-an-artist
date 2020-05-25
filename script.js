@@ -37,15 +37,16 @@ function colorePixel(e){
 }*/
 // Feito por Elisângelo
 // scripts para pintar os pixels de cores que foram seleciondas pelo usuario
-window.load = function(){
+window.onload = function(){
     document.querySelector(".color.black").className += "selected";
     let clearButton = document.getElementById('clear-board');
     clearButton.addEventListener('click',limpaPixel);
-    let pixelBoard = document.getElementsByClassName("pixel")[0];
-    function limpaPixel(e){
-        for( limpa in pixelBoard){
-            pixelBoard[limpa].style.backgroundColor = "white";
+    let pixelBoard = document.querySelectorAll("#pixel-board")[0];
+    let pixel = document.getElementsByTagName("pixel");
     
+    function limpaPixel(){
+                for( let i = 0; i < pixelBoard.lastElementChild; i +=1){
+                  pixel[i].style = "background-color: white";
         }
     }
     
