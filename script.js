@@ -1,5 +1,5 @@
-let pallete = document.querySelector("#color-pallete");
-pallete.addEventListener("mouseover",palleteColors)
+let pallete = document.querySelector("#color-palette");
+pallete.addEventListener("mouseover", palleteColors)
 
 function palleteColors(eventoPallete){
   console.log(eventoPallete.target);
