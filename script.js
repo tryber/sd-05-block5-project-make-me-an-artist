@@ -22,4 +22,7 @@ function changeSelected() {
     }
 }
 
-eachColor.addEventListener("click", changeSelected);
+colorBlack.addEventListener("click", changeSelected);
+colorGreen.addEventListener("click", changeSelected);
+colorYellow.addEventListener("click", changeSelected);
+colorRed.addEventListener("click", changeSelected);
