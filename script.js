@@ -15,7 +15,7 @@ function selectNewColor(event) {
 function clearBoard() {
   const pixels = document.getElementsByClassName('pixel');
   for (let pixel = 0; pixel < pixels.length; pixel += 1) {
-    pixels[pixel].style.backgroundColor = 'rgb(255 , 255 , 255)';
+    pixels[pixel].style.backgroundColor = 'white';
   }
 }
 
