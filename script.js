@@ -3,20 +3,27 @@ const paleta = document.getElementById('color-palette');
 const pixelPaleta = document.getElementsByClassName('color');
 const pixelBoard = document.getElementById('pixel-board');
 const cleanButton = document.getElementById('clear-board');
-let selectedColor = 'black';
+let selectedColor = document.getElementsByClassName("selected")[0];
 const nPixLine = 5;
 const colors = ['black', 'blue', 'green', 'yellow'];
 
+
+function selectNewColor(event) {
+  selectedColor.classList.remove('selected');
+  event.target.classList.add('selected');
+  selectedColor = event.target;
+}
+
 function clearBoard() {
-  let pixels = document.getElementsByClassName('pixel');
+  const pixels = document.getElementsByClassName('pixel');
   for (let pixel = 0; pixel < pixels.length; pixel += 1) {
-    pixels[pixel].style.backgroundColor = "white";
+    pixels[pixel].style.backgroundColor = 'white';
   }
 }
 
-function setPaleteColors(colors) {
+function setPaleteColors(colorsList) {
   for (let pixel = 0; pixel < pixelPaleta.length; pixel += 1) {
-    pixelPaleta[pixel].style.backgroundColor = colors[pixel];
+    pixelPaleta[pixel].style.backgroundColor = colorsList[pixel];
   }
 }
 
@@ -30,9 +37,9 @@ function genBoardElement(className, idx) {
 }
 
 function genPixels(numberPix) {
-  let pixels = [];
+  const pixels = [];
   for (let pixel = 0; pixel < numberPix; pixel += 1) {
-    let pix = genBoardElement('pixel', `pixel-${pixel + 1}`);
+    const pix = genBoardElement('pixel', `pixel-${pixel + 1}`);
     pixels.push(pix);
   }
   return pixels;
@@ -41,12 +48,12 @@ function genPixels(numberPix) {
 function populateBoard(pixels, elemento) {
   for (let pixel in pixels) {
     elemento.appendChild(pixels[pixel]);
-  };
+  }
 }
 
 // Eventos
 window.addEventListener('load', function () {
-  let pixels = genPixels(nPixLine * nPixLine);
+  const pixels = genPixels(nPixLine * nPixLine);
   populateBoard(pixels, pixelBoard);
   pixelBoard.style.width = `${nPixLine * 42}px`;
 });
@@ -54,10 +61,8 @@ window.addEventListener('load', function () {
 window.addEventListener('load', setPaleteColors(colors));
 cleanButton.onclick = clearBoard;
 
-paleta.addEventListener('click', function (event) {
-  selectedColor = event.target.style.backgroundColor;
-});
+paleta.addEventListener('click', selectNewColor);
 
 pixelBoard.addEventListener('click', function (event) {
-  event.target.style.backgroundColor = selectedColor;
+  event.target.style.backgroundColor = selectedColor.style.backgroundColor;
 });
