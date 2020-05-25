@@ -1,25 +1,27 @@
 .color-palette {
-  width: 168px;
   height: 42px;
+  width: 168px;
 }
+
 .color {
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
   display: inline-block;
+  height: 40px;
+  width: 40px;
 }
+
 .pixel-board {
-  padding: 0;
   line-height: 0;
+  padding: 0;
 }
 
 .pixel {
   background-color: white;
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
-  display: inline-block;
   box-sizing: content-box;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .color#preto {
