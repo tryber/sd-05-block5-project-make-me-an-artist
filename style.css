@@ -23,7 +23,7 @@
   background-color: yellow;
 }
 
-#pixel-board {
+.pixel-board {
   display: table;
 }
 
@@ -31,8 +31,6 @@
   border-style: solid;
   border-width: 1px;
   display: table-row;
-  height: 40px;
-  width: 40px;
 }
 
 .pixel {
@@ -43,3 +41,7 @@
   height: 40px;
   width: 40px;
 }
+  .clear-board {
+    padding: 6px;
+    margin-bottom: 6px;
+  }
