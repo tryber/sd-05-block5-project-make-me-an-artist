@@ -6,43 +6,16 @@ function removeClassSelected() {
   }
 }
 
-// Adiciona a classe 'selected' ao objeto clicado
-let selectedColor = 'black';
-let black = document.querySelector('.black');
-function getBlackColor(e) {
+// Adiciona a classe 'selected' e pega a cor do objeto clicado
+let selectedColor = 'black'; //Valor default da cor igual a black
+let getPixelColor = document.querySelector('#color-palette');
+function getPixel(e) {
   let element = e.target;
   removeClassSelected ();
   element.classList.add('selected');
-  selectedColor = element.style.backgroundColor;  
+  selectedColor = getComputedStyle(e.target, null).getPropertyValue('background-color');
 }
-black.addEventListener('click', getBlackColor);
-
-let green = document.querySelector('.green');
-function getGreenColor(e) {
-  let element = e.target;
-  removeClassSelected ();
-  element.classList.add('selected');
-  selectedColor = 'green';
-}
-green.addEventListener('click', getGreenColor);
-
-let blue = document.querySelector('.blue');
-function getBlueColor(e) {
-  let element = e.target;
-  removeClassSelected ();
-  element.classList.add('selected');
-  selectedColor = 'blue';
-}
-blue.addEventListener('click', getBlueColor);
-
-let yellow = document.querySelector('.yellow');
-function getYellowColor(e) {
-  let element = e.target;
-  removeClassSelected ();
-  element.classList.add('selected');
-  selectedColor = 'yellow';
-}
-yellow.addEventListener('click', getYellowColor);
+getPixelColor.addEventListener('click', getPixel);
 
 // Essa função usa a cor da variável 'selectedColor' para pintar os pixeis clicados
 let pickPixel = document.querySelector('#pixel-board');
