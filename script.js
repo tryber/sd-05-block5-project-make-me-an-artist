@@ -42,7 +42,7 @@ const buttonSize = document.getElementById('generate-board');
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
-  if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
+  /*if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
     alert('Board inválido!');
     size = 5;
   }
@@ -51,7 +51,7 @@ function generateBoard() {
   }
   if (size > 50) {
     size = 50;
-  }
+  }*/
   for (let i = 0; i < size; i += 1) {
     const divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
@@ -75,7 +75,7 @@ function ramdomColor() {
   const greenName = green.toString();
   const blue = Math.floor(Math.random() * 256);
   const blueName = blue.toString();
-  rGBColor += redName + ',' + greenName + ',' + blueName + ')';
+  rGBColor = `${rGBColor} ${redName},${greenName},${blueName})`;
 }
 
 function createColor(classe) {
