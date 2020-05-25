@@ -6,14 +6,16 @@
 }
 .pixel-board {
   padding: 0;
-  line-height: 0;
-  box-sizing: content-box;
+  line-height: 0;  
 }
+
 .pixel {
+  background-color: white;
   width: 40px;
   height: 40px;
   border: 1px solid black;
   display: inline-block;
+  box-sizing: content-box;
 }
 
 .color#preto {
