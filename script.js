@@ -2,7 +2,7 @@
 function criarQuadros() {
   const div1 = document.querySelector('.pixel-board');
 
-  for ( let i = 0; i < 25; i += 1 ) {
+  for (let i = 0; i < 25; i += 1) {
     const newDiv = document.createElement('div');
     newDiv.className = 'pixel';
     div1.appendChild(newDiv);
@@ -49,16 +49,16 @@ function identicarPixel(evento) {
   evento.target.style.backgroundColor = corAtual;
 }
 
-for ( let i = 0; i < pixels.length; i += 1 ) {
+for (let i = 0; i < pixels.length; i += 1) {
   pixels[i].addEventListener('click', identicarPixel);
 }
 
 // limpar cores
-const botaoApagarCores = document.querySelector('#clear-board');
-botaoApagarCores.addEventListener('click', apagarEstilos);
-
 function apagarEstilos() {
-  for ( let i = 0; i < pixels.length; i += 1 ) {
+  for (let i = 0; i < pixels.length; i += 1) {
     document.querySelectorAll('.pixel')[i].style.backgroundColor = null;
   }
 }
+
+const botaoApagarCores = document.querySelector('#clear-board');
+botaoApagarCores.addEventListener('click', apagarEstilos);
