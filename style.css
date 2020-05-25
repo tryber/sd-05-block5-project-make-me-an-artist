@@ -40,21 +40,18 @@ h1{
     position: absolute;
     top: 200px;
     left: 50px;
-    widows: 250px;
-    height: 250px;
+    widows: 210px;
+    height: 210px;
 }
-#pixel-board, .pixel-board{
-    display: inline-flex;
+#pixel-board{
+    display: grid;
     z-index: 0;
 }
-.pixel-board, .pixel{
-    display: block;
-}
 .pixel{
-    background-color: white;
     height: 40px;
     width: 40px;
     z-index: 1;
+    background-color: white;
 }
 .borda{
     border-color:black;

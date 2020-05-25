@@ -38,16 +38,25 @@ function colorePixel(e){
 // Feito por Elisângelo
 // scripts para pintar os pixels de cores que foram seleciondas pelo usuario
 window.onload = function(){
-    document.querySelector(".color.black").className += "selected";
+    let selected = document.querySelector(".color.black").className += " "+"selected";
     let clearButton = document.getElementById('clear-board');
+    let pixel = document.querySelectorAll(".pixel");
+
+    
     clearButton.addEventListener('click',limpaPixel);
-    let pixelBoard = document.querySelectorAll("#pixel-board")[0];
-    let pixel = document.getElementsByTagName("pixel");
+    let pixelBoard = document.querySelector("#pixel-board");
+    
     
     function limpaPixel(){
-                for( let i = 0; i < pixelBoard.lastElementChild; i +=1){
-                  pixel[i].style = "background-color: white";
+        for(apaga in pixel){
+          pixel[apaga].style = "background-color: white";
         }
+      /*if(e.target == true){ 
+        for(let child = parent.firstChild; child != null; child = child.nextSibling ){
+            pixelBoard[child].style.backgroundColor = "white";
+            pixel = pixelBoard.nextElementSibling;
+
+        }*/
     }
     
     
