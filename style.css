@@ -43,4 +43,5 @@ h1 {
   border: black solid 1px;
   height: 40px;
   width: 40px;
+  background-color: rgb(255, 0, 0);
 }
