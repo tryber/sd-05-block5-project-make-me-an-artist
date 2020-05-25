@@ -41,8 +41,10 @@ board.addEventListener("click", giveColor);
 let clearButton = document.getElementById("clear-board");
 
 function clearBoard() {
-  let allPixels = document.getElementById("pixel-board");
-  allPixels.style = "backgroundColor: white";
+  let pixels = document.getElementsByClassName("pixel");
+  for (let i=0; i<pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = "white";
+  }
 }
 clearButton.addEventListener("click", clearBoard);
 
