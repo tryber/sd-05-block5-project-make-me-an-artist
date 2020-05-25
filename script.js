@@ -1,46 +1,33 @@
 // Variáveis
-let black = document.getElementById("black");
-let red = document.getElementById("red");
-let green = document.getElementById("green");
-let blue = document.getElementById("blue");
+let black = document.querySelector("black");
+let color1 = document.querySelector("color-1");
+let color2 = document.querySelector("color-2");
+let color3 = document.querySelector("color-3");
+let colorPalette = document.getElementById("color-palette")
 let pixelBoard = document.getElementById("pixel-board");
 let botaoLimpar = document.getElementById("clear-board");
+let selected = black;
 
 //Funções
-
-function colorPixel() {
-  let cor = selected.classList[1];
-  target = event.target;
-  let corAnterior = target.classList[target.classList.length - 1];
-  target.classList.remove(corAnterior);
-  target.classList.add(cor);
-  let novaCor = "background-color: ${cor} !important";
-  target.style = novaCor;
-}
-
 function changeSelected() {
-  target = event.target;
-  selected.classList.remove("selected");
-  target.classList.add("selected"); 
-  selected = document.getElementsByClassName("selected")[0];
-}
-
-function clearBoard() {
-  pixel = board.firstElementChild;
-    for (let i = 0; i < board.children.length; i += 1) {
-    let corAntiga = pixel.classList[pixel.classList.length - 1];
-    pixel.classList.remove(corAnterior);
-    pixel.classList.add("blank");
-    pixel.style = "background-color: white";
-    pixel = pixel.nextElementSibling;
+  if (event.target === black) {
+    selected.classList.remove("selected");
+    black.classList.add("selected");
+    selected = event.target;
+  } else if (event.target === color1) {
+    selected.classList.remove("selected");
+    color1.classList.add("selected");
+    selected = event.target;
+  } else if (event.target === color2) {
+    selected.classList.remove("selected");
+    color2.classList.add("selected");
+    selected = event.target;
+  } else if (event.target === color3) {
+    selected.classList.remove("selected");
+    color3.classList.add("selected");
+    selected = event.target;
   }
 }
 
 //Event Listeners
-
-black.addEventListener("click", changeSelected);
-red.addEventListener("click", changeSelected);
-green.addEventListener("click", changeSelected);
-blue.addEventListener("click", changeSelected);
-pixelBoard.addEventListener("click", colorPixel);
-botaoLimpar.addEventListener("click", clearBoard);
+colorPalette.addEventListener("click", changeSelected);
