@@ -39,10 +39,9 @@ buttonClear.addEventListener('click', clearBoard);
 
 // Cria um board com n x n pixels
 const buttonSize = document.getElementById('generate-board');
-function generateBoard() {
-  document.getElementById('pixel-board').innerHTML = '';
-  let size = document.getElementById('board-size').value;
-  /*if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
+let size = document.getElementById('board-size').value;
+function verifySize() {
+  if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
     alert('Board inválido!');
     size = 5;
   }
@@ -51,7 +50,11 @@ function generateBoard() {
   }
   if (size > 50) {
     size = 50;
-  }*/
+  }
+}
+function generateBoard() {
+  document.getElementById('pixel-board').innerHTML = '';
+  if (size === '') {size = 5};
   for (let i = 0; i < size; i += 1) {
     const divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
@@ -63,7 +66,11 @@ function generateBoard() {
     }
   }
 }
-buttonSize.addEventListener('click', generateBoard);
+function verifyGenerateBoard() {
+  verifySize();
+  generateBoard();
+}
+buttonSize.addEventListener('click', verifyGenerateBoard);
 
 // Código básico para montar a página inicial
 let rGBColor = '';
