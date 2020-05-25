@@ -55,15 +55,40 @@ function changePixelColor(e){
 
 pickPixel.addEventListener('click', changePixelColor);
 
-let clearButton = document.querySelector('#clear-board');
+//botao de limpar
+
+const board = document.getElementById('pixel-board');
+
+let buttonClear = document.getElementById('clear-board');
+
 
 function clearBoard(){
-    const board = document.querySelector('#pixel-board');
-    for(let i = 0; i < 5; i++){
-        for(let j = 0; j < 5; j++){
-            board.children[i].children[j].style.backgroundColor = 'white';
-        }
-    }
+    document.getElementById('1').style.backgroundColor = "white";
+    document.getElementById('2').style.backgroundColor = "white";
+    document.getElementById('3').style.backgroundColor = "white";
+    document.getElementById('4').style.backgroundColor = "white";
+    document.getElementById('5').style.backgroundColor = "white";
+    document.getElementById('6').style.backgroundColor = "white";
+    document.getElementById('7').style.backgroundColor = "white";
+    document.getElementById('8').style.backgroundColor = "white";
+    document.getElementById('9').style.backgroundColor = "white";
+    document.getElementById('10').style.backgroundColor = "white";
+    document.getElementById('11').style.backgroundColor = "white";
+    document.getElementById('12').style.backgroundColor = "white";
+    document.getElementById('13').style.backgroundColor = "white";
+    document.getElementById('14').style.backgroundColor = "white";
+    document.getElementById('15').style.backgroundColor = "white";
+    document.getElementById('16').style.backgroundColor = "white";
+    document.getElementById('17').style.backgroundColor = "white";
+    document.getElementById('18').style.backgroundColor = "white";
+    document.getElementById('19').style.backgroundColor = "white";
+    document.getElementById('20').style.backgroundColor = "white";
+    document.getElementById('21').style.backgroundColor = "white";
+    document.getElementById('22').style.backgroundColor = "white";
+    document.getElementById('23').style.backgroundColor = "white";
+    document.getElementById('24').style.backgroundColor = "white";
+    document.getElementById('25').style.backgroundColor = "white";
 }
+  
 
-clearButton.addEventListener('click', clearBoard);
+buttonClear.addEventListener('click', clearBoard);
