@@ -6,13 +6,13 @@ h1{
     font-size: 50px;
 }
 
-#blue {
-    background-color: blue;
+#black {
+    background-color: black;
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     display: inline-block;
 }
 
@@ -21,8 +21,8 @@ h1{
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     display: inline-block;
     }
 
@@ -31,17 +31,39 @@ h1{
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     display: inline-block;
     } 
 
-#yellow {
-    background-color: yellow;
+#blue {
+    background-color: blue;
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     display: inline-block;
     }
+
+#pixel-board{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    height: 225px;
+    width: 225px;
+}
+
+.pixel{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 1px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
