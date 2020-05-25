@@ -29,16 +29,16 @@ h1{
     height: 40px;
     border:1px solid
 }
-.cor1{
+.cor-preta{
     background-color: black;
 }
-.cor2{
+.cor-vermelha{
     background-color:red;
 }
-.cor3{
+.cor-azul{
     background-color:blue;
 }
-.cor4{
+.cor-verde{
     background-color:green;
 }
 /*---------------------------*/

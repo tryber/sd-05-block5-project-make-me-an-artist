@@ -12,10 +12,10 @@
     </header>
     <!--Dives do cabeçalho -->
     <section id="color-palette">
-        <div class="selected color  cor1"></div>
-        <div class="color cor2"></div>
-        <div class="color cor3"></div>
-        <div class="color cor4"></div>
+        <div class="color selected cor-preta"></div>
+        <div class="color cor-vermelha"></div>
+        <div class="color cor-azul"></div>
+        <div class="color cor-verde"></div>
         
     </section>
     <!--Dives do cabeçalho termina aqui -->
@@ -57,24 +57,47 @@
       </div>
     </section>
 </div> 
-<!--Função que limpa o quadro preenchendo de branco -->
-<script>/*
-    const plDecores = document.querySelectorAll('.color')
-    const limpar = document.getElementsByClassName('pixel')
-    const limpar2 = document.getElementById('clear-board')
-*/
-</script>
+
+
+
 <script>
+  let recPixel = document.getElementsByClassName('pixel')
+    
+  for(let i = 0;i <recPixel.length;i+=1){
+  recPixel[i].addEventListener('click',function(){
+        let CorPreta = document.getElementsByClassName('cor-preta')
+        CorPreta = backgroundColor='black';
+        
+        recPixel[i].style.backgroundColor = CorPreta
+      console.log(CorPreta )
+          
+    })
+  }
+
+</script>
+
+
+
+
+
+
+
+
+ 
+
+
+<script>
+    /*
        let recPixel = document.getElementById('clear-board')
        const limpar = document.getElementsByClassName('pixel')
        recPixel.addEventListener('click',function(){
            let contador = 0  
            while(contador < 25){
             limpar[contador].className = 'pixel'
-             limpar[contador].style.backgroundColor='white'
+            limpar[contador].style.backgroundColor='white'
              contador += 1
            }
-       })   
+       })   */
 </script>
 
     
