@@ -68,3 +68,12 @@ document.querySelectorAll(".pixel").forEach((item) => {
     item.setAttribute("style", "background-color: " + corSelecionada + ";");
   });
 });
+
+const buttonClear = document.getElementsByTagName("button")[0];
+buttonClear.addEventListener("click", function () {
+  console.log(document.querySelectorAll(".pixel"));
+  const pixel = document.querySelectorAll(".pixel");
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].setAttribute("style", "background-color: rgb(255, 255, 255)");
+  }
+});
