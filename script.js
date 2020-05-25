@@ -14,8 +14,8 @@ colorBase4.style.background = "pink";
 
 //funções
 function clear() {
-for (let i = 0; i < listaDePixels.length; i += 1) {
-    listaDePixels[i].style.background = "white";
+for (let i = 0; i < listaDePixels.length; i += 1){
+    listaDePixels[i].style.background = "rgb(255, 255, 255)"
     }
 }
 
