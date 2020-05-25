@@ -96,6 +96,9 @@ formar.addEventListener("click", function () {
   }
   
   //CORRIGINFO VALORES DE LINHA E PIXEL
+  if (quadro.value == ""){
+    alert("Board inválido!")
+  }
   linha = parseInt(quadro.value)
   if (linha < 5) {
     linha = 5
@@ -103,6 +106,7 @@ formar.addEventListener("click", function () {
   if (linha > 50) {
     linha = 50
   }
+  
   //GERANDO LINHAS 
   lineGenerate(linha)
 
