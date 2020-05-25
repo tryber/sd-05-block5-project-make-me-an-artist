@@ -1,19 +1,23 @@
 body {
-  background-color: rgb(238, 238, 238);
+  background-color: lightblue;
 }
+
 .pixel.td {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
+
 .table {
   border: 1px solid black;
   display: table;
 }
+
 .td {
   border: 1px solid black;
   display: table-cell;
   height: 40px;
   width: 40px;
 }
+
 .tr {
   display: table-row;
 }

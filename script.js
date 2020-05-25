@@ -65,18 +65,18 @@ let randomColor;
 let cor = document.querySelectorAll('.color');
 for (let c = 1; c < cor.length; c += 1) {
   randomColor =
-    '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
-  cor[c].setAttribute('style', 'background-color: ' + randomColor);
+    '#' + (0x1000000 + (Math.random() * 0xffffff)).toString(16).substr(1, 6);
+  cor[c].setAttribute('style', `background-color: ${randomColor}`);
 }
 
 const boardSizeInput = document.getElementById('board-size');
 const buttonGenerateBoard = document.getElementById('generate-board');
-let table = document.getElementsByClassName('table')[1];
-let board = document.getElementById('pixel-board');
+// const table = document.getElementsByClassName('table')[1];
+const board = document.getElementById('pixel-board');
 
 buttonGenerateBoard.addEventListener('click', function () {
   board.innerHTML = '';
-  console.log(board);
+  // console.log(board);
 
   let boardSize = boardSizeInput.value;
   if (!boardSize) {
@@ -90,24 +90,24 @@ buttonGenerateBoard.addEventListener('click', function () {
   }
 
   for (let linha = 0; linha < boardSize; linha += 1) {
-    let divLinha = document.createElement('tr');
+    const divLinha = document.createElement('tr');
     divLinha.className = 'tr';
     board.appendChild(divLinha);
     for (let coluna = 0; coluna < boardSize; coluna += 1) {
-      let div = document.createElement('td');
+      const div = document.createElement('td');
       div.className = 'pixel td ';
       divLinha.appendChild(div);
     }
   }
   document.querySelectorAll('.pixel').forEach((item) => {
-    item.addEventListener('click', (event) => {
-      console.log('hello');
-      item.setAttribute('style', 'background-color: ' + corSelecionada + ';');
+    item.addEventListener('click', () => {
+      
+      item.setAttribute('style', `background-color: ${corSelecionada};`);
     });
   });
 });
 document.querySelectorAll('.pixel').forEach((item) => {
-  item.addEventListener('click', (event) => {
-    item.setAttribute('style', 'background-color: ' + corSelecionada + ';');
+  item.addEventListener('click', () => {
+    item.setAttribute('style', `background-color: ${corSelecionada};`);
   });
 });
