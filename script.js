@@ -1,19 +1,19 @@
-// Define as variáveis globais
+/* Define as variáveis globais */
 let palette;
 let clearButton;
-// Seleciona uma cor da paleta
+/* Seleciona uma cor da paleta */
 function setCurrentColor(el) {
   for (let i = 0; i < palette.length; i += 1) {
     palette[i].classList.remove('selected');
   }
   el.target.classList.add('selected');
 }
-// Pinta uma célula (pixel) com a cor selecionada
+/* Pinta uma célula (pixel) com a cor selecionada */
 function setPixelColor(el) {
   const selected = document.querySelector('.selected');
   el.target.style.backgroundColor = selected.style.backgroundColor;
 }
-// Constrói a Paleta
+/* Constrói a Paleta */
 function buildPalette() {
   const board = document.getElementById('color-palette');
   const colors = ['black', 'red', 'green', 'blue'];
@@ -24,13 +24,13 @@ function buildPalette() {
     cell.className = 'color';
     if (i === 0) cell.classList.add('selected');
     cell.addEventListener('click', setCurrentColor);
-    board.appendChild(document.createTextNode("\n"));
+    board.appendChild(document.createTextNode('\n'));
   }
 }
-// Constrói a grade de pixels (BUG)
+/* Constrói a grade de pixels [BUG] */
 function buildGrid(size) {
   const board = document.getElementById('pixel-board');
-  const width = `${size * 40}px`;
+  const width = `${size * 42}px`;
   board.innerHTML = '';
   board.style.width = width;
   document.getElementById('color-palette').style.width = width;
@@ -41,28 +41,28 @@ function buildGrid(size) {
     cell.className = 'pixel';
     cell.style.backgroundColor = 'white';
     cell.addEventListener('click', setPixelColor);
-    if((i+1)%size === 0) board.appendChild(document.createTextNode("\n\n"));
+    if ((i+1) % size === 0) board.appendChild(document.createTextNode('\n\n'));
   }
 }
-// Limpa tod o quadro
+/* Limpa tod o quadro */
 function clearAll() {
   const cells = document.getElementById('pixel-board').children;
   for (let i = 0; i < cells.length; i += 1) {
     cells[i].style.backgroundColor = 'white';
   }
 }
-//Define toda a estrutura do programa
+/* Define toda a estrutura do programa */
 window.onload = function () {
-  //Define os valores das variáveis globais
+  /* Define os valores das variáveis globais */
   palette = document.getElementsByClassName('color');
   clearButton = document.getElementById('clear-board');
   clearButton.addEventListener('click', clearAll);
-  // Define as configurações
+  /* Define as configurações */
   const boardSizeInput = document.getElementById('board-size');
-  // Constrói a paleta e a grade
+  /* Constrói a paleta e a grade */
   buildPalette();
   buildGrid(5);
-  // Atribui função ao botão de gerar nova grade
+  /* Atribui função ao botão de gerar nova grade */
   document.getElementById('generate-board').addEventListener('click', function () {
     if (!boardSizeInput.value) {
       window.alert('Board inválido!');
