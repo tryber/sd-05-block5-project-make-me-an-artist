@@ -29,19 +29,20 @@ blue.addEventListener("click", changeSelected);
 // - Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
 // (ou seja nao usar a class que é igual para todas, e sim um event.target).
 let board = document.querySelector(".board");
-let selectedPixel = "";
+
 function giveColor(eventpixel) {
-  let selectedPixel = eventpixel.target;
-  selectedPixel.style.backgroundColor = currentSelected.value;
+  const colorToBeApplied = document.querySelector(".selected");
+  const selectedPixel = eventpixel.target;
+  selectedPixel.style.backgroundColor = colorToBeApplied.style.backgroundColor;
 }
 board.addEventListener("click", giveColor);
 
 //Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 let clearButton = document.getElementById("clear-board");
-let pixels = document.getElementsByClassName("pixel");
 
 function clearBoard() {
-  pixels.style.backgroundColor = "white";
+  let allPixels = document.getElementById("pixel-board");
+  allPixels.style.backgroundColor = "white";
 }
 clearButton.addEventListener("click", clearBoard);
 
