@@ -30,7 +30,7 @@ function buildPalette() {
 /* Constrói a grade de pixels [BUG] */
 function buildGrid(size) {
   const board = document.getElementById('pixel-board');
-  const width = `${size * 42}px`;
+  const width = `${size * 38}px`;
   board.innerHTML = '';
   board.style.width = width;
   document.getElementById('color-palette').style.width = width;
@@ -41,7 +41,7 @@ function buildGrid(size) {
     cell.className = 'pixel';
     cell.style.backgroundColor = 'white';
     cell.addEventListener('click', setPixelColor);
-    if ((i+1) % size === 0) board.appendChild(document.createTextNode('\n\n'));
+    //if ((i+1) % size === 0) board.appendChild(document.createTextNode('\n\n'));
   }
 }
 /* Limpa tod o quadro */
