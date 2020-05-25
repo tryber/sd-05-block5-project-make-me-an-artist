@@ -43,7 +43,7 @@ function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
   console.log(size);
-  if (size.length < 1){
+  if (size.length < 1 || size == '' || size == null || size == NaN){
     alert('Board inválido!');
     size = 5;
   }
@@ -54,11 +54,11 @@ function generateBoard() {
     size = 50; 
   }
   for (let i = 0; i < size; i += 1){
-    let divLine = document.createElement('div');
+    let divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
     document.getElementById('pixel-board').appendChild(divLine);
     for (let j = 0; j < size; j += 1){
-      let divPixel = document.createElement('div');
+      let divPixel = document.createElement('td');
       divPixel.className = 'pixel';
       document.querySelectorAll('.pixel-line')[i].appendChild(divPixel);
     }
