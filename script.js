@@ -64,7 +64,7 @@ buttonClear.addEventListener('click', function () {
 let randomColor;
 const cor = document.querySelectorAll('.color');
 for (let c = 1; c < cor.length; c += 1) {
-  randomColor = `#${(0x1000000 + Math.random() * 0xffffff)
+  randomColor = `#${(0x1000000 + (Math.random() * 0xffffff))
     .toString(16)
     .substr(1, 6)}`;
   cor[c].setAttribute('style', `background-color: ${randomColor}`);
@@ -73,6 +73,14 @@ for (let c = 1; c < cor.length; c += 1) {
 const boardSizeInput = document.getElementById('board-size');
 const buttonGenerateBoard = document.getElementById('generate-board');
 const board = document.getElementById('pixel-board');
+
+function coloreGrid() {
+  document.querySelectorAll('.pixel').forEach((item) => {
+    item.addEventListener('click', () => {
+      item.setAttribute('style', `background-color: ${corSelecionada};`);
+    });
+  });
+}
 
 buttonGenerateBoard.addEventListener('click', function () {
   board.innerHTML = '';
@@ -99,11 +107,5 @@ buttonGenerateBoard.addEventListener('click', function () {
   }
   coloreGrid();
 });
-function coloreGrid() {
-  document.querySelectorAll('.pixel').forEach((item) => {
-    item.addEventListener('click', () => {
-      item.setAttribute('style', `background-color: ${corSelecionada};`);
-    });
-  });
-}
+
 coloreGrid();
