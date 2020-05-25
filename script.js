@@ -13,7 +13,7 @@ function getBlackColor(e) {
   let element = e.target;
   removeClassSelected ();
   element.classList.add('selected');
-  selectedColor = 'black';  
+  selectedColor = element.style.backgroundColor;  
 }
 black.addEventListener('click', getBlackColor);
 
@@ -69,7 +69,8 @@ let buttonSize = document.getElementById('generate-board');
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
-  if (size == ''){
+  console.log(size);
+  if (size == false){
     alert('Board inválido!');
     size = 5;
   }
