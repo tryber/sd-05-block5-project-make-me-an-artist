@@ -20,12 +20,12 @@ function buildPalette() {
 }
 function buildGrid(size) {
   const board = document.getElementById('pixel-board');
-  const width = `${size*40}px`;
+  const width = `${size * 40}px`;
   board.style.width = width;
   document.getElementById('color-palette').style.width = width;
   document.getElementById('tools-board').style.width = width;
   board.innerHTML = '';
-  for (let i = 0; i < Math.pow(size, 2); i += 1) {
+  for (let i = 0; i < size ** 2; i += 1) {
     const div = document.createElement('div');
     const cell = board.appendChild(div);
     cell.className = 'pixel';
@@ -34,6 +34,7 @@ function buildGrid(size) {
   }
 }
 function clearAll() {
+  const cells = document.getElementById('pixel-board').children;
   for (let i = 0; i < cells.length; i += 1) {
     cells[i].style.backgroundColor = 'white';
   }
@@ -41,17 +42,19 @@ function clearAll() {
 window.onload = function () {
   palette = document.getElementsByClassName('color');
   clearButton = document.getElementById('clear-board');
-  clearButton.addEventListener("click", this.clearAll);
+  clearButton.addEventListener('click', clearAll);
   // Defines configurations
   const boardSizeInput = document.getElementById('board-size');
   buildPalette();
   buildGrid(boardSizeInput.value);
   document.getElementById('generate-board').addEventListener('click', function () {
     if (!boardSizeInput.value) {
-      window.alert("Board inválido!");
+      window.alert('Board inválido!');
       return;
     }
-    const size = (boardSizeInput.value > 50) ? 50 : (boardSizeInput.value < 5) ? 5 : boardSizeInput.value;
+    let size = boardSizeInput.value;
+    if (boardSizeInput.value > 50) size = 51;
+    else if (boardSizeInput.value < 5) size = 5;
     buildGrid(size);
   });
 };
