@@ -1,0 +1,35 @@
+#black {
+  background-color: rgb(0, 0, 0);
+}
+
+#orange {
+  background-color: rgb(231, 175, 22);
+}
+
+#green {
+  background-color: rgb(36, 139, 15);
+}
+
+#blue {
+  background-color: rgb(13, 90, 134);
+}
+
+.color {
+  display: inline-block;
+  border: 1px solid rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+}
+
+.pixel {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+}
+
