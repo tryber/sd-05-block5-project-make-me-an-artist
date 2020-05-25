@@ -3,8 +3,10 @@
     height: 200px;
     border: 1px solid black;
 }
-#color-palette {
-    width: 200px;
+
+.color {
+    display: inline-block;
+    width: 40px;
     height: 40px;
     border: 1px solid black;
 }
