@@ -7,7 +7,7 @@ const nPixLine = 5;
 const colors = ['black', 'blue', 'green', 'yellow'];
 
 function selectNewColor(event) {
-  let selectedColor = document.getElementsByClassName('selected')[0];
+  const selectedColor = document.getElementsByClassName('selected')[0];
   selectedColor.classList.remove('selected');
   event.target.classList.add('selected');
 }
@@ -44,10 +44,8 @@ function genPixels(numberPix) {
 }
 
 function populateBoard(pixels, elemento) {
-  for (let pixel in pixels) {
-    if (pixel && pixels[pixel]) {
-      elemento.appendChild(pixels[pixel]);
-    }
+  for (let pixel = 0; pixel < pixels; pixels += 1) {
+    elemento.appendChild(pixels[pixel]);
   }
 }
 
@@ -62,6 +60,6 @@ window.addEventListener('load', setPaleteColors(colors));
 cleanButton.onclick = clearBoard;
 paleta.addEventListener('click', selectNewColor);
 pixelBoard.addEventListener('click', function (event) {
-  let selectedColor = document.getElementsByClassName('selected')[0];
+  const selectedColor = document.getElementsByClassName('selected')[0];
   event.target.style.backgroundColor = selectedColor.style.backgroundColor;
 });

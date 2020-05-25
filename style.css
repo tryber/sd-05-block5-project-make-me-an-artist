@@ -14,5 +14,6 @@
   display: table;
   flex-direction: row;
   flex-wrap: wrap;
+  line-height: 0px;
   text-align: center;
 }
