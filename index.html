@@ -58,22 +58,25 @@
     </section>
 </div> 
 <!--Função que limpa o quadro preenchendo de branco -->
+<script>/*
+    const plDecores = document.querySelectorAll('.color')
+    const limpar = document.getElementsByClassName('pixel')
+    const limpar2 = document.getElementById('clear-board')
+*/
+</script>
 <script>
        let recPixel = document.getElementById('clear-board')
-       let limpar = document.getElementsByClassName('pixel')
+       const limpar = document.getElementsByClassName('pixel')
        recPixel.addEventListener('click',function(){
            let contador = 0  
            while(contador < 25){
-             console.log(limpar[contador].style.backgroundColor='white')
+            limpar[contador].className = 'pixel'
+             limpar[contador].style.backgroundColor='white'
              contador += 1
            }
        })   
 </script>
-<script>
-    let v = document.getElementsByClassName('cor1')
-    console.log(v.className)
 
-</script>
     
 </body>
 </html>
