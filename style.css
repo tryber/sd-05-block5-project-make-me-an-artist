@@ -38,7 +38,7 @@
 
 .pixel-board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 40px);
   margin: 40px;
   width: 210px;
 }
