@@ -9,7 +9,7 @@ btn.addEventListener('click', function () {
 
 const cores = document.querySelectorAll('.color');
 
-let colorPalette = document.querySelector('#color-palette');
+const colorPalette = document.querySelector('#color-palette');
 colorPalette.addEventListener('click', function (event) {
   let corEscolhida = event.target;
   for (let i = 0; i < cores.length; i+=1) {
@@ -18,12 +18,15 @@ colorPalette.addEventListener('click', function (event) {
   corEscolhida.classList.add('selected');
 })
 
-let colorir = document.querySelector('tbody');
+const colorirPixel = document.querySelectorAll('.pixel');
+
+const colorir = document.querySelector('tbody');
 colorir.addEventListener('click', function (event) {
   let pixelEscolhido = event.target;
-  for (let i = 0; i < cores.length; i+=1) {
-    if (cores[i].classList.className === 'selected') {
-      pixelEscolhido.style.backgroundColor = cores[i].style.backgroundColor;
+  let lista = document.querySelector('.selected').classList;
+  for (let i = 0; i < lista.length; i+=1) {
+    if (lista[i] !== 'color' && lista[i] !== 'selected') {
+      pixelEscolhido.className = lista[i];
     }
   }
 })
