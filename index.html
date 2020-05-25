@@ -12,48 +12,15 @@
   </header>
 
   <div id="color-palette">
-    <div class="color black"></div>
-    <div class="color blue"></div>
-    <div class="color red"></div>
-    <div class="color green"></div>
+    <div class="color black selected" onclick="selectColor('black')"></div>
+    <div class="color blue" onclick="selectColor('blue')"></div>
+    <div class="color red" onclick="selectColor('red')"></div>
+    <div class="color green" onclick="selectColor('green')"></div>
   </div>
 
-  <table id="pixel-board">
-    <tr>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-    </tr>
-    <tr>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-    </tr>
-    <tr>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-    </tr>
-    <tr>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-    </tr>
-    <tr>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-      <td class="pixel default-color"></td>
-    </tr>
-  </table>
+  <table id="pixel-board"></table>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
