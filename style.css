@@ -1,65 +1,63 @@
 #title {
-	align-content: center;
-	margin-left: 30%;
+align-content: center;
+margin-left: 30%;
 }
 
 #color-palette {
-	align-content: center;
-	display:table;
-	margin-left: 30%;
-	width: 200px;
+align-content: center;
+display: table;
+margin-left: 30%;
+width: 200px;
 }
 
 .line {
-	display: table-row;
+display: table-row;
 }
 
 .color {
-	border: solid 1px black;
-	display: table-cell;
-	height: 50px;
-	margin: 0;
-	position: relative;
-	width: 50px;
+border: solid 1px black;
+display: table-cell;
+height: 50px;
+position: relative;
+width: 50px;
 }
 
 #cor1 {
-	background-color: black;
+background-color: black;
 }
 
 #cor2 {
-	background-color: blue;
+background-color: blue;
 }
 
 #cor3 {
-	background-color: red;
+background-color: red;
 }
 
 #cor4 {
-	background-color: green;
+background-color: green;
 }
 
 #pixel-board {
-	display: table; 
-	height: 200px;
-	margin-left:30%;
-	margin-top: 5%;
-	width: 200px;
-	}
+display: table; 
+height: 200px;
+margin-left:30%;
+margin-top: 5%;
+width: 200px;
+}
 
-.tr{ 
-	display: table-row;
-	margin-left: 30%;
+.tr {
+display: table-row;
 }
 
 .pixel {
-	background-color: white;
-	border: solid 1px black;
-	display: table-cell;
-	height: 40px;
-	width: 40px;
+background-color: white;
+border: solid 1px black;
+display: table-cell;
+height: 38px;
+width: 38px;
 }
 
 #clear-board {
-	margin-left: 35%;
+margin-left: 35%;
 }
