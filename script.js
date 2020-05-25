@@ -46,13 +46,13 @@ window.onload = function () {
   // Defines configurations
   const boardSizeInput = document.getElementById('board-size');
   buildPalette();
-  buildGrid(boardSizeInput.value);
+  buildGrid(5);
   document.getElementById('generate-board').addEventListener('click', function () {
     if (!boardSizeInput.value) {
       window.alert('Board inválido!');
       return;
     }
-    let size = boardSizeInput.value;
+    let size = boardSizeInput.value || 5;
     if (boardSizeInput.value > 50) size = 50;
     else if (boardSizeInput.value < 5) size = 5;
     buildGrid(size);
