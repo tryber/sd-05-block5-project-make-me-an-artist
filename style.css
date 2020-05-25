@@ -40,10 +40,8 @@ background-color: green;
 
 #pixel-board {
 display: table; 
-height: 200px;
 margin-left:30%;
 margin-top: 5%;
-width: 200px;
 }
 
 .tr {
@@ -72,6 +70,7 @@ margin-left: 35%;
 }
 
 .selected {
+	background-color: black;
 	margin-left: 35%;
 	margin-bottom: 50px;
 }

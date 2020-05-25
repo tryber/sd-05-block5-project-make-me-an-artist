@@ -49,8 +49,6 @@ document.getElementById("cor4").addEventListener("click", function(){
 });
 
 let pixelselecionado ='';
-//let corpi = document.getElementById("corselecionada").getPropertyValue('background-color');
-//alert(corpi);
 
 function pintapixel (pixelevent){
     pixelselecionado = pixelevent.target;
