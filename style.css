@@ -17,20 +17,21 @@ body{
   border: 1px solid black;
   display: inline-block;
  background-color: white;
+ 
 }
 .cor1{
-  background-color: black;
+  background: rgb(0, 0, 0);
 
 }
 .cor2{
-  background-color: red;
+  background: rgb(255, 0, 0);
 
 }
 .cor3{
-  background-color: green;
+  background: rgb(0, 255, 0);
 
 }
 .cor4{
-  background-color: blue;
+  background: rgb(0, 0, 255);
 
 }
