@@ -1,0 +1,49 @@
+.color {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.preto {
+  background-color: black;
+}
+
+.cor1 {
+  background-color: blue;
+}
+
+.cor2 {
+  background-color: red;
+}
+
+.cor3 {
+  background-color: yellow;
+}
+
+.pixel-board {
+  display: table;
+}
+
+.tr {
+  border-style: solid;
+  border-width: 1px;
+  display: table-row;
+}
+
+.pixel {
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.clear-board {
+  margin-bottom: 6px;
+  padding: 6px;
+}
