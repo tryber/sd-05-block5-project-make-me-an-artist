@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
     <meta charset="UTF-8">
     <title>Criado uma paleta de cores!</title>
 </head>
@@ -11,12 +10,17 @@
     <header>
         <h1 id="title">Paleta de Cores</h1>
     </header>
+    <!--Dives do cabeçalho -->
     <section id="color-palette">
         <div class="color selected peca1"></div>
         <div class="color peca2"></div>
         <div class="color peca3"></div>
         <div class="color peca4"></div>
+        
     </section>
+    <!--Dives do cabeçalho termina aqui -->
+
+    <input type="button" value="Limpar" id="clear-board">
 
     <section id="pixel-board">
         <div class="pixel"></div>
@@ -52,14 +56,18 @@
         <div class="pixel"></div>
       </div>
     </section>
+</div> 
 
-
-
-
-
-   </div> 
-
-
+<script>
+       let recPixel = document.getElementById('clear-board')
+       console.log(recPixel)
+       recPixel.addEventListener('click',function(){
+            
+            
+       })
+           
+    
+</script>
     
 </body>
 </html>

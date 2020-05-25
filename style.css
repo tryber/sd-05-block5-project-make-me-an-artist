@@ -55,33 +55,7 @@ h1{
     
 
 }
-/*
-#agrupar1{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-#agrupar2{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-#agrupar3{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-#agrupar4{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-#agrupar5{
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-*/
+
 .pixel{
     position: relative;
     top: 0px;
@@ -95,4 +69,15 @@ h1{
     padding: 0px;
     border: 1px solid black;
     background-color: white;
+}
+
+/*--Botão--*/
+#clear-board{
+    position: relative;
+    left: 40px;
+    top: 0px;
+    width: 100px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+
 }
