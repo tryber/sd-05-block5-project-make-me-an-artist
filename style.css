@@ -1,11 +1,19 @@
 .color {
-    border: 1px solid black;
-    height: 40px;
-    width: 40px; 
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
 .table {
-    display: table;
+  display: table;
 }
 .td {
-    display: table-cell;
+  display: table-cell;
+}
+.tr {
+  display: table-row;
+}
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
