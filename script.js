@@ -1,17 +1,29 @@
 //Change class "selected"
-let colorSelected = getElementsByClassName("selected")[0];
-let colorBlack = getElementsByClassName("black")[0];
-let colorGreen = getElementsByClassName("green")[0];
-let colorYellow = getElementsByClassName("yellow")[0];
-let colorRed = getElementsByClassName("red")[0];
-let eachColor = querySelectorAll(".color");
+let colorBlack = document.getElementById("cor1");
+let colorGreen = document.getElementById("cor2");
+let colorYellow = document.getElementById("cor3");
+let colorRed = document.getElementById("cor4");
+let colorSelected = colorBlack;
+let colorPalette = document.getElementById("color-palette");
 
 function changeSelected() {
-  colorSelected.classList.remove("selected");
-  event.target.classList.add("selected");
+    if(event.target === colorBlack) {
+        colorSelected.classList.remove("selected");
+        colorBlack.classList.add("selected");
+        colorSelected = event.target;
+    } else if(event.target === colorGreen) {
+        colorSelected.classList.remove("selected");
+        colorGreen.classList.add("selected");
+        colorSelected = event.target;
+    } else if(event.target === colorYellow) {
+        colorSelected.classList.remove("selected");
+        colorYellow.classList.add("selected");
+        colorSelected = event.target;
+    } else if(event.target === colorRed) {
+        colorSelected.classList.remove("selected");
+        colorRed.classList.add("selected");
+        colorSelected = event.target;
+    }
 }
 
-colorBlack.addEventListener("click", changeSelected);
-colorGreen.addEventListener("click", changeSelected);
-colorYellow.addEventListener("click", changeSelected);
-colorRed.addEventListener("click", changeSelected);
+colorPalette.addEventListener("click", changeSelected);
