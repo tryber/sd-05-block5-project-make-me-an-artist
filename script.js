@@ -71,23 +71,31 @@ for (let c = 1; c < cor.length; c += 1) {
 
 const boardSizeInput = document.getElementById("board-size");
 const buttonGenerateBoard = document.getElementById("generate-board");
-const table = document.getElementsByClassName("table")[1];
+let table = document.getElementsByClassName("table")[1];
+let board = document.getElementById("pixel-board");
 
 buttonGenerateBoard.addEventListener("click", function () {
+  board.innerHTML = "";
+  console.log(board);
+
   let boardSize = boardSizeInput.value;
-  if (boardSize < 5) {
+  if (!boardSize) {
+    alert("Board inválido!");
+  }
+  if (boardSize < 5 && boardSize) {
     boardSize = 5;
   }
   if (boardSize > 50) {
     boardSize = 50;
   }
+
   for (let linha = 0; linha < boardSize; linha += 1) {
-    let divLinha = document.createElement("div");
+    let divLinha = document.createElement("tr");
     divLinha.className = "tr";
-    table.appendChild(divLinha);
+    board.appendChild(divLinha);
     for (let coluna = 0; coluna < boardSize; coluna += 1) {
-      let div = document.createElement("div");
-      div.className = "pixel td";
+      let div = document.createElement("td");
+      div.className = "pixel td ";
       divLinha.appendChild(div);
     }
   }
@@ -99,8 +107,7 @@ buttonGenerateBoard.addEventListener("click", function () {
   });
 });
 document.querySelectorAll(".pixel").forEach((item) => {
-    item.addEventListener("click", (event) => {
-      console.log("hello");
-      item.setAttribute("style", "background-color: " + corSelecionada + ";");
-    });
+  item.addEventListener("click", (event) => {
+    item.setAttribute("style", "background-color: " + corSelecionada + ";");
   });
+});
