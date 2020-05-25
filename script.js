@@ -77,3 +77,10 @@ buttonClear.addEventListener("click", function () {
     pixel[i].setAttribute("style", "background-color: rgb(255, 255, 255)");
   }
 });
+
+let randomColor;
+let cor = document.querySelectorAll(".color");
+  for (let c = 1; c < cor.length; c += 1) {
+    randomColor = "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+    cor[c].setAttribute("style", ("background-color: " + randomColor));
+}

@@ -9,8 +9,8 @@ body {
   display: table;
 }
 .td {
-  display: table-cell;
   border: 1px solid black;
+  display: table-cell;
   height: 40px;
   width: 40px;
 }
