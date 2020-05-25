@@ -71,13 +71,10 @@ for (let c = 1; c < cor.length; c += 1) {
 
 const boardSizeInput = document.getElementById('board-size');
 const buttonGenerateBoard = document.getElementById('generate-board');
-// const table = document.getElementsByClassName('table')[1];
 const board = document.getElementById('pixel-board');
 
 buttonGenerateBoard.addEventListener('click', function () {
-  board.innerHTML = '';
-  // console.log(board);
-
+  board.innerHTML = ''; 
   let boardSize = boardSizeInput.value;
   if (!boardSize) {
     alert('Board inválido!');
@@ -99,15 +96,18 @@ buttonGenerateBoard.addEventListener('click', function () {
       divLinha.appendChild(div);
     }
   }
-  document.querySelectorAll('.pixel').forEach((item) => {
-    
-    item.addEventListener('click', () => {      
-      item.setAttribute('style', `background-color: ${corSelecionada};`);
-    });
-  });
+  coloreGrid();
+  // document.querySelectorAll('.pixel').forEach((item)=> {     
+  //   item.addEventListener('click', () => {      
+  //     item.setAttribute('style', `background-color: ${corSelecionada};`);
+  //   });
+  // });
 });
-document.querySelectorAll('.pixel').forEach((item) => {
+function coloreGrid() { 
+document.querySelectorAll('.pixel').forEach((item)=> {
   item.addEventListener('click', () => {
     item.setAttribute('style', `background-color: ${corSelecionada};`);
   });
 });
+}
+coloreGrid();
