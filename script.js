@@ -7,7 +7,10 @@ const color3= document.querySelector('.green');
 let board = document.querySelector('#pixel-board')
 let selected = document.getElementsByClassName('selected')[0];
 let corSelecionada = selected.classList[1];
-let target = '',pixel ='';
+let target = '';
+
+let clearBoard = document.getElementById('clear-board');
+let gBoard = document.getElementsByClassName('board');
 
 function changeSel(){
   target = event.target;
@@ -21,8 +24,16 @@ function colorPixel() {
   target.style.backgroundColor=corSelecionada;
   
 }
+function clearB(){
+  for (let i =0;i<gBoard[0].childElementCount;i+=1){
+    let aux1 = gBoard[0].children[i]
+    aux1.style.backgroundColor='white';
+  }
+}
+
 colorBlack.addEventListener('click',changeSel);
 color1.addEventListener('click',changeSel);
 color2.addEventListener('click',changeSel);
 color3.addEventListener('click',changeSel);
 board.addEventListener('click', colorPixel);
+clearBoard.addEventListener('click',clearB);
