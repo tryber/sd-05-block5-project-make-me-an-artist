@@ -15,9 +15,13 @@ colorBase4.style.background = "pink";
 //funções
 function clear() {
 for (let i = 0; i < listaDePixels.length; i += 1) {
-    listaDePixels[i].style.background = "white"
+    listaDePixels[i].style.background = "white";
     }
 }
 
+
 //eventos
 clearButton.addEventListener('click', clear);
+
+//chamadas de funções
+clear()
