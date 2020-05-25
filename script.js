@@ -3,7 +3,7 @@ const paleta = document.getElementById('color-palette');
 const pixelPaleta = document.getElementsByClassName('color');
 const pixelBoard = document.getElementById('pixel-board');
 const cleanButton = document.getElementById('clear-board');
-const selectedColor = 'black';
+let selectedColor = 'black';
 const nPixLine = 5;
 const colors = ['black', 'blue', 'green', 'yellow'];
 
@@ -41,7 +41,7 @@ function genPixels(numberPix) {
 function populateBoard(pixels, elemento) {
   for (let pixel in pixels) {
     elemento.appendChild(pixels[pixel]);
-  }
+  };
 }
 
 // Eventos
@@ -53,3 +53,11 @@ window.addEventListener('load', function () {
 
 window.addEventListener('load', setPaleteColors(colors));
 cleanButton.onclick = clearBoard;
+
+paleta.addEventListener('click', function (event) {
+  selectedColor = event.target.style.backgroundColor;
+});
+
+pixelBoard.addEventListener('click', function (event) {
+  event.target.style.backgroundColor = selectedColor;
+});
