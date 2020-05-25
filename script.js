@@ -67,6 +67,24 @@ function generateBoard() {
 buttonSize.addEventListener('click', generateBoard);
 
 // Cria um grid de 5 x 5 ao iniciar a página
-window.onload = generateBoard;
+window.onload = init;
+function init() {
+  generateBoard();
+  createColor('.color2');
+  createColor('.color3');
+  createColor('.color4');
+}
 
+function createColor(classe) {
+  ramdomColor();
+  document.querySelector(classe).style.backgroundColor = rGBColor;
+}
 
+let rGBColor = '';
+function ramdomColor() {
+  rGBColor = 'rgb(';
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  rGBColor += red + ', ' + green + ', ' + blue + ')';
+}
