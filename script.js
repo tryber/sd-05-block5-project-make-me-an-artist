@@ -92,4 +92,7 @@ function generateBoard() {
 }
 buttonSize.addEventListener('click', generateBoard);
 
+// Cria um grid de 5 x 5 ao iniciar a página
+window.onload = generateBoard;
+
 
