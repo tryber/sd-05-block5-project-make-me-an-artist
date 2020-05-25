@@ -53,7 +53,7 @@ window.onload = function () {
       return;
     }
     let size = boardSizeInput.value;
-    if (boardSizeInput.value > 50) size = 51;
+    if (boardSizeInput.value > 50) size = 50;
     else if (boardSizeInput.value < 5) size = 5;
     buildGrid(size);
   });
