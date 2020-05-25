@@ -17,6 +17,18 @@
 .color {
   display: inline-block;
   border: 1px solid rgb(0, 0, 0);
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
+
+.pixel {
+  border: 1px solid rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+}
+
