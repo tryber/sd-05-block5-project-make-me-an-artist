@@ -3,6 +3,7 @@ const colorRed = document.querySelector('.red');
 const colorGreen = document.querySelector('.green');
 const colorBlue = document.querySelector('.blue');
 const pixelBoard = document.getElementById('pixel-board');
+const clearBoard = document.getElementById('clear-board');
 
 
 let corSelecionada = document.querySelector('.selected');

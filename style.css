@@ -14,6 +14,10 @@ body {
   border: 1px solid black;
 }
 
+#branca {
+  background-color: white;
+}
+
 #pixel-board {
   position: relative;
   width: 200px;
@@ -25,8 +29,8 @@ body {
 
 .pixel {
   position: relative;
-  width: 39px;
-  height: 39px;
+  width: 42px;
+  height: 42px;
   margin: 0px;
   padding: 0px;
   border: 1px solid black;
@@ -38,13 +42,13 @@ body {
   position: relative;
   margin-left: 8px;
   margin-top: 4px;
-  padding-left: 8px;
+  padding: 0px;
 }
 
 .color {
   position: relative;
-  width: 39px;
-  height: 39px;
+  width: 42px;
+  height: 42px;
   border: 1px solid black;
   display: inline-block;
 }
