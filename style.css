@@ -41,12 +41,14 @@ h1{
     position: absolute;
     top: 200px;
     left: 50px;
-    display: grid;
-    width: 200px;
     height: 200px;
-    z-index: 0;
+    display: grid;
+
+}
+#pixel-board, .lines{
+    width: 200px;
     background-color: white;
-    
+    z-index: 0;
 }
 .pixel{
     height: 40px;
