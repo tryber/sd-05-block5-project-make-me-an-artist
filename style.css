@@ -30,3 +30,7 @@
 .white {
   background-color: white;
 }
+
+#pixel-board {
+  border-collapse: collapse;
+}
