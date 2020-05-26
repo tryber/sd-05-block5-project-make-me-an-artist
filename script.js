@@ -52,3 +52,5 @@ function changeColor(event) {
   selectedPixel.style.backgroundColor = novaCor;
 }
 pixTable.addEventListener('click', changeColor);
+
+// CRIAR QUADRO
