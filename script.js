@@ -28,7 +28,7 @@ function setPaleteColors(colorsList) {
 // Gerando pixel-board
 
 function genBoardElement(className, idx) {
-  const boardElement = document.createElement('div');
+  const boardElement = document.createElement('button');
   boardElement.setAttribute('class', className);
   boardElement.setAttribute('id', idx);
   return boardElement;
@@ -44,7 +44,8 @@ function genPixels(numberPix) {
 }
 
 function populateBoard(pixels, elemento) {
-  for (let pixel = 0; pixel < pixels; pixels += 1) {
+  for (let pixel in pixels) {
+    console.log(pixels[pixel]);
     elemento.appendChild(pixels[pixel]);
   }
 }
@@ -52,8 +53,10 @@ function populateBoard(pixels, elemento) {
 // Eventos
 window.addEventListener('load', function () {
   const pixels = genPixels(nPixLine * nPixLine);
-  populateBoard(pixels, pixelBoard);
-  pixelBoard.style.width = `${nPixLine * 42}px`;
+  this.console.log(pixels);
+  let elemento = document.querySelector('#pixel-board');
+  populateBoard(pixels, elemento);
+  elemento.style.width = `${nPixLine * 42}px`;
 });
 
 window.addEventListener('load', setPaleteColors(colors));
