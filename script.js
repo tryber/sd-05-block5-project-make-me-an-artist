@@ -30,6 +30,7 @@ function selectedColor(event) {
     color = 'green';
   }
 }
+
 colorBlack.addEventListener('click', selectedColor);
 colorRed.addEventListener('click', selectedColor);
 colorBlue.addEventListener('click', selectedColor);
