@@ -12,7 +12,7 @@ window.onload = function(){
     clearButton.addEventListener('click', limpaPixel);
     function limpaPixel(){
         for(apaga in pixel){
-        pixel[apaga].style = "blank";
+        pixel[apaga].style = "background-color: blank";
         }
     }
     cores.addEventListener('click', selecionaCor);
@@ -25,7 +25,14 @@ window.onload = function(){
             }
             else {selectedColor[i].classList.remove("selected");}
         }
-         corEscolhida = cor.style.backgroundColor;
+         corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
          console.log(corEscolhida)
     }
+    
+    pixelBoard.addEventListener('click', colorePixel);
+    function colorePixel(e){
+        let idpixel = e.target;
+        idpixel.style.backgroundColor = corEscolhida;
+    }
+    
 }
