@@ -63,7 +63,9 @@ color3.addEventListener('click', function () {
 // change the color of the pixel when it's clicked
 const board = document.getElementById('pixel-board');
 board.addEventListener('click', function (event) {
-  event.target.style.backgroundColor = selectedColor;
+  if (!event.target.className.includes('pixel-board')) {
+    event.target.style.backgroundColor = selectedColor;
+  }
 });
 
 // create a button that clears the board colors when clicked
