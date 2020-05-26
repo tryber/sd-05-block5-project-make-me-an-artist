@@ -22,7 +22,7 @@
 
 .pixel {
   background-color: white;
-  border: solid 1px;
+  border: solid 1px black;
   width: 41px;
   height: 41px;
 }
