@@ -27,4 +27,3 @@ colorRed.addEventListener('click', selecionaCor);
 colorGreen.addEventListener('click', selecionaCor);
 colorBlue.addEventListener('click', selecionaCor);
 pixelBoard.addEventListener('click', pintaCor);
-
