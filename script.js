@@ -1,12 +1,35 @@
 
 
+
+
 let palette = document.querySelector("#color-palette");
 palette.addEventListener("click", myClickpalette);
-let classCopy = ["color", "cor1"];
+let classCopy = ["color", "cor1", "selected"];
+
 function myClickpalette(paletteEvent){
-  classCopy = paletteEvent.target.className.split(" ")
-  console.log(classCopy);
-  return(classCopy)
+let a = paletteEvent.target.className.split(" ");
+if(a[1] === "cor1" ){
+  console.log(a)
+  classCopy = a 
+  classCopy[2] = "selected"
+
+}else if(a[1] === "cor2"){
+  console.log(a)
+  classCopy = a 
+  classCopy[2] = "selected"
+
+}else if(a[1] === "cor3"){
+  console.log(a)
+  classCopy = a 
+  classCopy[2] = "selected"
+
+}else if(a[1] === "cor4"){
+  console.log(a)
+  classCopy = a 
+  classCopy[2] = "selected"
+
+}
+  return(classCopy);
 }
 
 //------------------------------------------------------------
@@ -28,9 +51,11 @@ function myPasteColor(selectedPaste){
 
 //------------------------------------------------------------
 let clearBt = document.querySelector("#clear-board");
-clearBt.addEventListener("click", clearAllPixels);
-function clearAllPixels(clear){
+let clean = document.getElementById("pixel-board").querySelectorAll(".pixel");
+console.log(clean)
+clearBt.addEventListener("click", function (){
+  for(let i = 0; i < clean.length; i += 1){
+   clean[i].style.background = "rgb(255, 255, 255)"
+  }
 
-
-
-}
+})
