@@ -15,14 +15,17 @@ window.onload = function(){
     }
     cores.addEventListener('click', selecionaCor);
     function selecionaCor(e){
-        let cor = e.target
-        for(i = 0; i < selecionaCor.length; i+=1){ 
+        let cor = e.target;
+        corEscolhida = cor;
+        for(i = 0; i < selectedColor.length; i+=1){ 
             selectedColor[i].classList.remove("selected");
 
             if(  selectedColor[i] == cor){
                 cor.classList.add("selected");
                 document.querySelector(".selecao").textContent = e.target.classList[0];
             }
+            else {            
+        }
         }
          corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
         // console.log(corEscolhida)
