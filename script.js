@@ -3,14 +3,14 @@ let totalRows = 5;
 let totalPixels = 5;
 
 function createBoard() {
-  let table = document.querySelector("table");
+  let table = document.querySelector('table');
   for (let r = 0; r < totalRows; r += 1) {
     let pixelRow = document.createElement('tr');
 
     for (let p = 0; p < totalPixels; p += 1) {
       let pixels = document.createElement('td');
-      pixels.className = "pixel";
-      pixels.addEventListener("click", changeColor);
+      pixels.className = 'pixel';
+      pixels.addEventListener('click', changeColor);
       pixelRow.appendChild(pixels);
     }
   table.appendChild(pixelRow);
@@ -18,7 +18,7 @@ function createBoard() {
 }
 window.onload=createBoard;
 
-// Função para tirar a class ".selected"
+// Função para tirar a class '.selected'
 function removeSelected() {
   let paletteColor = document.querySelectorAll('.color');
   for (i = 0; i < paletteColor.length; i += 1) {
@@ -36,9 +36,21 @@ function selectColor(event) {
   element.classList.add('selected');
   colorSelect = getComputedStyle(event.target, null).getPropertyValue('background-color');
 }
-pixelColor.addEventListener("click", selectColor);
+pixelColor.addEventListener('click', selectColor);
 
 function changeColor(event) {
   let pixel = event.target;
   pixel.style.backgroundColor = colorSelect;
 }
+
+// Botão de limpeza
+let clearButton = document.getElementById('clear-board');
+function clearPixels() {
+  let board = document.getElementById('pixel-board');
+  for (let i = 0; i < board.children.length; i += 1) {
+    for (let j = 0; j < board.children.length; j += 1) {
+      board.children[i].children[j].style.backgroundColor = 'white';
+    }
+  }
+}
+clearButton.addEventListener('click', clearPixels);
