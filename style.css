@@ -1,0 +1,54 @@
+#color-palette {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.color {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+.color:nth-child(1) {
+  background-color: black;
+}
+
+.color:nth-child(2) {
+  background-color: red;
+}
+
+.color:nth-child(3) {
+  background-color: green;
+}
+
+.color:nth-child(4) {
+  background-color: gold;
+}
+
+.button {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+
+#pixel-board {
+  width: 215px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.clear {
+ background-color: white;
+}
