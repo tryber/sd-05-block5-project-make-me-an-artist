@@ -5,7 +5,6 @@ if (sessionStorage.key("selected").toString().indexOf("color") < 0) {
 
 let colorSelected = sessionStorage.getItem("selected")
 let paleta = document.getElementById("color-palette");
-let pixelBoard=document.getElementById("pixel-board");
 paleta.addEventListener("click", function (evento) {
   if (evento.target.className.toString().indexOf("color") >= 0) {
     changeColorSelected(colorSelected, evento.target.className);
@@ -20,3 +19,11 @@ function changeColorSelected(oldColor, newColor) {
   elementNew.className += "selected"
   sessionStorage.setItem("selected", elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf("color"), 6))
 }
+
+let pixelBoard = document.getElementById("pixel-board");
+pixelBoard.addEventListener("click", function (evento) {
+  
+  if(evento.className.toString().indexOf("color")>=0){
+    console.log(evento.target)
+  }
+});
