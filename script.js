@@ -12,7 +12,7 @@ paleta.addEventListener("click", function (evento) {
     //console.log(document.getElementsByClassName("color"))
   }
 });
-/*
+
 function changeColorSelected(oldColor, newColor) {
   let elementOld = document.getElementsByClassName("selected")[0];
   let elementNew = document.getElementsByClassName(newColor)[0];
@@ -20,4 +20,3 @@ function changeColorSelected(oldColor, newColor) {
   elementNew.className += "selected"
   sessionStorage.setItem("selected", elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf("color"), 6))
 }
-*/
