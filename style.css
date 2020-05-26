@@ -61,12 +61,12 @@ margin-left: 35%;
 }
 
 #corselecionada {
-	background-color: black;
 	height: 30px;
 	width: 100px;
 	color:white;
 	padding: 5px;
 	text-align: center;
+	background-color: black;
 }
 
 .selected {

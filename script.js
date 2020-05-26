@@ -52,9 +52,8 @@ let pixelselecionado ='';
 
 function pintapixel (pixelevent){
     pixelselecionado = pixelevent.target;
-    let selected = document.querySelector('.selected');
-    pixelselecionado.style.backgroundColor = selected.style.backgroundColor;
-    
+    const selected = document.querySelector('.selected');
+    pixelselecionado.style.backgroundColor = selected.style.backgroundColor;    
 };
 
 document.getElementById("pixel-board").addEventListener("click", pintapixel);
