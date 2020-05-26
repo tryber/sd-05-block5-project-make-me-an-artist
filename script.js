@@ -29,11 +29,6 @@ function selectedColor(event) {
     colorSelected = document.querySelector('.selected');
     color = 'green';
   }
-  console.log(colorSelected);
-  console.log(colorBlack);
-  console.log(colorRed);
-  console.log(colorBlue);
-  console.log(colorGreen);
 }
 
 colorBlack.addEventListener('click', selectedColor);
