@@ -67,13 +67,9 @@ function setColorPixel(el) {
 }
 
 function clearAll() {
-  pixel = pixelBoard.firstElementChild;
-  for (let i = 0; i < pixelBoard.children.length; i += 1) {
-    const corAntiga = pixel.classList[pixel.classList.length - 1];
-    pixel.classList.remove(corAntiga);
-    pixel.classList.add('blank');
-    pixel.style = 'background-color: white';
-    pixel = pixel.nextElementSibling;
+  let blanker = document.getElementsByClassName('pixel');
+  for (let i = 0; i < blanker.length; i += 1) {
+    blanker[i].style.backgroundColor = 'white';
   }
 }
 
