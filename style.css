@@ -1,8 +1,9 @@
 .color {
   border: solid 1px black;
+  display: inline-block;
+  margin-bottom: 30px;
   height: 40px;
   width: 40px;
-  display: inline-block;
 }
 
 .black {
@@ -20,3 +21,12 @@
 .green {
   background-color: green;
 }
+
+.pixel {
+  background-color: white;
+  border: solid 1px black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
