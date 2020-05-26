@@ -9,9 +9,9 @@
     const botaoGeraQuadro = document.getElementById("generate-board");
     let corEscolhida = 'black';
 
-    for
+    /*for
     pixelBoard.appendChild(pixel);
-    boardSize
+    boardSize*/
     clearButton.addEventListener('click', limpaPixel);
     function limpaPixel(){
         for(apaga in pixel){
