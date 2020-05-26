@@ -1,0 +1,23 @@
+body {
+  margin : 0;
+}
+
+.palette , .board , .tools {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.palette , .tools {
+  width: 210px;
+}
+
+.pixel , .color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel {
+  margin: -2px;
+}
