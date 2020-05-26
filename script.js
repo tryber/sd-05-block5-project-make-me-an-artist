@@ -19,7 +19,7 @@ function selecionaCor(){
 function pintaCor(){
     let seleciona = event.target
     seleciona.classList.remove(seleciona.classList[1])
-    seleciona.classList.add(corEscolhida)
+    seleciona.classList.add(corEscolhida);
 }
 
 colorBlack.addEventListener('click', selecionaCor);
