@@ -42,8 +42,8 @@ function createGridOfPixel(size) {
 }
 
 function changeSize() {
-  const size = parseInt(boardSize.value);
-  if (size === 0 ) {
+  const size = boardSize.value;
+  if (size.length <= 0 ) {
     alert("Board Inválida");
   } else{
     createGridOfPixel(size);
