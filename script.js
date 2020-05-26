@@ -27,29 +27,30 @@ function buildPalette() {
     board.appendChild(document.createTextNode('\n'));
   }
 }
-/* Constrói a grade de pixels [BUG] */
+/* Constrói a grade de pixels */
 function buildGrid(size) {
   const board = document.getElementById('pixel-board');
-  const width = `${size * 38}px`;
+  const wh = `${size * 42}px`;
   board.innerHTML = '';
-  board.style.width = width;
-  document.getElementById('color-palette').style.width = width;
-  document.getElementById('tools-board').style.width = width;
-  for (let i = 0; i < size ** 2; i += 1) {
-    const div = document.createElement('div');
-    const cell = board.appendChild(div);
-    cell.className = 'pixel';
-    cell.style.backgroundColor = 'white';
-    cell.addEventListener('click', setPixelColor);
-    //if ((i+1) % size === 0) board.appendChild(document.createTextNode('\n\n'));
+  board.style.width = wh;
+  document.getElementById('color-palette').style.width = wh;
+  document.getElementById('tools-board').style.width = wh;
+  for (let i = 0; i < size; i += 1) {
+    const tr = document.createElement('tr');
+    const line = board.appendChild(tr);
+    for (let j=0; j < size; j += 1) {
+      const td = document.createElement('td');
+      const cell = line.appendChild(td);
+      cell.className = 'pixel';
+      cell.style.backgroundColor = 'white';
+      cell.addEventListener('click', setPixelColor);
+    }
   }
 }
 /* Limpa tod o quadro */
 function clearAll() {
-  const cells = document.getElementById('pixel-board').children;
-  for (let i = 0; i < cells.length; i += 1) {
-    cells[i].style.backgroundColor = 'white';
-  }
+  const cells = document.getElementById('pixel-board').children[0].children.length || 5;
+  buildGrid(cells);
 }
 /* Define toda a estrutura do programa */
 window.onload = function () {
