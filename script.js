@@ -11,7 +11,6 @@ paleta.addEventListener("click", function (evento) {
     //console.log(document.getElementsByClassName("color"))
   }
 });
-
 function changeColorSelected(oldColor, newColor) {
   let elementOld = document.getElementsByClassName("selected")[0];
   let elementNew = document.getElementsByClassName(newColor)[0];
