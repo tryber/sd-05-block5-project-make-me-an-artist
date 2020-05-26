@@ -1,9 +1,10 @@
-window.onload=function(){
+/*
+window.onload = function () {
   if (sessionStorage.key("selected").toString().indexOf("color") < 0) {
-  sessionStorage.setItem("selected", "color1")
+    sessionStorage.setItem("selected", "color1")
+  }
 }
-}
-
+*/
 
 let colorSelected = sessionStorage.getItem("selected")
 let paleta = document.getElementById("color-palette");
