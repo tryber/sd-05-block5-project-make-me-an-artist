@@ -12,7 +12,7 @@ window.onload = function(){
     clearButton.addEventListener('click', limpaPixel);
     function limpaPixel(){
         for(apaga in pixel){
-        pixel[apaga].style = "background-color: blank";
+        pixel[apaga].style = "background-color: white";
         }
     }
     cores.addEventListener('click', selecionaCor);
@@ -28,7 +28,7 @@ window.onload = function(){
          corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
          console.log(corEscolhida)
     }
-    
+
     pixelBoard.addEventListener('click', colorePixel);
     function colorePixel(e){
         let idpixel = e.target;
