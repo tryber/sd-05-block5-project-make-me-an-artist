@@ -20,22 +20,22 @@ body {
 
 #pixel-board {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 205px;
+  height: 205px;
   margin-left: 8px;
-  border: 1px solid black;
   background-color: white;
 }
 
 .pixel {
   position: relative;
-  width: 42px;
-  height: 42px;
-  margin: 0px;
-  padding: 0px;
+  width: 41px;
+  height: 41px;
+  margin: -3px;
+  padding: -3px;
   border: 1px solid black;
   background-color: white;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 #color-palette {
