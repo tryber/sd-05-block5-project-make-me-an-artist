@@ -67,8 +67,7 @@ function clearBoard() {
   let allPixels = document.querySelectorAll("#pixel-board > tr > td");
   for(let i = 0; i < allPixels.length; i += 1) {
     allPixels[i].classList.remove(allPixels[i].classList[1]);
-    allPixels[i].classList.add(allPixels[i].classList["white"]);
-    console.log(allPixels[i])
+    allPixels[i].classList.add(allPixels[i].classList[1] = "white");
   } 
 }
 
