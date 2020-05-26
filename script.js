@@ -2,10 +2,10 @@
 let n = 25;
 let colorPalette = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
-let black = document.querySelector('.black');
-let blue = document.querySelector('.blue');
-let red = document.querySelector('.red');
-let green = document.querySelector('.green');
+let black = document.getElementById('black');
+let color1 = document.getElementById('color1');
+let color2 = document.getElementById('color2');
+let color3 = document.getElementById('color3');
 let boardSize = document.querySelector('#board-size');
 let boardGenButton = document.querySelector('#generate-board');
 let selected = document.getElementsByClassName('selected')[0];  
@@ -77,13 +77,35 @@ function clearAll() {
   }
 }
 
-clearAllButton.addEventListener('click', clearAll);
+function getRandomColor() {
+ const randomColor = Math.floor(Math.random()*16777215).toString(16);
+ let newColor = "#" + randomColor;
+ if(newColor === "#ffffff" || newColor === "#FFFFFF"){
+   newColor = "#ff00ff";
+ }
+ return newColor;
+}
+
+function setRandomColor() {
+  const setColor1 = getRandomColor();
+  color1.style.backgroundColor = setColor1;
+  color1.classList.add(setColor1);
+  const setColor2 = getRandomColor();
+  color2.style.backgroundColor = setColor2;
+  color2.classList.add(setColor2);
+  const setColor3 = getRandomColor();
+  color3.style.backgroundColor = setColor3;
+  color3.classList.add(setColor3);
+}
 
 // events
+clearAllButton.addEventListener('click', clearAll);
 black.addEventListener('click', changeSelectedColor);
-blue.addEventListener('click', changeSelectedColor);
-red.addEventListener('click', changeSelectedColor);
-green.addEventListener('click', changeSelectedColor);
+color1.addEventListener('click', changeSelectedColor);
+color2.addEventListener('click', changeSelectedColor);
+color3.addEventListener('click', changeSelectedColor);
 pixelBoard.addEventListener('click', setColorPixel)
 boardGenButton.addEventListener('click', changeSize);
 window.addEventListener('load',createGridOfPixel(5));
+
+setRandomColor();
