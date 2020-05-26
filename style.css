@@ -14,11 +14,6 @@ body {
   position: absolute;
   top: 25px;
 }
-.imagem {
-  left: 524px;
-  position: absolute;
-  top: 5px;
-}
 .github {
   position: absolute;
   right: 230px;
@@ -31,10 +26,7 @@ body {
   top: 100px;
   width: 24px;
 }
-.color-palette-Class{
-  
-}
-.color-palette-Class .preto{
+.preto{
   background-color: black;
   border: 1px solid black;
   height: 100px;
