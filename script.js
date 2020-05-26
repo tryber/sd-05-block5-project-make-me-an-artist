@@ -5,6 +5,7 @@ let colorGreen = document.getElementById('colorFour');
 let colorSelected = document.querySelector('.selected');
 let pixelUnit = document.querySelectorAll('.pixel');
 let color = "black";
+let clearButton = document.getElementById('clear-board');
 
 colorBlack.addEventListener('click', selectedColor);
 colorRed.addEventListener('click', selectedColor);
@@ -40,5 +41,11 @@ function selectedColor(event) {
 for (let i = 0; i < pixelUnit.length; i += 1) {
   pixelUnit[i].addEventListener('click', function() {
     pixelUnit[i].style.backgroundColor = color;
+  })
+}
+
+for (let i = 0; i < pixelUnit.length; i += 1) {
+  clearButton.addEventListener('click', function() {
+    pixelUnit[i].style.backgroundColor = 'white';
   })
 }
