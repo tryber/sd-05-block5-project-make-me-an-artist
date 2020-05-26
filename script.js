@@ -1,8 +1,8 @@
 // function that generates random colors
-function randomColors () {
-  let r = Math.floor(Math.random() * 256);
-  let g = Math.floor(Math.random() * 256);
-  let b = Math.floor(Math.random() * 256);
+function randomColors() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -24,43 +24,40 @@ black.addEventListener('click', function () {
   if (!black.className.includes('selected')) {
     black.classList.add('selected');
   }
-    color1.classList.remove('selected');
-    color2.classList.remove('selected');
-    color3.classList.remove('selected');
-    selectedColor = 'black';
+  color1.classList.remove('selected');
+  color2.classList.remove('selected');
+  color3.classList.remove('selected');
+  selectedColor = 'black';
 });
 
 color1.addEventListener('click', function () {
   if (!color1.className.includes('selected')) {
     color1.classList.add('selected');
   }
-    black.classList.remove('selected');
-    color2.classList.remove('selected');
-    color3.classList.remove('selected');
-    selectedColor = color1.style.backgroundColor;
-    console.log(selectedColor);
+  black.classList.remove('selected');
+  color2.classList.remove('selected');
+  color3.classList.remove('selected');
+  selectedColor = color1.style.backgroundColor;
 });
 
 color2.addEventListener('click', function () {
   if (!color2.className.includes('selected')) {
     color2.classList.add('selected');
   }
-    black.classList.remove('selected');
-    color1.classList.remove('selected');
-    color3.classList.remove('selected');
-    selectedColor = color2.style.backgroundColor;
-    console.log(selectedColor);
+  black.classList.remove('selected');
+  color1.classList.remove('selected');
+  color3.classList.remove('selected');
+  selectedColor = color2.style.backgroundColor;
 });
 
 color3.addEventListener('click', function () {
   if (!color3.className.includes('selected')) {
     color3.classList.add('selected');
   }
-    black.classList.remove('selected');
-    color1.classList.remove('selected');
-    color2.classList.remove('selected');
-    selectedColor = color3.style.backgroundColor;
-    console.log(selectedColor);
+  black.classList.remove('selected');
+  color1.classList.remove('selected');
+  color2.classList.remove('selected');
+  selectedColor = color3.style.backgroundColor;
 });
 
 // change the color of the pixel when it's clicked
@@ -87,14 +84,11 @@ function createPixels() {
   board.innerHTML = '';
   let boardColumns = '';
   let numberOfPixels = N.value;
-  // limit 5 <= N <= 50
   if (numberOfPixels === '') {
     alert('Board Inválido!');
-  }
-  if (numberOfPixels < 5) {
+  } else if (numberOfPixels < 5) {
     numberOfPixels = 5;
-  }
-  if (numberOfPixels > 50) {
+  } else if (numberOfPixels > 50) {
     numberOfPixels = 50;
   }
   for (let i = 0; i < numberOfPixels; i += 1) {
@@ -107,7 +101,6 @@ function createPixels() {
   }
   board.style.gridTemplateColumns = boardColumns;
 }
-
 
 // create a event listener to create the board once the button VQVis clicked
 const vqvBtn = document.getElementById('generate-board');
