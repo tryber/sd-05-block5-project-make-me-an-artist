@@ -1,61 +1,72 @@
+// function that generates random colors
+function randomColors () {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 // create variable to store each color element
 const black = document.querySelector('.color.black');
-const yellow = document.querySelector('.color.yellow');
-const red = document.querySelector('.color.red');
-const blue = document.querySelector('.color.blue');
+const color1 = document.querySelector('.color.color1');
+color1.style.backgroundColor = randomColors();
+const color2 = document.querySelector('.color.color2');
+color2.style.backgroundColor = randomColors();
+const color3 = document.querySelector('.color.color3');
+color3.style.backgroundColor = randomColors();
 
 // include class selected on black element
 black.className += ' selected';
 let selectedColor = 'black';
 
-  // add a event listener to each collor in the palett
+// add a event listener to each collor in the palett
 black.addEventListener('click', function () {
-  // if clas is not selected already, add class selected to   it
-  if (black.className !== 'color black selected') {
-    black.className += ' selected';
+  if (!black.className.includes('selected')) {
+    black.classList.add('selected');
   }
-  // keep other colors without the selected class
-  yellow.className = 'color yellow';
-  red.className = 'color red';
-  blue.className = 'color blue';
-  selectedColor = 'black';
+    color1.classList.remove('selected');
+    color2.classList.remove('selected');
+    color3.classList.remove('selected');
+    selectedColor = 'black';
 });
 
-yellow.addEventListener('click', function () {
-  if (yellow.className !== 'color yellow selected') {
-    yellow.className += ' selected';
+color1.addEventListener('click', function () {
+  if (!color1.className.includes('selected')) {
+    color1.classList.add('selected');
   }
-  black.className = 'color black';
-  red.className = 'color red';
-  blue.className = 'color blue';
-  selectedColor = 'yellow';
+    black.classList.remove('selected');
+    color2.classList.remove('selected');
+    color3.classList.remove('selected');
+    selectedColor = color1.style.backgroundColor;
+    console.log(selectedColor);
 });
 
-red.addEventListener('click', function () {
-  if (red.className !== 'color red selected') {
-    red.className += ' selected';
+color2.addEventListener('click', function () {
+  if (!color2.className.includes('selected')) {
+    color2.classList.add('selected');
   }
-  yellow.className = 'color yellow';
-  black.className = 'color black';
-  blue.className = 'color blue';
-  selectedColor = 'red';
+    black.classList.remove('selected');
+    color1.classList.remove('selected');
+    color3.classList.remove('selected');
+    selectedColor = color2.style.backgroundColor;
+    console.log(selectedColor);
 });
 
-blue.addEventListener('click', function () {
-  if (blue.className !== 'color blue selected') {
-    blue.className += ' selected';
+color3.addEventListener('click', function () {
+  if (!color3.className.includes('selected')) {
+    color3.classList.add('selected');
   }
-  yellow.className = 'color yellow';
-  red.className = 'color red';
-  black.className = 'color black';
-  selectedColor = 'blue';
+    black.classList.remove('selected');
+    color1.classList.remove('selected');
+    color2.classList.remove('selected');
+    selectedColor = color3.style.backgroundColor;
+    console.log(selectedColor);
 });
 
 // change the color of the pixel when it's clicked
 const board = document.getElementById('pixel-board');
 board.addEventListener('click', function (event) {
-  event.target.className = `pixel ${selectedColor}`;
+  event.target.style.backgroundColor = selectedColor;
 });
 
 // create a button that clears the board colors when clicked
@@ -63,7 +74,7 @@ const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', function () {
   const pixelDivs = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixelDivs.length; i += 1) {
-    pixelDivs[i].className = 'pixel white';
+    pixelDivs[i].style.backgroundColor = 'white';
   }
 });
 

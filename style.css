@@ -9,18 +9,6 @@
   background-color: black;
 }
 
-.blue {
-  background-color: blue;
-}
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
 .pixel-board {
   display: grid;
   grid-template-columns: max-content max-content max-content max-content max-content;
