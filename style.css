@@ -1,0 +1,30 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0 5px;
+  width: 40px;
+}
+
+.color-palette {
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.black {
+  background-color: black;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
