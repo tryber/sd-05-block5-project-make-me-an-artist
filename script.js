@@ -1,4 +1,4 @@
-window.onload = function(){
+
     const clearButton = document.getElementById('clear-board');
     const selectedColor = document.querySelectorAll(".color");
     const cores = document.getElementById("color-palette");
@@ -38,5 +38,4 @@ window.onload = function(){
     function colorePixel(e){
         let pixelClicado = e.target;
         pixelClicado.style.backgroundColor = corEscolhida;
-    }   
-}
+    }
