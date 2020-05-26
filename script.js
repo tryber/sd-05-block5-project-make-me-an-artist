@@ -1,4 +1,3 @@
-let classCopy = ["color", "cor1", "selected"];
 let palette = document.querySelector("#color-palette");
 palette.addEventListener("click", myClickpalette);
 let classCopy = ["color", "cor1", "selected"];
@@ -26,6 +25,7 @@ if(a[1] === "cor1" ){
   classCopy[2] = "selected"
 
 }
+
   return(classCopy);
 }
 
@@ -51,9 +51,8 @@ let clearBt = document.querySelector("#clear-board");
 let clean = document.getElementById("pixel-board").querySelectorAll(".pixel");
 console.log(clean)
 clearBt.addEventListener("click", function (){
-  for(let i = 0; i < clean.length; i++){
+  for(let i = 0; i < clean.length; i += 1){
    clean[i].style.background = "rgb(255, 255, 255)"
   }
 
 })
-
