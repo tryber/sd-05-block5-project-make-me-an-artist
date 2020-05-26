@@ -14,12 +14,31 @@ body {
   border: 1px solid black;
 }
 
-#color-palette{
+#pixel-board {
   position: relative;
-  margin-left: 1px;
+  width: 200px;
+  height: 200px;
+  margin-left: 8px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.pixel {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+#color-palette {
+  position: relative;
+  margin-left: 8px;
   margin-top: 4px;
-  padding-left: 4%;
-  ;
+  padding-left: 8px;
 }
 
 .color {
@@ -49,22 +68,4 @@ body {
 #clear-board {
   position: relative;
   margin-left: 60px;
-}
-
-#pixel-board {
-  position: relative;
-  width: 215px;
-  height: 215px;
-  margin-left: 8px;
-  background-color: white;  
-}
-
-.pixel {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin: -3px;
-  padding: -3px;
-  border: 1px solid black;
-  display: inline-block;  
 }
