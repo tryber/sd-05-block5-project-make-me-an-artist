@@ -57,7 +57,6 @@ function verifySize(size) {
 function generateBoard() {
   document.getElementById('pixel-board').innerHTML = '';
   let size = document.getElementById('board-size').value;
-  if (size === '') { size = 5; }
   verifySize(size);
   size = verifiedSize;
   for (let i = 0; i < size; i += 1) {
