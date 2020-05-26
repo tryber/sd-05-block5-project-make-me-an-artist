@@ -5,8 +5,12 @@ window.onload = function(){
     let pixelBoard = document.querySelector("#pixel-board");
     let pixel = document.querySelectorAll(".pixel");
     document.querySelector(".black").classList.add("selected");
+    let boardSize = document.getElementById("board-size").value;
+    const botaoGeraQuadro = document.getElementById("generate-board");
     let corEscolhida = 'black';
-    
+
+
+    boardSize
     clearButton.addEventListener('click', limpaPixel);
     function limpaPixel(){
         for(apaga in pixel){
@@ -15,19 +19,18 @@ window.onload = function(){
     }
     cores.addEventListener('click', selecionaCor);
     function selecionaCor(e){
-        let cor = e.target;
-        corEscolhida = cor;
+        corEscolhida = e.target;
         for(i = 0; i < selectedColor.length; i+=1){ 
             selectedColor[i].classList.remove("selected");
 
-            if(  selectedColor[i] == cor){
-                cor.classList.add("selected");
+            if(  selectedColor[i] == corEscolhida){
+                corEscolhida.classList.add("selected");
                 document.querySelector(".selecao").textContent = e.target.classList[0];
             }
             else {            
         }
         }
-         corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
+         corEscolhida = getComputedStyle(corEscolhida, null).getPropertyValue('background-color');
         // console.log(corEscolhida)
     }
 
