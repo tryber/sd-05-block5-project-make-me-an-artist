@@ -5,7 +5,7 @@ window.onload = function () {
   const red = document.querySelector('.color.red');
   const blue = document.querySelector('.color.blue');
 
-  // include class selected on black element when the window  is loaded
+  // include class selected on black element
     black.className += ' selected';  
     let selectedColor = 'black';
 
