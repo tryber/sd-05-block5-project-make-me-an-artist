@@ -62,3 +62,16 @@ function paintPixel() {
   event.target.classList.add(colorClass);
 }
 
+//Clear Board
+function clearBoard() {
+  let allPixels = document.querySelectorAll("#pixel-board > tr > td");
+  for(let i = 0; i < allPixels.length; i += 1) {
+    allPixels[i].classList.remove(allPixels[i].classList[1]);
+    allPixels[i].classList.add(allPixels[i].classList["white"]);
+    console.log(allPixels[i])
+  } 
+}
+
+let clearButton = document.getElementById("clear-board");
+clearButton.addEventListener("click", clearBoard);
+
