@@ -1,0 +1,41 @@
+.color-palette .color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.cor1 {
+  background-color: black;
+}
+
+.cor2 {
+  background-color: rgb(157, 0, 0);
+}
+
+.cor3 {
+  background-color: rgb(225, 176, 0);
+}
+
+.cor4 {
+  background-color: rgb(0, 115, 167);
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.table {
+  display: table;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
