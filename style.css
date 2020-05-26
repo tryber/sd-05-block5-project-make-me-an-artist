@@ -20,7 +20,7 @@
     background-color: green;
   }
 /* Pixel board formatting */
-#pixel-board {
+.pixel-board {
   border-collapse: collapse;
 }
 .pixel {
