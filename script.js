@@ -39,10 +39,9 @@ buttonClear.addEventListener('click', clearBoard);
 
 // Cria um board com n x n pixels
 const buttonSize = document.getElementById('generate-board');
-function generateBoard() {
-  document.getElementById('pixel-board').innerHTML = '';
-  let size = document.getElementById('board-size').value;
-  if (size.length < 1 || size === '' || size === null || isNaN(size) || size === false) {
+let verifiedSize = 0;
+function verifySize(size) {
+  if (size === '') {
     alert('Board inválido!');
     size = 5;
   }
@@ -52,6 +51,15 @@ function generateBoard() {
   if (size > 50) {
     size = 50;
   }
+  verifiedSize = size;
+  return verifiedSize;
+}
+function generateBoard() {
+  document.getElementById('pixel-board').innerHTML = '';
+  let size = document.getElementById('board-size').value;
+  if (size === '') { size = 5; }
+  verifySize(size);
+  size = verifiedSize;
   for (let i = 0; i < size; i += 1) {
     const divLine = document.createElement('tr');
     divLine.className = 'pixel-line';
