@@ -1,16 +1,16 @@
 // variables
 let n = 25;
-const colorPalette = document.getElementById("color-palette");
-const pixelBoard = document.getElementById("pixel-board");
-const black = document.getElementById("black");
-const color1 = document.getElementById("color1");
-const color2 = document.getElementById("color2");
-const color3 = document.getElementById("color3");
-const boardSize = document.querySelector("#board-size");
-const boardGenButton = document.querySelector("#generate-board");
-const selected = document.getElementsByClassName("selected")[0];
-const cor = selected.classList[1];
-const clearAllButton = document.getElementById("clear-board");
+let colorPalette = document.getElementById("color-palette");
+let pixelBoard = document.getElementById("pixel-board");
+let black = document.getElementById("black");
+let color1 = document.getElementById("color1");
+let color2 = document.getElementById("color2");
+let color3 = document.getElementById("color3");
+let boardSize = document.querySelector("#board-size");
+let boardGenButton = document.querySelector("#generate-board");
+let selected = document.getElementsByClassName("selected")[0];
+let cor = selected.classList[1];
+let clearAllButton = document.getElementById("clear-board");
 let target = "";
 
 // functions
