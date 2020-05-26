@@ -32,5 +32,6 @@ window.onload = function(){
         let pixelClicado = e.target;
         pixelClicado.style.backgroundColor = corEscolhida;
     }
+
     
 }

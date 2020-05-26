@@ -21,6 +21,7 @@ h1{
     display: inline-block;
 }
 .color{
+    border: 1px solid black;
     height: 40px;
     width: 40px;
 }
@@ -43,6 +44,8 @@ h1{
 }
 #pixel-board{
     display: grid;
+    width: 200px;
+    height: 200px;
     z-index: 0;
 }
 .pixel{
