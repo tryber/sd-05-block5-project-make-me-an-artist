@@ -13,7 +13,7 @@ function selecionarCor () {
 function limpar (){
     sqr = quadrado.firstChild;
     for (let a = 1; a <= quadrado.children.length; a += 1){
-        sqr.style = 'backgroung-color:  white';
+        sqr.style = 'background-color:  white';
         sqr[] += 1;
     }
 }
