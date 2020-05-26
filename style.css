@@ -26,7 +26,8 @@ body {
   top: 100px;
   width: 24px;
 }
-.preto{
+
+.color-palette-Class .preto{
   background-color: black;
   border: 1px solid black;
   height: 100px;
@@ -36,7 +37,7 @@ body {
   top: 80px;
   width: 100px;
 }
-.vermelho{
+.color-palette-Class .vermelho{
   background-color: red;
   border: 1px solid black;
   height: 100px;
@@ -46,7 +47,7 @@ body {
   top: 80px;
   width: 100px;
 }
-.azul{
+.color-palette-Class .azul{
   background-color: blue;
   border: 1px solid black;
   height: 100px;
@@ -56,7 +57,7 @@ body {
   top: 80px;
   width: 100px;
 }
-.verde{
+.color-palette-Class .verde{
   background-color: green;
   border: 1px solid black;
   height: 100px;
