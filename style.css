@@ -9,9 +9,17 @@ body {
 }
 
 #container {
-  width: 220px;
+  width: 200px;
   height: 50px;
   border: 1px solid black;
+}
+
+#color-palette{
+  position: relative;
+  margin-left: 1px;
+  margin-top: 4px;
+  padding-left: 4%;
+  ;
 }
 
 .color {
@@ -20,23 +28,21 @@ body {
   height: 40px;
   border: 1px solid black;
   display: inline-block;
-  margin-top: 2%;
-  margin-left: 3.5%;
 }
 
-.color.black {
+.black {
   background-color: black;
 }
 
-.color.red {
+.red {
   background-color: red;
 }
 
-.color.green {
+.green {
   background-color: green;
 }
 
-.color.blue {
+.blue {
   background-color: blue;
 }
 
@@ -61,5 +67,4 @@ body {
   padding: -3px;
   border: 1px solid black;
   display: inline-block;  
-  background-color: white;
 }
