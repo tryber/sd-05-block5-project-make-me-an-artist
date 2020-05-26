@@ -13,10 +13,17 @@ function setPixelColor(el) {
   const selected = document.querySelector('.selected');
   el.target.style.backgroundColor = selected.style.backgroundColor;
 }
+/* Gera cores aleatórias */
+function generateColor() {
+  const r = Math.round(Math.random() * 255);
+  const g = Math.round(Math.random() * 255);
+  const b = Math.round(Math.random() * 255);
+  return `RGB(${r}, ${g}, ${b})`;
+}
 /* Constrói a Paleta */
 function buildPalette() {
   const board = document.getElementById('color-palette');
-  const colors = ['black', 'red', 'green', 'blue'];
+  const colors = ['black', generateColor(), generateColor(), generateColor()];
   for (let i = 0; i < colors.length; i += 1) {
     const div = document.createElement('div');
     const cell = board.appendChild(div);
@@ -38,7 +45,7 @@ function buildGrid(size) {
   for (let i = 0; i < size; i += 1) {
     const tr = document.createElement('tr');
     const line = board.appendChild(tr);
-    for (let j=0; j < size; j += 1) {
+    for (let j = 0; j < size; j += 1) {
       const td = document.createElement('td');
       const cell = line.appendChild(td);
       cell.className = 'pixel';
