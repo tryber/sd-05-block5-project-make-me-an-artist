@@ -6,8 +6,8 @@ const red = document.querySelector('.color.red');
 const blue = document.querySelector('.color.blue');
 
 // include class selected on black element
-  black.className += ' selected';  
-  let selectedColor = 'black';
+black.className += ' selected';  
+let selectedColor = 'black';
 
   // add a event listener to each collor in the palett
 black.addEventListener('click', function () {
@@ -39,7 +39,7 @@ red.addEventListener('click', function () {
   yellow.className = 'color yellow';
   black.className = 'color black';
   blue.className = 'color blue';
-  selectedColor = 'red';    
+  selectedColor = 'red';
 });
 
 blue.addEventListener('click', function () {
@@ -61,9 +61,9 @@ board.addEventListener('click', function (event) {
 // create a button that clears the board colors when clicked
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', function () {
-  let pixelDivs = document.querySelectorAll('.pixel');
-  for (i in pixelDivs) {
-    pixelDivs[i].className = "pixel white";
+  const pixelDivs = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixelDivs.length; i += 1) {
+    pixelDivs[i].className = 'pixel white';
   }
 });
 
@@ -72,7 +72,7 @@ const N = document.getElementById('board-size');
 
 // create divs inside pixel-board based on the number of pixels ofthe input
 function createPixels() {
-  //clear all the divs created before creating a new board
+  // clear all the divs created before creating a new board
   board.innerHTML = '';
   let boardColumns = '';
   let numberOfPixels = N.value;
@@ -83,9 +83,9 @@ function createPixels() {
   if (numberOfPixels > 50) {
     numberOfPixels = 50;
   }
-  for (let i = 0; i < numberOfPixels; i+=1) {
+  for (let i = 0; i < numberOfPixels; i += 1) {
     boardColumns += 'max-content ';
-    for (let j = 0; j < numberOfPixels; j+=1) {
+    for (let j = 0; j < numberOfPixels; j += 1) {
       const div = document.createElement('div');
       div.className = 'pixel white';
       board.appendChild(div);
