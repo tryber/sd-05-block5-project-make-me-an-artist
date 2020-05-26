@@ -7,7 +7,7 @@ function corSelecionada(e) {
   }
 
   selecao.classList.add('selected');
-  corPixel = getComputedStyle(selecao, null).getPropertyValue('background-color');  
+  corPixel = getComputedStyle(selecao, null).getPropertyValue('background-color');
 }
 
 const acessarPalette = document.querySelector('#color-palette');
