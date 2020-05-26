@@ -1,7 +1,7 @@
 if (sessionStorage.key("selected").toString().indexOf("color") < 0) {
   sessionStorage.setItem("selected", "color1")
 }
-
+/*
 let colorSelected = sessionStorage.getItem("selected")
 let paleta = document.getElementById("color-palette");
 
@@ -18,3 +18,4 @@ function changeColorSelected(oldColor, newColor) {
   elementNew.className += "selected"
   sessionStorage.setItem("selected", elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf("color"), 6))
 }
+*/
