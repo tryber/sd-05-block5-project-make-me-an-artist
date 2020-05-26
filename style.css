@@ -12,7 +12,7 @@ body {
   font-size: 30px;
   left: 500px;
   position: absolute;
-  top: 135px;
+  top: 25px;
 }
 .imagem {
   left: 524px;
@@ -31,8 +31,48 @@ body {
   top: 100px;
   width: 24px;
 }
-.caixa1 .caixa2 .caixa3 .caixa4{
-
+.color-palette-Class{
+  
+}
+.color-palette-Class .preto{
+  background-color: black;
+  border: 1px solid black;
+  height: 100px;
+  left: 400px;
+  margin: 10px auto;
+  position: absolute;
+  top: 80px;
+  width: 100px;
+}
+.vermelho{
+  background-color: red;
+  border: 1px solid black;
+  height: 100px;
+  left: 520px;
+  margin: 10px auto;
+  position: absolute;
+  top: 80px;
+  width: 100px;
+}
+.azul{
+  background-color: blue;
+  border: 1px solid black;
+  height: 100px;
+  left: 640px;
+  margin: 10px auto;
+  position: absolute;
+  top: 80px;
+  width: 100px;
+}
+.verde{
+  background-color: green;
+  border: 1px solid black;
+  height: 100px;
+  left: 760px;
+  margin: 10px auto;
+  position: absolute;
+  top: 80px;
+  width: 100px;
 }
 .rodapeClasse {
   margin-bottom: 20px;
