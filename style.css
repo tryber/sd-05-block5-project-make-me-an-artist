@@ -1,0 +1,74 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1em;
+  background-color: white;
+}
+
+#title {
+  color: blueviolet;
+}
+
+#container {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+#branca {
+  background-color: white;
+}
+
+#pixel-board {
+  position: relative;
+  width: 205px;
+  height: 205px;
+  margin-left: 8px;
+  background-color: white;
+}
+
+.pixel {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: -3px;
+  padding: -3px;
+  border: 1px solid black;
+  background-color: white;
+  display: inline-block;
+}
+
+#color-palette {
+  position: relative;
+  margin-left: 8px;
+  margin-top: 4px;
+  padding: 0px;
+}
+
+.color {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+#clear-board {
+  position: relative;
+  margin-left: 60px;
+}
