@@ -19,5 +19,15 @@
     border-width: 1px;
     display: inline-block;
     width: 40px;
-    height:40px ;
+    height:40px;
+}
+
+.pixel {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    width: 41px;
+    height:41px;
+    border-collapse: 0px;
+    background-color: white;
 }
