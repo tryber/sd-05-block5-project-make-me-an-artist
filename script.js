@@ -77,6 +77,9 @@ function createPixels() {
   let boardColumns = '';
   let numberOfPixels = N.value;
   // limit 5 <= N <= 50
+  if (numberOfPixels === '') {
+    alert('Board Inválido!');
+  }
   if (numberOfPixels < 5) {
     numberOfPixels = 5;
   }
