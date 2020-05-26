@@ -1,0 +1,54 @@
+body {
+  font-family: Space Grotesk, sans-serif;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.black {
+  background-color: black;
+}
+
+.pixel-board {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content;
+  margin-left: 20%;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.white {
+  background-color: white;
+}
+
+ul {
+  margin-top: 30px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.size {
+  float: left;
+}
+
+button {
+  border-radius: 12px;
+  color: white;
+  margin-left: 5px;
+}
+
+.vqv {
+  background-color: green;
+}
+
+.clear-board {
+  background-color: indianred;
+}
