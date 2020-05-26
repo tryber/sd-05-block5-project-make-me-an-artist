@@ -9,8 +9,6 @@ let green = document.querySelector('.green');
 let selected = document.getElementsByClassName('selected')[0];  
 let cor = selected.classList[1];
 let clearAllButton = document.getElementById('clear-board');
-let inputSize = document.getElementById('board-size');
-let inputSizeButton = document.getElementById('generate-board');
 let target = '';
 
 // functions
@@ -26,25 +24,11 @@ function createBoardColumns() {
   pixelBoard.appendChild(pixelColumn);
 }
 
-function changeSize() {
-  const str = inputSize.value;
-  if (str.length === 0 ) {
-    alert('Board Inválido');
-  } else {
-    createGridOfPixel(str);
-  }
-}
-
-function createGridOfPixel(str) {
-  if (parseInt(str, 10) < 5) {
-    str = 5;
-  } else if (parseInt(str, 10) > 50) {
-    str = 50;
-  }
+function createGridOfPixel(n) {
   pixelBoard.innerHTML = '';
-  for(let line = 1; line <= str; line += 1) {
+  for(let line = 1; line <= n; line += 1) {
     createBoardLines();
-    for(let column = 2; column <= str; column += 1) {
+    for(let column = 2; column <= n; column += 1) {
       createBoardColumns();
     }
   }
@@ -84,5 +68,6 @@ black.addEventListener('click', changeSelectedColor);
 blue.addEventListener('click', changeSelectedColor);
 red.addEventListener('click', changeSelectedColor);
 green.addEventListener('click', changeSelectedColor);
-pixelBoard.addEventListener('click', setColorPixel);
-inputSizeButton.addEventListener('click',changeSize);
+pixelBoard.addEventListener('click', setColorPixel)
+
+window.addEventListener('load',createGridOfPixel(5));
