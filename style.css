@@ -1,0 +1,23 @@
+#black {
+    background-color: black;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#gray {
+    background-color: gray;
+}
+
+#blue {
+    background-color: blue;
+}
+
+.color {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    width: 40px;
+    height:40px ;
+}
