@@ -1,0 +1,18 @@
+.color , .pixel {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  display: table;
+  flex-flow: row wrap;
+  line-height: 0;
+  text-align: center;
+}
