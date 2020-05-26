@@ -12,8 +12,7 @@
 .pixel-board {
   border: 1px solid black;
   display: table;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   line-height: 0;
   text-align: center;
 }

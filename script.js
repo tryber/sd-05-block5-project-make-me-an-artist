@@ -44,8 +44,7 @@ function genPixels(numberPix) {
 }
 
 function populateBoard(pixels, elemento) {
-  for (let pixel in pixels) {
-    console.log(pixels[pixel]);
+  for (let pixel = 0; pixel < pixels.length; pixel += 1) {
     elemento.appendChild(pixels[pixel]);
   }
 }
@@ -53,8 +52,7 @@ function populateBoard(pixels, elemento) {
 // Eventos
 window.addEventListener('load', function () {
   const pixels = genPixels(nPixLine * nPixLine);
-  this.console.log(pixels);
-  let elemento = document.querySelector('#pixel-board');
+  const elemento = document.querySelector('#pixel-board');
   populateBoard(pixels, elemento);
   elemento.style.width = `${nPixLine * 42}px`;
 });
