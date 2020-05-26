@@ -75,7 +75,7 @@ function ramdomColor() {
   const greenName = green.toString();
   const blue = Math.floor(Math.random() * 256);
   const blueName = blue.toString();
-  rGBColor += redName + ',' + greenName + ',' + blueName + ')';
+  rGBColor = `${rGBColor} ${redName},${greenName},${blueName})`;
 }
 
 function createColor(classe) {
