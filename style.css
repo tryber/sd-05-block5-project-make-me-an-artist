@@ -1,3 +1,7 @@
+.backBody {
+  background-color: rgb(240 , 240 , 240);
+  font-family: Arial, Helvetica, sans-serif;
+}
 .table1 {
   display: table;
 }
@@ -8,9 +12,20 @@
 
 .color {
   border: 1px solid black;
-  display: table-cell;
+  display: table-column;
   height: 50px;
   margin: 2px;
-  padding: 5px;
   width: 50px;
+}
+
+.pixel-board {
+  border-collapse: collapse;
+  position: absolute;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
