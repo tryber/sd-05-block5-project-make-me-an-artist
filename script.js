@@ -1,15 +1,16 @@
 // FUNÇÃO PARA GERAR CORES ALEATÓRIAMENTE
-function geraCor () {
-  let hexadecimais = '0123456789ABCDEF';
+function geraCor() {
+  const hexadecimais = '0123456789ABCDEF';
   let cor = '#';
-  for ( i = 0; i < 6; i++ ) {
-    cor += hexadecimais[Math.floor(Math.random () * 16)];
+  /*global i*/
+  for (let i = 0; i < 6; i+=1) {
+    cor += hexadecimais[Math.floor(Math.random() * 16)];
   }
   return cor;
-};
+}
 
 // DECLAREI A VARIÁVEL FORA DA FUNÇÃO PARA CHAMÁ-LA NOVAMENTE
-let randonColor = document.getElementsByClassName('color');
+const randonColor = document.getElementsByClassName('color');
 // AO CARREGAR A PÁGINA A FUNÇÃO É EXECUTADA
 window.onload = function () {
   randonColor[0].classList.add('selected');
@@ -26,12 +27,12 @@ window.onload = function () {
 };
 
 // TROCA A SELEÇÃO DA PALETA DE CORES
-function selection (event) {
-  let oldSelection = document.getElementsByClassName("selected")[0];
-  oldSelection.classList.remove("selected");
-  let target = event.target;
-  target.classList.add("selected");
-};
+function selection(event) {
+  const oldSelection = document.getElementsByClassName('selected')[0];
+  oldSelection.classList.remove('selected');
+  const target = event.target;
+  target.classList.add('selected');
+}
 // let black = document.getElementsByClassName('color')[0];
 randonColor[0].addEventListener('click', selection);
 // let color1 = document.getElementsByClassName('color')[1];
@@ -41,13 +42,13 @@ randonColor[2].addEventListener('click', selection);
 // let color3 = document.getElementsByClassName('color')[3];
 randonColor[3].addEventListener('click', selection);
 
-//TROCA A COR DO PIXEL
-let pixTable = document.getElementById("pixel-board");
-pixTable.addEventListener("click", changeColor);
-function changeColor (event) {
-  let selectedPallete = document.getElementsByClassName("selected")[0];
-  let selectedPixel = event.target;
-  let novaCor = selectedPallete.style.backgroundColor;
+// TROCA A COR DO PIXEL
+const pixTable = document.getElementById('pixel-board');
+function changeColor(event) {
+  const selectedPallete = document.getElementsByClassName('selected')[0];
+  const selectedPixel = event.target;
+  const novaCor = selectedPallete.style.backgroundColor;
   selectedPixel.classList.remove(selectedPixel.classList[1]);
   selectedPixel.style.backgroundColor = novaCor;
-};
+}
+pixTable.addEventListener('click', changeColor);
