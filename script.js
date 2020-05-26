@@ -1,14 +1,16 @@
 // Variáveis
-let black = document.querySelector("black");
-let color1 = document.querySelector("color-1");
-let color2 = document.querySelector("color-2");
-let color3 = document.querySelector("color-3");
+let black = document.querySelector(".black");
+let color1 = document.querySelector(".color-1");
+let color2 = document.querySelector(".color-2");
+let color3 = document.querySelector(".color-3");
 let colorPalette = document.getElementById("color-palette")
 let pixelBoard = document.getElementById("pixel-board");
 let botaoLimpar = document.getElementById("clear-board");
 let selected = black;
 
 //Funções
+
+//Essa é pra selecionar uma cor da paleta de cores
 function changeSelected() {
   if (event.target === black) {
     selected.classList.remove("selected");
