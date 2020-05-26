@@ -18,8 +18,8 @@ function createPixelsColumn(numberOfPixels) {
       let pixelColumn = document.createElement("td");
       numberTagTR = tagTR[j];
       numberTagTR.appendChild(pixelColumn);
-      pixelColumn.className = "pixel";
-      pixelColumn.addEventListener("click", paintPixel)
+      pixelColumn.className = "pixel white";
+      pixelColumn.addEventListener("click", paintPixel);
     }
   }
 }
@@ -30,7 +30,7 @@ let colorBlack = document.getElementById("cor1");
 let colorGreen = document.getElementById("cor2");
 let colorYellow = document.getElementById("cor3");
 let colorRed = document.getElementById("cor4");
-let colorSelected = document.querySelector(".selected");
+let colorSelected = document.getElementsByClassName("selected")[0];
 let colorPalette = document.getElementById("color-palette");
 
 function changeSelected() {
@@ -57,6 +57,8 @@ colorPalette.addEventListener("click", changeSelected);
 
 //Paint pixels
 function paintPixel() {
-  
+  let colorClass = colorSelected.classList[1];
+  event.target.classList.remove(event.target.classList[1]);
+  event.target.classList.add(colorClass);
 }
 
