@@ -17,13 +17,15 @@ window.onload = function(){
     function selecionaCor(e){
         let cor = e.target
         for(i = 0; i < selecionaCor.length; i+=1){ 
-            if(  selectedColor[i] == cor){
-                cor.classList.add("selected");
-                document.querySelector(".selecao").textContent = e.target.classList[0];
+            if(  selectedColor[i] != cor){
+                selectedColor[i].classList.remove("selected");
             }
-            else {selectedColor[i].classList.remove("selected");}
+            else {
+            cor.classList.add("selected");
+            document.querySelector(".selecao").textContent = e.target.classList[0];
+            corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
         }
-         corEscolhida = getComputedStyle(e.target, null).getPropertyValue('background-color');
+        }
         // console.log(corEscolhida)
     }
 

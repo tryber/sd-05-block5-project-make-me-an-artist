@@ -41,17 +41,18 @@ h1{
     position: absolute;
     top: 200px;
     left: 50px;
-}
-#pixel-board{
     display: grid;
     width: 200px;
     height: 200px;
     z-index: 0;
+    background-color: white;
+    
 }
 .pixel{
     height: 40px;
     width: 40px;
     z-index: 1;
+    background-color: rgb(255,255,255);
 }
 .borda{
     border:black solid 1px;
