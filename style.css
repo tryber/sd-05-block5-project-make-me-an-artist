@@ -1,0 +1,21 @@
+.color {
+  border: black solid 1px;
+  height: 30px;
+  width: 30px;
+}
+
+#quadro1 {
+  background-color: black;
+}
+
+#quadro2 {
+  background-color: red;
+}
+
+#quadro3 {
+  background-color: yellow;
+}
+
+#quadro4 {
+  background-color: green;
+}
