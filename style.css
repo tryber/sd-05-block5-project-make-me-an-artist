@@ -14,21 +14,24 @@
 .color {
   border: 1px solid black;
   border-radius: 1vh;
-  display: table-column-group;
+  display: table-column;
   height: 45px;
-  margin: 6px;
   width: 45px;
+}
+
+button {
+  margin: 6px;
 }
 
 .pixel-board {
   border-collapse: collapse;
-  position: absolute;
   margin: 5px;
+  position: absolute;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 40px;
-  width: 40px;
+  height: 41px;
+  width: 41px;
 }

@@ -2,8 +2,8 @@
 function geraCor() {
   const hexadecimais = '0123456789ABCDEF';
   let cor = '#';
-  /*global i*/
-  for (let i = 0; i < 6; i+=1) {
+  /* global i */
+  for (let i = 0; i < 6; i += 1) {
     cor += hexadecimais[Math.floor(Math.random() * 16)];
   }
   return cor;
