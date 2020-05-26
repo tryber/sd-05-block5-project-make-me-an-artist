@@ -6,7 +6,7 @@ const red = document.querySelector('.color.red');
 const blue = document.querySelector('.color.blue');
 
 // include class selected on black element
-black.className += ' selected';  
+black.className += ' selected';
 let selectedColor = 'black';
 
   // add a event listener to each collor in the palett
@@ -55,7 +55,7 @@ blue.addEventListener('click', function () {
 // change the color of the pixel when it's clicked
 const board = document.getElementById('pixel-board');
 board.addEventListener('click', function (event) {
-  event.target.className = 'pixel ' + selectedColor;
+  event.target.className = `pixel ${selectedColor}`;
 });
 
 // create a button that clears the board colors when clicked
