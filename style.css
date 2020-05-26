@@ -1,23 +1,23 @@
-.color {
+#color-palette .color {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
-#preto {
+.cor1 {
   background-color: black;
 }
 
-.vermelho {
+.cor2 {
   background-color: rgb(157 , 0 , 0);
 }
 
-.amarelo {
+.cor3 {
   background-color: rgb(225 , 176 , 0);
 }
 
-.azul {
+.cor4 {
   background-color: rgb(0 , 115 , 167);
 }
 
@@ -28,7 +28,7 @@
   width: 40px;
 }
 
-#table { 
+.table { 
   display: table; 
 }
 
