@@ -1,9 +1,6 @@
 #pixel-board {
-  margin-top: 10px;
-  display: grid;
-  grid-template-columns: 40px 40px 40px 40px 40px;
-  grid-template-rows: 40px 40px 40px 40px 40px;
-  width: 200px;
+  display: table;
+  line-height: 0px;
 }
 
 .color {
@@ -39,4 +36,5 @@
   width: 40px;
   height: 40px;
   border: solid 1px;
+  display: inline-block;
 }

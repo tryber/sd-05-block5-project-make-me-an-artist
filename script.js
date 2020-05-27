@@ -1,11 +1,13 @@
 // Variáveis
-let black = document.querySelector(".black");
-let color1 = document.querySelector(".color-1");
-let color2 = document.querySelector(".color-2");
-let color3 = document.querySelector(".color-3");
-let colorPalette = document.getElementById("color-palette")
-let pixelBoard = document.getElementById("pixel-board");
-let botaoLimpar = document.getElementById("clear-board");
+const black = document.querySelector(".black");
+const color1 = document.querySelector(".color-1");
+const color2 = document.querySelector(".color-2");
+const color3 = document.querySelector(".color-3");
+const colorPalette = document.getElementById("color-palette")
+const pixelBoard = document.getElementById("pixel-board");
+const botaoLimpar = document.getElementById("clear-board");
+const boardSize = document.getElementById('board-size');
+const generateBoard = document.getElementById('generate-board')
 
 // Funções
 
@@ -33,7 +35,32 @@ function limparTudo() {
   }
 }
 
+// Essa é pra criar o board
+function criarBoard(n) {
+  pixelBoard.style.width = `${n * 42}px`;
+  pixelBoard.innerHTML = '';
+  for (i = 0; i < n * n; i++) {
+    let pixel = document.createElement('div');
+    pixelBoard.appendChild(pixel);
+    pixel.classList.add('pixel');
+  }
+}
+
+// Essa é pra definir o tamanho máximo e mínimo do board
+function checkGridSize() {
+  let n = boardSize.value;
+  if (n === '') {
+    alert('Board inválido!')
+  } else if (n <= 5) {
+    n = 5;
+  } else if (n >= 50) {
+    n = 50;
+  }
+  criarBoard(n);
+}
+
 // Event Listeners
 colorPalette.addEventListener("click", changeSelected);
 pixelBoard.addEventListener("click", colorPixel);
 botaoLimpar.addEventListener("click", limparTudo);
+generateBoard.addEventListener('click', checkGridSize);
