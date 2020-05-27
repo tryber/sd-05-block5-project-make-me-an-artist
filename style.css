@@ -1,7 +1,7 @@
-/*deve possuir uma paleta de quatro cores distintas - exercício 2*/
+/* deve possuir uma paleta de quatro cores distintas - exercício 2 */
 #black {
   background-color: black;
-}/*cor preta deve ser a primeira na paleta de cores*/
+}/* cor preta deve ser a primeira na paleta de cores */
 
 #brown {
   background-color: brown;
@@ -15,10 +15,12 @@
   background-color: pink;
 }
 
+/* paleta de cores deverá listar todas as cores lado a lado, abaixo do título "Paleta de Cores" */
+
 .color {
   border-style: solid;
   border-width: 1px;
   display: inline-block;
+  height: 40px;
   width: 40px;
-  height:40px;
-}/*pixels deve possuir 40 pixels de largura e 40 pixels de altura e borda preta de 1 pixel*/
+}/* px deve possuir 40 px de largura e 40 px e borda preta de 1 pixel */
