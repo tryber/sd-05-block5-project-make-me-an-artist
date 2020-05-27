@@ -24,6 +24,22 @@ function removerSelected() {
     }
 }
 
+
+function gerarCor() {
+    const hexaDecimais = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let corAleatoria = '#';
+    for(let i = 0; i < 4; i += 1) {
+        corAleatoria += hexaDecimais[Math.floor(Math.random() * 16)];
+    }
+    return corAleatoria;
+}
+
+for(let i = 1; i <= 3; i+= 1) {
+    const corAleatoria = gerarCor();
+    paletaDeCores[i].style.backgroundColor = corAleatoria;
+    cores[i] = corAleatoria;
+}
+
 for (let i = 0; i < quadrados.length; i++) {
     quadrados[i].addEventListener('click', atribuirCor);
 }
