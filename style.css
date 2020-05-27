@@ -44,19 +44,16 @@
 }
 
 .container {
+  align-items: center;
   background-color: crimson;
   border: 1px solid;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 50px;
 }
 
 .title {
-<<<<<<< HEAD
   font-size: 30px;
-=======
->>>>>>> parent of 205b795... codeClimate 2
   margin-top: 20px;
   text-align: center;
 }
