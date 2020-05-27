@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.color-palette-class .color-black {
+.color-palette-class div .color-black {
   background-color: black;
   border: 1px solid black;
   display: inline-block;
@@ -23,7 +23,7 @@ body {
   width: 100px;
 }
 
-.color-palette-class .color-red {
+.color-palette-class div .color-red {
   background-color: red;
   border: 1px solid black;
   display: inline-block;
@@ -31,7 +31,7 @@ body {
   width: 100px;
 }
 
-.color-palette-class .color-blue {
+.color-palette-class div .color-blue {
   background-color: blue;
   border: 1px solid black;
   display: inline-block;
@@ -39,7 +39,7 @@ body {
   width: 100px;
 }
 
-.color-palette-class .color-green {
+.color-palette-class div .color-green {
   background-color: green;
   border: 1px solid black;
   display: inline-block;
