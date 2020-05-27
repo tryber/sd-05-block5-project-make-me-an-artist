@@ -17,10 +17,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   line-height: 0;
-  margin: 0;
+  margin: auto;
+  margin-top: 5%;
   text-align: center;
 }
 
 .black {
   background-color: black;
+}
+
+body {
+  text-align: center;
+}
+
+.color-palette {
+  margin-bottom: 5%;
 }
