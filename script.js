@@ -1,42 +1,38 @@
 const botaoReset = document.getElementById('clear-board');
 const quadrados = document.getElementsByClassName('pixel');
 const paletaDeCores = document.querySelectorAll('.color')
-
-
-let coresAtuais = ['preto', 'amarelo', 'azul', 'vermelho'];
-const cores = ['preto', 'amarelo', 'azul', 'vermelho'];
+let coresAtuais = ['preta', '2', '3', '4'];
+const cores = ['black', 'paleta-2', 'paleta-3', 'paleta-4'];
 let cor = "black"
 
 function selecionarCor() {
-    for (let i = 0; i < 4; i += 1) {
-        if (this.className === `  ${coresAtuais[i]}`) {
+    for(let i = 0; i < 4; i++) {
+        if(this.className === `color paleta-${coresAtuais[i]}`) {
             removerSelected();
-            this.className = ` ${coresAtuais[i]} selected`;
+            this.className = `color paleta-${coresAtuais[i]} selected`;
             cor = cores[i];
         }
     }
 }
 
-for (let i = 0; i < paletaDeCores.length; i += 1) {
-    paletaDeCores[i].addEventListener('click', selecionarCor)
-}
-
 function atribuirCor() {
-    this.style.backgroungColor = "cor";
+    this.style.backgroundColor = cor;
 }
 
-for (let i = 0; i < quadrados.length; i += 1) {
-    quadrados[i].addEventListener('click', atribuirCor)
-}
 function removerSelected() {
-    for (let i = 0; i < paletaDeCores.length; i += 1) {
-        paletaDeCores[i].className = ` color ${coresAtuais[i]}`
+    for(let i = 0; paletaDeCores.length; i++) {
+        paletaDeCores[i].className = ` color paleta-${coresAtuais[i]}`
     }
 }
 
-botaoReset.addEventListener('click', function limparQuadro() {
-    for (let i = 0; i < quadrados.length; i += 1) {
+
+for(let i = 0; i < quadrados.length; i++) {
+    quadrados[i].addEventListener('click', atribuirCor);
+}
+
+botaoReset.addEventListener('click', function resetarQuadro() {
+    for(let i = 0 ; i < quadrados.length; i++) {
         quadrados[i].className = 'pixel';
-        quadrados[i].style.background = 'white';
+        quadrados[i].style.backgroundColor = 'white';
     }
-});
+})

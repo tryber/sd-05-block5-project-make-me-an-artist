@@ -2,7 +2,15 @@
   display: inline-flex;
 }
 
-.amarelo {
+.paleta-preta {
+  background-color: black;
+  border: 1px solid black;
+  color: black;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+.paleta-2 {
   background-color: yellow;
   border: 1px solid black;
   color: yellow;
@@ -11,7 +19,7 @@
   width: 40px;
 }
 
-.azul {
+.paleta-3 {
   background-color: blue;
   border: 1px solid black;
   color: blue;
@@ -20,16 +28,7 @@
   width: 40px;
 }
 
-.preto {
-  background-color: black;
-  border: 1px solid black;
-  color: black;
-  height: 40px;
-  margin: 10px;
-  width: 40px;
-}
-
-.vermelho {
+.paleta-4 {
   background-color: red;
   border: 1px solid black;
   color: red;
@@ -39,6 +38,7 @@
 }
 
 button {
+  cursor: pointer;
   margin-bottom: 30px;
   margin-left: 90px;
   margin-top: 30px;
