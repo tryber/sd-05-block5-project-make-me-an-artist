@@ -5,6 +5,10 @@ body {
   padding: 0px;
 }
 
+color-palette-class {
+
+}
+
 .color-preto {
   background-color: black;
   border: 1px solid black;
