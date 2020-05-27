@@ -26,7 +26,7 @@ function removerSelected() {
 
 
 function gerarCor() {
-    const hexaDecimais = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const hexaDecimais = '0123456789ABCDEF'
     let corAleatoria = '#';
     for(let i = 0; i < 4; i += 1) {
         corAleatoria += hexaDecimais[Math.floor(Math.random() * 16)];
