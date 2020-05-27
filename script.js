@@ -19,57 +19,57 @@ colorBase4.style.background = "pink";
 
 // funções
 function clear() {
-for (let i = 0; i < listaDePixels.length; i += 1){
+  for (let i = 0; i < listaDePixels.length; i += 1){
     listaDePixels[i].style.backgroundColor = "white";
-    }
+  }
 }
 
 function colorSelect(n) {
-    let color1 = false, color2 = false, color3 = false, color4 = false;
+  let color1 = false, color2 = false, color3 = false, color4 = false;
 
-    if (n.target === colorBase1){
-        color1 = true;
-    } else if (n.target === colorBase2){
-        color2 = true;
-    } else if (n.target === colorBase3){
-        color3 = true;
-    } else if (n.target === colorBase4){
-        color4 = true
-    };
+  if (n.target === colorBase1){
+    color1 = true;
+  } else if (n.target === colorBase2){
+    color2 = true;
+  } else if (n.target === colorBase3){
+    color3 = true;
+  } else if (n.target === colorBase4){
+    color4 = true
+  };
 
-    if (color1 === true){
-        colorBase1.className = "color selected";
-        colorBase2.className = "color";
-        colorBase3.className = "color";
-        colorBase4.className = "color";
-    } else if (color2 === true){
-        colorBase1.className = "color";
-        colorBase2.className = "color selected";
-        colorBase3.className = "color";
-        colorBase4.className = "color";
-    } else if (color3 === true){
-        colorBase1.className = "color";
-        colorBase2.className = "color";
-        colorBase3.className = "color selected";
-        colorBase4.className = "color";
-    } else if (color4 === true){
-        colorBase1.className = "color";
-        colorBase2.className = "color";
-        colorBase3.className = "color";
-        colorBase4.className = "color selected";
-    }
+  if (color1 === true){
+    colorBase1.className = "color selected";
+    colorBase2.className = "color";
+    colorBase3.className = "color";
+    colorBase4.className = "color";
+  } else if (color2 === true){
+    colorBase1.className = "color";
+    colorBase2.className = "color selected";
+    colorBase3.className = "color";
+    colorBase4.className = "color";
+  } else if (color3 === true){
+    colorBase1.className = "color";
+    colorBase2.className = "color";
+    colorBase3.className = "color selected";
+    colorBase4.className = "color";
+  } else if (color4 === true){
+    colorBase1.className = "color";
+    colorBase2.className = "color";
+    colorBase3.className = "color";
+    colorBase4.className = "color selected";
+  }
 }
 
 function colorir(n) {
-    if (colorBase1.className === "color selected") {
-        n.target.style.backgroundColor = "black";
-    } else if (colorBase2.className === "color selected") {
-        n.target.style.backgroundColor = "green";
-    } else if (colorBase3.className === "color selected") {
-        n.target.style.background = "red";
-    } else {
-        n.target.style.background = "pink";
-    }
+  if (colorBase1.className === "color selected") {
+    n.target.style.backgroundColor = "black";
+  } else if (colorBase2.className === "color selected") {
+    n.target.style.backgroundColor = "green";
+  } else if (colorBase3.className === "color selected") {
+    n.target.style.background = "red";
+  } else {
+    n.target.style.background = "pink";
+  }
 }
 
 // eventos
