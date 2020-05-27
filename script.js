@@ -1,7 +1,7 @@
 window.onload = function () {
   const botaoMudaCor = document.querySelector('#clear-board');
   function trocaCorBranca() {
-      let pixels = document.querySelectorAll('.pixel');
+      const pixels = document.querySelectorAll('.pixel');
       for (let c = 0; c < pixels.length; c+=1) {
           pixels[c].style.backgroundColor = 'white';
         }
