@@ -1,34 +1,38 @@
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   margin: 0px;
   padding: 0px;
 }
-.preto{
+
+.color-preto {
   background-color: black;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;  
+  height: 100px;
   width: 100px;
 }
-.vermelho{
+
+.color-vermelho {
   background-color: red;
   border: 1px solid black;
   display: inline-block;
   height: 100px;
   width: 100px;
 }
-.azul{
+
+.color-azul {
   background-color: blue;
   border: 1px solid black;
   display: inline-block;
   height: 100px;
   width: 100px;
 }
-.verde{
+
+.color-verde {
   background-color: green;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;  
+  height: 100px;
   width: 100px;
 }
