@@ -1,6 +1,11 @@
 let penColour = "black";
-function setPenColour(color) {
+function setPenColour(color,num) {
   penColour = color;
+  let cont = document.getElementById('color-palette').childElementCount
+  for(let i = 0; i < cont; i ++){
+    document.getElementById('color-palette').children[i].className = 'color'
+  }
+  document.getElementById('color-palette').children[num].className = 'color selected'
 }
 
 function setPixelColour(pixel) {
