@@ -37,14 +37,13 @@ function selecionaCor (event) {
     }
 }
 
-function mudaCor () {
-    let novaCor = cor.classList[1];
-    event.target.classList.remove(event.target.classList[1]);
-    event.target.classList.add(novaCor);
+function mudaCor (event) {
+    let novaCor = document.querySelector ('.selected');
+    event.target.style.backgroundColor = getComputedStyle (novaCor).backgroundColor;
 }
 
 function limpar () {
-    for (i=0; i < quadrado.children.length; i += 1){
+    for (let i=0; i < quadrado.children.length; i += 1){
         let corAtual = quadrado.children[i].classList[1];
         quadrado.children[i].classList.remove(corAtual);
         quadrado.children[i].classList.add("none");
