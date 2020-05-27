@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.color-palette-class div .color-black {
+.color-palette-class div .selected {
   background-color: black;
   border: 1px solid black;
   display: inline-block;
@@ -49,8 +49,8 @@ body {
 
 .pixel-board-class {
   display: block;
-  text-align: center;
   margin-top: 20px;
+  text-align: center;
 }
 
 .pixel-board-class-linha1 {
@@ -73,227 +73,218 @@ body {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
   margin-right: -5px;
+  width: 40px;  
 }
 
 .pixel2 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
   margin-right: -5px;
+  width: 40px;  
 }
 
 .pixel3 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.1px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel4 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;  
 }
 
 .pixel5 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel6 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
   margin-right: -5px;
+  width: 40px;
 }
 
 .pixel7 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
   margin-right: -5px;
+  width: 40px;
 }
 
 .pixel8 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.1px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;  
 }
 
 .pixel9 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel10 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel11 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel12 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
-}
-
-.pixel12 {
-  background-color: white;
-  border: 1px solid black;
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel13 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel14 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel15 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel16 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel17 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel18 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel19 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel20 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel21 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel22{
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -5px;
+  width: 40px;
 }
 
 .pixel23 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel24 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin-right: -4.5px;
+  height: 40px;
+  margin-right: -4px;
+  width: 40px;
 }
 
 .pixel25 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 100px;
-  width: 100px;
+  height: 40px;
+  width: 40px;
 }
