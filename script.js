@@ -1,6 +1,4 @@
 // variables
-const n = 25;
-const colorPalette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const black = document.getElementById('black');
 const color1 = document.getElementById('color1');
@@ -60,7 +58,7 @@ function setColorPixel(el) {
   const actualColorPixel = document.querySelector('.selected');
   const backgroundActual = actualColorPixel.classList[1];
   const actualPixel = el.target;
-  actualPixel.style.backgroundColor = actualColorPixel.style.backgroundColor = backgroundActual;
+  actualPixel.style.backgroundColor = backgroundActual;
 }
 
 function clearAll() {
