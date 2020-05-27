@@ -46,3 +46,254 @@ body {
   height: 100px;
   width: 100px;
 }
+
+.pixel-board-class {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pixel-board-class-linha1 {
+  margin-bottom: -5px;
+}
+
+.pixel-board-class-linha2 {
+  margin-bottom: -5px;
+}
+
+.pixel-board-class-linha3 {
+  margin-bottom: -5px;
+}
+
+.pixel-board-class-linha4 {
+  margin-bottom: -5px;
+}
+
+.pixel1 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -5px;
+}
+
+.pixel2 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -5px;
+}
+
+.pixel3 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.1px;
+}
+
+.pixel4 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel5 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.pixel6 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -5px;
+}
+
+.pixel7 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -5px;
+}
+
+.pixel8 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.1px;
+}
+
+.pixel9 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel10 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.pixel11 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel12 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel12 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel13 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel14 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel15 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.pixel16 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel17 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel18 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel19 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel20 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
+.pixel21 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel22{
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel23 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel24 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin-right: -4.5px;
+}
+
+.pixel25 {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
