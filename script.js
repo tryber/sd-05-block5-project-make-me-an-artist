@@ -1,3 +1,4 @@
+// Evento do botao limpar pixels
 const btn = document.querySelector('#clear-board');
 const pixel = document.querySelectorAll('.pixel');
 
@@ -7,6 +8,7 @@ btn.addEventListener('click', function () {
   }
 });
 
+// Evento que troca classe selected para cor clicada
 const cores = document.querySelectorAll('.color');
 
 const colorPalette = document.querySelector('#color-palette');
@@ -18,6 +20,7 @@ colorPalette.addEventListener('click', function (event) {
   corEscolhida.classList.add('selected');
 });
 
+// Evento que colore o pixel clicado com a cor selecionada
 const colorir = document.querySelector('tbody');
 colorir.addEventListener('click', function (event) {
   const pixelEscolhido = event.target;
@@ -30,3 +33,21 @@ colorir.addEventListener('click', function (event) {
   }
   pixelEscolhido.classList.add('pixel');
 });
+
+// Evento do botão VQV
+const btnVqv = document.querySelector('#generate-board');
+btnVqv.addEventListener('click', function () {
+  const tamanhoPixels = document.querySelector('#board-size').value;
+  if (tamanhoPixels === '') {
+    alert('Board inválido!');
+    return;
+  }
+  if (tamanhoPixels < 5) {
+    tamanhoPixels = 5;
+  }
+  if (tamanhoPixels > 50) {
+    tamanhoPixels = 50;
+  }
+  
+
+})
