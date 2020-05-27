@@ -59,6 +59,8 @@ function checkGridSize() {
   criarBoard(n);
 }
 
+criarBoard(5);
+
 // Event Listeners
 colorPalette.addEventListener("click", changeSelected);
 pixelBoard.addEventListener("click", colorPixel);
