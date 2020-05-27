@@ -44,22 +44,22 @@ botaoLimpar.addEventListener("click", function () {
 let botaoDimensao = document.getElementById("generate-board")
 botaoDimensao.addEventListener("click", function () {
   let texto = document.getElementById("board-size")
-  console.log(texto)
+
   if (texto.value == "") {
     alert("Board inválido!")
     return;
   }
-  if(parseInt(texto.value) < 5)
-    texto.value=5
-    
-  if(parseInt(texto.value) > 50)
-  texto.value=50
-  
+  if (parseInt(texto.value) < 5)
+    texto.value = 5
+
+  if (parseInt(texto.value) > 50)
+    texto.value = 50
+
   createBoard(parseInt(texto.value));
 })
 function createBoard(dimension) {
-  pixelBoard.innerHTML=""
-  
+  pixelBoard.innerHTML = ""
+
   for (let i1 = 0; i1 < dimension; i1++) {
     let lin = document.createElement("div")
     lin.className = "linha"
@@ -67,8 +67,8 @@ function createBoard(dimension) {
     for (let j1 = 0; j1 < dimension; j1++) {
       let quadro = document.createElement("div")
       quadro.className = "pixel"
-      quadro.style.backgroundColor="white"
-      lin.appendChild(quadro) ;
+      quadro.style.backgroundColor = "white"
+      lin.appendChild(quadro);
     }
     pixelBoard.appendChild(lin);
   }

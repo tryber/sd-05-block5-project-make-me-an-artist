@@ -45,7 +45,7 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin: -3px;
+  margin: -2px;
   background-color: white;
 }
 /*Item3 e 5*/
@@ -61,5 +61,5 @@ div .pixel{
   margin-bottom: 10px;
 }
 .linha{
-  margin: -3px;
+  margin: -4px;
 }
