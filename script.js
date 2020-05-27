@@ -82,7 +82,7 @@ clear.addEventListener('click', function () {
 
 // Change Grid Size
 function changeGridSize() {
-  const n = gridSizeInput.value;
+  let n = gridSizeInput.value;
   if (n === '') {
     alert('Board inválido!');
   }
