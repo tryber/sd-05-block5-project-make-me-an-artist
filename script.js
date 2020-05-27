@@ -13,7 +13,7 @@ function setPixelColour(pixel) {
 }
 
 
-let cleaner = document.getElementsByClassName('clear-board')[0];
+let cleaner = document.getElementById('clear-board');
 cleaner.addEventListener("click", function(){
   let cont = document.getElementsByClassName("pixel").length
   
