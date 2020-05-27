@@ -1,9 +1,4 @@
-// document.querySelectorAll('.color').forEach(item => {
-//   item.addEventListener('click', event => {
-
-//   })
-// })
-
+// Deixando a classe 'selected' em um elemento por vez.
 let coresPaletta = document.getElementById("color-palette");
 
 function trocandoClasseDasCores(loucura) {
@@ -15,3 +10,13 @@ function trocandoClasseDasCores(loucura) {
   }
 }
 coresPaletta.addEventListener('click', trocandoClasseDasCores);
+
+// Botão para limpar o board
+let botao = document.getElementById("clear-board");
+let board = document.getElementsByClassName("pixel");
+let white = document.getElementById("white");
+
+function botaoParaLimparCores() {
+  board.innerHTML = botao.replaceWith.white
+}
+botao.addEventListener('click', botaoParaLimparCores);
