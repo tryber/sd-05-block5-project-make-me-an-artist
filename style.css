@@ -25,10 +25,9 @@
 
 .pixel {
   background-color: white;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
+  border-color: black;
+  border-width: 1px;
 }
 
-.first-line, .second-line, .third-line, .forth-line, .fifth-line {
-  display: inline-block;
-}
