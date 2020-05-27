@@ -1,10 +1,6 @@
-window.onload = function firstSelectedColor(){
-  let blackColor = document.getElementsByClassName("black");
-  blackColor[0].className = "selected";
-}
+let blackColor = document.getElementsByClassName("black")[0];
+let redColor = document.getElementsByClassName("red")[0];
+let blueColor = document.getElementsByClassName("blue")[0];
+let greenColor = document.getElementsByClassName("green")[0];
 
-// let selectedColor = document.getElementsByClassName("")
-// function selectColor(event){
-//   let color = event.target;
-//   if 
-// }
+
