@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-.color-palette-class div .selected {
+.color-palette-class div .color-black {
   background-color: black;
   border: 1px solid black;
   display: inline-block;
