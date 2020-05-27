@@ -3,7 +3,7 @@ const cor1 = document.getElementById ('sqr1');
 const cor2 = document.getElementById ('sqr2');
 const cor3 = document.getElementById ('sqr3');
 const cor4 = document.getElementById ('sqr4');
-let cor = "";
+let cor = black;
 const quadrado = document.getElementById ('pixel-board');
 
 cor1.addEventListener("click", selecionaCor);
@@ -42,9 +42,10 @@ function mudaCor () {
     event.target.classList.add(novaCor);
 }
 
-function limpar (){
-    sqr = quadrado.firstChild;
-    for (let a = 1; a <= quadrado.children.length; a += 1){
-        sqr.style = 'background-color:  white';                                                                 
+function limpar () {
+    for (i=0; i < quadradro.children.length; i += 1){
+        let corAtual = quadrado.children[i].classList[1];
+        quadrado.children[i].classList.remove(corAtual);
+        quadrado.children[i].classList.add("none");
     }
 }
