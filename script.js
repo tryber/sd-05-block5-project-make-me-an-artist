@@ -1,15 +1,15 @@
-const pix = document.querySelector("pixel")
-let pal = document.getElementById("color-pallete")
-let sel = document.querySelector("selected")
-const cor = document.querySelector('color')
+const pix = document.getElementsByClassName("pixel")
+let pal = document.getElementById("color-palette")
+let sel = document.getElementsByClassName("selected")
+const cor = document.getElementsByClassName('color')
 
-function changeColor() {
-sel.classList.remove("selected")
+function changeColor(event) {
+    for (c of cor) {
+        c.classList.remove("selected")
+    }
 event.target.classList.add('selected')
-sel = document.querySelector('selected')
 }
 
-cor.addEventListener('click', changeColor)
-
-console.log(sel)
-console.log("Olá, mundo!")
+for (c of cor) {
+    c.addEventListener('click', changeColor)
+}

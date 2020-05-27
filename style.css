@@ -29,10 +29,5 @@
     width: 40px;
     height:40px;
     background-color: white;
-}
-
-#pixel-board {
-    display: table;
-    width: 210px;
-    line-height: 0px;
+    margin: -2px;
 }
