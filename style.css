@@ -22,3 +22,13 @@
 .green {
   background-color: green;
 }
+
+.pixel {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.first-line, .second-line, .third-line, .forth-line, .fifth-line {
+  display: inline-block;
+}
