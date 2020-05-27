@@ -1,45 +1,25 @@
-.black {
-  background-color: black;
-}
-
-.blank {
-  background-color: white;
-}
-
-.board {
-  height: 210px;
-}
-
-.buttons {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.color {
-  border: black 1px solid;
+.color , .pixel {
+  border: 1px solid black;
   display: inline-block;
-  height: 30px;
-  margin-left: 0;
-  margin-right: 1px;
-  width: 30px;
-}
-
-.first {
-  clear: left;
-}
-
-.input {
-  width: 50px;
-}
-
-.palette {
-  height: 30px;
+  height: 40px;
+  margin: 0;
+  width: 40px;
 }
 
 .pixel {
   background-color: white;
-  border: solid 1px black;
-  float: left;
-  height: 40px;
-  width: 40px;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  display: table;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.black {
+  background-color: black;
 }

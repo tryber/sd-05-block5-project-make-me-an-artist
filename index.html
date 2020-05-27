@@ -1,49 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paleta de Cores</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Pixel Art do Balacobaco</title>
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette" class="palette">
-      <div id="black" class="color black selected"></div>
-      <div id="cor2" class="color"></div>
-      <div id="cor3" class="color"></div>
-      <div id="cor4" class="color"></div>
+    <div id="color-palette" class="color-palette">
+      <div class="color black selected"></div>
+      <div id="color2" class="color"></div>
+      <div id="color3" class="color"></div>
+      <div id="color4" class="color"></div>
     </div>
-    <button id="clear-board" class="buttons">Limpar</button>
-    <input id="board-size" class="input" type="number" min="1" />
+    <button id="clear-board">Limpar</button>
+    <input id="board-size" min="0">
     <button id="generate-board">VQV</button>
-    <div id="pixel-board" class="board">
-      <div class="pixel first blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel first blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel first blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel first blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel first blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-      <div class="pixel blank"></div>
-    </div>
+    <div id="pixel-board" class="pixel-board"></div>
   </body>
   <script src="script.js"></script>
 </html>
