@@ -6,5 +6,5 @@ window.onload = function () {
           pixels[c].style.backgroundColor = 'white';
         }
     }
-  botaoMudaCor.addEventListener('click', trocaCorBranca);
 }
+botaoMudaCor.addEventListener('click', trocaCorBranca);
