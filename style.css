@@ -28,8 +28,11 @@
     display: inline-block;
     width: 40px;
     height:40px;
-    border-collapse: 0px;
     background-color: white;
-    margin: 0px;
-    padding: 0px;
+}
+
+#pixel-board {
+    display: table;
+    width: 210px;
+    line-height: 0px;
 }
