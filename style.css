@@ -1,26 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#color-palette {
+.color-palette {
   height: 30px;
 }
 
-#pixel-board {
-  min-width: 200px;
-  width: 2500px;
+.pixel-board {
   display: block;
   min-height: 200px;
+  min-width: 200px;
+  width: 2500px;
 }
 
 .color {
+  border: 1px solid black;
   float: left;
+  height: 42px;
   margin-left: 5px;
   width: 42px;
-  height: 42px;
-  border: 1px solid black;
 }
 
 .firstLine {
