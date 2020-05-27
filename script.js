@@ -25,6 +25,7 @@ function clear() {
     listaDePixels[i].style.backgroundColor = 'white';
   }
 }
+
 function colorSelect(n) {
   let color1 = false;
   let color2 = false;
@@ -59,7 +60,7 @@ function colorSelect(n) {
   } else if (color4 === true){
     colorBase1.className = 'color';
     colorBase2.className = 'color';
-    colorBase3.className = 'color";
+    colorBase3.className = 'color';
     colorBase4.className = 'color selected';
   }
 }
