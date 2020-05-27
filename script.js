@@ -22,15 +22,15 @@ let colorArray = {
 }
 
 let v2=document.createElement("div")
-v2.className="color color2 selected"
+v2.className="color color2 "
 v2.style.backgroundColor=colorArray["color2"]
 
 let v3=document.createElement("div")
-v3.className="color color3 selected"
+v3.className="color color3 "
 v3.style.backgroundColor=colorArray["color3"]
 
 let v4=document.createElement("div")
-v4.className="color color4 selected"
+v4.className="color color4 "
 v4.style.backgroundColor=colorArray["color4"]
 
 document.getElementById("color-palette").appendChild(v2)
