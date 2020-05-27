@@ -9,6 +9,7 @@ let clearButton = document.querySelector('button');
 let palette = document.querySelector('#color-palette');
 let pixelBoard = document.querySelector('#pixel-board');
 let corSelecionada = document.querySelector('#selected');
+let color1 = false, color2 = false, color3 = false, color4 = false;
 
 // definições prederminadas
 colorBase1.style.background = 'black';
@@ -28,16 +29,22 @@ function clear() {
 }
 
 function colorSelect(n) {
-  let color1 = false, color2 = false, color3 = false, color4 = false;
   if (n.target === colorBase1) {
     color1 = true;
+    return(color1);
   } else if (n.target === colorBase2) {
     color2 = true;
+    return(color2);
   } else if (n.target === colorBase3) {
     color3 = true;
+    return(color3);
   } else if (n.target === colorBase4) {
     color4 = true;
-  };
+    return(color4);
+  }
+  corSelect2()
+}
+function corSelect2() {
   if (color1 === true) {
     colorBase1.className = 'color selected';
   } else if (color2 === true) {
