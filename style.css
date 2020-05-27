@@ -39,8 +39,8 @@ h1 {
 }
 
 .pixel-board {
-  display: table; 
-  margin-left:30%;
+  display: table;
+  margin-left: 30%;
   margin-top: 5%;
 }
 
@@ -67,10 +67,10 @@ h1 {
 
 .corselecionada1 {
   align-content: center;
-  color:white;
+  color: white;
   height: 30px;
+  margin-bottom: 5%; 
   margin-left: 35%;
-  margin-bottom: 5%;
   padding: 0;
   text-align: center;
   width: 100px;
