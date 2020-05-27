@@ -54,9 +54,6 @@ coresBlue.addEventListener('click', aplicarCorBlue);
 const coresGreen = document.querySelector('.color-green');
 coresGreen.addEventListener('click', aplicarCorGreen);
 
-const coresGreen = document.querySelector('.color-green');
-coresGreen.addEventListener('click', aplicarCorGreen);
-
 for (let i = 0; i < pixels.length; i += 1) {
   pixels[i].addEventListener('click', identicarPixel);
 }
