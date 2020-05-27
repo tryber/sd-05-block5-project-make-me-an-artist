@@ -33,12 +33,15 @@ function aplicarCorGreen() {
 const pixels = document.querySelectorAll('.pixel');
 function identicarPixel(evento) {
   evento.target.style.backgroundColor = corAtual;
+  evento.target.classList.add('selected');
 }
 
 // limpar cores
 function apagarEstilos() {
+  const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    document.querySelectorAll('.pixel')[i].style.backgroundColor = null;
+    pixels[i].style.backgroundColor = null;
+    pixels[i].classList.remove('selected');
   }
 }
 
