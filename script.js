@@ -8,7 +8,7 @@ let cor = "black";
 function selecionarCor() {
     let selected = event.target.classList.contains('selected');
     removerSelected();
-    if(!selected){
+    if (!selected) {
         event.target.classList.add('selected');
     }
 }
@@ -19,21 +19,21 @@ function atribuirCor() {
 }
 
 function removerSelected() {
-    for(let i = 0; i < paletaDeCores.length; i++) {
+    for (let i = 0; i < paletaDeCores.length; i++) {
         paletaDeCores[i].className = ` color paleta-${coresAtuais[i]}`
     }
 }
 
-for(let i = 0; i < paletaDeCores.length; i++) {
-    paletaDeCores[i].addEventListener('click', selecionarCor);
-}
-
-for(let i = 0; i < quadrados.length; i++) {
+for (let i = 0; i < quadrados.length; i++) {
     quadrados[i].addEventListener('click', atribuirCor);
 }
 
+for (let i = 0; i < paletaDeCores.length; i++) {
+    paletaDeCores[i].addEventListener('click', selecionarCor);
+}
+
 botaoReset.addEventListener('click', function resetarQuadro() {
-    for(let i = 0 ; i < quadrados.length; i++) {
+    for (let i = 0; i < quadrados.length; i++) {
         quadrados[i].className = 'pixel';
         quadrados[i].style.backgroundColor = 'white';
     }
