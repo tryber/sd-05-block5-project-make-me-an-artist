@@ -9,7 +9,7 @@ const clearBoard = document.getElementById('clear-board');
 let corAtual = black;
 
 // Funções
-
+// Seleção de cor na paleta de cores
 function selectColor() {
   corAtual.classList.remove('selected');
   event.target.classList.add('selected');
@@ -23,12 +23,12 @@ function changeColor() {
 
 // Limpa a paleta de cores
 function clear() {
-  let pixel = document.getElementsByClassName("pixel");
-  for (let i=0; i < pixel.length; i += 1) {
-    pixel[i].style.backgroundColor = "white";
+  let pixels = document.getElementsByClassName('pixel');
+  for (let i=0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
   }
 }
 
 // Event Listeners
 colorPalette.addEventListener('click' , selectColor);
-clearBoard.addEventListener("click", clear);
+clearBoard.addEventListener('click', clear);
