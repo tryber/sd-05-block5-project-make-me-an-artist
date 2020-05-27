@@ -3,7 +3,7 @@ const cor1 = document.getElementById ('sqr1');
 const cor2 = document.getElementById ('sqr2');
 const cor3 = document.getElementById ('sqr3');
 const cor4 = document.getElementById ('sqr4');
-const black = document.querySelector(".black");
+let black = document.querySelector(".black");
 let cor = black;
 const quadrado = document.getElementById ('pixel-board');
 
