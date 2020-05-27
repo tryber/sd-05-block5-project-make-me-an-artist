@@ -6,7 +6,7 @@ const caixaTres = document.querySelector('color-blue');
 const caixaQuatro = document.querySelector('color-green');
 
 function trocaCor () {
-
+    .style.backgroundColor = value.caixaUm;
 }
 
 caixaUm.addEventListener('click', trocaCor);
