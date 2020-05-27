@@ -30,6 +30,7 @@
   margin-right: auto;
 }
 
+
 /*Item2*/
 
 #title {
@@ -42,10 +43,18 @@
 
 #pixel-board {
   /*width: 210px;*/
-  width: fit-content;
-  height: fit-content;
+  
   margin-left: auto;
   margin-right: auto;
+}
+.conf1{
+  width: 210px;
+  height: auto;
+  margin: 0px;
+}
+.conf2{
+  width: fit-content;
+  height: fit-content;
 }
 
 /*Item4*/

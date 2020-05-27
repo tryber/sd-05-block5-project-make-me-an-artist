@@ -21,7 +21,7 @@ function maisCor() {
   v.style.backgroundColor = colorArray[nomeCor]
   document.getElementById("color-palette").appendChild(v)
 }
-
+document.getElementById("maisCor").addEventListener("click",maisCor)
 let colorArray = {
   'color1': 'black',
   'color2': rgb(cor(), cor(), cor()),
@@ -107,6 +107,7 @@ function createBoard(dimension) {
       quadro.style.backgroundColor = "white"
       lin.appendChild(quadro);
     }
+    pixelBoard.className="conf2"
     pixelBoard.appendChild(lin);
   }
 }
