@@ -13,26 +13,37 @@ function cor() {
 function rgb(a, b, c) {
   return 'rgb(' + a + ',' + b + ',' + c + ')'
 }
-let c2=rgb(cor(),cor(),cor())
-let colorArray = {
-  'color1': 'black',
-  'color2': c2,
-  'color3': rgb(cor(),cor(),cor()),
-  'color4': rgb(cor(),cor(),cor())
+function maisCor() {
+  let nomeCor = "color" + (Object.keys(colorArray).length + 1)
+  colorArray[nomeCor] = rgb(cor(), cor(), cor())
+  let v = document.createElement("div")
+  v.className = "color " + nomeCor + " "
+  v.style.backgroundColor = colorArray[nomeCor]
+  document.getElementById("color-palette").appendChild(v)
 }
 
-let v2=document.createElement("div")
-v2.className="color color2 "
-v2.style.backgroundColor=colorArray["color2"]
+let colorArray = {
+  'color1': 'black',
+  'color2': rgb(cor(), cor(), cor()),
+  'color3': rgb(cor(), cor(), cor()),
+  'color4': rgb(cor(), cor(), cor())
+}
+let v1 = document.createElement("div")
+v1.className = "color color1 selected "
+v1.style.backgroundColor = colorArray["color1"]
 
-let v3=document.createElement("div")
-v3.className="color color3 "
-v3.style.backgroundColor=colorArray["color3"]
+let v2 = document.createElement("div")
+v2.className = "color color2 "
+v2.style.backgroundColor = colorArray["color2"]
 
-let v4=document.createElement("div")
-v4.className="color color4 "
-v4.style.backgroundColor=colorArray["color4"]
+let v3 = document.createElement("div")
+v3.className = "color color3 "
+v3.style.backgroundColor = colorArray["color3"]
 
+let v4 = document.createElement("div")
+v4.className = "color color4 "
+v4.style.backgroundColor = colorArray["color4"]
+document.getElementById("color-palette").appendChild(v1)
 document.getElementById("color-palette").appendChild(v2)
 document.getElementById("color-palette").appendChild(v3)
 document.getElementById("color-palette").appendChild(v4)
