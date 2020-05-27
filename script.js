@@ -4,12 +4,38 @@ sessionStorage.setItem("selected", "color1")
 let colorSelected = sessionStorage.getItem("selected")
 let paleta = document.getElementById("color-palette");
 let pixelBoard = document.getElementById("pixel-board")
+
+function cor() {
+  let sort = Math.floor(Math.random() * 255);
+  return sort > 10 ? sort : 10;
+}
+
+function rgb(a, b, c) {
+  return 'rgb(' + a + ',' + b + ',' + c + ')'
+}
+let c2=rgb(cor(),cor(),cor())
 let colorArray = {
   'color1': 'black',
-  'color2': 'red',
-  'color3': 'blue',
-  'color4': 'green'
+  'color2': c2,
+  'color3': rgb(cor(),cor(),cor()),
+  'color4': rgb(cor(),cor(),cor())
 }
+
+let v2=document.createElement("div")
+v2.className="color color2 selected"
+v2.style.backgroundColor=colorArray["color2"]
+
+let v3=document.createElement("div")
+v3.className="color color3 selected"
+v3.style.backgroundColor=colorArray["color3"]
+
+let v4=document.createElement("div")
+v4.className="color color4 selected"
+v4.style.backgroundColor=colorArray["color4"]
+
+document.getElementById("color-palette").appendChild(v2)
+document.getElementById("color-palette").appendChild(v3)
+document.getElementById("color-palette").appendChild(v4)
 
 paleta.addEventListener("click", function (evento) {
   if (evento.target.className.toString().indexOf("color") >= 0) {
@@ -73,3 +99,4 @@ function createBoard(dimension) {
     pixelBoard.appendChild(lin);
   }
 }
+
