@@ -7,5 +7,4 @@ window.onload = function () {
         }
     }
   botaoMudaCor.addEventListener('click', trocaCorBranca);
-}
-
+};
