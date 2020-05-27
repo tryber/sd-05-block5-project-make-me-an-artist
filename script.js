@@ -6,12 +6,12 @@ const cor4 = document.getElementById ('sqr4');
 let black = document.querySelector(".black");
 let cor = black;
 const quadrado = document.getElementById ('pixel-board');
+const pixels = document.querySelectorAll ('.pixel');
 
 cor1.addEventListener("click", selecionaCor);
 cor2.addEventListener("click", selecionaCor);
 cor3.addEventListener("click", selecionaCor);
 cor4.addEventListener("click", selecionaCor);
-botao.addEventListener ("click", limpar);
 quadrado.addEventListener ("click", mudaCor);
 
 function selecionaCor (event) {
@@ -42,10 +42,9 @@ function mudaCor (event) {
     event.target.style.backgroundColor = getComputedStyle (novaCor).backgroundColor;
 }
 
-function limpar () {
-    for (let i=0; i < quadrado.children.length; i += 1){
-        let corAtual = quadrado.children[i].classList[1];
-        quadrado.children[i].classList.remove(corAtual);
-        quadrado.children[i].classList.add("none");
-    }
+
+for (let i=0; i < pixels.length; i += 1){
+     botao.addEventListener ('click', function () {
+         pixels[i].style.backgroundColor = 'white';
+     });               
 }
