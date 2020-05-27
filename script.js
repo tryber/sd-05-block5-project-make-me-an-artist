@@ -32,3 +32,12 @@ pixelBoard.addEventListener("click", function (evento) {
 });
 
 
+let botaoLimpar = document.getElementById("clear-board")
+botaoLimpar.addEventListener("click",function () {
+  let count = document.getElementsByClassName("pixel").length
+  for (let i = 0; i <count; i++) {
+    document.getElementsByClassName("pixel").style.backgroundColor="white"
+    
+  }
+  
+})
