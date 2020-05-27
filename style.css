@@ -27,9 +27,7 @@
 #title {
   text-align: center;
 }
-div {
-  border: 2px red solid;
-}
+
 
 /*Item3*/
 
@@ -47,7 +45,7 @@ div {
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin: -2px;
+  margin: -3px;
   background-color: white;
 }
 /*Item3 e 5*/
@@ -59,9 +57,9 @@ div .pixel{
   
 }
 .centraliza{
-  margin-left: 50%;
- 
+  margin-left: 48%;
+  margin-bottom: 10px;
 }
 .linha{
-  margin: -4px;
+  margin: -3px;
 }
