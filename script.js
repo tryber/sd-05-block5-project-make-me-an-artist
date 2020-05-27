@@ -10,6 +10,15 @@ function changeColor(event) {
 event.target.classList.add('selected')
 }
 
+function setPixel(event) {
+ let selCor = document.querySelector(".selected")
+ event.target.style.backgroundColor = selCor.id   
+}
+
 for (c of cor) {
     c.addEventListener('click', changeColor)
+}
+
+for (p of pix) {
+    p.addEventListener('click', setPixel)
 }
