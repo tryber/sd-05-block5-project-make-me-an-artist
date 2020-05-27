@@ -6,7 +6,7 @@ const gridSizeInput = document.getElementById('board-size');
 const colorVariety = document.getElementById('color-variety');
 const colorVarietyButton = document.getElementById('color-variety-button');
 
-// --------------------------------------------------SETUP INICIAL------------------------------------------------------- //
+// -------------------------SETUP INICIAL------------------------------- //
 
 // Cria Grid
 function setGrid(n) {
@@ -39,12 +39,12 @@ function randomColor() {
 
 function setColor(n) {
   paletteColor.innerHTML = '';
-  let preto = document.createElement('div');
+  const preto = document.createElement('div');
   paletteColor.appendChild(preto);
   preto.className = 'color selected';
   preto.style.backgroundColor = 'black';
   for (let param = 0; param < n; param += 1) {
-    let cor = document.createElement('div');
+    const cor = document.createElement('div');
     paletteColor.appendChild(cor);
     cor.classList.add('color');
     cor.style.backgroundColor = randomColor();
@@ -52,11 +52,11 @@ function setColor(n) {
 }
 
 function setColorNumbers() {
-  n = colorVariety.value;
+  const n = colorVariety.value;
   setColor(n);
 }
-setColor(3)
-// --------------------------------------------------------------------------------------------------------------------- //
+setColor(3);
+// ---------------------------------------------------------------------- //
 
 // Colore Pixel
 pixelBoard.addEventListener('click', function () {
@@ -82,7 +82,7 @@ clear.addEventListener('click', function () {
 
 // Change Grid Size
 function changeGridSize() {
-  n = gridSizeInput.value;
+  const n = gridSizeInput.value;
   if (n === '') {
     alert('Board inválido!');
   }
