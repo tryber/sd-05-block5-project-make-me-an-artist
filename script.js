@@ -40,4 +40,20 @@ botaoLimpar.addEventListener("click",function () {
     
   }
   
+});
+let botaoDimensao = document.getElementById("generate-board")
+botaoDimensao.addEventListener("click",function(){
+  let texto=document.getElementById("generate-board")
+  if(texto.value==""){
+    alert("Board inválido!")
+    return;
+  }
 })
+function createBoard(dimension){
+  let lin=document.createElement("div")
+  lin.className="linha"
+  console.log(lin)
+  for (let i1 = 0; i1 < dimension; i1++) {
+    
+  }
+}
