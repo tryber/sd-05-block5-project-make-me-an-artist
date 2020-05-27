@@ -1,65 +1,80 @@
 /*Item2*/
+
 .color {
   display: inline-block;
   width: 50px;
   height: 50px;
   border: 1px black solid;
 }
-.color1{
+
+.color1 {
   background-color: black;
 }
-.color2{
+
+.color2 {
   background-color: red;
 }
-.color3{
+
+.color3 {
   background-color: blue;
 }
-.color4{
+
+.color4 {
   background-color: green;
 }
-#color-palette{
+
+#color-palette {
   width: 300px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
+
 /*Item2*/
+
 #title {
   text-align: center;
 }
 
-
 /*Item3*/
 
 /*Item4*/
-#pixel-board{
+
+#pixel-board {
   /*width: 210px;*/
   width: fit-content;
   height: fit-content;
   margin-left: auto;
   margin-right: auto;
 }
+
 /*Item4*/
 
-.pixel{
+.pixel {
   width: 40px;
   height: 40px;
   display: inline-block;
   margin: -2px;
   background-color: white;
 }
+
 /*Item3 e 5*/
-div .pixel{
+
+div .pixel {
   border: 1px black solid;
 }
 
-.selected{
-  
-}
-.centraliza{
+.selected {}
+
+.centraliza {
   margin-left: 48%;
   margin-bottom: 10px;
 }
-.linha{
+
+.linha {
   margin: -4px;
+  height: 40px;
+}
+#generate-board{
+  right: 0px;
 }
