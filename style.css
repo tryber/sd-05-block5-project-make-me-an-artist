@@ -5,8 +5,14 @@ body {
   padding: 0px;
 }
 
-color-palette-class {
+.title-class{
+  display: block;
+  text-align: center;
+}
 
+.color-palette-class {
+  display: block;
+  text-align: center;
 }
 
 .color-preto {
