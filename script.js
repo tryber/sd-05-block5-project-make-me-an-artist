@@ -8,7 +8,7 @@ window.onload = function () {
         for (let i = 0; i < 5; i++) {
             console.log("ate aqui ok3");
             let square = document.createElement("div");
-            square.className = "color fazLinha";
+            square.className = "pixel fazLinha";
             line.appendChild(square);
         }
     }
