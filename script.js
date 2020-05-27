@@ -1,5 +1,4 @@
 // variables
-const size = 5;
 const pixelBoard = document.getElementById('pixel-board');
 const black = document.getElementById('black');
 const color1 = document.getElementById('color1');
@@ -41,7 +40,7 @@ function createGridOfPixel(size) {
 
 function changeSize() {
   const size = boardSize.value;
-  if (size.length === '') {
+  if (size.length == '') {
     alert('Board Inválido!');
   } else {
     createGridOfPixel(size);
@@ -98,6 +97,6 @@ color2.addEventListener('click', changeSelectedColor);
 color3.addEventListener('click', changeSelectedColor);
 pixelBoard.addEventListener('click', setColorPixel);
 boardGenButton.addEventListener('click', changeSize);
-window.addEventListener('load', createGridOfPixel(size));
+window.addEventListener('load', createGridOfPixel(5));
 
 setRandomColor();
