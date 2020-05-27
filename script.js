@@ -3,8 +3,8 @@ const cor1 = document.getElementById ('sqr1');
 const cor2 = document.getElementById ('sqr2');
 const cor3 = document.getElementById ('sqr3');
 const cor4 = document.getElementById ('sqr4');
+const black = document.querySelector(".black");
 let cor = black;
-let black = document.querySelector(".black");
 const quadrado = document.getElementById ('pixel-board');
 
 cor1.addEventListener("click", selecionaCor);
@@ -44,7 +44,7 @@ function mudaCor () {
 }
 
 function limpar () {
-    for (i=0; i < quadradro.children.length; i += 1){
+    for (i=0; i < quadrado.children.length; i += 1){
         let corAtual = quadrado.children[i].classList[1];
         quadrado.children[i].classList.remove(corAtual);
         quadrado.children[i].classList.add("none");
