@@ -20,6 +20,7 @@ h1{
     border: 1px solid black;
     height: 40px;
     width: 40px;
+    
 }
 .color.red{
     background-color: red;
@@ -34,19 +35,19 @@ h1{
     background-color: black;
 }
 #pixel-board{
-    display: table;
+    display: grid;
     margin-top: 10px;
     margin-left: 40px;
 }
 .lines{
     background-color: white;
     z-index: 0;  
-    display: inline-block;
+    clear: left;
 }
 .pixel {
     background-color: white;
     border: 1px solid black;
-    display: table-cell;
+    float: left;
     height: 40px;
     width: 40px;
   }
