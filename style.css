@@ -40,7 +40,7 @@ body {
 
 .pixel-board-class {
   display: block;
-  margin-top: 200px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -58,6 +58,11 @@ body {
 
 .pixel-board-class-linha4 {
   margin-bottom: -5px;
+}
+
+.clear-board-class {
+  margin-left: 600px;
+  margin-top: 50px;  
 }
 
 .pixel{
