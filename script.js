@@ -1,11 +1,10 @@
 const paletteColor = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
-const color2 = document.getElementById('color2');
-const color3 = document.getElementById('color3');
-const color4 = document.getElementById('color4');
 const clear = document.getElementById('clear-board');
 const gridSize = document.getElementById('generate-board');
 const gridSizeInput = document.getElementById('board-size');
+const colorVariety = document.getElementById('color-variety');
+const colorVarietyButton = document.getElementById('color-variety-button');
 
 // --------------------------------------------------SETUP INICIAL------------------------------------------------------- //
 
@@ -20,7 +19,6 @@ function setGrid(n) {
   }
 }
 setGrid(5);
-
 // Random Number
 function randomNumber(min, max) {
   min = Math.ceil(min);
@@ -39,13 +37,25 @@ function randomColor() {
 
 // Set Color
 
-function setColor(...palette) {
-  for (let param = 0; param < palette.length; param += 1) {
-    palette[param].style.backgroundColor = randomColor();
+function setColor(n) {
+  paletteColor.innerHTML = '';
+  let preto = document.createElement('div');
+  paletteColor.appendChild(preto);
+  preto.className = 'color selected';
+  preto.style.backgroundColor = 'black';
+  for (let param = 0; param < n; param += 1) {
+    let cor = document.createElement('div');
+    paletteColor.appendChild(cor);
+    cor.classList.add('color');
+    cor.style.backgroundColor = randomColor();
   }
 }
-setColor(color2, color3, color4);
 
+function setColorNumbers() {
+  n = colorVariety.value;
+  setColor(n);
+}
+setColor(3)
 // --------------------------------------------------------------------------------------------------------------------- //
 
 // Colore Pixel
@@ -72,18 +82,17 @@ clear.addEventListener('click', function () {
 
 // Change Grid Size
 function changeGridSize() {
-  n = gridSizeInput.value
-  if (n = '') {
-    alert('Board inválido!')
+  n = gridSizeInput.value;
+  if (n === '') {
+    alert('Board inválido!');
   }
-  if (n < 5) {
+  if (n <= 5) {
     n = 5;
-    setGrid(n)
-  } else if (n > 50) {
-    n = 50;
-    setGrid(n)
-  } else {
-    setGrid(n)
   }
+  if (n >= 50) {
+    n = 50;
+  }
+  setGrid(n);
 }
 gridSize.addEventListener('click', changeGridSize);
+colorVarietyButton.addEventListener('click', setColorNumbers);
