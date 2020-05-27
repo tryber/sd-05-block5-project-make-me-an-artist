@@ -1,12 +1,11 @@
 const botaoReset = document.getElementById('clear-board');
 const quadrados = document.getElementsByClassName('pixel');
 const paletaDeCores = document.querySelectorAll('.color');
-console.log(paletaDeCores);
 let coresAtuais = ['preta', '2', '3', '4'];
 const cores = ['black', 'paleta-2', 'paleta-3', 'paleta-4'];
 let cor = "black";
 
-function selecionarCor(event) {
+function selecionarCor() {
     let selected = event.target.classList.contains('selected');
     removerSelected();
     if(!selected){
@@ -14,7 +13,7 @@ function selecionarCor(event) {
     }
 }
 
-function atribuirCor(event) {
+function atribuirCor() {
     let selectedDiv = document.querySelector('.selected');
     event.target.style.backgroundColor = getComputedStyle(selectedDiv).backgroundColor;
 }
