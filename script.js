@@ -1,3 +1,4 @@
+const generateBoard = document.getElementById('generate-board');
 const colorBlack = document.getElementById('colorOne');
 const colorRed = document.getElementById('colorTwo');
 const colorBlue = document.getElementById('colorThree');
@@ -6,6 +7,21 @@ let colorSelected = document.querySelector('.selected');
 const pixelUnit = document.querySelectorAll('.pixel');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
+
+function magic() {
+  const size = document.getElementById('board-size').value;
+  document.getElementsByTagName('tbody')[0].innerHTML = '';
+  for (let j = 0; j < size; j += 1) {
+    const tr = document.createElement('tr');
+    for (let i = 0; i < size; i += 1) {
+      const td = document.createElement('td');
+      td.className = 'pixel';
+      tr.appendChild(td);
+    }
+    document.getElementById('pixel-board').children[0].appendChild(tr);
+  }
+}
+generateBoard.addEventListener('click', magic);
 
 function selectedColor(event) {
   if (event.target === colorBlack) {
