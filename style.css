@@ -8,8 +8,6 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  margin-left: 0;
-  margin-right: -4px;
 }
 
 .black {
@@ -28,13 +26,10 @@
   background-color: blue;
 }
 
-.blank {
-  background-color: white;
-}
-
 .pixel {
   width: 40px;
   height: 40px;
   border: solid 1px;
   display: inline-block;
+  background-color: white;
 }
