@@ -28,32 +28,39 @@ function changeColorSelected(oldColor, newColor) {
 
 pixelBoard.addEventListener("click", function (evento) {
   if (evento.target.className.toString().indexOf("pixel") >= 0)
-    evento.target.style.backgroundColor = colorArray[sessionStorage.getItem("selected")]    
+    evento.target.style.backgroundColor = colorArray[sessionStorage.getItem("selected")]
 });
 
 
 let botaoLimpar = document.getElementById("clear-board")
-botaoLimpar.addEventListener("click",function () {
+botaoLimpar.addEventListener("click", function () {
   let count = document.getElementsByClassName("pixel").length
-  for (let i = 0; i <count; i++) {
-    document.getElementsByClassName("pixel")[i].style.backgroundColor="white"
-    
+  for (let i = 0; i < count; i++) {
+    document.getElementsByClassName("pixel")[i].style.backgroundColor = "white"
+
   }
-  
+
 });
 let botaoDimensao = document.getElementById("generate-board")
-botaoDimensao.addEventListener("click",function(){
-  let texto=document.getElementById("generate-board")
-  if(texto.value==""){
+botaoDimensao.addEventListener("click", function () {
+  let texto = document.getElementById("generate-board")
+  if (texto.value == "") {
     alert("Board inválido!")
     return;
   }
 })
-function createBoard(dimension){
-  let lin=document.createElement("div")
-  lin.className="linha"
-  console.log(lin)
+function createBoard(dimension) {
+  pixelBoard.innerHTML=""
+  
   for (let i1 = 0; i1 < dimension; i1++) {
-    
+    let lin = document.createElement("div")
+    lin.className = "linha"
+    console.log(lin)
+    for (let j1 = 0; j1 < dimension; j1++) {
+      let quadro = document.createElement("div")
+      quadro.className = "pixel"
+      lin.appendChild(quadro) ;
+    }
+    pixelBoard.appendChild(lin);
   }
 }

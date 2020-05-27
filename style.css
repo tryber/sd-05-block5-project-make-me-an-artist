@@ -35,8 +35,9 @@ div {
 
 /*Item4*/
 #pixel-board{
-  width: 210px;
-  height: auto;
+  /*width: 210px;*/
+  width: fit-content;
+  height: fit-content;
   margin-left: auto;
   margin-right: auto;
 }
