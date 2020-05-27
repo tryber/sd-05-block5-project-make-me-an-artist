@@ -22,7 +22,7 @@ document.getElementById('cor1').addEventListener('click', function () {
 });
 
 document.getElementById('cor2').addEventListener('click', function () {
-  document.getElementById('corselecionada').style.backgroundColor = "blue";
+  document.getElementById('corselecionada').style.backgroundColor = 'blue';
   alert('cor selecionada azul');
   document.getElementById('cor2').className += ' selected';
   document.getElementById('cor1').className = 'color';
@@ -31,7 +31,7 @@ document.getElementById('cor2').addEventListener('click', function () {
 });
 
 document.getElementById('cor3').addEventListener('click', function () {
-  document.getElementById('corselecionada').style.backgroundColor = "red";
+  document.getElementById('corselecionada').style.backgroundColor = 'red';
   alert('cor selecionada vermelho');
   document.getElementById('cor3').className += ' selected';
   document.getElementById('cor1').className = 'color';
@@ -40,7 +40,7 @@ document.getElementById('cor3').addEventListener('click', function () {
 });
 
 document.getElementById('cor4').addEventListener('click', function () {
-  document.getElementById('corselecionada').style.backgroundColor = "green";
+  document.getElementById('corselecionada').style.backgroundColor = 'green';
   alert('cor selecionada verde');
   document.getElementById('cor4').className += ' selected';
   document.getElementById('cor1').className = 'color';
