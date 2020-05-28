@@ -10,17 +10,23 @@ document.addEventListener('click', function (event) {
   }
 }, false);
 
+
+function deletaTudo() {
+  const pegaTudo = document.getElementById('pixel-board');
+  pegaTudo.innerHTML = '';
+}
+
 function criaBoard(n) {
   for (let i = 1; i <= n; i += 1) {
     const ultimaPosDentroBoard = document.getElementById('pixel-board');
     const criaDivLinha = document.createElement('div');
-    //criaDivLinha.className = 'Linha' + i;
+    //  criaDivLinha.className = 'Linha' + i;
     ultimaPosDentroBoard.appendChild(criaDivLinha);
 
     for (let j = 1; j <= n; j += 1) {
       const criaColuna = document.createElement('div');
       criaColuna.className = 'pixel';
-      //criaColuna.className = 'pixel ' + 'Coluna' + j;
+      //  criaColuna.className = 'pixel ' + 'Coluna' + j;
       const ultimaPosDentroLinha = ultimaPosDentroBoard.lastElementChild;
       ultimaPosDentroLinha.appendChild(criaColuna);
     }
@@ -31,7 +37,7 @@ criaBoard(5);
 
 function usuarioCria() {
   let conteudoInputSize = document.getElementById('board-size').value;
-  if (conteudoInputSize === ''){
+  if (conteudoInputSize === '') {
     alert('Board inválido!');
   } else {
     deletaTudo();
@@ -69,24 +75,18 @@ function limpaTudo() {
   }
 }
 
-function deletaTudo() {
-  const pegaTudo = document.getElementById('pixel-board');
-  pegaTudo.innerHTML = "";
-}
-
 monitoraLimpar.addEventListener('click', limpaTudo);
 
 function criaQuadradoCor() {
   const selecionaPaleta = document.getElementById('color-palette');
   let corRandomica = '#';
-  for (let i=1; i <= 3; i += 1){
+  for (let i = 1; i <= 3; i += 1) {
     const criaDiv = document.createElement('div');
     criaDiv.className = 'color ' + 'randomica' + i;
-    let r = Math.floor(Math.random()*255);
-    let g = Math.floor(Math.random()*255);
-    let b = Math.floor(Math.random()*255);
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
     corRandomica = 'rgb(' + r + "," + g + "," + b + ')';
-    console.log(corRandomica);
     criaDiv.style.backgroundColor = corRandomica;
     selecionaPaleta.append(criaDiv);
   }
