@@ -2,54 +2,48 @@ sessionStorage.setItem('selected', 'color1');
 const colorSelected = sessionStorage.getItem('selected');
 const paleta = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
+let colorArray = {
+  color1: 'black',
+  color2: rgb(cor(), cor(), cor()),
+  color3: rgb(cor(), cor(), cor()),
+  color4: rgb(cor(), cor(), cor())
+};
 function cor() {
-  let sort = Math.floor(Math.random() * 255);
+  const sort = Math.floor(Math.random() * 255);
   return sort > 10 ? sort : 10;
 }
 function rgb(a, b, c) {
   return 'rgb(' + a + ',' + b + ',' + c + ')';
 }
 function maisCor() {
-  let nomeCor = 'color' + (Object.keys(colorArray).length + 1);
+  const nomeCor = 'color' + (Object.keys(colorArray).length + 1);
   colorArray[nomeCor] = rgb(cor(), cor(), cor());
-  let v = document.createElement('div');
+  const v = document.createElement('div');
   v.className = 'color ' + nomeCor + ' ';
   v.style.backgroundColor = colorArray[nomeCor];
   document.getElementById('color-palette').appendChild(v);
 }
 document.getElementById('maisCor').addEventListener('click', maisCor);
-let colorArray = {
-  'color1': 'black',
-  'color2': rgb(cor(), cor(), cor()),
-  'color3': rgb(cor(), cor(), cor()),
-  'color4': rgb(cor(), cor(), cor())
-}
-let v1 = document.createElement('div');
+const v1 = document.createElement('div');
 v1.className = 'color color1 selected ';
-v1.style.backgroundColor = colorArray['color1'];
+v1.style.backgroundColor = colorArray.color1;
 //
-let v2 = document.createElement('div');
+const v2 = document.createElement('div');
 v2.className = 'color color2 ';
-v2.style.backgroundColor = colorArray['color2'];
+v2.style.backgroundColor = colorArray.color2;
 //
-let v3 = document.createElement('div');
+const v3 = document.createElement('div');
 v3.className = 'color color3 ';
-v3.style.backgroundColor = colorArray['color3'];
+v3.style.backgroundColor = colorArray.color3;
 //
-let v4 = document.createElement('div');
+const v4 = document.createElement('div');
 v4.className = 'color color4 ';
-v4.style.backgroundColor = colorArray['color4'];
+v4.style.backgroundColor = colorArray.color4;
 document.getElementById('color-palette').appendChild(v1);
 document.getElementById('color-palette').appendChild(v2);
 document.getElementById('color-palette').appendChild(v3);
 document.getElementById('color-palette').appendChild(v4);
 //
-paleta.addEventListener('click', function (evento) {
-  if (evento.target.className.toString().indexOf('color') >= 0) {
-    changeColorSelected(colorSelected, evento.target.className);
-    //  console.log(document.getElementsByClassName('color'))
-  }
-});
 //
 function changeColorSelected(oldColor, newColor) {
   const elementOld = document.getElementsByClassName('selected')[0];
@@ -58,6 +52,12 @@ function changeColorSelected(oldColor, newColor) {
   elementNew.className += 'selected';
   sessionStorage.setItem('selected', elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf('color'), 6));
 }
+paleta.addEventListener('click', function (evento) {
+  if (evento.target.className.toString().indexOf('color') >= 0) {
+    changeColorSelected(colorSelected, evento.target.className);
+    //  console.log(document.getElementsByClassName('color'))
+  }
+});
 pixelBoard.addEventListener('click', function (evento) {
   if (evento.target.className.toString().indexOf('pixel') >= 0) {
     evento.target.style.backgroundColor = colorArray[sessionStorage.getItem('selected')];
@@ -71,24 +71,6 @@ botaoLimpar.addEventListener('click', function () {
   }
 });
 const botaoDimensao = document.getElementById('generate-board');
-botaoDimensao.addEventListener('click', function () {
-  const texto = document.getElementById('board-size'); 
-  let textoValor = parseInt(texto.value);
-  if (texto.value === '') {
-    alert('Board inválido!');
-    return;
-  }
-  if (textoValor < 5) {
-    textoValor = 5;
-    texto.value=5;
-  }
-
-  if (textoValor > 50) {
-    textoValor = 50;
-    texto.value=0;
-  }
-  createBoard(textoValor);
-});
 function createBoard(dimension) {
   pixelBoard.innerHTML = '';
   for (let i1 = 0; i1 < dimension; i1 += 1) {
@@ -104,3 +86,21 @@ function createBoard(dimension) {
     pixelBoard.appendChild(lin);
   }
 }
+botaoDimensao.addEventListener('click', function () {
+  const texto = document.getElementById('board-size');
+  let textoValor = parseInt(texto.value);
+  if (texto.value === '') {
+    alert('Board inválido!');
+    return;
+  }
+  if (textoValor < 5) {
+    textoValor = 5;
+    texto.value = 5;
+  }
+
+  if (textoValor > 50) {
+    textoValor = 50;
+    texto.value = 0;
+  }
+  createBoard(textoValor);
+});
