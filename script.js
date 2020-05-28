@@ -19,24 +19,25 @@ const div = paleta.children;
 const pixelBoard = document.getElementById('pixel-board');
 let cor = ['preto'];
 
-paleta.addEventListener('click', mudaCorSelecionada);
-
 function mudaCorSelecionada(evento) {
-  for (let i = 0; i < paleta.childElementCount; i += 1) {
-    div[i].classList.remove('selected');
+    for (let i = 0; i < paleta.childElementCount; i += 1) {
+      div[i].classList.remove('selected');
+    }
+    cor = [];
+    const cornova = evento.target;
+    const bloco = cornova.classList.value;
+    const lista = bloco.split(' ');
+    cor.push(lista[lista.length - 1]);
+    cornova.classList.add('selected');
   }
-  cor = [];
-  const cornova = evento.target;
-  const bloco = cornova.classList.value;
-  const lista = bloco.split(' ');
-  cor.push(lista[lista.length - 1]);
-  cornova.classList.add('selected');
-}
+  
+
+paleta.addEventListener('click', mudaCorSelecionada);
 
 function pincel(event) {
   const contato = event.target;
   const listaString = contato.classList.value;
-  let listaItem = listaString.split(' ');
+  const listaItem = listaString.split(' ');
   contato.classList.remove(listaItem[2]);
   contato.classList.add(cor);
 }
@@ -46,7 +47,6 @@ const botaoLimpar = document.getElementById('clear-board');
 botaoLimpar.addEventListener('click', function () {
   for (let i = 0; i < id; i += 1) {
     const str = i.toString();
-    console.log(str);
     const square = document.getElementById(str);
     const squar = square.classList.value;
     const resetList = squar.split(' ');
