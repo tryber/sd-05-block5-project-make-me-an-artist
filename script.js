@@ -14,7 +14,7 @@ let selectedColor = document.getElementsByClassName("selected")[0];
 
 function selectColor (event){
   color = event.target;
-  if (selectedColor !== newColor){
+  if (selectedColor !== color){
     selectedColor.className -= " selected";
     color.className += " selected";
     selectedColor = document.getElementsByClassName("selected")[0];
