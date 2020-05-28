@@ -5,8 +5,8 @@ const pixelBoard = document.getElementById('pixel-board');
 
 //classe selected ...e removida da cor anteriormente selecionada//
 
-const select = document.getElementsByClassName('selected')[0];
-const color2 = select.getElementsByClassName[1];
+const select = document.getElementsByClassName('selected');
+const color2 = document.getElementsByClassName('color2');
 const target = '';
 
 function Color() {
