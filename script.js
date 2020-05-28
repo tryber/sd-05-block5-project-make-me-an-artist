@@ -1,10 +1,10 @@
 const generateBoard = document.getElementById('generate-board');
-const colorBlack = document.getElementById('colorOne');
-const colorRed = document.getElementById('colorTwo');
-const colorBlue = document.getElementById('colorThree');
-const colorGreen = document.getElementById('colorFour');
+const colorBlack = document.getElementById('color1');
+const colorRed = document.getElementById('color2');
+const colorBlue = document.getElementById('color3');
+const colorGreen = document.getElementById('color4');
+let pixelUnit = document.querySelectorAll('.pixel');
 let colorSelected = document.querySelector('.selected');
-const pixelUnit = document.querySelectorAll('.pixel');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
@@ -17,7 +17,6 @@ function createBoard() {
     size = 50;
     alert('Será considerado tamanho máximo de 50px para o board.');
   }
-
   document.getElementsByTagName('tbody')[0].innerHTML = '';
   if (size >= 5 && size <=50) {
     for (let j = 0; j < size; j += 1) {
@@ -29,6 +28,7 @@ function createBoard() {
       }
       document.getElementById('pixel-board').children[0].appendChild(tr);
     }
+    pixelUnit = document.querySelectorAll('.pixel');
   } else {
     alert('Board inválido!');
   }
@@ -64,14 +64,17 @@ colorRed.addEventListener('click', selectedColor);
 colorBlue.addEventListener('click', selectedColor);
 colorGreen.addEventListener('click', selectedColor);
 
-for (let i = 0; i < pixelUnit.length; i += 1) {
-  pixelUnit[i].addEventListener('click', function () {
-    pixelUnit[i].style.backgroundColor = color;
-  });
-}
 
-for (let i = 0; i < pixelUnit.length; i += 1) {
-  clearButton.addEventListener('click', function () {
+const pixelBoard = document.getElementById('pixel-board');
+pixelBoard.addEventListener('click', function(evento) {
+  if (evento.target.className === 'pixel') {
+    evento.target.style.backgroundColor = color;
+  }
+});
+
+clearButton.addEventListener('click', function () {
+  pixelUnit = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixelUnit.length; i += 1) {
     pixelUnit[i].style.backgroundColor = 'white';
-  });
-}
+  }
+});
