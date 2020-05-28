@@ -14,19 +14,19 @@ function cor() {
   return sort > 10 ? sort : 10;
 }
 function rgb(a, b, c) {
-  return concatena(['rgb(' , a , ',', b , ',' , c , ')']);
+  return concatena(['rgb(', a, ',', b, ',', c, ')']);
 }
-let colorArray = {
+const colorArray = {
   color1: 'black',
   color2: rgb(cor(), cor(), cor()),
   color3: rgb(cor(), cor(), cor()),
   color4: rgb(cor(), cor(), cor())
 };
 function maisCor() {
-  const nomeCor = concatena(['color' , (Object.keys(colorArray).length + 1)]);
+  const nomeCor = concatena(['color', (Object.keys(colorArray).length + 1)]);
   colorArray[nomeCor] = rgb(cor(), cor(), cor());
   const v = document.createElement('div');
-  v.className = concatena(['color ' , nomeCor , ' ']);
+  v.className = concatena(['color ', nomeCor, ' ']);
   v.style.backgroundColor = colorArray[nomeCor];
   document.getElementById('color-palette').appendChild(v);
 }
