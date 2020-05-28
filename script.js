@@ -3,8 +3,8 @@ const colorSelected = sessionStorage.getItem('selected');
 const paleta = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 function concatena(vetor) {
-  let vari='';
-  for (let i=0 ; i<vetor.length;i += 1){
+  let vari = '';
+  for (let i = 0; i < vetor.length; i += 1) {
     vari += vetor[i];
   }
   return vari;
@@ -14,7 +14,7 @@ function cor() {
   return sort > 10 ? sort : 10;
 }
 function rgb(a, b, c) {
-  return concatena(['rgb(',  a , ',' , b , ',' , c , ')']);
+  return concatena(['rgb(' , a , ',', b , ',' , c , ')']);
 }
 let colorArray = {
   color1: 'black',
