@@ -17,12 +17,21 @@ function boardInit(pixelNumbers) {
       numberTagTR.appendChild(pixelColumn);
       pixelColumn.className = "pixel white";
       pixelColumn.addEventListener("click", paintPixel);
-    }}
+    }
   }
-  boardInit(5);
-
+}
+boardInit(5);
 
 function createBoardSize() {
+  if (numberOfPixels.value === "") {
+    alert("Board inválido!");
+  }
+  if (numberOfPixels.value < 5) {
+    numberOfPixels.value = 5;
+  }
+  if (numberOfPixels.value > 50) {
+    numberOfPixels.value = 50;
+  }
   if (numberOfPixels.value >= 5 && numberOfPixels.value <= 50) {
     pixelBoard.innerText = "";
     for (let i = 0; i < numberOfPixels.value; i += 1) {
@@ -38,9 +47,6 @@ function createBoardSize() {
         pixelColumn.addEventListener("click", paintPixel);
       }
     }
-  }
-  if(numberOfPixels.value === "") {
-    alert("Board inválido!");
   }
 }
 
