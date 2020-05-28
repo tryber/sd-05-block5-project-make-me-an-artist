@@ -24,7 +24,7 @@ function Color() {
 } //função seletora//
 for (c of color2) {
 c.addEventListener('click', function (event) {
-for (s of color2)  {
+for (s of color2) {
     s.classList.remove('selected');
 }
 event.target.classList.add('selected');
