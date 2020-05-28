@@ -32,8 +32,7 @@ function selectColor(event){
 let button = document.getElementsByTagName("button")[0];
 button.addEventListener("click", clearButton);
 
-function clearButton(event){
-  let clickedButton = event.target;
+function clearButton(){
   let pixels = document.getElementsByClassName("pixel");
   for(let i = 0; i < pixels.length; i+=1){
     pixels[i].style.backgroundColor = "white";
