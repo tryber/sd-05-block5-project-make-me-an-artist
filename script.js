@@ -13,9 +13,9 @@ window.onload = function () {
   botaoMudaCor.addEventListener('click', trocaCorBranca);
 
   function trocaCor(event) {
-     let selected = event.target.classList.contains('selected');
+    let selected = event.target.classList.contains('selected');
      if (!selected) {
-       let selectedDiv = querySelector('.selected');
+       let selectedDiv = document.querySelector('.selected');
        selectedDiv.classList.remove('selected');    
        event.target.classList.add('selected'); 
       }
