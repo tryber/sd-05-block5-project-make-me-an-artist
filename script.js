@@ -8,3 +8,4 @@ function PintarFundo(){
 let limparQuadros = document.getElementById('clear-board');
     limparQuadros.addEventListener('click',PintarFundo);
 //fim do código ...
+
