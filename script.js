@@ -21,7 +21,7 @@ colorPalette.addEventListener('click', function (event) {
 });
 
 // Evento que colore o pixel clicado com a cor selecionada
-const colorir = document.querySelector('tbody');
+const colorir = document.querySelector('table');
 colorir.addEventListener('click', function (event) {
   const pixelEscolhido = event.target;
   pixelEscolhido.className = ' ';
