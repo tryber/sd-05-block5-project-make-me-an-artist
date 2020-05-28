@@ -41,7 +41,6 @@ function usuarioCria() {
     alert('Board inválido!');
   } else {
     deletaTudo();
-    console.log(conteudoInputSize);
     if (conteudoInputSize < 5) {
       conteudoInputSize = 5;
     } else if (conteudoInputSize > 50) {
