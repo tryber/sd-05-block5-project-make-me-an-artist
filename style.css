@@ -1,58 +1,57 @@
 .color {
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
 
 .absolute {
-    position: relative;
+  position: relative;
 }
 
 .preto {
-    background-color: black;
+  background-color: black;
 }
 
 .amarelo {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .vermelho {
-    background-color: red;
+  background-color: red;
 }
 
 .branco {
-    background-color: white;
+  background-color: white;
 }
 
 .laranja {
-    background-color: orange;
+  background-color: orange;
 }
 
 .linha {
-    height: 42px;
-    width: 210px;
+  height: 42px;
+  width: 210px;
 }
 
 .largura {
-    width: 100%;
+  width: 100%;
 }
 
 .larguraPaleta {
-    width: 168px;
+  width: 168px;
 }
 
 .tamanhoQuadro {
-    width: 210px;
-    height: 210px;
+  height: 210px;
+  width: 210px;
 }
 
 .fazLinha {
-    float: left;
+  float: left;
 }
 
 .pixel {
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
-
