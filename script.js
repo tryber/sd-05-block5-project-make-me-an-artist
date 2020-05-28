@@ -5,8 +5,26 @@ let numberTagTR;
 const genBoardButton = document.getElementById("generate-board");
 const numberOfPixels = document.getElementById("board-size");
 
-function createPixels() {
-  if (pixelBoard.innerText === "" && numberOfPixels.value >= 5 && numberOfPixels.value <= 50) {
+function boardInit(pixelNumbers) {
+  for (let i = 0; i < pixelNumbers; i += 1) {
+    let pixelLine = document.createElement("tr");
+    pixelBoard.appendChild(pixelLine);
+  }
+  for (let i = 0; i < pixelNumbers; i += 1) {
+    for (let j = 0; j < tagTR.length; j += 1) {
+      let pixelColumn = document.createElement("td");
+      numberTagTR = tagTR[j];
+      numberTagTR.appendChild(pixelColumn);
+      pixelColumn.className = "pixel white";
+      pixelColumn.addEventListener("click", paintPixel);
+    }}
+  }
+  boardInit(5);
+
+
+function createBoardSize() {
+  if (numberOfPixels.value >= 5 && numberOfPixels.value <= 50) {
+    pixelBoard.innerText = "";
     for (let i = 0; i < numberOfPixels.value; i += 1) {
       let pixelLine = document.createElement("tr");
       pixelBoard.appendChild(pixelLine);
@@ -26,7 +44,7 @@ function createPixels() {
   }
 }
 
-genBoardButton.addEventListener("click", createPixels);
+genBoardButton.addEventListener("click", createBoardSize);
 
 //Change class "selected"
 let colorBlack = document.getElementById("cor1");
