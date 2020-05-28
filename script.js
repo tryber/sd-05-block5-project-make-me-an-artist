@@ -9,8 +9,15 @@ let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
 function createBoard() {
-  const size = document.getElementById('board-size').value;
-  console.log(size);
+  let size = document.getElementById('board-size').value;
+  if (size > 0 && size < 5) {
+    size = 5;
+    alert('Será considerado tamanho mínimo de 5px para o board.');
+  } else if (size > 50) {
+    size = 50;
+    alert('Será considerado tamanho máximo de 50px para o board.');
+  }
+
   document.getElementsByTagName('tbody')[0].innerHTML = '';
   if (size >= 5 && size <=50) {
     for (let j = 0; j < size; j += 1) {
