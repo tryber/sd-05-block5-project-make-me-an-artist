@@ -31,7 +31,7 @@
 }
 .conf1{
   height: auto;
-  margin: 0px;
+  margin: 0;
   width: 210px;
 }
 .conf2{
@@ -52,13 +52,13 @@ div .pixel {
 text-emphasis: none;
 }
 .centraliza {
-  margin-left: 48%;
   margin-bottom: 10px;
+  margin-left: 48%;
 }
 .linha {
   height: 40px;
   margin: -4px;
 }
 #generate-board{
-  right: 0px;
+  right: 0;
 }
