@@ -23,8 +23,8 @@ function Color() {
   }
 } //função seletora//
 
-paletteColor.addEventListener('click', function ()) {
+paletteColor.addEventListener('click', function () {
   const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
   event.target.classList.add('selected');
-}
+})
