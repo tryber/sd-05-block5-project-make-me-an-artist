@@ -38,3 +38,15 @@ function clearButton(){
     pixels[i].style.backgroundColor = "white";
   }
 }
+
+function colorPixel(event){
+  let selectedPixel = event.target;
+  let palletElement = document.getElementsByClassName("selected")[0];
+  let bgColor = getComputedStyle(palletElement).backgroundColor;
+  selectedPixel.style.backgroundColor = bgColor;
+}
+
+let pixels = document.getElementsByClassName("pixel");
+for (let i = 0; i < pixels.length; i+=1){
+  pixels[i].addEventListener("click", colorPixel)
+}
