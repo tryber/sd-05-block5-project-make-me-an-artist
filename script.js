@@ -10,20 +10,20 @@ const color = select.classList[1];
 const target = '';
 
 function Color() {
-  paletteColor.innerHTML = '';
+  colorPalette.innerHTML = '';
   const black = document.createElement('div');
-  paletteColor.appendChild(black);
+  colorPalette.appendChild(black);
   black.className = 'selected';
   black.style.backgroundColor = 'black';
   for (let i = 0; i < n; i += 1) {
     const cor = document.createElement('div');
-    paletteColor.appendChild(color);
+    colorPalette.appendChild(color);
     color.classList.add('secondcolor');
     color.style.backgroundColor = randomColor();
   }
 } //função seletora//
 
-paletteColor.addEventListener('click', function () {
+colorPalette.addEventListener('click', function () {
   const selectedColor = document.querySelector('.selected');
   selectedColor.classList.remove('selected');
   event.target.classList.add('selected');
