@@ -8,20 +8,25 @@ const pixelUnit = document.querySelectorAll('.pixel');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
-function magic() {
+function createBoard() {
   const size = document.getElementById('board-size').value;
+  console.log(size);
   document.getElementsByTagName('tbody')[0].innerHTML = '';
-  for (let j = 0; j < size; j += 1) {
-    const tr = document.createElement('tr');
-    for (let i = 0; i < size; i += 1) {
-      const td = document.createElement('td');
-      td.className = 'pixel';
-      tr.appendChild(td);
+  if (size >= 5 && size <=50) {
+    for (let j = 0; j < size; j += 1) {
+      const tr = document.createElement('tr');
+      for (let i = 0; i < size; i += 1) {
+        const td = document.createElement('td');
+        td.className = 'pixel';
+        tr.appendChild(td);
+      }
+      document.getElementById('pixel-board').children[0].appendChild(tr);
     }
-    document.getElementById('pixel-board').children[0].appendChild(tr);
+  } else {
+    alert('Board inválido!');
   }
 }
-generateBoard.addEventListener('click', magic);
+generateBoard.addEventListener('click', createBoard);
 
 function selectedColor(event) {
   if (event.target === colorBlack) {
