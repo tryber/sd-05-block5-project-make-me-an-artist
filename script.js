@@ -78,7 +78,7 @@ monitoraLimpar.addEventListener('click', limpaTudo);
 
 function criaQuadradoCor() {
   const selecionaPaleta = document.getElementById('color-palette');
-  let corRandomica = '#';
+  let corRandomica = '';
   for (let i = 1; i <= 3; i += 1) {
     const criaDiv = document.createElement('div');
     criaDiv.className = 'color ' + 'randomica' + i;
