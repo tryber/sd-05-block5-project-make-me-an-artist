@@ -6,16 +6,18 @@
 </head>
 <body>
     <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette">
-        <div class="color fazLinha pad preto"></div>
-        <div class="color fazLinha pad amarelo"></div>
-        <div class="color fazLinha pad vermelho"></div>
-        <div class="color fazLinha pad laranja"></div>
+    <section>
+        <div id="color-palette" class="absolute largura">
+            <div class="selected color fazLinha pad preto"></div>
+            <div class="color fazLinha pad amarelo"></div>
+            <div class="color fazLinha pad vermelho"></div>
+            <div class="color fazLinha pad laranja"></div>
+        </div>
+    </section>
+    <div class="absolute largura">
+        <button id="clear-board" class="largura">Limpar</button>
     </div>
-    <div>
-        <button id="clear-board">Limpar</button>
-    </div>
-    <div id="pixel-board">
+    <div id="pixel-board" class="absolute largura">
     </div>
     <script src="script.js"></script>
 </body>
