@@ -6,7 +6,7 @@ window.onload = function () {
         quadroPixel.appendChild(line);
         for (let i = 0; i < 5; i += 1) {
             const square = document.createElement('div');
-            square.className = 'pixel fazLinha';
+            square.className = 'pixel fazLinha branco';
             line.appendChild(square);
         }
     }
@@ -16,7 +16,7 @@ window.onload = function () {
 const paleta = document.getElementById('color-palette');
 const div = paleta.children;
 const pixelBoard = document.getElementById('pixel-board');
-let cor = ['black'];
+let cor = ['preto'];
 
 paleta.addEventListener('click', mudaCorSelecionada);
 
@@ -36,6 +36,8 @@ pixelBoard.addEventListener('click', pincel)
 
 function pincel(event) {
     let contato = event.target;
-    let coordenada = contato.classList;
-    coordenada.add(cor)
+    let listaString = contato.classList.value;
+    let listaItem = listaString.split(' ');
+    contato.classList.remove(listaItem[2]);
+    contato.classList.add(cor);
 }
