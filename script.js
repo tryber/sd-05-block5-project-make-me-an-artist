@@ -6,7 +6,7 @@ const pixelBoard = document.getElementById('pixel-board');
 //classe selected ...e removida da cor anteriormente selecionada//
 
 const select = document.getElementsByClassName('selected')[0];
-const color = select.getElementsByClassName[1];
+const color2 = select.getElementsByClassName[1];
 const target = '';
 
 function Color() {
@@ -16,17 +16,17 @@ function Color() {
   black.className = 'selected';
   black.style.backgroundColor = 'black';
   for (let i = 0; i < n; i += 1) {
-    const cor = document.createElement('div');
-    colorPalette.appendChild(color);
-    color.classList.add('secondcolor');
-    color.style.backgroundColor = randomColor();
+    const color2 = document.createElement('div');
+    colorPalette.appendChild(color2);
+    color2.classList.add('secondcolor');
+    color2.style.backgroundColor = randomColor();
   }
 } //função seletora//
-for (c of color) {
-  c.addEventListener('click', function (event) {
-  for (s of color)  {
-      s.classList.remove('selected')
-  }
-  event.target.classList.add('selected')
-  })
-  }
+for (c of color2) {
+c.addEventListener('click', function (event) {
+for (s of color2)  {
+    s.classList.remove('selected')
+}
+event.target.classList.add('selected')
+})
+}
