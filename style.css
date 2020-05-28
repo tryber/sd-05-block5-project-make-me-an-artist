@@ -10,7 +10,14 @@
 }
 #pink {
   background-color: pink;
-}/* paleta de cores deverá listar todas as cores lado a lado, abaixo do título "Paleta de Cores" */
+}/* paleta de cores deverá listar todas as cores lado a lado..."Paleta de Cores" */
+
+#pixel-board {
+  display: table;
+  line-height: 1px;
+  width: 210px;
+}/* quadro de "pixels" deve aparecer abaixo da paleta de cores */
+
 .color {
   border-color: black;
   border-style: solid;
@@ -28,8 +35,3 @@
   background-color: white;
   display: inline-block;
 }
-#pixel-board {
-  display: table;
-  line-height: 0px;
-  width: 210px;
-}/*quadro de "pixels" deve aparecer abaixo da paleta de cores*/
