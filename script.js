@@ -1,41 +1,33 @@
 // Variáveis
-const black = document.querySelector(".black");
-const color1 = document.querySelector(".color-1");
-const color2 = document.querySelector(".color-2");
-const color3 = document.querySelector(".color-3");
-const colorPalette = document.getElementById("color-palette")
-const pixelBoard = document.getElementById("pixel-board");
-const botaoLimpar = document.getElementById("clear-board");
+const black = document.querySelector('.black');
+const color1 = document.querySelector('.color-1');
+const color2 = document.querySelector('.color-2');
+const color3 = document.querySelector('.color-3');
+const colorPalette = document.getElementById('color-palette')
+const pixelBoard = document.getElementById('pixel-board');
 const boardSize = document.getElementById('board-size');
-const generateBoard = document.getElementById('generate-board')
+const botaoLimpar = document.getElementById('clear-board');
+const botaoGenerateBoard = document.getElementById('generate-board')
+
 
 // Funções
-
-// Essa é pra selecionar uma cor da paleta de cores
 function changeSelected() {
-  const corSelecionada = document.querySelector('.selected'); 
+  const corSelecionada = document.querySelector('.selected');
   corSelecionada.classList.remove('selected');
   event.target.classList.add('selected');
 }
 
-// Essa é pra colorir um pixal quando clicar
 function colorPixel() {
-  corSelecionada = document.querySelector('.selected');
-  let currentColor = corSelecionada.classList[1];
-  event.target.classList.remove(event.target.classList[1]);
-  event.target.classList.add(currentColor);
+  const corSelecionada = document.querySelector('.selected');
+  event.target.style.backgroundColor = window.getComputedStyle(corSelecionada).getPropertyValue('background-color');
 }
 
-// Essa é pra fazer funcionar o botão limpar
 function limparTudo() {
   for (i = 0; i < pixelBoard.children.length; i++) {
-    let colorClass = pixelBoard.children[i].classList[1];
-    pixelBoard.children[i].classList.remove(colorClass);
-    pixelBoard.children[i].classList.add("blank");
+    pixelBoard.children[i].style.backgroundColor = 'white';
   }
 }
 
-// Essa é pra criar o board
 function criarBoard(n) {
   pixelBoard.style.width = `${n * 42}px`;
   pixelBoard.innerHTML = '';
@@ -46,7 +38,6 @@ function criarBoard(n) {
   }
 }
 
-// Essa é pra definir o tamanho máximo e mínimo do board
 function checkGridSize() {
   let n = boardSize.value;
   if (n === '') {
@@ -61,8 +52,30 @@ function checkGridSize() {
 
 criarBoard(5);
 
+function randomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function randomColor() {
+  const r = randomNumber(0, 255);
+  const g = randomNumber(0, 255);
+  const b = randomNumber(0, 255);
+  const color = `rgb(${r},${g},${b})`;
+  return color;
+}
+
+function setColor() {
+  color1.style.backgroundColor = randomColor();
+  color2.style.backgroundColor = randomColor();
+  color3.style.backgroundColor = randomColor();
+}
+
+setColor();
+
 // Event Listeners
-colorPalette.addEventListener("click", changeSelected);
-pixelBoard.addEventListener("click", colorPixel);
-botaoLimpar.addEventListener("click", limparTudo);
-generateBoard.addEventListener('click', checkGridSize);
+colorPalette.addEventListener('click', changeSelected);
+pixelBoard.addEventListener('click', colorPixel);
+botaoLimpar.addEventListener('click', limparTudo);
+botaoGenerateBoard.addEventListener('click', checkGridSize);

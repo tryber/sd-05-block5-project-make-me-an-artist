@@ -1,35 +1,19 @@
-#pixel-board {
-  display: table;
-  line-height: 0px;
-}
-
-.color {
-  border: solid 1px;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+.pixel {
+  background-color: white;
 }
 
 .black {
   background-color: black;
 }
 
-.color-1 {
-  background-color: red;
-}
-
-.color-2 {
-  background-color: green;
-}
-
-.color-3 {
-  background-color: blue;
-}
-
-.pixel {
-  width: 40px;
-  height: 40px;
-  border: solid 1px;
+.color, .pixel {
+  border: 1px black solid;
   display: inline-block;
-  background-color: white;
+  height: 40px;
+  width: 40px;
+}
+
+#pixel-board {
+  display: table;
+  line-height: 0px;
 }
