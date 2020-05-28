@@ -42,12 +42,11 @@ btnVqv.addEventListener('click', function () {
     alert('Board inválido!');
     return;
   }
-  if (tamanhoPixels < 5) {
+  else if (tamanhoPixels < 5) {
     tamanhoPixels = 5;
   }
-  if (tamanhoPixels > 50) {
+  else if (tamanhoPixels > 50) {
     tamanhoPixels = 50;
   }
-  
 
 })
