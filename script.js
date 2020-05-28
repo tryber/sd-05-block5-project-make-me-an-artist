@@ -20,3 +20,4 @@ function selectColor (event){
     selectedColor = document.getElementsByClassName("selected")[0];
   }
 }
+
