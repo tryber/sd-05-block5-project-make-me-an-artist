@@ -35,7 +35,12 @@ function createBoard() {
 }
 generateBoard.addEventListener('click', createBoard);
 
+vetorCores = {
+  color1: 'rgb(0, 0, 0)',
+}
+
 function selectedColor(event) {
+  
   if (event.target === colorBlack) {
     colorSelected.classList.remove('selected');
     colorBlack.classList.add('selected');
