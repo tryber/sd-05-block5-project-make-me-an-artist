@@ -12,10 +12,10 @@ window.onload = function () {
     }
 };
 
-const paleta = document.getElementById('color-palette');
-paleta.addEventListener("click", mudaCorSelecionada)
-
-function mudaCorSelecionada (evento) {
-    let cor = evento.target;
-    
+function mudaCorSelecionada(evento) {
+    let cornova = evento.target;
+    cornova.className = 'selected'
 }
+
+const paleta = document.getElementById('color-palette');
+paleta.addEventListener('click', mudaCorSelecionada);
