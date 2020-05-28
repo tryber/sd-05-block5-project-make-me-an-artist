@@ -75,3 +75,20 @@ function deletaTudo() {
 }
 
 monitoraLimpar.addEventListener('click', limpaTudo);
+
+function criaQuadradoCor() {
+  const selecionaPaleta = document.getElementById('color-palette');
+  let corRandomica = '#';
+  for (let i=1; i <= 3; i += 1){
+    const criaDiv = document.createElement('div');
+    criaDiv.className = 'color ' + 'randomica' + i;
+    let r = Math.floor(Math.random()*255);
+    let g = Math.floor(Math.random()*255);
+    let b = Math.floor(Math.random()*255);
+    corRandomica = 'rgb(' + r + "," + g + "," + b + ')';
+    console.log(corRandomica);
+    criaDiv.style.backgroundColor = corRandomica;
+    selecionaPaleta.append(criaDiv);
+  }
+}
+criaQuadradoCor();
