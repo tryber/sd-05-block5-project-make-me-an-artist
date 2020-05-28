@@ -12,10 +12,17 @@ window.onload = function () {
     }
 };
 
+const paleta = document.getElementById('color-palette');
+
+paleta.addEventListener('click', mudaCorSelecionada); 
+
 function mudaCorSelecionada(evento) {
+    for (let i = 0; i < paleta.childElementCount; i += 1) {
+        let div = paleta.children[i];
+        div.classList.remove('selected');
+    }
     let cornova = evento.target;
-    cornova.className = 'selected'
+    cornova.classList.add('selected');
 }
 
-const paleta = document.getElementById('color-palette');
-paleta.addEventListener('click', mudaCorSelecionada);
+
