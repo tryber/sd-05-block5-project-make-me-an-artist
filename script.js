@@ -34,19 +34,23 @@ colorir.addEventListener('click', function (event) {
   pixelEscolhido.classList.add('pixel');
 });
 
-// Evento do botão VQV
-const btnVqv = document.querySelector('#generate-board');
-btnVqv.addEventListener('click', function () {
-  const tamanhoPixels = document.querySelector('#board-size').value;
-  if (tamanhoPixels === '') {
+// Função do botão que cria Pixels
+function createPixels() {
+  if (document.querySelector('#board-size').value === '') {
     alert('Board inválido!');
-    return;
   }
-  else if (tamanhoPixels < 5) {
-    tamanhoPixels = 5;
+  else {
+    for (let i = 0; i < document.querySelector('#board-size').value; i += 1) {
+      const linha = document.createElement('tr');
+      linha.className = 'linha';
+      document.querySelector('#pixel-board').appendChild(linha);
+    }
+    for (let i = 0; i < document.querySelectorAll('.linha').length; i += 1) {
+      for (let n = 0; n < document.querySelector('#board-size').value; n += 1) {
+        const novoPixel = document.createElement('td');
+        novoPixel.className = 'pixel';
+        document.querySelectorAll('.linha')[i].appendChild(novoPixel);
+      }
+    }
   }
-  else if (tamanhoPixels > 50) {
-    tamanhoPixels = 50;
-  }
-
-})
+}
