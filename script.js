@@ -2,24 +2,31 @@ sessionStorage.setItem('selected', 'color1');
 const colorSelected = sessionStorage.getItem('selected');
 const paleta = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
+function concatena(vetor) {
+  let vari='';
+  for (let i=0 ; i<vetor.length;i += 1){
+    vari += vetor[i];
+  }
+  return vari;
+}
+function cor() {
+  const sort = Math.floor(Math.random() * 255);
+  return sort > 10 ? sort : 10;
+}
+function rgb(a, b, c) {
+  return concatena(['rgb(',  a , ',' , b , ',' , c , ')']);
+}
 let colorArray = {
   color1: 'black',
   color2: rgb(cor(), cor(), cor()),
   color3: rgb(cor(), cor(), cor()),
   color4: rgb(cor(), cor(), cor())
 };
-function cor() {
-  const sort = Math.floor(Math.random() * 255);
-  return sort > 10 ? sort : 10;
-}
-function rgb(a, b, c) {
-  return 'rgb(' + a + ',' + b + ',' + c + ')';
-}
 function maisCor() {
-  const nomeCor = 'color' + (Object.keys(colorArray).length + 1);
+  const nomeCor = concatena(['color' , (Object.keys(colorArray).length + 1)]);
   colorArray[nomeCor] = rgb(cor(), cor(), cor());
   const v = document.createElement('div');
-  v.className = 'color ' + nomeCor + ' ';
+  v.className = concatena(['color ' , nomeCor , ' ']);
   v.style.backgroundColor = colorArray[nomeCor];
   document.getElementById('color-palette').appendChild(v);
 }
@@ -77,18 +84,18 @@ function createBoard(dimension) {
     const lin = document.createElement('div');
     lin.className = 'linha';
     for (let j1 = 0; j1 < dimension; j1 += 1) {
-      let quadro = document.createElement('div');
+      const quadro = document.createElement('div');
       quadro.className = 'pixel';
       quadro.style.backgroundColor = 'white';
       lin.appendChild(quadro);
     }
-    pixelBoard.className = 'conf2';
+    pixelBoard.className = 'pixel-board conf2';
     pixelBoard.appendChild(lin);
   }
 }
 botaoDimensao.addEventListener('click', function () {
   const texto = document.getElementById('board-size');
-  let textoValor = parseInt(texto.value);
+  let textoValor = parseInt(texto.value, 10);
   if (texto.value === '') {
     alert('Board inválido!');
     return;
