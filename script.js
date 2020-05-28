@@ -20,7 +20,7 @@ const colorArray = {
   color1: 'black',
   color2: rgb(cor(), cor(), cor()),
   color3: rgb(cor(), cor(), cor()),
-  color4: rgb(cor(), cor(), cor())};
+  color4: rgb(cor(), cor(), cor()) };
 function maisCor() {
   const nomeCor = concatena(['color', (Object.keys(colorArray).length + 1)]);
   colorArray[nomeCor] = rgb(cor(), cor(), cor());
