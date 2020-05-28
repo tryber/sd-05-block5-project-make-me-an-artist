@@ -22,8 +22,11 @@ function Color() {
     color.style.backgroundColor = randomColor();
   }
 } //função seletora//
-
-colorPalette.addEventListener('click', function (event) {
-  selectedColor.classList.remove('selected');
-  event.target.classList.add('selected');
-})
+for (c of color) {
+  c.addEventListener('click', function (event) {
+  for (s of color)  {
+      s.classList.remove('selected')
+  }
+  event.target.classList.add('selected')
+  })
+  }
