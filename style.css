@@ -25,11 +25,20 @@
 }
 
 .linha {
-    height: 44px;
+    height: 42px;
 }
 
 .largura {
     width: 100%;
+}
+
+.larguraPaleta {
+    width: 168px;
+}
+
+.tamanhoQuadro {
+    width: 210px;
+    height: 210px;
 }
 
 .fazLinha {
@@ -43,6 +52,3 @@
     width: 40px;
 }
 
-.selected {
-    border: 2px solid purple;
-}
