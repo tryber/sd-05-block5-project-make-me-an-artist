@@ -1,10 +1,8 @@
 window.onload = function () {
 
   const botaoMudaCor = document.querySelector('#clear-board');
-  const caixaUm = document.querySelector('.color-black');
-  const caixaDois = document.querySelector('.color-red');
-  const caixaTres = document.querySelector('.color-blue');
-  const caixaQuatro = document.querySelector('.color-green');
+  const cores = document.querySelectorAll('.color');
+  
    
   function trocaCorBranca() {
       const pixels = document.querySelectorAll('.pixel');
@@ -15,12 +13,16 @@ window.onload = function () {
   botaoMudaCor.addEventListener('click', trocaCorBranca);
 
   function trocaCor(event) {
-      const cores = document.querySelectorAll('.pixel');
-      for (let x = 0; c < pixels.length; c+=1) {
-
+     let selected = event.target.classList.contains('selected');
+     if (!selected) {
+       let selectedDiv = querySelector('.selected');
+       selectedDiv.classList.remove('selected');    
+       event.target.classList.add('selected'); 
       }
-    }
+  }
 
-  caixaUm.addEventListener('click', trocaCor);
+  for (let x = 0; x < cores.length; x+=1) {
+    cores[x].addEventListener('click', trocaCor); 
+  }
 
 };
