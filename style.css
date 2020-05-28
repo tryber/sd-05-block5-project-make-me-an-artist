@@ -23,15 +23,15 @@
   background-color: green;
 }
 
-.pixel {
-  background-color: white;
-  width: 41px;
-  height: 41px;
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
+#pixel-board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
 }
 
-.first-column, .second-column, .third-column, .forth-column, .fifth-column {
-  display: inline-block;
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 38px;
+  height: 38px;
 }
+

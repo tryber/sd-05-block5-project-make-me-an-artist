@@ -1,7 +1,7 @@
-const blackColor = document.getElementsByClassName("black")[0];
-const redColor = document.getElementsByClassName("red")[0];
-const blueColor = document.getElementsByClassName("blue")[0];
-const greenColor = document.getElementsByClassName("green")[0];
+let blackColor = document.getElementsByClassName("black")[0];
+let redColor = document.getElementsByClassName("red")[0];
+let blueColor = document.getElementsByClassName("blue")[0];
+let greenColor = document.getElementsByClassName("green")[0];
 let selectedColor = document.getElementsByClassName("selected")[0];
 
 blackColor.className += " selected";
