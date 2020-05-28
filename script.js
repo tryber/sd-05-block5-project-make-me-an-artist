@@ -1,8 +1,7 @@
 // Evento do botao limpar pixels
 const btn = document.querySelector('#clear-board');
-const pixel = document.querySelectorAll('.pixel');
-
 btn.addEventListener('click', function () {
+  const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].className = 'pixel';
   }
@@ -54,3 +53,20 @@ function createPixels() {
     }
   }
 }
+
+// Função que cria quadro de pixels inicial
+function buildPixels(j) {
+  for (let i = 0; i < j; i += 1) {
+    const linha = document.createElement('tr');
+    linha.className = 'linha';
+    document.querySelector('#pixel-board').appendChild(linha);
+  }
+  for (let i = 0; i < document.querySelectorAll('.linha').length; i += 1) {
+    for (let n = 0; n < j; n += 1) {
+      const novoPixel = document.createElement('td');
+      novoPixel.className = 'pixel';
+      document.querySelectorAll('.linha')[i].appendChild(novoPixel);
+    }
+  }
+}
+buildPixels(5);
