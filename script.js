@@ -21,15 +21,15 @@ let cor = ['preto'];
 
 function mudaCorSelecionada(evento) {
   for (let i = 0; i < paleta.childElementCount; i += 1) {
-      div[i].classList.remove('selected');
-    }
+    div[i].classList.remove('selected');
+  }
   cor = [];
   const cornova = evento.target;
   const bloco = cornova.classList.value;
   const lista = bloco.split(' ');
   cor.push(lista[lista.length - 1]);
   cornova.classList.add('selected');
-}  
+}
 paleta.addEventListener('click', mudaCorSelecionada);
 
 function pincel(event) {
