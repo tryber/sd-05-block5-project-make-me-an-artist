@@ -35,26 +35,30 @@ colorir.addEventListener('click', function (event) {
 
 // Função do botão que cria Pixels
 function createPixels() {
-  const quantidadePixels = document.querySelector('#board-size').value;
+  let quantidadePixels = document.querySelector('#board-size').value;
   if (quantidadePixels === '') {
     alert('Board inválido!');
   }
-  else {
-    while (document.querySelectorAll('.linha').length) {
-      const itemRemovido = document.querySelectorAll('.linha')[0];
-      document.querySelector('#pixel-board').removeChild(itemRemovido);
-    }
-    for (let i = 0; i < quantidadePixels; i += 1) {
-      const linha = document.createElement('tr');
-      linha.className = 'linha';
-      document.querySelector('#pixel-board').appendChild(linha);
-    }
-    for (let i = 0; i < document.querySelectorAll('.linha').length; i += 1) {
-      for (let n = 0; n < quantidadePixels; n += 1) {
-        const novoPixel = document.createElement('td');
-        novoPixel.className = 'pixel';
-        document.querySelectorAll('.linha')[i].appendChild(novoPixel);
-      }
+  if (quantidadePixels < 5) {
+    quantidadePixels = 5;
+  }
+  if (quantidadePixels > 50) {
+    quantidadePixels = 50;
+  }
+  while (document.querySelectorAll('.linha').length) {
+    const itemRemovido = document.querySelectorAll('.linha')[0];
+    document.querySelector('#pixel-board').removeChild(itemRemovido);
+  }
+  for (let i = 0; i < quantidadePixels; i += 1) {
+    const linha = document.createElement('tr');
+    linha.className = 'linha';
+    document.querySelector('#pixel-board').appendChild(linha);
+  }
+  for (let i = 0; i < document.querySelectorAll('.linha').length; i += 1) {
+    for (let n = 0; n < quantidadePixels; n += 1) {
+      const novoPixel = document.createElement('td');
+      novoPixel.className = 'pixel';
+      document.querySelectorAll('.linha')[i].appendChild(novoPixel);
     }
   }
 }
