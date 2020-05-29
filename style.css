@@ -1,5 +1,6 @@
 #color-palette{
     float: left;
+    margin-bottom: auto;
 }
 .color{
     height: 40px;
@@ -27,4 +28,21 @@
 #blue{
     background-color: blue;
     float: right
+}
+
+#pixel-board{
+    max-width: 240px;
+}
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    float:left;
+}
+
+.secao{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
