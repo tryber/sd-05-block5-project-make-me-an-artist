@@ -9,8 +9,7 @@ let limparQuadros = document.getElementById('clear-board');
 limparQuadros.addEventListener('click',PintarFundo);
 //fim do código ...
 
-
-//let corSelecionada = document.querySelector('.selected');
+let corSelecionada = document.querySelector('.selected');
 
 function selecionaCor(event){
     let corselect = document.querySelector('.selected');
@@ -26,7 +25,18 @@ paletaDecores.addEventListener('click',function(){
     }
 })
 
+function pintarPixel(){
+    let cor = document.querySelector('.selected');
+    console.log(event.target);
+    //if(event.target.classList.contains('pixel')){
+        event.target.style.backgroundColor = cor.style.backgroundColor;
+    //}
+}
 
+const pixelBoard = document.getElementById('pixel-board');
+//pixelBoard.addEventListener('click', pintarPixel);
 
-
-
+pixelBoard.addEventListener('click', function () {
+    const selectedColor = document.querySelector('.selected');
+    event.target.style.backgroundColor = window.getComputedStyle(selectedColor).getPropertyValue('background-color');
+    }); 
