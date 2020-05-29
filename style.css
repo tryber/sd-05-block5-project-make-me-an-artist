@@ -5,6 +5,14 @@ body {
   padding: 0px;
 }
 
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
 .title-class {
   display: block;
   text-align: center;
@@ -39,9 +47,13 @@ body {
 }
 
 .pixel-board-class {
-  display: block;
+  display: table;
+  line-height: 0px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   text-align: center;
+  width: 210px;
 }
 
 .clear-board-class {
@@ -49,10 +61,4 @@ body {
   margin-top: 50px;
 }
 
-.pixel {
-  background-color: white;
-  border: 1px solid black;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-}
+
