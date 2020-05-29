@@ -6,3 +6,4 @@ function createPixelBoard(){
     }
 }
 createPixelBoard();
+
