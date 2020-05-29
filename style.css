@@ -55,9 +55,10 @@ h1{
 #pixel-board{
     width: 211px;
     margin-left: 30px;
-    /*border: 1px solid black;*/
+
     display:table;
-    line-height: 0px;    
+    line-height: 0px;  
+      
 
 }
 
