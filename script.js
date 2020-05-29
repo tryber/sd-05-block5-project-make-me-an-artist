@@ -1,5 +1,4 @@
 function createPixelBoard(){
-    const pixdiv=document.createElement("div");
     for ( i = 0; i < 25; i += 1){
     let pixdiv = document.createElement("div");
         pixdiv.className = "pixel";

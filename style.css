@@ -12,26 +12,23 @@
 
 #black{
     background-color: black;
-    float: left;
 }
 
 #green{
     background-color: green;
-    float: right
 }
 
 #red{
     background-color: red;
-    float: right
 }
 
 #blue{
     background-color: blue;
-    float: right
 }
 
 #pixel-board{
     max-width: 240px;
+    text-align: center;
 }
 .pixel{
     height: 40px;
