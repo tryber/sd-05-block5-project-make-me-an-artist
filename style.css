@@ -1,0 +1,61 @@
+.color-palette {
+  display: inline-flex;
+}
+
+.paleta-preta {
+  background-color: black;
+  border: 1px solid black;
+  color: black;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.paleta-2 {
+  background-color: yellow;
+  border: 1px solid black;
+  color: yellow;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.paleta-3 {
+  background-color: blue;
+  border: 1px solid black;
+  color: blue;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+.paleta-4 {
+  background-color: red;
+  border: 1px solid black;
+  color: red;
+  height: 40px;
+  margin: 10px;
+  width: 40px;
+}
+
+button {
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-left: 90px;
+  margin-top: 30px;
+}
+
+
+tr {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
