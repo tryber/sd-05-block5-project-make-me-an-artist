@@ -36,6 +36,6 @@ function Pixel(event) {
     event.target.style.backgroundColor = color3.id;
  }
 
- for (p of pix) {
+ for (p of Pixel) {
      p.addEventListener('click', Pixel);
  }
