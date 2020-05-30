@@ -1,43 +1,37 @@
 //clicar em pixel dentro quadro... preenchido com esta cor//
-
-const colorPalette = document.getElementById('color-pallete');  //substitui query por element//
-const pixelBoard = document.getElementById('pixel-board');
-
-//classe selected ...e removida da cor anteriormente selecionada//
-
+const paleta = document.getElementById('color-pallete');
+const caixaDePixels = document.getElementById('pixel-board');
 const select = document.getElementsByClassName('selected');
-const color2 = document.getElementsByClassName('color2');
+const selecionaCor = document.getElementsByClassName('color2');
 const target = '';
-const color3 = '';
-
-
+//classe selected ...e removida da cor anteriormente selecionada//
 function Color() {
-  colorPalette.innerHTML = '';
-  const black = document.createElement('div');
-  colorPalette.appendChild(black);
-  black.className = 'selected';
-  black.style.backgroundColor = 'black';
-  for (let i = 0; i < n; i += 1) {
-    const color2 = document.createElement('div');
-    colorPalette.appendChild(color2);
-    color2.classList.add('secondcolor');
-    color2.style.backgroundColor = randomColor();
-  }
+paleta.innerHTML = '';
+const black = document.createElement('div');
+paleta.appendChild(black);
+black.className = 'selected';
+black.style.backgroundColor = 'black';
+for (let i = 0; i < n; i += 1) {
+const color2 = document.createElement('div');
+paleta.appendChild(color2);
+color2.classList.add('secondcolor');
+color2.style.backgroundColor = randomColor();
+}
 } //função seletora//
-for (c of color2) {
+for (c of selecionaCor) {
 c.addEventListener('click', function (event) {
-for (s of color2) {
-    s.classList.remove('selected');
+for (s of selecionaCor) {
+s.classList.remove('selected');
 }
 event.target.classList.add('selected');
 })
 }
 
 function Pixel(event) {
-  const color3 = document.querySelector(".selected");
-    event.target.style.backgroundColor = color3.id;
- }
+const colorPixel = document.querySelector(".selected");
+event.target.style.backgroundColor = colorPixel.id;
+}
 
- for (p of Pixel) {
-     p.addEventListener('click', Pixel);
- }
+for (p of Pixel) {
+p.addEventListener('click', Pixel);
+}
