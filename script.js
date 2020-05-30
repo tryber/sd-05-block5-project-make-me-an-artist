@@ -6,11 +6,13 @@ const cores = ['black', 'paleta-2', 'paleta-3', 'paleta-4'];
 let cor = "black";
 
 function selecionarCor() {
-    let selected = event.target.classList.contains('selected');
-    removerSelected();
-    if (!selected) {
-        event.target.classList.add('selected');
+    let selected = document.getElementById('selected')
+    if( event.target.classList.contains('selected')) {
+        removerSelected();
     }
+    else if (!selected) {
+        event.target.classList.add('selected');
+    } else{alert('error');}
 }
 
 function atribuirCor() {
@@ -23,7 +25,6 @@ function removerSelected() {
         paletaDeCores[i].className = ` color paleta-${coresAtuais[i]}`
     }
 }
-
 
 function gerarCor() {
     const hexaDecimais = '0123456789ABCDEF'
