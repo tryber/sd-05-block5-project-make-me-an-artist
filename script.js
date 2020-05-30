@@ -1,5 +1,6 @@
-const generateBoard = document.getElementById('generate-board');
-const colorBlack = document.getElementById('color1');
+const generateBoard = document.getElementById('generate-board'); // table, onde serao inseridos tr e td;
+const palette = document.getElementById('color-palette'); // seção que terá os pixels de selação de cor;
+const colorBlack = document.getElementById('color1'); // primeira cor;
 const colorRed = document.getElementById('color2');
 const colorBlue = document.getElementById('color3');
 const colorGreen = document.getElementById('color4');
@@ -8,9 +9,11 @@ let colorSelected = document.querySelector('.selected');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
+// função para gerar os pixels
 function createBoard() {
   let size = document.getElementById('board-size').value;
-  if (size > 0 && size < 5) {
+  // verificação do tamanho definido, sendo entre 5 e 50 pixels.
+  if (size >= 0 && size < 5) {
     size = 5;
     alert('Será considerado tamanho mínimo de 5px para o board.');
   } else if (size > 50) {
@@ -18,6 +21,7 @@ function createBoard() {
     alert('Será considerado tamanho máximo de 50px para o board.');
   }
   document.getElementsByTagName('tbody')[0].innerHTML = '';
+  // verificação do tamanho do board e criação dos tr e td já com classe .pixel.
   if (size >= 5 && size <=50) {
     for (let j = 0; j < size; j += 1) {
       const tr = document.createElement('tr');
@@ -35,40 +39,41 @@ function createBoard() {
 }
 generateBoard.addEventListener('click', createBoard);
 
-vetorCores = {
-  color1: 'rgb(0, 0, 0)',
+// criar ramdon colors. 
+function createColor() {
+  const hexadecimais = '0123456789ABCDEF';
+  let colorRan = '#';
+  for (let i = 0; i < 6; i += 1) {
+    colorRan += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return colorRan;
 }
-
-function selectedColor(event) {
-  
-  if (event.target === colorBlack) {
-    colorSelected.classList.remove('selected');
-    colorBlack.classList.add('selected');
-    colorSelected = document.querySelector('.selected');
-    color = 'black';
-  } else if (event.target === colorRed) {
-    colorSelected.classList.remove('selected');
-    colorRed.classList.add('selected');
-    colorSelected = document.querySelector('.selected');
-    color = 'red';
-  } else if (event.target === colorBlue) {
-    colorSelected.classList.remove('selected');
-    colorBlue.classList.add('selected');
-    colorSelected = document.querySelector('.selected');
-    color = 'blue';
-  } else if (event.target === colorGreen) {
-    colorSelected.classList.remove('selected');
-    colorGreen.classList.add('selected');
-    colorSelected = document.querySelector('.selected');
-    color = 'green';
+// array dos pixels da paleta de cores
+const palettePixel = document.getElementsByClassName('color');
+// funcao para definir as cores da paleta - utilizada ao carregar a pagina
+window.onload = function () {
+  palettePixel[0].classList.add('selected');
+  palettePixel[0].style.backgroundColor = 'black';
+  // adiciona uma random color como background de cada pixel da paleta, exeto o primeiro.
+  for (let pixel = 1; pixel < palettePixel.length; pixel += 1) {
+    palettePixel[pixel].style.backgroundColor = createColor();
   }
 }
-
-colorBlack.addEventListener('click', selectedColor);
-colorRed.addEventListener('click', selectedColor);
-colorBlue.addEventListener('click', selectedColor);
-colorGreen.addEventListener('click', selectedColor);
-
+// encontra pixel selecionado, remove classe. Adiciona a classe ao item que recebeu o evento.
+function selectColor(event) {
+  const lastSelected = document.getElementsByClassName('selected')[0];
+  lastSelected.classList.remove('selected');
+  const target = event.target
+  target.classList.add('selected');
+  // armazena a cor em uma variável
+  color = target.style.backgroundColor;
+}
+// adiciona evento para todos os itens da paleta. 
+document.querySelectorAll('.color').forEach(element => {
+  element.addEventListener('click', event => {
+    selectColor(event);
+  });
+});
 
 const pixelBoard = document.getElementById('pixel-board');
 pixelBoard.addEventListener('click', function(evento) {
@@ -83,3 +88,5 @@ clearButton.addEventListener('click', function () {
     pixelUnit[i].style.backgroundColor = 'white';
   }
 });
+
+

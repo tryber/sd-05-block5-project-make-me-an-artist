@@ -6,22 +6,6 @@
   width: 40px;
 }
 
-.blackPalette {
-  background-color: black;
-}
-
-.redPalette {
-  background-color: red;
-}
-
-.bluePalette {
-  background-color: blue;
-}
-
-.greenPalette {
-  background-color: green;
-}
-
 .table {
   border-collapse: collapse;
 }
