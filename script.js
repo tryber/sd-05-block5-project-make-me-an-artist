@@ -1,14 +1,14 @@
 const generateBoard = document.getElementById('generate-board'); // table, onde serao inseridos tr e td;
-const palette = document.getElementById('color-palette'); // seção que terá os pixels de selação de cor;
+// const palette = document.getElementById('color-palette'); // seção que terá os pixels de selação de cor;
 let pixelUnit = document.querySelectorAll('.pixel');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
 // função para gerar os pixels
+// verificação do tamanho definido, sendo entre 5 e 50 pixels.
 function createBoard() {
   let size = document.getElementById('board-size').value;
-  // verificação do tamanho definido, sendo entre 5 e 50 pixels.
-  if (size >= 0 && size < 5) {
+  if (size > 0 && size < 5) {
     size = 5;
     alert('Será considerado tamanho mínimo de 5px para o board.');
   } else if (size > 50) {
@@ -64,19 +64,19 @@ function selectColor(event) {
   color = target.style.backgroundColor;
 }
 // adiciona evento para todos os itens da paleta.
-document.querySelectorAll('.color').forEach(element => {
+document.querySelectorAll('.color').forEach( (element) => {
   element.addEventListener('click', (event) => {
     selectColor(event);
   });
 });
-
+// altera a cor do pixel no board.
 const pixelBoard = document.getElementById('pixel-board');
 pixelBoard.addEventListener('click', function (evento) {
   if (evento.target.className === 'pixel') {
     evento.target.style.backgroundColor = color;
   }
 });
-
+// limpa todo o board.
 clearButton.addEventListener('click', function () {
   pixelUnit = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixelUnit.length; i += 1) {
