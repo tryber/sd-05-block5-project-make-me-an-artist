@@ -30,8 +30,7 @@ event.target.classList.add('selected');
 function Pixel(event) {
 const colorPixel = document.querySelector(".selected");
 event.target.style.backgroundColor = colorPixel.id;
-}
-
 for (p of Pixel) {
 p.addEventListener('click', Pixel);
+}
 }
