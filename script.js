@@ -5,19 +5,24 @@ let coresAtuais = ['preta', '2', '3', '4'];
 const cores = ['black', 'paleta-2', 'paleta-3', 'paleta-4'];
 let cor = "black";
 
-function selecionarCor() {
-    let selected = document.getElementById('selected')
-    if (event.target.classList.contains('selected')) {
-        removerSelected();
-    }
-    else if (!selected) {
-        event.target.classList.add('selected');
-    } else { alert('error'); }
-}
 
-function atribuirCor() {
-    let selectedDiv = document.querySelector('.selected');
-    event.target.style.backgroundColor = getComputedStyle(selectedDiv).backgroundColor;
+function selecionaCor() {
+    for (let i = 0; i < 4; i += 1) {
+        if (this.className === `color paleta-${coresAtuais[i]}`) {
+            removerSelected();
+            this.className = `color paleta-${coresAtuais[i]} selected`;
+            cor = cores[i];
+        }
+    }
+}
+for (let i = 0; i < coresAtuais.length; i++) {
+    paletaDeCores[i].addEventListener('click', selecionaCor);
+}
+function atribuirCorAoPixel() {
+    this.style.backgroundColor = cor;
+}
+for (let i = 0; i < quadrados.length; i += 1) {
+    quadrados[i].addEventListener('click', atribuirCorAoPixel);
 }
 
 function removerSelected() {
@@ -41,13 +46,7 @@ for (let i = 1; i <= 3; i += 1) {
     cores[i] = corAleatoria;
 }
 
-for (let i = 0; i < quadrados.length; i++) {
-    quadrados[i].addEventListener('click', atribuirCor);
-}
 
-for (let i = 0; i < paletaDeCores.length; i++) {
-    paletaDeCores[i].addEventListener('click', selecionarCor);
-}
 
 botaoReset.addEventListener('click', function resetarQuadro() {
     for (let i = 0; i < quadrados.length; i++) {

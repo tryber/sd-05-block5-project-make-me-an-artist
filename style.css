@@ -53,7 +53,7 @@ tr {
 }
 
 td.pixel {
-  background-color: rgba(34, 17, 255, 0.467);
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
