@@ -1,11 +1,6 @@
 const generateBoard = document.getElementById('generate-board'); // table, onde serao inseridos tr e td;
 const palette = document.getElementById('color-palette'); // seção que terá os pixels de selação de cor;
-const colorBlack = document.getElementById('color1'); // primeira cor;
-const colorRed = document.getElementById('color2');
-const colorBlue = document.getElementById('color3');
-const colorGreen = document.getElementById('color4');
 let pixelUnit = document.querySelectorAll('.pixel');
-let colorSelected = document.querySelector('.selected');
 let color = 'black';
 const clearButton = document.getElementById('clear-board');
 
@@ -22,7 +17,7 @@ function createBoard() {
   }
   document.getElementsByTagName('tbody')[0].innerHTML = '';
   // verificação do tamanho do board e criação dos tr e td já com classe .pixel.
-  if (size >= 5 && size <=50) {
+  if (size >= 5 && size <= 50) {
     for (let j = 0; j < size; j += 1) {
       const tr = document.createElement('tr');
       for (let i = 0; i < size; i += 1) {
@@ -39,7 +34,7 @@ function createBoard() {
 }
 generateBoard.addEventListener('click', createBoard);
 
-// criar ramdon colors. 
+// criar random colors.
 function createColor() {
   const hexadecimais = '0123456789ABCDEF';
   let colorRan = '#';
@@ -63,20 +58,20 @@ window.onload = function () {
 function selectColor(event) {
   const lastSelected = document.getElementsByClassName('selected')[0];
   lastSelected.classList.remove('selected');
-  const target = event.target
+  const target = event.target;
   target.classList.add('selected');
   // armazena a cor em uma variável
   color = target.style.backgroundColor;
 }
-// adiciona evento para todos os itens da paleta. 
+// adiciona evento para todos os itens da paleta.
 document.querySelectorAll('.color').forEach(element => {
-  element.addEventListener('click', event => {
+  element.addEventListener('click', (event) => {
     selectColor(event);
   });
 });
 
 const pixelBoard = document.getElementById('pixel-board');
-pixelBoard.addEventListener('click', function(evento) {
+pixelBoard.addEventListener('click', function (evento) {
   if (evento.target.className === 'pixel') {
     evento.target.style.backgroundColor = color;
   }
@@ -88,5 +83,3 @@ clearButton.addEventListener('click', function () {
     pixelUnit[i].style.backgroundColor = 'white';
   }
 });
-
-
