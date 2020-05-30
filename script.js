@@ -31,6 +31,7 @@ event.target.classList.add('selected');
 })
 }
 
+let color3 = " ";
 function Pixel(event) {
   let color3 = document.querySelector(".selected");
     event.target.style.backgroundColor = color3.id;
