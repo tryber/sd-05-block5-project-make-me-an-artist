@@ -7,12 +7,12 @@ let cor = "black";
 
 function selecionarCor() {
     let selected = document.getElementById('selected')
-    if( event.target.classList.contains('selected')) {
+    if (event.target.classList.contains('selected')) {
         removerSelected();
     }
     else if (!selected) {
         event.target.classList.add('selected');
-    } else{alert('error');}
+    } else { alert('error'); }
 }
 
 function atribuirCor() {
@@ -29,13 +29,13 @@ function removerSelected() {
 function gerarCor() {
     const hexaDecimais = '0123456789ABCDEF'
     let corAleatoria = '#';
-    for(let i = 0; i < 4; i += 1) {
+    for (let i = 0; i < 4; i += 1) {
         corAleatoria += hexaDecimais[Math.floor(Math.random() * 16)];
     }
     return corAleatoria;
 }
 
-for(let i = 1; i <= 3; i+= 1) {
+for (let i = 1; i <= 3; i += 1) {
     const corAleatoria = gerarCor();
     paletaDeCores[i].style.backgroundColor = corAleatoria;
     cores[i] = corAleatoria;
