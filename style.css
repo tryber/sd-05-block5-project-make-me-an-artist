@@ -1,0 +1,49 @@
+#color-palette{/*
+    float: left;
+    margin-bottom: auto;*/
+}
+.color{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#black{
+    background-color: black;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#pixel-board{
+    max-width: 240px;
+    text-align: center;
+}
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    background-color: white;
+    display: inline-block;
+}
+
+.secao{/*
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
