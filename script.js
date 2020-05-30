@@ -2,7 +2,9 @@
 const paleta = document.getElementById('color-pallete');
 const caixaDePixels = document.getElementById('pixel-board');
 const select = document.getElementsByClassName('selected');
-const selecionaCor = document.getElementsByClassName('color2');
+const selecionaCor = document.getElementsByClassName('color');
+let botao = document.getElementById('clear-board');
+let white = document.getElementById('white');
 const target = '';
 //classe selected ...e removida da cor anteriormente selecionada//
 function Color() {
@@ -32,5 +34,5 @@ const colorPixel = document.querySelector(".selected");
 event.target.style.backgroundColor = colorPixel.id;
 for (p of Pixel) {
 p.addEventListener('click', Pixel);
-}
+  }
 }
