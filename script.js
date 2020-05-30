@@ -6,7 +6,7 @@ const pixelBoard = document.getElementById('pixel-board');
 //classe selected ...e removida da cor anteriormente selecionada//
 
 const select = document.getElementsByClassName('selected');
-const color2 = document.getElementsByClassName('color2');
+const color2 = document.getElementsByClassName('color2  ');
 const target = '';
 
 function Color() {
@@ -30,3 +30,12 @@ for (s of color2) {
 event.target.classList.add('selected');
 })
 }
+
+function Pixel(event) {
+  let color3 = document.querySelector(".selected");
+    event.target.style.backgroundColor = color3.id;
+ }
+
+ for (p of pix) {
+     p.addEventListener('click', Pixel);
+ }
