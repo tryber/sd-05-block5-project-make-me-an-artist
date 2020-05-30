@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Paleta de Cores</title>
+  </head>
+  <body>
+    <h1 id="title">Paleta de Cores</h1> <!--Titulo da Página (check1)-->
+    <!--A página tem que ter paleta com 4 cores distintas (check2)-->
+    <p>Selecione a cor desejada:</p>
+    <section id="color-palette">
+      <option id="color1" class="color"></option><!--A cor preta deve ser a primeira na paleta de cores (check5)-->
+      <option id="color2" class="color"></option>
+      <option id="color3" class="color"></option>
+      <option id="color4" class="color"></option>
+    </section>
+    <button id="clear-board" class="clearButton">Limpar</button>
+    <input id="board-size" type="number" min="1">
+    <button id="generate-board">VQV</button>
+    <table id="pixel-board" class="table"> <!--A página tem que ter quadro de 25 pixels (5x5) (check3)-->
+      <tbody>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+            <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+       </tr>
+        <tr>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+          <td class="pixel"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script src="script.js"></script>
+</html>
