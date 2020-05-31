@@ -3,7 +3,7 @@
 const paletaDeCores = document.querySelectorAll('.color');
 /*const quadrados = document.getElementById('pixel');*/
 const corSelecionada = document.getElementById('selected');
-const quadrados = document.getElementById('pixel');
+const quadrados = document.querySelector('.pixel');
 const corBranca = document.getElementById('white');
 const botaoLimpar = document.getElementById('clear-board');
 const coresAtuais = ['c1', 'c2','c3', 'c4'];
