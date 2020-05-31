@@ -55,18 +55,18 @@ function changeColorSelected(oldColor, newColor) {
   const elementOld = document.getElementsByClassName('selected')[0];
   const elementNew = document.getElementsByClassName(newColor)[0];
   elementOld.className = elementOld.className.replace('selected', '');
+  sessionStorage.setItem('selected', elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf('color')).replace(' ',''));
   elementNew.className += 'selected';
-  sessionStorage.setItem('selected', elementNew.className.toString().substr(elementNew.className.toString().lastIndexOf('color'), 6));
 }
 paleta.addEventListener('click', function (evento) {
-  if (evento.target.className.toString().indexOf('color') >= 0) {
+  if (evento.target.className.toString().indexOf('color') >= 0 && evento.target.className!="color-palette") {
     changeColorSelected(colorSelected, evento.target.className);
     //  console.log(document.getElementsByClassName('color'))
   }
 });
 pixelBoard.addEventListener('click', function (evento) {
   if (evento.target.className.toString().indexOf('pixel') >= 0) {
-    evento.target.style.backgroundColor = colorArray[sessionStorage.getItem('selected')];
+    evento.target.style.backgroundColor = colorArray[sessionStorage.getItem('selected').replace(' ','')];
   }
 });
 const botaoLimpar = document.getElementById('clear-board');
