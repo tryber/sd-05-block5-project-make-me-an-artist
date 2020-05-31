@@ -1,5 +1,6 @@
 body {
-    margin: 10px;
+    margin-top: 50px;
+    margin-left: 300px;
 }
 #title {
     font-size: 50px;
@@ -7,8 +8,8 @@ body {
 }
 .color{
     display: inline-block;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     margin: 5px;
     border-color: black;
     border: 1px;
@@ -25,4 +26,19 @@ body {
 }
 #green{
     background-color: green;
+}
+#pixel-board{
+    display:table;
+    line-height: 0;
+    width: 210px;
+
+}
+.pixel{
+    display: inline-block;
+    background-color: white;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 40px;
+    height: 40px;
 }
