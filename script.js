@@ -79,10 +79,10 @@ buildPixels(5);
 // Gera cores aleatórias
 function generateColor() {
   for (let i = 1; i < document.querySelectorAll('.color').length; i += 1) {
-    let r = Math.round(Math.random() * 255);
-    let g = Math.round(Math.random() * 255);
-    let b = Math.round(Math.random() * 255);
-    let corAleatoria = document.querySelectorAll('.color')[i];
+    const r = Math.round(Math.random() * 255);
+    const g = Math.round(Math.random() * 255);
+    const b = Math.round(Math.random() * 255);
+    const corAleatoria = document.querySelectorAll('.color')[i];
     corAleatoria.style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
   }
 }
