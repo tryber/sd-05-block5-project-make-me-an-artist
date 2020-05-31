@@ -30,9 +30,9 @@ for (let l = 0; l < quadrados.length; l+=1) {
 quadrados[l].addEventlistener('click', colocarCor);
 }
 
-/*function trocaCorBranca() {
+function trocaCorBranca() {
   const quadrados = document.querySelectorAll('.pixel-board');
     for (let i = 0; i < quadrados.length; i+=1) {
   quadrados[i].style.backgroundColor = 'white';
 }
-}*/
+}
