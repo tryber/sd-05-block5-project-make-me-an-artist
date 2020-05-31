@@ -7,7 +7,6 @@ for (let a = 0; a < palette.length; a++){
     palette[a].addEventListener("click",selectColor);
 }
 function selectColor (event){
-    console.log(event.target)
     for (let b = 0; b < palette.length; b++){
         palette[b].classList.remove("selected");
     }
@@ -19,8 +18,7 @@ for (let c = 0; c < pixelSelect.length; c++){
     pixelSelect[c].addEventListener("click",pintDiv);
 }
 function pintDiv (event){
-    let selectDiv = document.querySelector('.selected');
-    console.log(selectDiv)  
+    let selectDiv = document.querySelector('.selected'); 
     event.target.style.backgroundColor = getComputedStyle(selectDiv).backgroundColor;
 }
 
