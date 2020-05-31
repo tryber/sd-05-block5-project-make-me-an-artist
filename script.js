@@ -1,6 +1,6 @@
 //Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro//
 //variáveis declaradas//
-const paletaDeCores = document.querySelectorAll('.color-paleta');
+const paletaDeCores = document.querySelectorAll('.color');
 const corSelecionada = document.getElementById('selected');
 const quadrados = document.querySelector('.pixel');
 const corBranca = document.getElementById('white');
@@ -20,7 +20,7 @@ function colocarCor (event) {
 }
 function removeSelected () {
   for (let j = 0; j < paletaDeCores.length; j+=1) {
-    paletaDeCores[j].className = 'color paleta-${coresAtuais[j]}';
+    paletaDeCores[j].className = 'color-${coresAtuais[j]}';
     }
 }
 for (let k = 0; k < paletaDeCores.length; k+=1) {
