@@ -1,5 +1,6 @@
 let palette = document.querySelectorAll(".color");
 let pixelSelect = document.querySelectorAll(".pixel")
+let limparTudo = document.querySelector("#clear-board")
 
 
 for (let a = 0; a < palette.length; a++){
@@ -21,4 +22,11 @@ function pintDiv (event){
     let selectDiv = document.querySelector('.select');
     console.log(selectDiv)  
     event.target.style.backgroundColor = getComputedStyle(selectDiv).backgroundColor;
+}
+
+limparTudo.addEventListener("click", limpar);
+function limpar (){
+    for (let d = 0; d < pixelSelect.length; d++){
+        pixelSelect[d].style.backgroundColor = "white";
+    }
 }
