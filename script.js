@@ -84,6 +84,6 @@ function generateColor() {
     let b = Math.round(Math.random() * 255);
     let corAleatoria = document.querySelectorAll('.color')[i];
     corAleatoria.style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-  }  
+  }
 }
 generateColor();
