@@ -1,14 +1,14 @@
 /* deve possuir uma paleta de quatro cores distintas - exercício 2 */
-#black {
+.paleta-c1 {
   background-color: black;
 }/* cor preta deve ser a primeira na paleta de cores */
-#brown {
+.paleta-c2 {
   background-color: brown;
 }
-#blue {
+.paleta-c3 {
   background-color: blue;
 }
-#pink {
+.paleta-c4 {
   background-color: pink;
 }/* paleta de cores deverá listar todas as cores lado a lado..."Paleta de Cores" */
 

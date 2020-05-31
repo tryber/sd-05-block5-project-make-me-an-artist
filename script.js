@@ -1,38 +1,38 @@
-//clicar em pixel dentro quadro... preenchido com esta cor//
-const paleta = document.getElementById('color-pallete');
-const caixaDePixels = document.getElementById('pixel-board');
-const select = document.getElementsByClassName('selected');
-const selecionaCor = document.getElementsByClassName('color');
-let botao = document.getElementById('clear-board');
-let white = document.getElementById('white');
-const target = '';
-//classe selected ...e removida da cor anteriormente selecionada//
-function Color() {
-paleta.innerHTML = '';
-const black = document.createElement('div');
-paleta.appendChild(black);
-black.className = 'selected';
-black.style.backgroundColor = 'black';
-for (let i = 0; i < n; i += 1) {
-const color2 = document.createElement('div');
-paleta.appendChild(color2);
-color2.classList.add('secondcolor');
-color2.style.backgroundColor = randomColor();
+//Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro//
+//variáveis declaradas//
+const paletaDeCores = document.querySelectorAll('.color');
+const quadrados = document.getElementById('pixel');
+const corSelecionada = document.getElementById('selected');
+const caixasVazias = document.getElementById('pixel-board');
+const corBranca = document.getElementById('white');
+const botaoLimpar = document.getElementById('clear-board');
+const corPreta = "black";
+const coresAtuais = ['c1', 'c2','c3', 'c4'];
+  //funções//
+function selecionaCor (event) {
+  console.log(event.target);
+  console.log(selecionaDiv.style.backgroundColor);
+  let selected = event.target.classList.contains('selected');
+  removeSelected();
+  if (!selected) {
+    event.target.classList.add('selected')
+  }
 }
-} //função seletora//
-for (c of selecionaCor) {
-c.addEventListener('click', function (event) {
-for (s of selecionaCor) {
-s.classList.remove('selected');
+function colocarCor (event) {
+  let selecionaDiv = document.querySelector('.selected')
+    event.target.style.backgroundColor = getComputedStyle(selecionaDiv).backgroundColor;
 }
-event.target.classList.add('selected');
-})
+function removeSelected () {
+  for(let j = 0; j < paletaDeCores.length; j+=1) {
+    paletaDeCores[j].className = 'color paleta-${coresAtuais[i]}';
+  }
 }
+/*for(let k = 0; k < quadrados.length; k+=1) {quadrados[k].addEventListener('click', colocarCor);
+}*/
 
-function Pixel(event) {
-const colorPixel = document.querySelector(".selected");
-event.target.style.backgroundColor = colorPixel.id;
-for (p of Pixel) {
-p.addEventListener('click', Pixel);
+function trocaCorBranca() {
+    const caixasVazias = document.querySelectorAll('.pixel-board');
+      for (let i = 0; i < caixasVazias.length; i+=1) {
+    caixasVazias[i].style.backgroundColor = 'white';
   }
 }
