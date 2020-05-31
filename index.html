@@ -8,16 +8,18 @@
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <ul id="color-palette">
+    <ul id="color-palette" class="color-palette">
       <li class="color preto selected"></li>
       <li class="color vermelho"></li>
       <li class="color azul"></li>
       <li class="color amarelo"></li>
     </ul>
-    <button type="button" id="clear-board">Limpar</button>
-    <input type="number" id="board-size" placeholder="Tamanho do quadro de Pixels" min="1" max="99"/> 
-    <button type="button" id="generate-board" onclick="createPixels()">VQV</button>
-    <table id="pixel-board"></table>
+    <div class="btn">
+      <button type="button" id="clear-board">Limpar</button>
+      <input type="number" id="board-size" placeholder="Tamanho do quadro de Pixels" min="1" max="99"/>
+      <button type="button" id="generate-board" onclick="createPixels()">VQV</button>
+    </div>
+    <table id="pixel-board" class="pixel-board"></table>
   </body>
   <script src="script.js"></script>
 </html>

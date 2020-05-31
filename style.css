@@ -21,27 +21,19 @@ h1 {
 }
 
 .vermelho {
-  background-color: red;
   border: black solid 1px;
   height: 40px;
   width: 40px;
 }
 
 .azul {
-  background-color: blue;
   border: black solid 1px;
   height: 40px;
   width: 40px;
 }
 
 .amarelo {
-  background-color: yellow;
   border: black solid 1px;
   height: 40px;
   width: 40px;
-}
-
-.pixel-board {
-  height: 100%;
-  width: 100%;
 }
