@@ -3,7 +3,7 @@ const btn = document.querySelector('#clear-board');
 btn.addEventListener('click', function () {
   const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].className = 'pixel';
+    pixel[i].style.backgroundColor = 'white';
   }
 });
 
@@ -22,15 +22,9 @@ colorPalette.addEventListener('click', function (event) {
 // Evento que colore o pixel clicado com a cor selecionada
 const colorir = document.querySelector('table');
 colorir.addEventListener('click', function (event) {
+  const corEscolhida = document.querySelector('.selected').style.backgroundColor;
   const pixelEscolhido = event.target;
-  pixelEscolhido.className = ' ';
-  const lista = document.querySelector('.selected').classList;
-  for (let i = 0; i < lista.length; i += 1) {
-    if (lista[i] !== 'color' && lista[i] !== 'selected') {
-      pixelEscolhido.classList.add(lista[i]);
-    }
-  }
-  pixelEscolhido.classList.add('pixel');
+  pixelEscolhido.style.backgroundColor = corEscolhida;
 });
 
 // Função do botão que cria Pixels
@@ -58,6 +52,7 @@ function createPixels() {
     for (let n = 0; n < quantidadePixels; n += 1) {
       const novoPixel = document.createElement('td');
       novoPixel.className = 'pixel';
+      novoPixel.style.backgroundColor = 'white';
       document.querySelectorAll('.linha')[i].appendChild(novoPixel);
     }
   }
@@ -74,6 +69,7 @@ function buildPixels(j) {
     for (let n = 0; n < j; n += 1) {
       const novoPixel = document.createElement('td');
       novoPixel.className = 'pixel';
+      novoPixel.style.backgroundColor = 'white';
       document.querySelectorAll('.linha')[i].appendChild(novoPixel);
     }
   }

@@ -3,36 +3,13 @@ h1 {
 }
 
 .color {
+  border: black solid 1px;
   display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel {
-  background-color: white;
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
-}
-
-.preto {
-  background-color: black;
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
-}
-
-.vermelho {
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
-}
-
-.azul {
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
-}
-
-.amarelo {
   border: black solid 1px;
   height: 40px;
   width: 40px;
