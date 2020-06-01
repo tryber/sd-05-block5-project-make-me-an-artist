@@ -1,7 +1,7 @@
 // Create pixel board
 const pixelBoard = document.getElementById('pixel-board');
 const tagTR = document.getElementsByTagName('tr');
-const numberTagTR;
+let numberTagTR;
 const genBoardButton = document.getElementById('generate-board');
 const numberOfPixels = document.getElementById('board-size');
 
