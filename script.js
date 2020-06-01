@@ -1,3 +1,10 @@
+// Paint pixels
+function paintPixel() {
+  const colorClass = colorSelected.classList[1];
+  event.target.classList.remove(event.target.classList[1]);
+  event.target.classList.add(colorClass);
+}
+
 // Create pixel board
 const pixelBoard = document.getElementById('pixel-board');
 const tagTR = document.getElementsByTagName('tr');
@@ -7,12 +14,12 @@ const numberOfPixels = document.getElementById('board-size');
 
 function boardInit(pixelNumbers) {
   for (let i = 0; i < pixelNumbers; i += 1) {
-    let pixelLine = document.createElement('tr');
+    const pixelLine = document.createElement('tr');
     pixelBoard.appendChild(pixelLine);
   }
   for (let i = 0; i < pixelNumbers; i += 1) {
     for (let j = 0; j < tagTR.length; j += 1) {
-      let pixelColumn = document.createElement('td');
+      const pixelColumn = document.createElement('td');
       numberTagTR = tagTR[j];
       numberTagTR.appendChild(pixelColumn);
       pixelColumn.className = 'pixel white';
@@ -57,7 +64,7 @@ const colorBlack = document.getElementById('cor1');
 const colorGreen = document.getElementById('cor2');
 const colorYellow = document.getElementById('cor3');
 const colorRed = document.getElementById('cor4');
-const colorSelected = document.getElementsByClassName('selected')[0];
+let colorSelected = document.getElementsByClassName('selected')[0];
 const colorPalette = document.getElementById('color-palette');
 
 function changeSelected() {
@@ -82,16 +89,9 @@ function changeSelected() {
 
 colorPalette.addEventListener('click', changeSelected);
 
-// Paint pixels
-function paintPixel() {
-  let colorClass = colorSelected.classList[1];
-  event.target.classList.remove(event.target.classList[1]);
-  event.target.classList.add(colorClass);
-}
-
 // Clear Board
 function clearBoard() {
-  let allPixels = document.querySelectorAll('#pixel-board > tr > td');
+  const allPixels = document.querySelectorAll('#pixel-board > tr > td');
   for (let i = 0; i < allPixels.length; i += 1) {
     allPixels[i].classList.remove(allPixels[i].classList[1]);
     allPixels[i].classList.add((allPixels[i].classList[1] = 'white'));
