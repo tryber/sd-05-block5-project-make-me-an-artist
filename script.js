@@ -19,4 +19,16 @@ pixelBoard.addEventListener('click', function (doiDimais) {
     pixelEscolhido.style.backgroundColor = propriedadeCss;
     console.log(pixelEscolhido.style.backgroundColor);
   }
+});
+
+let botaoLimpar = document.getElementById('clear-board');
+
+botaoLimpar.addEventListener('click', function(){
+  let limparCor = document.getElementsByClassName('pixel');
+  for (let i = 0; i < limparCor.length; i++) {
+    limparCor[i].style.backgroundColor = "white";
+  }
 })
+
+
+
