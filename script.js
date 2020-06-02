@@ -1,11 +1,43 @@
 let id = 0;
+let altura = 5;
+
 window.onload = function () {
-  const quadroPixel = document.getElementById('pixel-board');
-  for (let l = 0; l < 5; l += 1) {
+  quadro(altura);
+};
+
+const botaoBoard = document.getElementById('generate-board');
+const quadroPixel = document.getElementById('pixel-board');
+
+botaoBoard.addEventListener('click', function () {
+  const boardInput = document.getElementById('board-size').value;
+  console.log(boardInput);
+  if(boardInput > 50) {
+    altura = 50;
+    mudaQuadro();
+  }
+  if (boardInput < 5) {
+    altura = 5;
+    mudaQuadro()
+  }
+  if (boardInput === '') {
+    alert('Board Inválido');
+  }
+  if (boardInput >= 5 && boardInput <= 50) {
+    altura = boardInput;
+    mudaQuadro();
+  }
+})
+
+function quadro (altura) {
+  console.log(altura);
+  pixelBoard.style.width = (altura * 42 + 'px');
+  pixelBoard.style.height = (altura * 42 + 'px');
+  for (let l = 0; l < altura; l += 1) {
     const line = document.createElement('div');
     line.className = 'linha largura';
+    line.style.width = (altura * 42 + 'px');
     quadroPixel.appendChild(line);
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < altura; i += 1) {
       const square = document.createElement('div');
       square.className = 'pixel fazLinha branco';
       square.id = id;
@@ -13,7 +45,13 @@ window.onload = function () {
       id += 1;
     }
   }
-};
+}
+
+function mudaQuadro () {
+  pixelBoard.innerHTML = '';
+  quadro(altura);
+}
+
 const paleta = document.getElementById('color-palette');
 const div = paleta.children;
 const pixelBoard = document.getElementById('pixel-board');
@@ -42,13 +80,4 @@ function pincel(event) {
 
 pixelBoard.addEventListener('click', pincel);
 const botaoLimpar = document.getElementById('clear-board');
-botaoLimpar.addEventListener('click', function () {
-  for (let i = 0; i < id; i += 1) {
-    const str = i.toString();
-    const square = document.getElementById(str);
-    const squar = square.classList.value;
-    const resetList = squar.split(' ');
-    square.classList.remove(resetList[2]);
-    square.classList.add('branco');
-  }
-});
+botaoLimpar.addEventListener('click', mudaQuadro);

@@ -30,7 +30,6 @@
 
 .linha {
   height: 42px;
-  width: 210px;
 }
 
 .largura {
@@ -39,11 +38,6 @@
 
 .larguraPaleta {
   width: 168px;
-}
-
-.tamanhoQuadro {
-  height: 210px;
-  width: 210px;
 }
 
 .fazLinha {
