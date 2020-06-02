@@ -24,6 +24,13 @@ function quadro() {
   }
 }
 
+function corRandom() {
+  const r = Math.ceil(255 * Math.random());
+  const g = Math.ceil(255 * Math.random());
+  const b = Math.ceil(255 * Math.random());
+  return (`rgb(${r}, ${g}, ${b})`);
+}
+
 function criaPaleta() {
   for (let i = 0; i < 4; i += 1) {
     let tinta = paleta.children;
@@ -40,13 +47,6 @@ window.onload = function () {
   quadro(altura);
   criaPaleta();
 };
-
-function corRandom() {
-  const r = Math.ceil(255 * Math.random());
-  const g = Math.ceil(255 * Math.random());
-  const b = Math.ceil(255 * Math.random());
-  return (`rgb(${r}, ${g}, ${b})`);
-}
 
 function mudaQuadro() {
   pixelBoard.innerHTML = '';
