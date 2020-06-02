@@ -43,7 +43,7 @@ botaoBoard.addEventListener('click', function () {
     mudaQuadro()
   };
   if (boardInput === '') {
-    alert('Board inválido');
+    alert('Board inválido!');
   }
   if (boardInput >= 5 && boardInput <= 50) {
     altura = boardInput;
