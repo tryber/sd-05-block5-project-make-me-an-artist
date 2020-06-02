@@ -1,9 +1,11 @@
 let id = 0;
 let altura = 5;
 const quadroPixel = document.getElementById('pixel-board');
+const pixelBoard = document.getElementById('pixel-board');
+const paleta = document.getElementById('color-palette');
 
 function quadro() {
-  const medida = (altura * 42) + 'px';
+  const medida = `${altura * 42}px`;
   pixelBoard.style.width = medida;
   pixelBoard.style.height = medida;
   for (let l = 0; l < altura; l += 1) {
@@ -38,9 +40,6 @@ window.onload = function () {
   quadro(altura);
   criaPaleta();
 };
-
-const paleta = document.getElementById('color-palette');
-const pixelBoard = document.getElementById('pixel-board');
 
 function corRandom() {
   const r = Math.ceil(255 * Math.random());
