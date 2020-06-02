@@ -1,0 +1,36 @@
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.absolute {
+  position: relative;
+}
+
+.selected {
+  box-sizing: border-box;
+}
+
+.linha {
+  height: 42px;
+}
+
+.largura {
+  width: 100%;
+}
+
+.larguraPaleta {
+  width: 168px;
+}
+
+.fazLinha {
+  float: left;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}

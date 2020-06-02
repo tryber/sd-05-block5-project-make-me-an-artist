@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <title>Make me an artist</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <h1 id="title">Paleta de Cores</h1>
+  <div id="color-palette" class="absolute linha">
+    <div class="color fazLinha selected"></div>
+    <div class="color fazLinha"></div>
+    <div class="color fazLinha"></div>
+    <div class="color fazLinha"></div>
+  </div>
+  <div class="absolute ">
+    <button id="clear-board">Limpar</button>
+  </div>
+  <div>
+    <p>Qual tamanho deseja pro quadro? <input type="number" max="50" min="1" id="board-size"> <button id="generate-board">VQV</button></p>
+  </div>
+  <div id="pixel-board" class="absolute"></div>
+  <script src="script.js"></script>
+</body>
