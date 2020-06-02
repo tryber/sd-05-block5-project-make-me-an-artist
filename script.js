@@ -19,11 +19,11 @@ function corRandom() {
 }
 
 function criaPaleta() {
-  for (let i = 0; i < 3; i += 1) {
-    const tinta = document.createElement('div');
-    tinta.className = 'pixel fazLinha';
+  for (let i = 1; i < 4; i += 1) {
+    let tinta = paleta.children;
+    tinta = tinta[i];
     tinta.style.backgroundColor = corRandom();
-    paleta.appendChild(tinta);
+    console.log(tinta);
   }
 }
 
@@ -38,8 +38,9 @@ function quadro() {
     quadroPixel.appendChild(line);
     for (let i = 0; i < altura; i += 1) {
       const square = document.createElement('div');
-      square.className = 'pixel fazLinha branco';
+      square.className = 'pixel fazLinha';
       square.id = id;
+      square.backgroundColor = 'rgb 255, 255, 255'
       line.appendChild(square);
       id += 1;
     }
@@ -65,7 +66,7 @@ botaoBoard.addEventListener('click', function () {
     mudaQuadro()
   };
   if (boardInput === '') {
-    alert('Board inválido!');
+    return(alert('Board inválido!'));
   }
   if (boardInput >= 5 && boardInput <= 50) {
     altura = boardInput;
