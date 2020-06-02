@@ -40,7 +40,7 @@ function quadro() {
       const square = document.createElement('div');
       square.className = 'pixel fazLinha';
       square.id = id;
-      square.backgroundColor = 'rgb 255, 255, 255'
+      square.style.backgroundColor = 'rgb 255, 255, 255'
       line.appendChild(square);
       id += 1;
     }
