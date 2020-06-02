@@ -9,7 +9,7 @@ window.onload = function () {
 const paleta = document.getElementById('color-palette');
 const div = paleta.children;
 const pixelBoard = document.getElementById('pixel-board');
-let cor = ['preto'];
+let corPincel = 'rgb(0, 0, 0)';
 
 function corRandom() {
   const r = Math.ceil(255 * Math.random());
@@ -19,11 +19,16 @@ function corRandom() {
 }
 
 function criaPaleta() {
-  for (let i = 1; i < 4; i += 1) {
+  for (let i = 0; i < 4; i += 1) {
     let tinta = paleta.children;
     tinta = tinta[i];
+    if (i === 0) {
+      tinta.style.backgroundColor = 'rgb(0, 0, 0)';
+      console.log(tinta)
+    } else {
     tinta.style.backgroundColor = corRandom();
     console.log(tinta);
+    }
   }
 }
 
@@ -75,23 +80,16 @@ botaoBoard.addEventListener('click', function () {
 });
 
 function mudaCorSelecionada(evento) {
-  for (let i = 0; i < paleta.childElementCount; i += 1) {
-    div[i].classList.remove('selected');
-  }
-  cor = [];
-  const cornova = evento.target;
-  const bloco = cornova.classList.value;
-  const lista = bloco.split(' ');
-  cor.push(lista[lista.length - 1]);
-  cornova.classList.add('selected');
+  document.querySelector('.selected').classList.remove('selected');
+  evento.target.classList.add('selected');
 }
 paleta.addEventListener('click', mudaCorSelecionada);
 
 function pincel(event) {
   const contato = event.target;
   let corP = document.querySelector('.selected');
-  corP = corP.style.backgroundColor;
-  contato.style.backgroundColor = corP;
+  let corp = corP.style.backgroundColor;
+  contato.style.backgroundColor = corp;
 }
 
 pixelBoard.addEventListener('click', pincel);
