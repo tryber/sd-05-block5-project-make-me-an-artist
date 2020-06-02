@@ -1,39 +1,9 @@
 let id = 0;
 let altura = 5;
-
-window.onload = function () {
-  quadro(altura);
-  criaPaleta();
-};
-
-const paleta = document.getElementById('color-palette');
-const div = paleta.children;
-const pixelBoard = document.getElementById('pixel-board');
-let corPincel = 'rgb(0, 0, 0)';
-
-function corRandom() {
-  const r = Math.ceil(255 * Math.random());
-  const g = Math.ceil(255 * Math.random());
-  const b = Math.ceil(255 * Math.random());
-  return ('rgb(' + r + ', ' + g + ', '  + b + ')');
-}
-
-function criaPaleta() {
-  for (let i = 0; i < 4; i += 1) {
-    let tinta = paleta.children;
-    tinta = tinta[i];
-    if (i === 0) {
-      tinta.style.backgroundColor = 'rgb(0, 0, 0)';
-      console.log(tinta)
-    } else {
-    tinta.style.backgroundColor = corRandom();
-    console.log(tinta);
-    }
-  }
-}
+const quadroPixel = document.getElementById('pixel-board');
 
 function quadro() {
-  const medida = altura * 42 + 'px';
+  const medida = (altura * 42) + 'px';
   pixelBoard.style.width = medida;
   pixelBoard.style.height = medida;
   for (let l = 0; l < altura; l += 1) {
@@ -52,13 +22,39 @@ function quadro() {
   }
 }
 
-function mudaQuadro () {
+function criaPaleta() {
+  for (let i = 0; i < 4; i += 1) {
+    let tinta = paleta.children;
+    tinta = tinta[i];
+    if (i === 0) {
+      tinta.style.backgroundColor = 'rgb(0, 0, 0)';
+    } else {
+      tinta.style.backgroundColor = corRandom();
+    }
+  }
+}
+
+window.onload = function () {
+  quadro(altura);
+  criaPaleta();
+};
+
+const paleta = document.getElementById('color-palette');
+const pixelBoard = document.getElementById('pixel-board');
+
+function corRandom() {
+  const r = Math.ceil(255 * Math.random());
+  const g = Math.ceil(255 * Math.random());
+  const b = Math.ceil(255 * Math.random());
+  return (`rgb(${r}, ${g}, ${b})`);
+}
+
+function mudaQuadro() {
   pixelBoard.innerHTML = '';
   quadro(altura);
 }
 
 const botaoBoard = document.getElementById('generate-board');
-const quadroPixel = document.getElementById('pixel-board');
 
 botaoBoard.addEventListener('click', function () {
   const boardInput = document.getElementById('board-size').value;
@@ -69,9 +65,9 @@ botaoBoard.addEventListener('click', function () {
   if (boardInput < 5) {
     altura = 5;
     mudaQuadro();
-  };
+  }
   if (boardInput === '') {
-    return(alert('Board inválido!'));
+    alert('Board inválido!');
   }
   if (boardInput >= 5 && boardInput <= 50) {
     altura = boardInput;
@@ -87,8 +83,7 @@ paleta.addEventListener('click', mudaCorSelecionada);
 
 function pincel(event) {
   const contato = event.target;
-  let corP = document.querySelector('.selected');
-  let corp = corP.style.backgroundColor;
+  const corp = document.querySelector('.selected').style.backgroundColor;
   contato.style.backgroundColor = corp;
 }
 
