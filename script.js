@@ -3,7 +3,29 @@ let altura = 5;
 
 window.onload = function () {
   quadro(altura);
+  criaPaleta();
 };
+
+const paleta = document.getElementById('color-palette');
+const div = paleta.children;
+const pixelBoard = document.getElementById('pixel-board');
+let cor = ['preto'];
+
+function corRandom() {
+  const r = Math.ceil(255 * Math.random());
+  const g = Math.ceil(255 * Math.random());
+  const b = Math.ceil(255 * Math.random());
+  return('rgb(' + r + ', ' + g + ', '  + b + ')');
+}
+
+function criaPaleta() {
+  for (let i = 0; i < 3; i += 1) {
+    const tinta = document.createElement('div');
+    tinta.className = 'pixel fazLinha';
+    tinta.style.backgroundColor = corRandom();
+    paleta.appendChild(tinta);
+  }
+}
 
 function quadro() {
   const medida = altura * 42 + 'px';
@@ -51,11 +73,6 @@ botaoBoard.addEventListener('click', function () {
   }
 });
 
-const paleta = document.getElementById('color-palette');
-const div = paleta.children;
-const pixelBoard = document.getElementById('pixel-board');
-let cor = ['preto'];
-
 function mudaCorSelecionada(evento) {
   for (let i = 0; i < paleta.childElementCount; i += 1) {
     div[i].classList.remove('selected');
@@ -71,10 +88,9 @@ paleta.addEventListener('click', mudaCorSelecionada);
 
 function pincel(event) {
   const contato = event.target;
-  const listaString = contato.classList.value;
-  const listaItem = listaString.split(' ');
-  contato.classList.remove(listaItem[2]);
-  contato.classList.add(cor);
+  let cor = document.querySelector('.selected');
+  cor = cor.style.backgroundColor;
+  contato.style.backgroundColor = cor;
 }
 
 pixelBoard.addEventListener('click', pincel);
