@@ -5,37 +5,14 @@ window.onload = function () {
   quadro(altura);
 };
 
-const botaoBoard = document.getElementById('generate-board');
-const quadroPixel = document.getElementById('pixel-board');
-
-botaoBoard.addEventListener('click', function () {
-  const boardInput = document.getElementById('board-size').value;
-  console.log(boardInput);
-  if(boardInput > 50) {
-    altura = 50;
-    mudaQuadro();
-  }
-  if (boardInput < 5) {
-    altura = 5;
-    mudaQuadro()
-  }
-  if (boardInput === '') {
-    alert('Board Inválido');
-  }
-  if (boardInput >= 5 && boardInput <= 50) {
-    altura = boardInput;
-    mudaQuadro();
-  }
-})
-
-function quadro (altura) {
-  console.log(altura);
-  pixelBoard.style.width = (altura * 42 + 'px');
-  pixelBoard.style.height = (altura * 42 + 'px');
+function quadro() {
+  const medida = altura * 42 + 'px';
+  pixelBoard.style.width = medida;
+  pixelBoard.style.height = medida;
   for (let l = 0; l < altura; l += 1) {
     const line = document.createElement('div');
     line.className = 'linha largura';
-    line.style.width = (altura * 42 + 'px');
+    line.style.width = medida;
     quadroPixel.appendChild(line);
     for (let i = 0; i < altura; i += 1) {
       const square = document.createElement('div');
@@ -51,6 +28,28 @@ function mudaQuadro () {
   pixelBoard.innerHTML = '';
   quadro(altura);
 }
+
+const botaoBoard = document.getElementById('generate-board');
+const quadroPixel = document.getElementById('pixel-board');
+
+botaoBoard.addEventListener('click', function () {
+  const boardInput = document.getElementById('board-size').value;
+  if (boardInput > 50) {
+    altura = 50;
+    mudaQuadro();
+  };
+  if (boardInput < 5) {
+    altura = 5;
+    mudaQuadro()
+  };
+  if (boardInput === '') {
+    alert('Board inválido');
+  }
+  if (boardInput >= 5 && boardInput <= 50) {
+    altura = boardInput;
+    mudaQuadro();
+  }
+});
 
 const paleta = document.getElementById('color-palette');
 const div = paleta.children;
