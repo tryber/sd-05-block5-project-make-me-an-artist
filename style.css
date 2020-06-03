@@ -35,16 +35,16 @@ h1{
     background-color: black;
 }
 #pixel-board{
-    display: flex;
+    display: grid;
     margin-top: 10px;
     margin-left: 40px;
-    max-width: fit-content;
+  /*max-width: fit-content;*/
 }
 .lines{
 
     background-color: white;
     z-index: 0;  
-
+    clear: left;
 
 
 }
@@ -55,7 +55,7 @@ h1{
     border-collapse: collapse;
     height: 40px;
     width: 40px;
-
+    float: left;
   }
 /*.borda{
     border:black solid 1px;
