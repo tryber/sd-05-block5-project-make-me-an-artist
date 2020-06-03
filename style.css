@@ -35,30 +35,33 @@ h1{
     background-color: black;
 }
 #pixel-board{
-    display: grid;
+    display: flex;
     margin-top: 10px;
     margin-left: 40px;
+    max-width: fit-content;
 }
 .lines{
+
     background-color: white;
     z-index: 0;  
-    clear: left;
+
+
+
 }
 .pixel {
-    border:black solid 1px;
+   /* border:black solid 1px;*/
     background-color: white;
     box-sizing: border-box;    
     border-collapse: collapse;
     height: 40px;
     width: 40px;
-    float: left;
-    /*justify-content: flex-start;*/
+
   }
-/*.borda{
+.borda{
     border:black solid 1px;
     border-collapse: collapse
     z-index: 1;
-};*/
+}
 input{
 width: 50px;
 }

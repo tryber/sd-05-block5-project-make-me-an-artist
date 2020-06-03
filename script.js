@@ -1,10 +1,8 @@
-//window.onload = boardSize.addEventListener('keyup', perguntaUsuario);
-
     const clearButton = document.getElementById('clear-board');
     const selectedColor = document.querySelectorAll(".color");
     const cores = document.getElementById("color-palette");
     let pixelBoard = document.querySelector("#pixel-board");
-    let pixel = document.querySelectorAll(".pixel");
+    const pixel = document.getElementsByClassName("pixel");
     document.querySelector(".black").classList.add("selected");
     let boardSize = document.getElementById("board-size");
     const botaoGeraQuadro = document.getElementById("generate-board");
@@ -12,7 +10,8 @@
     let corEscolhida = 'black';
     let tamanhoDoBoard = 0;
     let tamanho= '';
-   
+    
+    configuraBoard(5);
    function configuraBoard(a){
     let board ='', valor= '';
     if(a < 5){
@@ -30,7 +29,7 @@
             linha.className = "lines";
             for(let cont = 0; cont < valor; cont +=1){
                 let pixelCell = document.createElement("div");
-                pixelCell.className = "pixel";
+                pixelCell.className = "pixel borda";
                 pixelCell.style.backgroundColor = "white";
                // console.log("pixel: ", pixelCell.innerText);
                 linha.appendChild(pixelCell);
@@ -41,12 +40,14 @@
       //  return board;
     }
 botaoGeraQuadro.addEventListener('click', checaEntrada);
-function checaEntrada(){ 
+function checaEntrada(
+
+){ 
     let valor = boardSize.value;
 if (valor != ""){
 
    if(valor == 0){
-  alert("Tamanho inválido! Digite um valor diferente de 0");
+  alert("Digite um valor diferente de 0!");
     boardSize.value = '';
     boardSize.focus();
   }
@@ -60,9 +61,9 @@ if (valor != ""){
 }   
 clearButton.addEventListener('click', limpaPixel);
     function limpaPixel(){
-        for(item in pixel){
-        pixel[item].style = "background-color = white;";
-        }
+        for(let item = 0; item < pixel.length; item++){
+            pixel[item].style.backgroundColor = "white";
+            }
    }
     function selecionaCor(e){
         corEscolhida = e.target;
@@ -87,8 +88,4 @@ clearButton.addEventListener('click', limpaPixel);
 
     cores.addEventListener('click', selecionaCor);
     pixelBoard.addEventListener('click', colorePixel);
-    botaoGeraQuadro.addEventListener('click', checaEntrada())
-    //console.log(tamanho);
-    //checaEntrada(tamanho);
-   //tamanhoDoBoard =  configuraBoard(tamanho);
-   // pixelBoard.innerHTML = " ";
+    
