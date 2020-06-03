@@ -1,3 +1,5 @@
+*
+
 body {
   font-family: 'Amatic SC', cursive;
   display: block;
@@ -19,6 +21,7 @@ h1 {
   justify-content: center;
   margin: 0 auto;
   padding-top: 3em;
+  margin-right: 3px;
 }
 
 .color {
@@ -43,10 +46,15 @@ button:hover, .color:hover{
 }
 
 #pixel-board {
+  display: grid;
+  width: 210px;
+  grid-template-columns: repeat(5, 40px);
+}
+
+#board-container {
   display: flex;
   justify-items: center;
   justify-content: center;
-  width: fit-content;
 }
 
 .pixel {
