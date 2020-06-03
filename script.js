@@ -30,7 +30,7 @@
             linha.className = "lines";
             for(let cont = 0; cont < valor; cont +=1){
                 let pixelCell = document.createElement("div");
-                pixelCell.className = "pixel borda";
+                pixelCell.className = "pixel";
                 pixelCell.style.backgroundColor = "white";
                // console.log("pixel: ", pixelCell.innerText);
                 linha.appendChild(pixelCell);

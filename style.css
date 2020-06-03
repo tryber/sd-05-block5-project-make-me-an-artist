@@ -35,7 +35,7 @@ h1{
     background-color: black;
 }
 #pixel-board{
-    display: flex;
+    display: grid;
     margin-top: 10px;
     margin-left: 40px;
 }
@@ -45,6 +45,7 @@ h1{
     clear: left;
 }
 .pixel {
+    border:black solid 1px;
     background-color: white;
     box-sizing: border-box;    
     border-collapse: collapse;
@@ -53,11 +54,11 @@ h1{
     float: left;
     /*justify-content: flex-start;*/
   }
-.borda{
+/*.borda{
     border:black solid 1px;
-   /* border-collapse: collapse;*/
+    border-collapse: collapse
     z-index: 1;
-}
+};*/
 input{
 width: 50px;
 }
