@@ -42,7 +42,7 @@ h1{
 .lines{
     background-color: white;
     z-index: 0;  
-  /*  clear: left;*/
+    clear: left;
 }
 .pixel {
     background-color: white;
@@ -50,6 +50,8 @@ h1{
     border-collapse: collapse;
     height: 40px;
     width: 40px;
+    float: left;
+    /*justify-content: flex-start;*/
   }
 .borda{
     border:black solid 1px;

@@ -53,7 +53,7 @@ if (valor != ""){
         
    else configuraBoard(valor);
 }
-    else { alert("Preencha o valor e clique em \'VQV:\'")} 
+    else { alert("Board inválido!")} 
     boardSize.value = '';
     boardSize.focus();
 
