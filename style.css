@@ -49,7 +49,7 @@ h1{
 
 }
 .pixel {
-   /* border:black solid 1px;*/
+    border:black solid 1px;
     background-color: white;
     box-sizing: border-box;    
     border-collapse: collapse;
@@ -57,11 +57,11 @@ h1{
     width: 40px;
 
   }
-.borda{
+/*.borda{
     border:black solid 1px;
     border-collapse: collapse
     z-index: 1;
-}
+};*/
 input{
 width: 50px;
 }
