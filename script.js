@@ -3,7 +3,6 @@ const color2 = document.getElementById('color2');
 const color3 = document.getElementById('color3');
 const color4 = document.getElementById('color4');
 const clearButton = document.getElementById('clear-board');
-const allPixels = document.getElementsByClassName('pixel');
 const allColors = document.getElementsByClassName('color');
 const boardSize = document.getElementById('board-size');
 const generateBoard = document.getElementById('generate-board');
@@ -12,11 +11,38 @@ const pixelBoard = document.getElementById('pixel-board');
 const boardContainer = document.getElementById('board-container');
 let selectedColor = 'black';
 
-// adding event listener to all pixels
-for (let i = 0; i < allPixels.length; i+=1) {
-  allPixels[i].addEventListener('click', changeColor);
+// generate board from input
+function createBoard() {
+  document.getElementById('pixel-board').remove();
+
+  let newPixelBoard = document.createElement('div');
+    newPixelBoard.setAttribute('id', 'pixel-board');
+    boardContainer.appendChild(newPixelBoard);
+
+  let input = boardSize.value;
+  for(let i = 0; i < input; i++) {
+    let newRow = document.createElement('div');
+    newRow.setAttribute('class', 'pixel-row');
+    newPixelBoard.appendChild(newRow);
+
+    for(let j = 0; j < input; j++) {
+      let newPixel = document.createElement('div');
+      newPixel.setAttribute('class', 'pixel');
+      newRow.appendChild(newPixel);
+    }
+  }
+  clickablePixels()
 }
 
+generateBoard.addEventListener('click', createBoard);
+
+// adding event listener to all pixels
+function clickablePixels(){
+  for (let i = 0; i < document.getElementsByClassName('pixel').length; i+=1) {
+  document.getElementsByClassName('pixel')[i].addEventListener('click', changeColor);
+}
+}
+clickablePixels()
 // changing backgound color of selected pixel
 function changeColor(e) {
   e.target.style.backgroundColor = selectedColor;
@@ -59,8 +85,8 @@ color4.addEventListener('click', changeColor4);
 
 // clearing all pixels
 function clear() {
-  for (let i = 0; i < allPixels.length; i+=1) {
-    allPixels[i].style.backgroundColor = 'white';
+  for (let i = 0; i < document.getElementsByClassName('pixel').length; i+=1) {
+    document.getElementsByClassName('pixel')[i].style.backgroundColor = 'white';
   }
 }
 clearButton.addEventListener('click', clear);
@@ -81,27 +107,3 @@ function changeValues() {
 }
 generateBoard.addEventListener('click', changeValues);
 
-// generate board from input
-
-function createBoard() {
-  document.getElementById('pixel-board').remove();
-
-  let newPixelBoard = document.createElement('div');
-    newPixelBoard.setAttribute('id', 'pixel-board');
-    boardContainer.appendChild(newPixelBoard);
-
-  let input = boardSize.value;
-  for(let i = 0; i < input; i++) {
-    let newRow = document.createElement('div');
-    newRow.setAttribute('class', 'pixel-row');
-    newPixelBoard.appendChild(newRow);
-
-    for(let j = 0; j < input; j++) {
-      let newPixel = document.createElement('div');
-      newPixel.setAttribute('class', 'pixel');
-      newRow.appendChild(newPixel);
-    }
-  }
-}
-
-generateBoard.addEventListener('click', createBoard);
