@@ -21,7 +21,7 @@ function createBoard() {
 
   changeValues()
   let input = boardSize.value;
-  
+
   for(let i = 0; i < input; i++) {
     let newRow = document.createElement('div');
     newRow.setAttribute('class', 'pixel-row');
@@ -49,7 +49,7 @@ generateBoard.addEventListener('click', alertEmpty);
 function changeValues() {
   if (boardSize.value > 50) {
     boardSize.value = 50;
-  } else if (boardSize.value < 5){
+  } else if (boardSize.value < 5 && boardSize.value > 0 || boardSize.value < 0){
     boardSize.value = 5;
   }
   return boardSize.value;
