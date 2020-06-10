@@ -1,67 +1,61 @@
-*
-
 body {
-  font-family: 'Amatic SC', cursive;
+  background-color: #fbf7f5;
   display: block;
-  background-color: #fbf7f5	;
+  font-family: Amatic SC, cursive;
 }
 
 h1 {
-  text-align: center;
   font-size: 4em;
-  width: fit-content;
   margin: 0 auto;
+  text-align: center;
+  width: fit-content;
 }
-
 
 #color-palette {
   display: flex;
   flex-wrap: wrap;
-  justify-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 8px 0 0;
   padding-top: 3em;
-  margin-right: 3px;
 }
 
 .color {
   border: 1px solid black;
-  width: 40px;
-  height: 40px;  
+  height: 40px;
   margin: 0.1em;
+  width: 40px;
 }
 
 button {
-  display: block;
-  margin: 1em auto 4em auto;
-  padding: 0.5em;
-  letter-spacing: 0.1em;
   background-color: transparent;
   border: 1px solid black;
+  display: block;
+  letter-spacing: 0.1em;
+  margin: 1em auto 4em;
+  padding: 0.5em;
 }
 
-button:hover, .color:hover{
-  opacity: 50%;
+button:hover , .color:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 #pixel-board {
   display: grid;
-  width: 210px;
   grid-template-columns: repeat(5, 40px);
+  width: 210px;
 }
 
 #board-container {
   display: flex;
-  justify-items: center;
   justify-content: center;
 }
 
 .pixel {
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
   background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
 
 #color1 {
@@ -69,7 +63,7 @@ button:hover, .color:hover{
 }
 
 #color2 {
-  background-color: rgb(254 , 200 , 216);
+  background-color: rgb(254, 200, 216);
 }
 
 #color3 {
