@@ -40,6 +40,33 @@ button:hover , .color:hover {
   opacity: 0.6;
 }
 
+#board-size-container {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+#board-size {
+  margin: 2em;
+  width: 3em;
+  margin: 1em;
+  height: 1.9em;
+  border: 1px solid black;
+}
+
+#generate-board {
+  margin: 1em;
+}
+
 #pixel-board {
   display: grid;
   grid-template-columns: repeat(5, 40px);
