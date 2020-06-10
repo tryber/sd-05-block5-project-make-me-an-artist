@@ -60,13 +60,20 @@ function clear() {
     allPixels[i].style.backgroundColor = 'white';
   }
 }
-
 clearButton.addEventListener('click', clear);
 
 // alert when input is empty
-generateBoard.addEventListener('click', alertEmpty);
 function alertEmpty() {
   if(boardSize.value == ''){
     alert('Board inválido!')
   }
 }
+generateBoard.addEventListener('click', alertEmpty);
+
+// change values when above or below limit 
+function changeValues(){
+  if(boardSize.value > 50){
+    boardSize.value = 50
+  }
+}
+generateBoard.addEventListener('click', changeValues)

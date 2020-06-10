@@ -212,19 +212,19 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Crie um input e um botão que permitam definir um quadro de pixels com tamanho entre 5 e 50. Ao clicar no botão, deve ser gerado um quadro de **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input;
 
- - Ou seja, se o valor passado para o input for 7, ao clicar no botão, vai ser gerado um quadro de 49 pixels (7 pixels de largura x 7 pixels de altura);
+ - Ou seja, se o valor passado para o input for 7, ao clicar no botão, vai ser gerado um quadro de 49 pixels (7 pixels de largura x 7 pixels de altura); 
 
-- O input deve ter o `id` denominado `board-size` e o botão deve ter o `id` denominado `generate-board`;
+- O input deve ter o `id` denominado `board-size` e o botão deve ter o `id` denominado `generate-board`; ✔
 
-- O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
+- O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`; ✔
 
-- O botão deve conter o texto "VQV";
+- O botão deve conter o texto "VQV"; ✔
 
-- O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
+- O input deve estar posicionado entre a paleta de cores e o quadro de pixels; ✔
 
-- O botão deve estar posicionado ao lado do input;
+- O botão deve estar posicionado ao lado do input; ✔
 
-- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
+- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!"; ✔
 
 - O novo quadro deve ter todos os pixels preenchidos com a cor branca.
 
