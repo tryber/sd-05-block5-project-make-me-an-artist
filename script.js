@@ -5,6 +5,8 @@ const color4 = document.getElementById('color4');
 const clearButton = document.getElementById('clear-board');
 const allPixels = document.getElementsByClassName('pixel');
 const allColors = document.getElementsByClassName('color');
+const boardSize = document.getElementById('board-size');
+const generateBoard = document.getElementById('generate-board');
 let selectedColor = 'black';
 
 // adding event listener to all pixels
@@ -60,3 +62,11 @@ function clear() {
 }
 
 clearButton.addEventListener('click', clear);
+
+// alert when input is empty
+generateBoard.addEventListener('click', alertEmpty);
+function alertEmpty() {
+  if(boardSize.value == ''){
+    alert('Board inválido!')
+  }
+}
