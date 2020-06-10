@@ -67,18 +67,21 @@ button:hover , .color:hover {
   margin: 1em;
 }
 
-#pixel-board {
-  display: grid;
-  grid-template-columns: repeat(5, 40px);
-  width: 210px;
-}
-
 #board-container {
   display: flex;
   justify-content: center;
 }
 
+#pixel-board {
+  display: table;
+}
+
+.pixel-row {
+  display: table-row;
+}
+
 .pixel {
+  display: table-cell;
   background-color: white;
   border: 1px solid black;
   height: 40px;
