@@ -49,7 +49,7 @@ button:hover , .color:hover {
   align-items: center;
   align-content: center;
   justify-content: center;
-  width: 20%;
+  width: 15%;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
@@ -57,7 +57,7 @@ button:hover , .color:hover {
 
 #board-size {
   margin: 2em;
-  width: 3em;
+  width: 2.5em;
   margin: 1em;
   height: 1.9em;
   border: 1px solid black;
