@@ -7,6 +7,9 @@ const allPixels = document.getElementsByClassName('pixel');
 const allColors = document.getElementsByClassName('color');
 const boardSize = document.getElementById('board-size');
 const generateBoard = document.getElementById('generate-board');
+const pixelRow = document.getElementsByClassName('pixel-row');
+const pixelBoard = document.getElementById('pixel-board');
+const boardContainer = document.getElementById('board-container');
 let selectedColor = 'black';
 
 // adding event listener to all pixels
@@ -71,9 +74,34 @@ function alertEmpty() {
 generateBoard.addEventListener('click', alertEmpty);
 
 // change values when above or below limit 
-function changeValues(){
+function changeValues() {
   if(boardSize.value > 50){
     boardSize.value = 50
   }
 }
-generateBoard.addEventListener('click', changeValues)
+generateBoard.addEventListener('click', changeValues);
+
+// generate board from input
+
+function createBoard() {
+  document.getElementById('pixel-board').remove();
+
+  let newPixelBoard = document.createElement('div');
+    newPixelBoard.setAttribute('id', 'pixel-board');
+    boardContainer.appendChild(newPixelBoard);
+
+  let input = boardSize.value;
+  for(let i = 0; i < input; i++) {
+    let newRow = document.createElement('div');
+    newRow.setAttribute('class', 'pixel-row');
+    newPixelBoard.appendChild(newRow);
+
+    for(let j = 0; j < input; j++) {
+      let newPixel = document.createElement('div');
+      newPixel.setAttribute('class', 'pixel');
+      newRow.appendChild(newPixel);
+    }
+  }
+}
+
+generateBoard.addEventListener('click', createBoard);
