@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <title>Paleta de Cores</title>
+</head>
+<body>
+  <h1 id='title'>Paleta de Cores</h1>
+
+  <main>
+
+    <div id='color-palette'>
+      <div id='color1' class='color selected'></div>
+      <div id='color2' class='color'></div>
+      <div id='color3' class='color'></div>
+      <div id='color4' class='color'></div>
+    </div>
+
+    <button id='clear-board'>Limpar</button>
+
+    <div id='board-size-container'>
+      <label for='board-size'>Número de pixels por lado: </label> 
+      <input type='number' id='board-size' min='1'><button id='generate-board'>VQV</button>
+    </div>
+
+    <div id='board-container'>
+
+      <div id='pixel-board'>
+          <div class='pixel-row'>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+          </div>
+          <div class='pixel-row'>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+          </div>
+          <div class='pixel-row'>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+          </div>
+          <div class='pixel-row'>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+          </div>
+          <div class='pixel-row'>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+            <div class='pixel'></div>
+          </div>
+          
+      </div>
+
+    </div>
+  </main>
+  <script src='script.js'></script>
+</body>
+</html>
