@@ -19,7 +19,9 @@ function createBoard() {
     newPixelBoard.setAttribute('id', 'pixel-board');
     boardContainer.appendChild(newPixelBoard);
 
+  changeValues()
   let input = boardSize.value;
+  
   for(let i = 0; i < input; i++) {
     let newRow = document.createElement('div');
     newRow.setAttribute('class', 'pixel-row');
@@ -33,8 +35,26 @@ function createBoard() {
   }
   clickablePixels()
 }
-
 generateBoard.addEventListener('click', createBoard);
+
+// alert when input is empty
+function alertEmpty() {
+  if (boardSize.value == '') {
+    alert('Board inválido!')
+  }
+}
+generateBoard.addEventListener('click', alertEmpty);
+
+// change values when above or below limit 
+function changeValues() {
+  if (boardSize.value > 50) {
+    boardSize.value = 50;
+  } else if (boardSize.value < 5){
+    boardSize.value = 5;
+  }
+  return boardSize.value;
+}
+generateBoard.addEventListener('click', changeValues);
 
 // adding event listener to all pixels
 function clickablePixels(){
@@ -43,6 +63,7 @@ function clickablePixels(){
 }
 }
 clickablePixels()
+
 // changing backgound color of selected pixel
 function changeColor(e) {
   e.target.style.backgroundColor = selectedColor;
@@ -90,20 +111,4 @@ function clear() {
   }
 }
 clearButton.addEventListener('click', clear);
-
-// alert when input is empty
-function alertEmpty() {
-  if(boardSize.value == ''){
-    alert('Board inválido!')
-  }
-}
-generateBoard.addEventListener('click', alertEmpty);
-
-// change values when above or below limit 
-function changeValues() {
-  if(boardSize.value > 50){
-    boardSize.value = 50
-  }
-}
-generateBoard.addEventListener('click', changeValues);
 
