@@ -1,4 +1,4 @@
-div.color {
+.color-palette.color {
   display: inline-block;
 }
 
@@ -28,9 +28,12 @@ div.color {
   align-content: flex-start;
   display: grid;
   grid-template-columns: 40px 40px 40px 40px 40px;
+  height: 200px;
+  width: 200px;
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;
