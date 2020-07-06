@@ -23,3 +23,15 @@ div.color {
 .cor4 {
   background-color: orange;
 }
+
+.pixel-board {
+  align-content: flex-start;
+  display: grid;
+  grid-template-columns: 40px 40px 40px 40px 40px;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
