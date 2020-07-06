@@ -8,18 +8,18 @@ div.color {
   width: 40px;
 }
 
-#cor1 {
+.cor1 {
   background-color: black;
 }
 
-#cor2 {
+.cor2 {
   background-color: aqua;
 }
 
-#cor3 {
+.cor3 {
   background-color: crimson;
 }
 
-#cor4 {
+.cor4 {
   background-color: orange;
 }
