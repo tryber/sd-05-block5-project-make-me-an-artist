@@ -1,13 +1,13 @@
-// limpar cores
-// const botaoApagarCores = document.querySelector('#clear-board');
-// botaoApagarCores.addEventListener('click', apagarEstilos);
-// function apagarEstilos() {
-//   const pixels = document.querySelectorAll('.pixel');
-//   for (let i = 0; i < pixels.length; i += 1) {
-//     pixels[i].style.backgroundColor = null;
-//   }
-// }
-let color = 'black';
+//limpar cores
+const botaoApagarCores = document.querySelector('#clear-board');
+function apagarEstilos() {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+        pixels[i].style.backgroundColor = null;
+      }
+    }
+    botaoApagarCores.addEventListener('click', apagarEstilos);
+    let color = 'black';
 
 // criar random colors.
 function createColor() {
