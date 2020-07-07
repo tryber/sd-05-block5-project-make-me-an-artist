@@ -1,12 +1,12 @@
 // limpar cores
-const botaoApagarCores = document.querySelector('#clear-board');
-botaoApagarCores.addEventListener('click', apagarEstilos);
-let pixels = document.querySelectorAll('.pixel');
-function apagarEstilos() {
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = null;
-  }
-}
+// const botaoApagarCores = document.querySelector('#clear-board');
+// botaoApagarCores.addEventListener('click', apagarEstilos);
+// function apagarEstilos() {
+//   const pixels = document.querySelectorAll('.pixel');
+//   for (let i = 0; i < pixels.length; i += 1) {
+//     pixels[i].style.backgroundColor = null;
+//   }
+// }
 let color = 'black';
 
 // criar random colors.
@@ -28,7 +28,7 @@ window.onload = function () {
   for (let pixel = 1; pixel < palettePixel.length; pixel += 1) {
     palettePixel[pixel].style.backgroundColor = createColor();
   }
-}
+};
 // encontra pixel selecionado, remove classe. Adiciona a classe ao item que recebeu o evento.
 function selectColor(event) {
   const lastSelected = document.getElementsByClassName('selected')[0];
@@ -39,7 +39,7 @@ function selectColor(event) {
   color = target.style.backgroundColor;
 }
 // adiciona evento para todos os itens da paleta.
-document.querySelectorAll('.color').forEach( (element) => {
+document.querySelectorAll('.color').forEach((element) => {
   element.addEventListener('click', (event) => {
     selectColor(event);
   });
@@ -71,7 +71,7 @@ setGrid(5);
 const gridSizeInput = document.getElementById('board-size');
 // Change Grid Size
 function changeGridSize() {
-  let n = gridSizeInput.value;
+  const n = gridSizeInput.value;
   setGrid(n);
 }
 generateBoard.addEventListener('click', changeGridSize);
