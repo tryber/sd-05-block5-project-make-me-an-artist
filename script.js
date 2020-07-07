@@ -1,50 +1,77 @@
-// evento de click nas cores
-let currentColor = 'black';
-
-function aplicarCorBlack() {
-  currentColor = 'black';
-}
-
-function aplicarCorRed() {
-  currentColor = 'red';
-}
-
-function aplicarCorBlue() {
-  currentColor = 'blue';
-}
-
-function aplicarCorGreen() {
-  currentColor = 'green';
-}
-
-// caixas de pixel em branco
-const pixels = document.querySelectorAll('.pixel');
-function identicarPixel(event) {
-  event.target.style.backgroundColor = currentColor;
-}
-
 // limpar cores
-function apagarEstilos() {
-  for (let i = 0; i < pixels.length; i += 1) {
-    document.querySelectorAll('.pixel')[i].style.backgroundColor = null;
-  }
-}
-
-const black = document.querySelector('.selected');
-black.addEventListener('click', aplicarCorBlack);
-
-const red = document.querySelector('.red');
-red.addEventListener('click', aplicarCorRed);
-
-const blue = document.querySelector('.blue');
-blue.addEventListener('click', aplicarCorBlue);
-
-const green = document.querySelector('.green');
-green.addEventListener('click', aplicarCorGreen);
-
-for (let i = 0; i < pixels.length; i += 1) {
-  pixels[i].addEventListener('click', identicarPixel);
-}
-
 const botaoApagarCores = document.querySelector('#clear-board');
 botaoApagarCores.addEventListener('click', apagarEstilos);
+let pixels = document.querySelectorAll('.pixel');
+function apagarEstilos() {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = null;
+  }
+}
+let color = 'black';
+
+// criar random colors.
+function createColor() {
+  const hexadecimais = '0123456789ABCDEF';
+  let colorRan = '#';
+  for (let i = 0; i < 6; i += 1) {
+    colorRan += hexadecimais[Math.floor(Math.random() * 16)];
+  }
+  return colorRan;
+}
+// array dos pixels da paleta de cores
+const palettePixel = document.getElementsByClassName('color');
+// funcao para definir as cores da paleta - utilizada ao carregar a pagina
+window.onload = function () {
+  palettePixel[0].classList.add('selected');
+  palettePixel[0].style.backgroundColor = 'black';
+  // adiciona uma random color como background de cada pixel da paleta, exeto o primeiro.
+  for (let pixel = 1; pixel < palettePixel.length; pixel += 1) {
+    palettePixel[pixel].style.backgroundColor = createColor();
+  }
+}
+// encontra pixel selecionado, remove classe. Adiciona a classe ao item que recebeu o evento.
+function selectColor(event) {
+  const lastSelected = document.getElementsByClassName('selected')[0];
+  lastSelected.classList.remove('selected');
+  const target = event.target;
+  target.classList.add('selected');
+  // armazena a cor em uma variável
+  color = target.style.backgroundColor;
+}
+// adiciona evento para todos os itens da paleta.
+document.querySelectorAll('.color').forEach( (element) => {
+  element.addEventListener('click', (event) => {
+    selectColor(event);
+  });
+});
+// altera a cor do pixel no board.
+const pixelBoard = document.getElementById('pixel-board');
+pixelBoard.addEventListener('click', function (evento) {
+  if (evento.target.className === 'pixel') {
+    evento.target.style.backgroundColor = color;
+  }
+});
+// função para gerar os pixels
+// verificação do tamanho definido, sendo entre 5 e 50 pixels.
+const generateBoard = document.getElementById('generate-board');
+const board = document.querySelector('.pixel-board');
+
+// Cria Grid
+function setGrid(n) {
+  pixelBoard.innerHTML = '';
+  pixelBoard.style.width = `${42 * n}px`;
+  for (let index = 0; index < n * n; index += 1) {
+    const pixel = document.createElement('div');
+    board.append(pixel);
+    pixel.classList.add('pixel');
+  }
+}
+setGrid(5);
+
+const gridSizeInput = document.getElementById('board-size');
+// Change Grid Size
+function changeGridSize() {
+  let n = gridSizeInput.value;
+  setGrid(n);
+}
+generateBoard.addEventListener('click', changeGridSize);

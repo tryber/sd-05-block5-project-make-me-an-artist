@@ -6,22 +6,6 @@
   width: 40px;
 }
 
-.black {
-  background-color: black;
-}
-
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
-}
-
 .pixel {
   background-color: white;
   border: solid 1px black;
@@ -30,7 +14,13 @@
   width: 40px;
 }
 
-.board {
-  display: grid;
-  grid-template-columns: repeat(5, 40px);
+.clearButton {
+  margin: 5px 10px 10px;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  display: table;
+  flex-flow: wrap;
+  line-height: 0;
 }
