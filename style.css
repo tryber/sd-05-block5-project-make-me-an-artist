@@ -1,0 +1,40 @@
+.color-palette {
+  display: inline-flex;
+}
+
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.cor1 {
+  background-color: black;
+}
+
+.cor2 {
+  background-color: aqua;
+}
+
+.cor3 {
+  background-color: crimson;
+}
+
+.cor4 {
+  background-color: orange;
+}
+
+.linha {
+  height: 42px;
+}
+
+.fazLinha {
+  float: left;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
