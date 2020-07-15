@@ -15,28 +15,32 @@ document.getElementById('cor3').addEventListener('click', selecionaCorAtual);
 document.getElementById('cor4').addEventListener('click', selecionaCorAtual);
 
 const pixelBoard = document.getElementById('pixel-board');
-let altura = 5;
+const quadroPixel = document.getElementById('pixel-board');
+let quant = 5;
+id = 0;
+
 function criaQuadroPixels() {
-  const tamanho = `${altura * 42}px`;
+  const tamanho = `${quant * 42}px`;
   pixelBoard.style.width = tamanho;
   pixelBoard.style.height = tamanho;
-  for (let i = 0; i < tamanho; i += 1) {
-    const linha = document.createElement('div');
-    linha.className = 'pixel';
-    linha.style.width = tamanho;
-    linha.style.border = '1px solid black';
-    pixelBoard.appendChild(linha);
-    /*for (let j = 0; j < altura; j += 1) {
+  for (let i = 0; i < quant; i += 1) {
+    const linhas = document.createElement('div');
+    linhas.className = 'linha';
+    linhas.style.width = tamanho;
+    quadroPixel.appendChild(linhas);
+    for (let j = 0; j < quant; j += 1) {
       const quadro = document.createElement('div');
-      quadro.className = 'quadro pixel';
-    quadro.style.backgroundColor = 'rgb 255, 255, 255';
-    pixelBoard.appendChild(quadro)
-    }*/
+      quadro.className = 'pixel fazLinha';
+      quadro.id = id;
+      quadro.style.backgroundColor = 'rgb 255, 255, 255';
+      linhas.appendChild(quadro);
+      id += 1;
+    }
   }
 }
 
 window.onload = function() {
-  criaQuadroPixels(altura);
+  criaQuadroPixels(quant);
 }
 
 /*
