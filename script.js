@@ -72,6 +72,30 @@ function geraPaleta() {
   document.getElementById('cor4').style.backgroundColor = geraRgb();
 }
 
+function refazQuadroPixels() {
+  pixelBoard.innerHTML = '';
+  criaQuadroPixels(quant);
+}
+
+function quadroPersonalizado() {
+  const quantPixels = document.getElementById('board-size').value;
+  if (quantPixels > 5 && quantPixels < 50) {
+    quant = quantPixels;
+    refazQuadroPixels();
+  } else if (quantPixels > 50) {
+    quant = 50;
+    refazQuadroPixels();
+  } else if (quantPixels < 5) {
+    quant = 5;
+    refazQuadroPixels();
+  }
+  if (quantPixels === '') {
+    alert('Board inválido!');
+  }
+}
+
+botaoQuadroPersonalizado = document.getElementById('generate-board');
+botaoQuadroPersonalizado.addEventListener('click', quadroPersonalizado);
 
 window.onload = function() {
   criaQuadroPixels(quant);
