@@ -50,7 +50,7 @@ function colorePixels (eventpixel) {
   const pixelSelecionado = eventpixel.target;
   pixelSelecionado.style.backgroundColor = cor.style.backgroundColor;
 }
-pixelBoard.addEventListener('click', colorePixels);
+pixelBoard.addEventListener('click', colorePixels); */
 
 // criando a função que limpará todos os pixels:
 const botaoLimpar = document.getElementById('clear-board');
@@ -60,4 +60,4 @@ function limpaPixels() {
     todosPixels[i].style.backgroundColor = 'white';
   }
 }
-botaoLimpar.addEventListener('click', limpaPixels); */
+botaoLimpar.addEventListener('click', limpaPixels);
