@@ -2,7 +2,7 @@
 const pixelBoard = document.getElementById('pixel-board');
 const quadroPixel = document.getElementById('pixel-board');
 let quant = 5;
-id = 0;
+let id = 0;
 const botaoLimpar = document.getElementById('clear-board');
 const botaoQuadroPersonalizado = document.getElementById('generate-board');
 
@@ -10,8 +10,8 @@ const botaoQuadroPersonalizado = document.getElementById('generate-board');
 // função que mudará a classe selected:
 let corSelecionada = document.getElementsByClassName('selected')[0];
 function selecionaCorAtual(event) {
-  let corAtual = event.target;
-  if (corAtual != corSelecionada) {
+  const corAtual = event.target;
+  if (corAtual !== corSelecionada) {
     corSelecionada.classList.remove('selected');
     corAtual.classList.add('selected');
     corSelecionada = document.getElementsByClassName('selected')[0];
@@ -84,10 +84,10 @@ function geraPaleta() {
   document.getElementById('cor4').style.backgroundColor = geraRgb();
 }
 
-window.onload = function() {
+window.onload = function () {
   criaQuadroPixels(quant);
   geraPaleta();
-}
+};
 
 function colorePixel(evento) {
   const click = evento.target;
