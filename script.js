@@ -107,3 +107,5 @@ function colorePixel(evento) {
   const corClicada = document.querySelector('.selected').style.backgroundColor;
   click.style.backgroundColor = corClicada;
 }
+
+pixelBoard.addEventListener('click', colorePixel);
