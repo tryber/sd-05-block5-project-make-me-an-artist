@@ -39,10 +39,6 @@ function criaQuadroPixels() {
   }
 }
 
-window.onload = function() {
-  criaQuadroPixels(quant);
-}
-
 /*
 // agora função que dará cor aos pixels:
 function colorePixels (eventpixel) {
@@ -61,3 +57,23 @@ function limpaPixels() {
   }
 }
 botaoLimpar.addEventListener('click', limpaPixels);
+
+function geraRgb() {
+  const r = Math.ceil(255 * Math.random());
+  const g = Math.ceil(255 * Math.random());
+  const b = Math.ceil(255 * Math.random());
+  return (`rgb(${r}, ${g}, ${b})`);
+}
+
+function geraPaleta() {
+  document.getElementById('cor1').style.backgroundColor = 'rgb(0, 0, 0)';
+  document.getElementById('cor2').style.backgroundColor = geraRgb();
+  document.getElementById('cor3').style.backgroundColor = geraRgb();
+  document.getElementById('cor4').style.backgroundColor = geraRgb();
+}
+
+
+window.onload = function() {
+  criaQuadroPixels(quant);
+  geraPaleta();
+}
